@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 08/18/2022 18:43:17
--- Generated from EDMX file: C:\Users\PXbask\PXmmorpg\Src\Server\GameServer\GameServer\Entities.edmx
+-- Date Created: 10/23/2018 21:23:15
+-- Generated from EDMX file: D:\Projects\ExtremeWorld\mmorpg\Src\Server\GameServer\GameServer\Entities.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -36,9 +36,6 @@ IF OBJECT_ID(N'[dbo].[Players]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[Characters]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Characters];
-GO
-IF OBJECT_ID(N'[dbo].[TCharItems]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[TCharItems];
 GO
 
 -- --------------------------------------------------
@@ -75,11 +72,11 @@ CREATE TABLE [dbo].[Characters] (
 );
 GO
 
--- Creating table 'CharItems'
-CREATE TABLE [dbo].[CharItems] (
+-- Creating table 'CharacterItem'
+CREATE TABLE [dbo].[CharacterItem] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Name] nvarchar(max)  NOT NULL,
-    [Description] nvarchar(max)  NOT NULL
+    [CharacterID] int  NOT NULL
 );
 GO
 
@@ -105,9 +102,9 @@ ADD CONSTRAINT [PK_Characters]
     PRIMARY KEY CLUSTERED ([ID] ASC);
 GO
 
--- Creating primary key on [Id] in table 'CharItems'
-ALTER TABLE [dbo].[CharItems]
-ADD CONSTRAINT [PK_CharItems]
+-- Creating primary key on [Id] in table 'CharacterItem'
+ALTER TABLE [dbo].[CharacterItem]
+ADD CONSTRAINT [PK_CharacterItem]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
@@ -143,6 +140,21 @@ GO
 CREATE INDEX [IX_FK_PlayerCharacter]
 ON [dbo].[Characters]
     ([Player_ID]);
+GO
+
+-- Creating foreign key on [CharacterID] in table 'CharacterItem'
+ALTER TABLE [dbo].[CharacterItem]
+ADD CONSTRAINT [FK_TCharacterTCharacterItem]
+    FOREIGN KEY ([CharacterID])
+    REFERENCES [dbo].[Characters]
+        ([ID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_TCharacterTCharacterItem'
+CREATE INDEX [IX_FK_TCharacterTCharacterItem]
+ON [dbo].[CharacterItem]
+    ([CharacterID]);
 GO
 
 -- --------------------------------------------------
