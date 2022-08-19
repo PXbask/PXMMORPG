@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 09/07/2018 00:02:53
--- Generated from EDMX file: D:\Projects\ExtremeWorld\project-z\Src\Server\GameServer\GameServer\Entities.edmx
+-- Date Created: 08/18/2022 18:43:17
+-- Generated from EDMX file: C:\Users\PXbask\PXmmorpg\Src\Server\GameServer\GameServer\Entities.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -36,6 +36,9 @@ IF OBJECT_ID(N'[dbo].[Players]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[Characters]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Characters];
+GO
+IF OBJECT_ID(N'[dbo].[TCharItems]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[TCharItems];
 GO
 
 -- --------------------------------------------------
@@ -72,6 +75,14 @@ CREATE TABLE [dbo].[Characters] (
 );
 GO
 
+-- Creating table 'CharItems'
+CREATE TABLE [dbo].[CharItems] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [Name] nvarchar(max)  NOT NULL,
+    [Description] nvarchar(max)  NOT NULL
+);
+GO
+
 -- --------------------------------------------------
 -- Creating all PRIMARY KEY constraints
 -- --------------------------------------------------
@@ -92,6 +103,12 @@ GO
 ALTER TABLE [dbo].[Characters]
 ADD CONSTRAINT [PK_Characters]
     PRIMARY KEY CLUSTERED ([ID] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'CharItems'
+ALTER TABLE [dbo].[CharItems]
+ADD CONSTRAINT [PK_CharItems]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
 -- --------------------------------------------------

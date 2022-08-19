@@ -18,6 +18,7 @@ namespace GameServer
     {
         Thread thread;
         bool running = false;
+        
         public bool Init()
         {
             DBService.Instance.Init();

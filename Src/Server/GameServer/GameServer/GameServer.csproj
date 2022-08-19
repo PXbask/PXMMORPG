@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>GameServer</RootNamespace>
     <AssemblyName>GameServer</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
@@ -115,6 +115,9 @@
     <Compile Include="Settings.cs" />
     <Compile Include="Core\Vector3Int.cs" />
     <Compile Include="TCharacter.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TCharItem.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="TPlayer.cs">
