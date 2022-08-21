@@ -12,6 +12,7 @@ public class LoadingManager : MonoBehaviour {
     public GameObject UITips;
     public GameObject UILoading;
     public GameObject UILogin;
+    public GameObject UIRegister;
 
     public Slider progressBar;
     public Text progressText;
@@ -28,6 +29,7 @@ public class LoadingManager : MonoBehaviour {
         UITips.SetActive(true);
         UILoading.SetActive(false);
         UILogin.SetActive(false);
+        UIRegister.SetActive(false);
         yield return new WaitForSeconds(2f);
         UILoading.SetActive(true);
         yield return new WaitForSeconds(1f);
@@ -45,6 +47,7 @@ public class LoadingManager : MonoBehaviour {
         {
             i += Random.Range(0.1f, 1.5f);
             progressBar.value = i;
+            progressNumber.text = Mathf.Clamp(i,0,100).ToString("f0")+"%";
             yield return new WaitForEndOfFrame();
         }
 

@@ -10,12 +10,12 @@ public class UIRegister : MonoBehaviour {
     public InputField password;
     public InputField passwordConfirm;
     public Button buttonRegister;
-
+    public Toggle agreeToggle;
 
     // Use this for initialization
     void Start () {
         UserService.Instance.OnRegister = this.OnRegister;
-
+        buttonRegister.onClick.AddListener(OnClickRegister);
     }
 	
     void OnRegister(SkillBridge.Message.Result result, string msg)
@@ -47,6 +47,11 @@ public class UIRegister : MonoBehaviour {
         if (this.password.text != this.passwordConfirm.text)
         {
             MessageBox.Show("两次输入的密码不一致");
+            return;
+        }
+        if (!this.agreeToggle.isOn)
+        {
+            MessageBox.Show("请先同意用户协议");
             return;
         }
         UserService.Instance.SendRegister(this.username.text, this.password.text);
