@@ -114,6 +114,7 @@
     <Compile Include="Network\NetService.cs" />
     <Compile Include="Network\NetSession.cs" />
     <Compile Include="Network\TcpSocketListener.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -147,9 +148,20 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Entities.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="bin\Debug\GameServer.exe.config" />
     <None Include="Entities.edmx.diagram">
       <DependentUpon>Entities.edmx</DependentUpon>
     </None>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\Entities.csdl" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\Entities.msl" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\Entities.ssdl" />
+    <None Include="obj\Debug\GameServer.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\GameServer.csproj.CopyComplete" />
+    <None Include="obj\Debug\GameServer.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\GameServer.csproj.SuggestedBindingRedirects.cache" />
+    <None Include="obj\Debug\GameServer.exe.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
@@ -186,6 +198,36 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\Common.dll" />
+    <Content Include="bin\Debug\Common.pdb" />
+    <Content Include="bin\Debug\Data\CharacterDefine.txt" />
+    <Content Include="bin\Debug\Data\GameConfig.txt" />
+    <Content Include="bin\Debug\Data\LevelUpDefine.txt" />
+    <Content Include="bin\Debug\Data\MapDefine.txt" />
+    <Content Include="bin\Debug\Data\SpawnPointDefine.txt" />
+    <Content Include="bin\Debug\Data\SpawnRuleDefine.txt" />
+    <Content Include="bin\Debug\Data\TeleporterDefine.txt" />
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Debug\EntityFramework.xml" />
+    <Content Include="bin\Debug\GameServer.exe" />
+    <Content Include="bin\Debug\GameServer.pdb" />
+    <Content Include="bin\Debug\log4net.dll" />
+    <Content Include="bin\Debug\log4net.xml" />
+    <Content Include="bin\Debug\Log\20220818.txt" />
+    <Content Include="bin\Debug\Log\20220819.txt" />
+    <Content Include="bin\Debug\Log\20220821.txt" />
+    <Content Include="bin\Debug\Log\20220824.txt" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="bin\Debug\protobuf-net.dll" />
+    <Content Include="bin\Debug\protobuf-net.xml" />
+    <Content Include="bin\Debug\Protocol.dll" />
+    <Content Include="bin\Debug\Protocol.pdb" />
+    <Content Include="bin\Debug\UnityEngine.dll" />
+    <Content Include="bin\Debug\zh-Hans\EntityFramework.resources.dll" />
+    <Content Include="bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll" />
     <Content Include="Entities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Entities.edmx</DependentUpon>
@@ -200,6 +242,12 @@
     <Content Include="log4net.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="obj\Debug\GameServer.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\GameServer.exe" />
+    <Content Include="obj\Debug\GameServer.pdb" />
+    <Content Include="obj\Debug\TempPE\Entities.Context.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Entities.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Entities.Designer.cs.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

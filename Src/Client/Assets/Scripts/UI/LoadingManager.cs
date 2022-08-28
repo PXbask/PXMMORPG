@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
-
+using Services;
 using SkillBridge.Message;
 using ProtoBuf;
 
@@ -35,19 +35,19 @@ public class LoadingManager : MonoBehaviour {
         yield return new WaitForSeconds(1f);
         UITips.SetActive(false);
 
-        //yield return DataManager.Instance.LoadData();
+        yield return DataManager.Instance.LoadData();
 
         //Init basic services
         //MapService.Instance.Init();
-        //UserService.Instance.Init();
+        UserService.Instance.Init();
 
 
         // Fake Loading Simulate
         for (float i = 50; i < 100;)
         {
             i += Random.Range(0.1f, 1.5f);
-            progressBar.value = i;
-            progressNumber.text = Mathf.Clamp(i,0,100).ToString("f0")+"%";
+            progressBar.value = i / 100f;
+            progressNumber.text = Mathf.Clamp(i, 0, 100).ToString("f0") + "%";
             yield return new WaitForEndOfFrame();
         }
 

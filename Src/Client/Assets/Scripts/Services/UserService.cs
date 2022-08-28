@@ -5,7 +5,7 @@ using System.Text;
 using Common;
 using Network;
 using UnityEngine;
-
+using Models;
 using SkillBridge.Message;
 
 namespace Services
@@ -14,6 +14,7 @@ namespace Services
     {
         public UnityEngine.Events.UnityAction<Result, string> OnRegister;
         public UnityEngine.Events.UnityAction<Result, string> OnLogin;
+        public UnityEngine.Events.UnityAction<Result, string> OnCreateChar;
         NetMessage pendingMessage = null;
         bool connected = false;
 
@@ -23,12 +24,14 @@ namespace Services
             NetClient.Instance.OnDisconnect += OnGameServerDisconnect;
             MessageDistributer.Instance.Subscribe<UserRegisterResponse>(this.OnUserRegister);
             MessageDistributer.Instance.Subscribe<UserLoginResponse>(this.OnUserLogin);
+            MessageDistributer.Instance.Subscribe<UserCreateCharacterResponse>(this.OnUserCreateChar);
         }
 
         public void Dispose()
         {
             MessageDistributer.Instance.Unsubscribe<UserLoginResponse>(this.OnUserLogin);
             MessageDistributer.Instance.Unsubscribe<UserRegisterResponse>(this.OnUserRegister);
+            MessageDistributer.Instance.Unsubscribe<UserCreateCharacterResponse>(this.OnUserCreateChar);
             NetClient.Instance.OnConnect -= OnGameServerConnect;
             NetClient.Instance.OnDisconnect -= OnGameServerDisconnect;
         }
@@ -85,6 +88,20 @@ namespace Services
                         this.OnRegister(Result.Failed, string.Format("服务器断开！\n RESULT:{0} ERROR:{1}", result, reason));
                     }
                 }
+                if (this.pendingMessage.Request.userLogin != null)
+                {
+                    if (this.OnLogin != null)
+                    {
+                        this.OnLogin(Result.Failed, string.Format("服务器断开！\n RESULT:{0} ERROR:{1}", result, reason));
+                    }
+                }
+                if (this.pendingMessage.Request.createChar != null)
+                {
+                    if (this.OnCreateChar != null)
+                    {
+                        this.OnCreateChar(Result.Failed, string.Format("服务器断开！\n RESULT:{0} ERROR:{1}", result, reason));
+                    }
+                }
                 return true;
             }
             return false;
@@ -129,6 +146,25 @@ namespace Services
                 this.ConnectToServer();
             }
         }
+        public void SendCharCreate(string name, CharacterClass @class)
+        {
+            Debug.LogFormat("UserCreateCharacterRequest::name :{0} class:{1}", name, @class);
+            NetMessage message= new NetMessage();
+            message.Request = new NetMessageRequest();
+            message.Request.createChar=new UserCreateCharacterRequest();
+            message.Request.createChar.Name = name;
+            message.Request.createChar.Class = @class;
+            if (this.connected && NetClient.Instance.Connected)
+            {
+                this.pendingMessage = null;
+                NetClient.Instance.SendMessage(message);
+            }
+            else
+            {
+                this.pendingMessage = message;
+                this.ConnectToServer();
+            }
+        }
         #endregion
         #region MessageDistributer Event
         void OnUserRegister(object sender, UserRegisterResponse response)
@@ -144,10 +180,27 @@ namespace Services
         void OnUserLogin(object sender, UserLoginResponse response)
         {
             Debug.LogFormat("OnUserLogin:{0} [{1}]", response.Result, response.Errormsg);
-
+            if (response.Result.Equals(Result.Success))
+            {
+                User.Instance.SetupUserInfo(response.Userinfo);
+            }
             if(this.OnLogin != null)
             {
                 this.OnLogin(response.Result, response.Errormsg);
+            }
+        }
+
+        void OnUserCreateChar(object sender, UserCreateCharacterResponse response)
+        {
+            Debug.LogFormat("OnUserCreateChar:{0} [{1}]", response.Result, response.Errormsg);
+            if (response.Result.Equals(Result.Success))
+            {
+                User.Instance.Info.Player.Characters.Clear();
+                User.Instance.Info.Player.Characters.AddRange(response.Characters);
+            }
+            if (this.OnCreateChar != null)
+            {
+                this.OnCreateChar(response.Result, response.Errormsg);
             }
         }
         #endregion

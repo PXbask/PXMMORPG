@@ -17,7 +17,10 @@ namespace GameServer.Services
         {
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserRegisterRequest>(this.OnRegister);
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserLoginRequest>(this.OnLogin);
+            MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserCreateCharacterRequest>(this.OnCreateCharacter);
         }
+
+
 
         public void Init()
         {
@@ -59,8 +62,21 @@ namespace GameServer.Services
             TUser user = DBService.Instance.Entities.Users.Where(u => u.Username == request.User).FirstOrDefault();
             if(user != null && user.Password == request.Passward)
             {
+                sender.Session.User = user;
                 message.Response.userLogin.Result = Result.Success;
                 message.Response.userLogin.Errormsg = "None";
+                message.Response.userLogin.Userinfo = new NUserInfo();
+                message.Response.userLogin.Userinfo.Id = 1;
+                message.Response.userLogin.Userinfo.Player = new NPlayerInfo();
+                message.Response.userLogin.Userinfo.Player.Id = user.Player.ID;
+                foreach (var c in user.Player.Characters)
+                {
+                    NCharacterInfo info = new NCharacterInfo();
+                    info.Id = c.ID;
+                    info.Name = c.Name;
+                    info.Class = (CharacterClass)c.Class;
+                    message.Response.userLogin.Userinfo.Player.Characters.Add(info);
+                }
             }
             else
             {
@@ -69,6 +85,43 @@ namespace GameServer.Services
             }
             byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);
+        }
+        private void OnCreateCharacter(NetConnection<NetSession> sender, UserCreateCharacterRequest request)
+        {
+            Log.InfoFormat("UserCreateCharacterRequest: Name:{0}  Class:{1}", request.Name, request.Class);
+
+            NetMessage message = new NetMessage();
+            message.Response = new NetMessageResponse();
+            message.Response.createChar = new UserCreateCharacterResponse();
+
+            TCharacter character = DBService.Instance.Entities.Characters.Where(u => u.Name == request.Name && u.Class == (int)request.Class).FirstOrDefault();
+            if (character != null)
+            {
+                message.Response.createChar.Result = Result.Failed;
+                message.Response.createChar.Errormsg = "角色已存在";
+            }
+            else
+            {
+                TCharacter @char= new TCharacter()
+                {
+                    Name = request.Name,
+                    Class = (int)request.Class,
+                    TID = (int)request.Class,
+                    MapID = 1,
+                    MapPosX = 5000,
+                    MapPosY = 4000,
+                    MapPosZ = 820,
+                };
+                DBService.Instance.Entities.Characters.Add(@char);
+                sender.Session.User.Player.Characters.Add(@char);
+                DBService.Instance.Entities.SaveChanges();
+
+                message.Response.createChar.Result = Result.Success;
+                message.Response.createChar.Errormsg = "None";
+
+                byte[] data = PackageHandler.PackMessage(message);
+                sender.SendData(data, 0, data.Length);
+            }
         }
     }
 }

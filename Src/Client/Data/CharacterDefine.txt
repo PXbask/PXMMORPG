@@ -5,6 +5,7 @@
     "Type": "Normal",
     "Class": "WARRIOR",
     "Resource": "Character/Warrior",
+    "Description": "来自极北之地的战斗民族的后代，具有强悍的战斗力和顽强的意志力。任何与此战斗过的人都表示这是个难以击败的钢铁之兽。",
     "InitLevel": 1,
     "Speed": 300
   },
@@ -14,6 +15,7 @@
     "Type": "Normal",
     "Class": "WIZARD",
     "Resource": "Character/Wizard",
+    "Description": "大法师帕秋莉·萨托瑞的学生，拥有掌管金木水火土日月星元素程度的能力，强大的元素之力足以吞噬一切来犯之敌。",
     "InitLevel": 1,
     "Speed": 300
   },
@@ -23,6 +25,7 @@
     "Type": "Normal",
     "Class": "ARCHER",
     "Resource": "Character/Archer",
+    "Description": "年纪轻轻就继承了弓箭大师安柏精湛的剑术，古老的龙之一族曾有“辕门射戟”的传说，在她看来这也不过如此。",
     "InitLevel": 1,
     "Speed": 300
   },

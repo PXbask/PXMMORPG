@@ -19,7 +19,14 @@ public class UILogin : MonoBehaviour {
 	}
 	void OnLogin(SkillBridge.Message.Result result, string msg)
 	{
-		MessageBox.Show(string.Format("结果：{0} msg:{1}", result, msg));
+		if (result.Equals(SkillBridge.Message.Result.Success))
+		{
+			SceneManager.Instance.LoadScene("CharSelect");
+		}
+        else
+        {
+			MessageBox.Show(string.Format("结果：{0} msg:{1}", result, msg));
+		}
 	}
 	public void OnClickLogin()
     {

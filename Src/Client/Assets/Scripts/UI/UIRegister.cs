@@ -20,10 +20,17 @@ public class UIRegister : MonoBehaviour {
 	
     void OnRegister(SkillBridge.Message.Result result, string msg)
     {
-        MessageBox.Show(string.Format("结果：{0} msg:{1}",result,msg));
+        if (result.Equals(SkillBridge.Message.Result.Success))
+        {
+            SceneManager.Instance.LoadScene("CharSelect");
+        }
+        else
+        {
+            MessageBox.Show(string.Format("结果：{0} msg:{1}", result, msg));
+        }
     }
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update () {
 		
 	}
 
