@@ -42,7 +42,9 @@ public class UICharInfo : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		if(info!=null)
+        InfoType = UICharInfoType.Normal;
+        highlight.gameObject.SetActive(false);
+        if (info!=null)
         {
             this.charClass.text = this.info.Class.ToString();
             this.charName.text = this.info.Name;

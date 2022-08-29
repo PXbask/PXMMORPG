@@ -25,13 +25,22 @@ namespace Services
             MessageDistributer.Instance.Subscribe<UserRegisterResponse>(this.OnUserRegister);
             MessageDistributer.Instance.Subscribe<UserLoginResponse>(this.OnUserLogin);
             MessageDistributer.Instance.Subscribe<UserCreateCharacterResponse>(this.OnUserCreateChar);
+            MessageDistributer.Instance.Subscribe<UserGameEnterResponse>(this.OnUserGameEnter);
+            MessageDistributer.Instance.Subscribe<UserGameLeaveResponse>(this.OnUserGameLeave);
+            MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnMapCharacterEnter);
         }
+
+
 
         public void Dispose()
         {
             MessageDistributer.Instance.Unsubscribe<UserLoginResponse>(this.OnUserLogin);
             MessageDistributer.Instance.Unsubscribe<UserRegisterResponse>(this.OnUserRegister);
             MessageDistributer.Instance.Unsubscribe<UserCreateCharacterResponse>(this.OnUserCreateChar);
+            MessageDistributer.Instance.Unsubscribe<UserGameEnterResponse>(this.OnUserGameEnter);
+            MessageDistributer.Instance.Unsubscribe<UserGameLeaveResponse>(this.OnUserGameLeave);
+            MessageDistributer.Instance.Unsubscribe<MapCharacterEnterResponse>(this.OnMapCharacterEnter);
+
             NetClient.Instance.OnConnect -= OnGameServerConnect;
             NetClient.Instance.OnDisconnect -= OnGameServerDisconnect;
         }
@@ -165,6 +174,23 @@ namespace Services
                 this.ConnectToServer();
             }
         }
+        public void SendGameEnter(int characterIdx)
+        {
+            Debug.LogFormat("UserGameEnterRequest::index :{0}", characterIdx);
+            NetMessage message = new NetMessage();
+            message.Request = new NetMessageRequest();
+            message.Request.gameEnter = new UserGameEnterRequest();
+            message.Request.gameEnter.characterIdx = characterIdx;
+            NetClient.Instance.SendMessage(message);
+        }
+        public void SendGameLeave()
+        {
+            Debug.LogFormat("UserGameLeaveRequest::User Leave");
+            NetMessage message = new NetMessage();
+            message.Request = new NetMessageRequest();
+            message.Request.gameLeave = new UserGameLeaveRequest();
+            NetClient.Instance.SendMessage(message);
+        }
         #endregion
         #region MessageDistributer Event
         void OnUserRegister(object sender, UserRegisterResponse response)
@@ -176,7 +202,6 @@ namespace Services
                 this.OnRegister(response.Result, response.Errormsg);
             }
         }
-
         void OnUserLogin(object sender, UserLoginResponse response)
         {
             Debug.LogFormat("OnUserLogin:{0} [{1}]", response.Result, response.Errormsg);
@@ -189,7 +214,6 @@ namespace Services
                 this.OnLogin(response.Result, response.Errormsg);
             }
         }
-
         void OnUserCreateChar(object sender, UserCreateCharacterResponse response)
         {
             Debug.LogFormat("OnUserCreateChar:{0} [{1}]", response.Result, response.Errormsg);
@@ -202,6 +226,24 @@ namespace Services
             {
                 this.OnCreateChar(response.Result, response.Errormsg);
             }
+        }
+        private void OnUserGameEnter(object sender, UserGameEnterResponse response)
+        {
+            Debug.LogFormat("OnUserGameEnter:{0} [{1}]", response.Result, response.Errormsg);
+            if (response.Result.Equals(Result.Success)) { }
+        }
+        private void OnUserGameLeave(object sender, UserGameLeaveResponse response)
+        {
+            Debug.LogFormat("OnUserGameLeave:{0} [{1}]", response.Result, response.Errormsg);
+            if (response.Result.Equals(Result.Success)) { }
+        }
+        private void OnMapCharacterEnter(object sender, MapCharacterEnterResponse response)
+        {
+            Debug.LogFormat("OnMapCharacterEnter:MapID:{0}", response.mapId);
+            NCharacterInfo info = response.Characters[0];
+            User.Instance.CurrentCharacter = info;
+            string sceneName = DataManager.Instance.Maps[response.mapId].Resource;
+            SceneManager.Instance.LoadScene(sceneName);
         }
         #endregion
     }

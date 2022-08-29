@@ -7,7 +7,7 @@ public class UIProfileView : MonoBehaviour {
 	public RectTransform rect;
 	public GameObject uicharinfo;
 	private RectTransform rectTransform;
-
+	public UICharacterView characterView;
 	public List<GameObject> profileButtons;
 	public UnityEngine.Events.UnityAction<int> OnSelectCharacter;
 	void Start () {
@@ -44,5 +44,14 @@ public class UIProfileView : MonoBehaviour {
 		{
 			this.AddProfile(Models.User.Instance.Info.Player.Characters[i], i);
 		}
+
+		if(profileButtons.Count > 0)
+        {
+			characterView.CurrentCharacter = (int)profileButtons[1].GetComponent<UICharInfo>().info.Class - 1;
+        }
+        else
+        {
+			characterView.CurrentCharacter = -1;
+        }
 	}
 }

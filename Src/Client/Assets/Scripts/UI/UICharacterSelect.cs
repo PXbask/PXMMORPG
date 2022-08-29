@@ -70,7 +70,10 @@ public class UICharacterSelect : MonoBehaviour {
     }
 	public void OnClickStartGame()
     {
-		MessageBox.Show("进入游戏");
+        if (selectCharacterIdx >= 0)
+        {
+			UserService.Instance.SendGameEnter(selectCharacterIdx);
+        }
     }
 	public void OnClickSelectBackButton()
     {
