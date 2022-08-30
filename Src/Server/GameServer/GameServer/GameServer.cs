@@ -25,11 +25,13 @@ namespace GameServer
         {
             network = new NetService();
             network.Init(8000);
+            DataManager.Instance.Init();
+            CharacterManager.Instance.Init();
+
             DBService.Instance.Init();
             UserService.Instance.Init();
-            CharacterManager.Instance.Init();
-            DataManager.Instance.Init();
-            MapManager.Instance.Init();
+            MapService.Instance.Init();
+
             thread = new Thread(new ThreadStart(this.Update));
 
             return true;
