@@ -37,7 +37,11 @@ public class EntityController : MonoBehaviour
         if (!this.isPlayer)
             rb.useGravity = false;
     }
-
+    void OnDestroy()
+    {
+        if(UIWorldElementManager.Instance != null)
+            UIWorldElementManager.Instance.RemoveElement(transform);
+    }
     void UpdateTransform()
     {
         this.position = GameObjectTool.LogicToWorld(entity.position);

@@ -1,23 +1,44 @@
-2022-08-30 14:56:11,799 [ 1] INFO  Unity: LoadingManager start
-2022-08-30 14:56:15,232 [ 1] INFO  Unity: DataManager > DataManager()
-2022-08-30 14:56:18,892 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
-2022-08-30 14:56:18,894 [ 1] INFO  Unity: ConnectToServer() Start 
-2022-08-30 14:56:18,903 [ 1] INFO  Unity: DoConnect
-2022-08-30 14:56:18,906 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-08-30 14:56:18,916 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-08-31 19:24:01,073 [ 1] INFO  Unity: LoadingManager start
+2022-08-31 19:24:04,251 [ 1] INFO  Unity: DataManager > DataManager()
+2022-08-31 19:24:07,532 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
+2022-08-31 19:24:07,534 [ 1] INFO  Unity: ConnectToServer() Start 
+2022-08-31 19:24:07,540 [ 1] INFO  Unity: DoConnect
+2022-08-31 19:24:07,543 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-08-31 19:24:07,548 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-08-30 14:56:18,928 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2022-08-30 14:56:20,262 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2022-08-30 14:56:20,266 [ 1] INFO  Unity: LoadLevel: CharSelect
-2022-08-30 14:56:20,857 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-08-30 14:56:23,730 [ 1] INFO  Unity: Select Char:[6]PXbask[Wizard]
-2022-08-30 14:56:26,001 [ 1] INFO  Unity: UserGameEnterRequest::index :1
-2022-08-30 14:56:26,037 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
-2022-08-30 14:56:26,039 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
-2022-08-30 14:56:26,041 [ 1] INFO  Unity: LoadLevel: MainCity
-2022-08-30 14:56:26,984 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-08-30 14:57:40,154 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-08-30 14:57:40,155 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-08-31 19:24:07,554 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2022-08-31 19:24:07,660 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2022-08-31 19:24:07,663 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-08-31 19:24:08,077 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-08-31 19:24:09,086 [ 1] INFO  Unity: Select Char:[6]PXbask[Wizard]
+2022-08-31 19:24:09,916 [ 1] INFO  Unity: UserGameEnterRequest::index :1
+2022-08-31 19:24:09,951 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
+2022-08-31 19:24:09,952 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:0 CharacterID:1
+2022-08-31 19:24:09,954 [ 1] INFO  Unity: AddCharacter:6:PXbask Map:1 Entity:(0:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-08-31 19:24:09,955 [ 1] INFO  Unity: AddCharacter:6:PXbask Map:1 Entity:(0:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-08-31 19:24:09,957 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-08-31 19:24:09,958 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
+2022-08-31 19:24:09,959 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-08-31 19:24:10,528 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-08-31 19:24:10,546 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, UIWorldElementManager.AddCharacterNameBar (UnityEngine.Transform tr, Entities.Character character) (at Assets/Scripts/Managers/UIWorldElementManager.cs:15)
+GameObjectManager.CreateCharacterObject (Entities.Character character) (at Assets/Scripts/GameObject/GameObjectManager.cs:84)
+GameObjectManager+<InitGameObjects>c__Iterator0.MoveNext () (at Assets/Scripts/GameObject/GameObjectManager.cs:40)
+UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) (at D:/unity/Runtime/Export/Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+GameObjectManager:Start() (at Assets/Scripts/GameObject/GameObjectManager.cs:16)
+}</args></log4net.Error>
+2022-08-31 19:24:11,094 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-08-31 19:24:11,106 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, UIWorldElementManager.AddCharacterNameBar (UnityEngine.Transform tr, Entities.Character character) (at Assets/Scripts/Managers/UIWorldElementManager.cs:15)
+GameObjectManager.CreateCharacterObject (Entities.Character character) (at Assets/Scripts/GameObject/GameObjectManager.cs:84)
+GameObjectManager+<InitGameObjects>c__Iterator0.MoveNext () (at Assets/Scripts/GameObject/GameObjectManager.cs:40)
+UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) (at D:/unity/Runtime/Export/Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+GameObjectManager:Start() (at Assets/Scripts/GameObject/GameObjectManager.cs:16)
+}</args></log4net.Error>
+2022-08-31 19:24:43,292 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-08-31 19:24:43,293 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)

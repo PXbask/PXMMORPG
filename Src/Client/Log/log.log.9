@@ -1,115 +1,52 @@
-2022-08-29 15:31:26,445 [ 1] INFO  Unity: LoadingManager start
-2022-08-29 15:31:29,720 [ 1] INFO  Unity: DataManager > DataManager()
-2022-08-29 15:31:34,047 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
-2022-08-29 15:31:34,049 [ 1] INFO  Unity: ConnectToServer() Start 
-2022-08-29 15:31:34,055 [ 1] INFO  Unity: DoConnect
-2022-08-29 15:31:34,059 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-08-29 15:31:34,066 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-08-31 19:22:31,726 [ 1] INFO  Unity: LoadingManager start
+2022-08-31 19:22:34,870 [ 1] INFO  Unity: DataManager > DataManager()
+2022-08-31 19:22:37,982 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
+2022-08-31 19:22:37,984 [ 1] INFO  Unity: ConnectToServer() Start 
+2022-08-31 19:22:37,988 [ 1] INFO  Unity: DoConnect
+2022-08-31 19:22:37,989 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-08-31 19:22:37,993 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-08-29 15:31:34,073 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2022-08-29 15:31:34,229 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2022-08-29 15:31:34,231 [ 1] INFO  Unity: LoadLevel: CharSelect
-2022-08-29 15:31:34,786 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-08-29 15:31:45,096 [ 1] INFO  Unity: UserCreateCharacterRequest::name :JJ class:Archer
-2022-08-29 15:31:45,230 [ 1] INFO  Unity: OnUserCreateChar:Success [None]
-2022-08-29 15:31:59,443 [ 1] INFO  Unity: Select Char:[6]PXbask[Wizard]
-2022-08-29 15:32:01,314 [ 1] INFO  Unity: Select Char:[6]PXbask[Wizard]
-2022-08-29 15:32:01,479 [ 1] INFO  Unity: Select Char:[6]PXbask[Wizard]
-2022-08-29 15:32:02,839 [ 1] INFO  Unity: Select Char:[7]JJ[Archer]
-2022-08-29 15:32:03,070 [ 1] INFO  Unity: Select Char:[7]JJ[Archer]
-2022-08-29 15:32:03,533 [ 1] INFO  Unity: Select Char:[6]PXbask[Wizard]
-2022-08-29 15:32:03,932 [ 1] INFO  Unity: Select Char:[5]T0[Warrior]
-2022-08-29 15:32:04,380 [ 1] INFO  Unity: Select Char:[6]PXbask[Wizard]
-2022-08-29 15:32:04,876 [ 1] INFO  Unity: Select Char:[7]JJ[Archer]
-2022-08-29 15:32:05,290 [ 1] INFO  Unity: Select Char:[6]PXbask[Wizard]
-2022-08-29 15:32:05,672 [ 1] INFO  Unity: Select Char:[5]T0[Warrior]
-2022-08-29 15:32:11,332 [ 1] INFO  Unity: Select Char:[6]PXbask[Wizard]
-2022-08-29 15:32:20,247 [ 1] INFO  Unity: Select Char:[6]PXbask[Wizard]
-2022-08-29 15:32:20,926 [ 1] INFO  Unity: UserGameEnterRequest::index :1
-2022-08-29 15:32:20,965 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
-2022-08-29 15:32:20,966 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
-2022-08-29 15:32:20,968 [ 1] INFO  Unity: LoadLevel: MainCity
-2022-08-29 15:32:21,887 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-08-29 15:33:11,806 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
-
-  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
-  at Network.NetClient.ProcessRecv () [0x00084] in C:\Users\PXbask\PXmmorpg\Src\Client\Assets\Scripts\Network\NetClient.cs:340 
-
-2022-08-29 15:33:11,809 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:354)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:434)
-
-2022-08-29 15:33:11,966 [ 1] INFO  Unity: DoConnect
-2022-08-29 15:33:11,967 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-08-29 15:33:11,970 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
-
-2022-08-29 15:33:13,989 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-2022-08-29 15:33:13,992 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-2022-08-29 15:33:14,044 [ 1] INFO  Unity: DoConnect
-2022-08-29 15:33:14,046 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-08-29 15:33:14,050 [ 1] INFO  Unity: Connect[1] to server 127.0.0.1:8000
-
-2022-08-29 15:33:16,070 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-2022-08-29 15:33:16,072 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-2022-08-29 15:33:16,112 [ 1] INFO  Unity: DoConnect
-2022-08-29 15:33:16,115 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-08-29 15:33:16,119 [ 1] INFO  Unity: Connect[2] to server 127.0.0.1:8000
-
-2022-08-29 15:33:18,150 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-2022-08-29 15:33:18,152 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-2022-08-29 15:33:18,153 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :1 reason:Cannot connect to server
-2022-08-29 15:33:22,906 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-08-29 15:33:22,907 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-08-31 19:22:37,999 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2022-08-31 19:22:38,107 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2022-08-31 19:22:38,109 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-08-31 19:22:38,455 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-08-31 19:22:39,612 [ 1] INFO  Unity: Select Char:[6]PXbask[Wizard]
+2022-08-31 19:22:40,326 [ 1] INFO  Unity: UserGameEnterRequest::index :1
+2022-08-31 19:22:40,360 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
+2022-08-31 19:22:40,361 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:0 CharacterID:1
+2022-08-31 19:22:40,363 [ 1] INFO  Unity: AddCharacter:6:PXbask Map:1 Entity:(0:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-08-31 19:22:40,364 [ 1] INFO  Unity: AddCharacter:6:PXbask Map:1 Entity:(0:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-08-31 19:22:40,366 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-08-31 19:22:40,367 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
+2022-08-31 19:22:40,368 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-08-31 19:22:40,937 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-08-31 19:22:40,955 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{UnassignedReferenceException: The variable uinameBar of UIWorldElementManager has not been assigned.
+You probably need to assign the uinameBar variable of the UIWorldElementManager script in the inspector., UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at D:/unity/Runtime/Export/UnityEngineObject.bindings.cs:264)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at D:/unity/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at D:/unity/Runtime/Export/UnityEngineObject.bindings.cs:295)
+UIWorldElementManager.AddCharacterNameBar (UnityEngine.Transform tr, Entities.Character character) (at Assets/Scripts/Managers/UIWorldElementManager.cs:13)
+GameObjectManager.CreateCharacterObject (Entities.Character character) (at Assets/Scripts/GameObject/GameObjectManager.cs:84)
+GameObjectManager+<InitGameObjects>c__Iterator0.MoveNext () (at Assets/Scripts/GameObject/GameObjectManager.cs:40)
+UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) (at D:/unity/Runtime/Export/Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+GameObjectManager:Start() (at Assets/Scripts/GameObject/GameObjectManager.cs:16)
+}</args></log4net.Error>
+2022-08-31 19:22:41,452 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-08-31 19:22:41,464 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{UnassignedReferenceException: The variable uinameBar of UIWorldElementManager has not been assigned.
+You probably need to assign the uinameBar variable of the UIWorldElementManager script in the inspector., UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at D:/unity/Runtime/Export/UnityEngineObject.bindings.cs:264)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at D:/unity/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at D:/unity/Runtime/Export/UnityEngineObject.bindings.cs:295)
+UIWorldElementManager.AddCharacterNameBar (UnityEngine.Transform tr, Entities.Character character) (at Assets/Scripts/Managers/UIWorldElementManager.cs:13)
+GameObjectManager.CreateCharacterObject (Entities.Character character) (at Assets/Scripts/GameObject/GameObjectManager.cs:84)
+GameObjectManager+<InitGameObjects>c__Iterator0.MoveNext () (at Assets/Scripts/GameObject/GameObjectManager.cs:40)
+UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) (at D:/unity/Runtime/Export/Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+GameObjectManager:Start() (at Assets/Scripts/GameObject/GameObjectManager.cs:16)
+}</args></log4net.Error>
+2022-08-31 19:23:21,549 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-08-31 19:23:21,550 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
