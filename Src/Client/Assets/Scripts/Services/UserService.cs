@@ -243,8 +243,6 @@ namespace Services
             Debug.LogFormat("OnMapCharacterEnter:MapID:{0}", response.mapId);
             NCharacterInfo info = response.Characters[0];
             User.Instance.CurrentCharacter = info;
-            string sceneName = DataManager.Instance.Maps[response.mapId].Resource;
-            SceneManager.Instance.LoadScene(sceneName);
         }
         #endregion
     }

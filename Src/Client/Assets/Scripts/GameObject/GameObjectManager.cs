@@ -72,6 +72,7 @@ public class GameObjectManager : MonoBehaviour
                 if (character.Info.Id == Models.User.Instance.CurrentCharacter.Id)
                 {
                     MainPlayerCamera.Instance.player = go;
+                    Models.User.Instance.CurrentCharacterObject = go;
                     pc.enabled = true;
                     pc.character = character;
                     pc.entityController = ec;

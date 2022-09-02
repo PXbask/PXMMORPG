@@ -5,7 +5,8 @@
     "Type": "Normal",
     "SubType": "Normal",
     "PKMode": false,
-    "Resource": "MainCity"
+    "Resource": "MainCity",
+    "Asset": "BullionCity"
   },
   "2": {
     "ID": 2,
@@ -13,7 +14,8 @@
     "Type": "Normal",
     "SubType": "Normal",
     "PKMode": false,
-    "Resource": "Map01"
+    "Resource": "Map01",
+    "Asset": "Sunset_Forest"
   },
   "3": {
     "ID": 3,
@@ -21,7 +23,8 @@
     "Type": "Normal",
     "SubType": "Normal",
     "PKMode": false,
-    "Resource": "Map02"
+    "Resource": "Map02",
+    "Asset": "Sunset_Forest"
   },
   "4": {
     "ID": 4,
@@ -29,6 +32,7 @@
     "Type": "Normal",
     "SubType": "Normal",
     "PKMode": false,
-    "Resource": "Map03"
+    "Resource": "Map03",
+    "Asset": "Sunset_Dungon"
   }
 }

@@ -27,6 +27,7 @@ namespace Services
         {
             if (DataManager.Instance.Maps.ContainsKey(id))
             {
+                User.Instance.CurrentMapData = DataManager.Instance.Maps[id];
                 SceneManager.Instance.LoadScene(DataManager.Instance.Maps[id].Resource);
             }
             else

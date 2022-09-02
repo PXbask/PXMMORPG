@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\Log\UnityLogger.cs" />
      <Compile Include="Assets\Scripts\Managers\CharacterManager.cs" />
      <Compile Include="Assets\Scripts\Managers\DataManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\MiniMapManager.cs" />
      <Compile Include="Assets\Scripts\Models\User.cs" />
      <Compile Include="Assets\Scripts\Network\NetClient.cs" />
      <Compile Include="Assets\Scripts\Scene\SceneManager.cs" />
@@ -78,6 +79,7 @@
      <Compile Include="Assets\Scripts\UI\UILogin.cs" />
      <Compile Include="Assets\Scripts\UI\UIMainCity.cs" />
      <Compile Include="Assets\Scripts\UI\UIMessageBox.cs" />
+     <Compile Include="Assets\Scripts\UI\UIMiniMap.cs" />
      <Compile Include="Assets\Scripts\UI\UINameBar.cs" />
      <Compile Include="Assets\Scripts\UI\UIProfileView.cs" />
      <Compile Include="Assets\Scripts\UI\UIRegister.cs" />

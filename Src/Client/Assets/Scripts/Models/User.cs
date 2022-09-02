@@ -23,5 +23,8 @@ namespace Models
 
         public SkillBridge.Message.NCharacterInfo CurrentCharacter { get; set; }
 
+        public Common.Data.MapDefine CurrentMapData { get; set; }
+
+        public UnityEngine.GameObject CurrentCharacterObject { get; set; }
     }
 }
