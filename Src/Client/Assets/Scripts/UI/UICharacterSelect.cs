@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using SkillBridge.Message;
 using Models;
 using Services;
-
+using Manager;
 public class UICharacterSelect : MonoBehaviour {
 
 	public UICharacterView characterView;

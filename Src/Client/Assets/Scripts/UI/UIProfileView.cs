@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class UIProfileView : MonoBehaviour {
-	public RectTransform rect;
+	public RectTransform rect_content;
 	public GameObject uicharinfo;
 	private RectTransform rectTransform;
 	public UICharacterView characterView;
@@ -20,9 +20,9 @@ public class UIProfileView : MonoBehaviour {
 	public void AddProfile(SkillBridge.Message.NCharacterInfo nCharacterInfo,int idx)
     {
 		var sd = rectTransform.rect.height * uicharinfo.transform.lossyScale.x;
-		rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, rect.rect.width);
-		rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, rect.rect.height + sd);
-		var go = Instantiate(uicharinfo, rect);
+		rect_content.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, rect_content.rect.width);
+		rect_content.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, rect_content.rect.height + sd);
+		var go = Instantiate(uicharinfo, rect_content);
 		UICharInfo info = go.GetComponent<UICharInfo>();
 		info.info = nCharacterInfo;
 		go.GetComponent<Button>().onClick.AddListener(() => OnSelectCharacter(idx));
@@ -47,7 +47,7 @@ public class UIProfileView : MonoBehaviour {
 
 		if(profileButtons.Count > 0)
         {
-			characterView.CurrentCharacter = (int)profileButtons[1].GetComponent<UICharInfo>().info.Class - 1;
+			characterView.CurrentCharacter = (int)profileButtons[0].GetComponent<UICharInfo>().info.Class - 1;
         }
         else
         {

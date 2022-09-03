@@ -9,7 +9,7 @@ public class MainPlayerCamera : MonoSingleton<MainPlayerCamera>
 
     public GameObject player;
 	// Use this for initialization
-	void Start () {
+	protected override void OnStart () {
 		
 	}
 	
@@ -21,7 +21,7 @@ public class MainPlayerCamera : MonoSingleton<MainPlayerCamera>
     private void LateUpdate()
     {
         if (player == null)
-            return;
+            player = Models.User.Instance.CurrentCharacterObject;
 
         this.transform.position = player.transform.position;
         this.transform.rotation = player.transform.rotation;

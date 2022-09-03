@@ -6,7 +6,7 @@ using System.IO;
 using Services;
 using SkillBridge.Message;
 using ProtoBuf;
-
+using Manager;
 public class LoadingManager : MonoBehaviour {
 
     public GameObject UITips;

@@ -5,7 +5,7 @@ using UnityEngine;
 using Entities;
 
 
-public class EntityController : MonoBehaviour
+public class EntityController : MonoBehaviour, Manager.IEntityNotify
 {
 
     public Animator anim;
@@ -31,6 +31,7 @@ public class EntityController : MonoBehaviour
     void Start () {
         if (entity != null)
         {
+            Manager.EntityManager.Instance.RegisterEntityChangeNotify(this.entity.entityId, this);
             this.UpdateTransform();
         }
 
@@ -85,5 +86,14 @@ public class EntityController : MonoBehaviour
                 anim.SetTrigger("Jump");
                 break;
         }
+    }
+
+    public void OnEntityRemoved()
+    {
+        if (UIWorldElementManager.Instance != null)
+        {
+            UIWorldElementManager.Instance.RemoveElement(this.transform);
+        }
+        Destroy(gameObject);
     }
 }

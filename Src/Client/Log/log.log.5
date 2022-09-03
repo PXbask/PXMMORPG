@@ -1,44 +1,107 @@
-2022-09-02 10:44:22,120 [ 1] INFO  Unity: LoadingManager start
-2022-09-02 10:44:25,338 [ 1] INFO  Unity: DataManager > DataManager()
-2022-09-02 10:44:28,396 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
-2022-09-02 10:44:28,398 [ 1] INFO  Unity: ConnectToServer() Start 
-2022-09-02 10:44:28,404 [ 1] INFO  Unity: DoConnect
-2022-09-02 10:44:28,407 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-09-02 10:44:28,413 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-09-03 16:33:03,336 [ 1] INFO  Unity: LoadingManager start
+2022-09-03 16:33:11,917 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:0
+2022-09-03 16:33:11,917 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:0
+2022-09-03 16:33:11,949 [ 1] INFO  Unity: OnUserLogin:Failed [’À∫≈ªÚ√‹¬Î¥ÌŒÛ]
+2022-09-03 16:33:11,950 [ 1] INFO  Unity: OnUserLogin:Failed [’À∫≈ªÚ√‹¬Î¥ÌŒÛ]
+2022-09-03 16:33:22,007 [ 1] INFO  Unity: UserLoginRequest::user :Satori psw:000
+2022-09-03 16:33:22,007 [ 1] INFO  Unity: UserLoginRequest::user :Satori psw:000
+2022-09-03 16:33:22,040 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2022-09-03 16:33:22,040 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2022-09-03 16:33:22,041 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-09-03 16:33:22,041 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-09-03 16:33:22,379 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-09-03 16:33:22,379 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-09-03 16:33:31,192 [ 1] INFO  Unity: UserCreateCharacterRequest::name :S0 class:Warrior
+2022-09-03 16:33:31,192 [ 1] INFO  Unity: UserCreateCharacterRequest::name :S0 class:Warrior
+2022-09-03 16:33:31,276 [ 1] INFO  Unity: OnUserCreateChar:Success [None]
+2022-09-03 16:33:31,276 [ 1] INFO  Unity: OnUserCreateChar:Success [None]
+2022-09-03 16:33:31,279 [ 1] ERROR Unity: Message handler exception:, Argument is out of range.
+Parameter name: index, mscorlib,   at System.Collections.Generic.List`1[UnityEngine.GameObject].get_Item (Int32 index) [0x0000c] in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/List.cs:633 
+  at UIProfileView.UpdateProfileData () [0x000b9] in C:\Users\PXbask\PXmmorpg\Src\Client\Assets\Scripts\UI\UIProfileView.cs:50 
+  at UICharacterSelect.InitCharacterSelect (Boolean init) [0x00026] in C:\Users\PXbask\PXmmorpg\Src\Client\Assets\Scripts\UI\UICharacterSelect.cs:46 
+  at UICharacterSelect.OnCreateChar (Result result, System.String msg) [0x0001c] in C:\Users\PXbask\PXmmorpg\Src\Client\Assets\Scripts\UI\UICharacterSelect.cs:102 
+  at Services.UserService.OnUserCreateChar (System.Object sender, SkillBridge.Message.UserCreateCharacterResponse response) [0x0009f] in C:\Users\PXbask\PXmmorpg\Src\Client\Assets\Scripts\Services\UserService.cs:228 
+  at Network.MessageDistributer`1[System.Object].RaiseEvent[UserCreateCharacterResponse] (System.Object sender, SkillBridge.Message.UserCreateCharacterResponse msg) [0x00000] in <filename unknown>:0 
+2022-09-03 16:33:31,281 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{ArgumentOutOfRangeException: Argument is out of range.
+Parameter name: index, System.Collections.Generic.List`1[UnityEngine.GameObject].get_Item (Int32 index) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/List.cs:633)
+UIProfileView.UpdateProfileData () (at Assets/Scripts/UI/UIProfileView.cs:50)
+UICharacterSelect.InitCharacterSelect (Boolean init) (at Assets/Scripts/UI/UICharacterSelect.cs:46)
+UICharacterSelect.OnCreateChar (Result result, System.String msg) (at Assets/Scripts/UI/UICharacterSelect.cs:102)
+Services.UserService.OnUserCreateChar (System.Object sender, SkillBridge.Message.UserCreateCharacterResponse response) (at Assets/Scripts/Services/UserService.cs:228)
+Network.MessageDistributer`1[System.Object].RaiseEvent[UserCreateCharacterResponse] (System.Object sender, SkillBridge.Message.UserCreateCharacterResponse msg)
+}</args></log4net.Error>
+2022-09-03 16:33:31,284 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{ArgumentOutOfRangeException: Argument is out of range.
+Parameter name: index, System.Collections.Generic.List`1[UnityEngine.GameObject].get_Item (Int32 index) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/List.cs:633)
+UIProfileView.UpdateProfileData () (at Assets/Scripts/UI/UIProfileView.cs:50)
+UICharacterSelect.InitCharacterSelect (Boolean init) (at Assets/Scripts/UI/UICharacterSelect.cs:46)
+UICharacterSelect.OnCreateChar (Result result, System.String msg) (at Assets/Scripts/UI/UICharacterSelect.cs:102)
+Services.UserService.OnUserCreateChar (System.Object sender, SkillBridge.Message.UserCreateCharacterResponse response) (at Assets/Scripts/Services/UserService.cs:228)
+Network.MessageDistributer`1[System.Object].RaiseEvent[UserCreateCharacterResponse] (System.Object sender, SkillBridge.Message.UserCreateCharacterResponse msg)
+}</args></log4net.Error>
+2022-09-03 16:33:34,922 [ 1] INFO  Unity: Select Char:[8]S0[Warrior]
+2022-09-03 16:33:34,922 [ 1] INFO  Unity: Select Char:[8]S0[Warrior]
+2022-09-03 16:35:08,933 [ 1] INFO  Unity: UserGameEnterRequest::index :0
+2022-09-03 16:35:08,933 [ 1] INFO  Unity: UserGameEnterRequest::index :0
+2022-09-03 16:35:08,967 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
+2022-09-03 16:35:08,967 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
+2022-09-03 16:35:08,969 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:0 CharacterID:1
+2022-09-03 16:35:08,969 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:0 CharacterID:1
+2022-09-03 16:35:08,971 [ 1] INFO  Unity: AddCharacter:8:S0 Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-09-03 16:35:08,971 [ 1] INFO  Unity: AddCharacter:8:S0 Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-09-03 16:35:08,974 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-09-03 16:35:08,974 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-09-03 16:35:08,975 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
+2022-09-03 16:35:08,975 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
+2022-09-03 16:35:09,533 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-09-03 16:35:09,533 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-09-03 16:35:19,459 [ 1] INFO  Unity: SetDirection:(98, 18, 0)
+2022-09-03 16:35:19,459 [ 1] INFO  Unity: SetDirection:(98, 18, 0)
+2022-09-03 16:35:19,557 [ 1] INFO  Unity: SetDirection:(94, 35, 0)
+2022-09-03 16:35:19,557 [ 1] INFO  Unity: SetDirection:(94, 35, 0)
+2022-09-03 16:35:19,641 [ 1] INFO  Unity: SetDirection:(86, 51, 0)
+2022-09-03 16:35:19,641 [ 1] INFO  Unity: SetDirection:(86, 51, 0)
+2022-09-03 16:35:19,740 [ 1] INFO  Unity: SetDirection:(74, 67, 0)
+2022-09-03 16:35:19,740 [ 1] INFO  Unity: SetDirection:(74, 67, 0)
+2022-09-03 16:35:19,790 [ 1] INFO  Unity: MoveForward
+2022-09-03 16:35:19,790 [ 1] INFO  Unity: MoveForward
+2022-09-03 16:35:19,889 [ 1] INFO  Unity: SetDirection:(60, 80, 0)
+2022-09-03 16:35:19,889 [ 1] INFO  Unity: SetDirection:(60, 80, 0)
+2022-09-03 16:35:20,585 [ 1] INFO  Unity: Stop
+2022-09-03 16:35:20,585 [ 1] INFO  Unity: Stop
+2022-09-03 16:35:20,767 [ 1] INFO  Unity: MoveBack
+2022-09-03 16:35:20,768 [ 1] INFO  Unity: MoveBack
+2022-09-03 16:35:21,975 [ 1] INFO  Unity: Stop
+2022-09-03 16:35:21,976 [ 1] INFO  Unity: Stop
+2022-09-03 16:35:22,207 [ 1] INFO  Unity: SetDirection:(43, 90, 0)
+2022-09-03 16:35:22,208 [ 1] INFO  Unity: SetDirection:(43, 90, 0)
+2022-09-03 16:35:22,324 [ 1] INFO  Unity: SetDirection:(24, 97, 0)
+2022-09-03 16:35:22,324 [ 1] INFO  Unity: SetDirection:(24, 97, 0)
+2022-09-03 16:35:22,406 [ 1] INFO  Unity: SetDirection:(7, 100, 0)
+2022-09-03 16:35:22,406 [ 1] INFO  Unity: SetDirection:(7, 100, 0)
+2022-09-03 16:35:22,506 [ 1] INFO  Unity: SetDirection:(-11, 99, 0)
+2022-09-03 16:35:22,506 [ 1] INFO  Unity: SetDirection:(-11, 99, 0)
+2022-09-03 16:35:25,658 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-09-03 16:35:25,658 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-09-03 16:35:25,659 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
-2022-09-02 10:44:28,420 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2022-09-02 10:44:28,561 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2022-09-02 10:44:28,563 [ 1] INFO  Unity: LoadLevel: CharSelect
-2022-09-02 10:44:29,107 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-09-02 10:44:29,700 [ 1] INFO  Unity: Select Char:[6]PXbask[Wizard]
-2022-09-02 10:44:30,496 [ 1] INFO  Unity: UserGameEnterRequest::index :1
-2022-09-02 10:44:30,534 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
-2022-09-02 10:44:30,536 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:0 CharacterID:1
-2022-09-02 10:44:30,539 [ 1] INFO  Unity: AddCharacter:6:PXbask Map:1 Entity:(0:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-09-02 10:44:30,541 [ 1] INFO  Unity: AddCharacter:6:PXbask Map:1 Entity:(0:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-09-02 10:44:30,543 [ 1] INFO  Unity: LoadLevel: MainCity
-2022-09-02 10:44:30,545 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
-2022-09-02 10:44:31,415 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-09-02 10:46:52,758 [ 1] INFO  Unity: MoveForward
-2022-09-02 10:46:52,874 [ 1] INFO  Unity: Stop
-2022-09-02 10:46:53,207 [ 1] INFO  Unity: MoveForward
-2022-09-02 10:46:53,743 [ 1] INFO  Unity: SetDirection:(98, -19, 0)
-2022-09-02 10:46:53,759 [ 1] INFO  Unity: Stop
-2022-09-02 10:46:53,842 [ 1] INFO  Unity: SetDirection:(93, -36, 0)
-2022-09-02 10:46:53,924 [ 1] INFO  Unity: SetDirection:(85, -52, 0)
-2022-09-02 10:46:54,030 [ 1] INFO  Unity: SetDirection:(74, -67, 0)
-2022-09-02 10:46:54,200 [ 1] INFO  Unity: SetDirection:(61, -80, 0)
-2022-09-02 10:46:54,306 [ 1] INFO  Unity: MoveForward
-2022-09-02 10:46:54,962 [ 1] INFO  Unity: Stop
-2022-09-02 10:46:55,030 [ 1] INFO  Unity: SetDirection:(46, -89, 0)
-2022-09-02 10:46:55,130 [ 1] INFO  Unity: SetDirection:(30, -95, 0)
-2022-09-02 10:46:55,470 [ 1] INFO  Unity: SetDirection:(47, -88, 0)
-2022-09-02 10:46:55,562 [ 1] INFO  Unity: SetDirection:(63, -77, 0)
-2022-09-02 10:46:55,604 [ 1] INFO  Unity: MoveBack
-2022-09-02 10:46:55,680 [ 1] INFO  Unity: SetDirection:(76, -65, 0)
-2022-09-02 10:46:56,430 [ 1] INFO  Unity: Stop
-2022-09-02 10:47:25,128 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-09-02 10:47:25,129 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-09-03 16:35:25,659 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+
+2022-09-03 16:35:25,661 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-09-03 16:35:25,661 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-09-03 16:35:25,662 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+
+2022-09-03 16:35:25,662 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)

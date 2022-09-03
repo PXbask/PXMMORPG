@@ -15884,6 +15884,7 @@ MonoBehaviour:
   mapImage: {fileID: 374439626}
   arrow: {fileID: 1492974111}
   mapName: {fileID: 1342697442}
+  playertr: {fileID: 0}
 --- !u!1 &485142200
 GameObject:
   m_ObjectHideFlags: 0
@@ -21213,6 +21214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c635be0209fa5488b5b0f96ce1700f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  global: 1
 --- !u!4 &663986363
 Transform:
   m_ObjectHideFlags: 0
@@ -23766,7 +23768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c964d35b6a33a8e458be29cbd91c36a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  global: 0
+  global: 1
   uinameBar: {fileID: 1623635935835254, guid: c386b5870cfc39041bdb10ca86a4ec28, type: 2}
 --- !u!1 &758956649
 GameObject:
@@ -32485,8 +32487,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: BackToCharSelect
+      - m_Target: {fileID: 1415483396}
+        m_MethodName: OnClickBack2Select
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

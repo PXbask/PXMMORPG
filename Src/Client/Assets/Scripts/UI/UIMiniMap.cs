@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using Manager;
 public class UIMiniMap : MonoBehaviour {
 	public BoxCollider boundary;
 	public Image mapImage;

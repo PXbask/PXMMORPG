@@ -14,7 +14,8 @@ public class UIMainCity : MonoBehaviour {
     }
 	public void OnClickBack2Select()
     {
-
+        SceneManager.Instance.LoadScene("CharSelect");
+        Services.UserService.Instance.SendGameLeave();
     }
     public void UpdateInfo()
     {

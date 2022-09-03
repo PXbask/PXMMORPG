@@ -5,7 +5,7 @@ using System;
 using Network;
 using SkillBridge.Message;
 using Models;
-
+using Manager;
 namespace Services
 {
     public class MapService : Singleton<MapService>, IDisposable
@@ -56,6 +56,10 @@ namespace Services
         private void OnMapCharacterLeave(object sender, MapCharacterLeaveResponse response)
         {
             Debug.LogFormat("OnMapCharacterLeave:MapID:{0} CharacterID:{1}", User.Instance.CurrentCharacter.mapId, response.characterId);
+            if (response.characterId != User.Instance.CurrentCharacter.Id)
+                Manager.CharacterManager.Instance.RemoveCharacter(response.characterId);
+            else
+                Manager.CharacterManager.Instance.Characters.Clear();
         }
         #endregion
     }

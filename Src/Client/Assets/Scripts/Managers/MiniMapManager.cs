@@ -3,18 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MiniMapManager : Singleton<MiniMapManager> {
+namespace Manager
+{
+	public class MiniMapManager : Singleton<MiniMapManager>
+	{
 
-	void Start () {
-		
+		void Start()
+		{
+
+		}
+
+		void Update()
+		{
+
+		}
+		public Sprite LoadCurrentMiniMap()
+		{
+			string path = string.Format("UI/Minimap/{0}", User.Instance.CurrentMapData.Asset);
+			return Resloader.Load<Sprite>(path);
+		}
 	}
-	
-	void Update () {
-		
-	}
-	public Sprite LoadCurrentMiniMap()
-    {
-		string path = string.Format("UI/Minimap/{0}",User.Instance.CurrentMapData.Asset);
-		return Resloader.Load<Sprite>(path);
-    }
 }
+

@@ -4,7 +4,7 @@ using UnityEngine;
 
 using Entities;
 using SkillBridge.Message;
-
+using Manager;
 public class PlayerInputController : MonoBehaviour {
 
     public Rigidbody rb;
