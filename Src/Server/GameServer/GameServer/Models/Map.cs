@@ -42,6 +42,11 @@ namespace GameServer.Models
             this.Define = define;
         }
 
+        internal void Update()
+        {
+            
+        }
+
         /// <summary>
         /// 角色进入地图
         /// </summary>

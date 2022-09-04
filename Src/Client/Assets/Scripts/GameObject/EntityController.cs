@@ -60,7 +60,7 @@ public class EntityController : MonoBehaviour, Manager.IEntityNotify
         if (this.entity == null)
             return;
 
-        this.entity.OnUpdate(Time.fixedDeltaTime);
+        this.entity.UpdateInfo(Time.fixedDeltaTime);
 
         if (!this.isPlayer)
         {

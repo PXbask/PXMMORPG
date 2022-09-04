@@ -36,7 +36,7 @@ namespace Entities
             this.SetEntityData(entity);
         }
 
-        public virtual void OnUpdate(float delta)
+        public virtual void UpdateInfo(float delta)
         {
             if (this.speed != 0)
             {
