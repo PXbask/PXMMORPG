@@ -96,4 +96,10 @@ public class EntityController : MonoBehaviour, Manager.IEntityNotify
         }
         Destroy(gameObject);
     }
+
+    public void OnEntityChanged(Entity entity)
+    {
+        Debug.LogFormat("OnEntityChanged: ID:{0} Postion:{1} Direction:{2} Speed:{3}",
+            entity.entityId, entity.position, entity.direction, entity.speed);
+    }
 }

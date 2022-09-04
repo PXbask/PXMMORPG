@@ -236,7 +236,13 @@ namespace Services
         private void OnUserGameLeave(object sender, UserGameLeaveResponse response)
         {
             Debug.LogFormat("OnUserGameLeave:{0} [{1}]", response.Result, response.Errormsg);
-            if (response.Result.Equals(Result.Success)) { }
+            if (response.Result.Equals(Result.Success)) {
+                MapService.Instance.CurrentMapID = 0;
+            }
+            else
+            {
+                MessageBox.Show("退出失败");
+            }
         }
         private void OnMapCharacterEnter(object sender, MapCharacterEnterResponse response)
         {

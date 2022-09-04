@@ -42,10 +42,6 @@ namespace GameServer.Models
             this.Define = define;
         }
 
-        internal void Update()
-        {
-        }
-
         /// <summary>
         /// 角色进入地图
         /// </summary>
@@ -83,6 +79,7 @@ namespace GameServer.Models
                 this.SendCharacterLeaveMap(kv.Value.connection, charInfo);
             }
         }
+        #region SendMessages
         void SendCharacterEnterMap(NetConnection<NetSession> conn, NCharacterInfo character)
         {
             NetMessage message = new NetMessage();
@@ -106,5 +103,25 @@ namespace GameServer.Models
             byte[] data = PackageHandler.PackMessage(message);
             connection.SendData(data, 0, data.Length);
         }
+
+        #endregion
+        internal void UpdateEntity(NEntitySync sync)
+        {
+            foreach(var kv in MapCharacters)
+            {
+                if (kv.Value.character.entityId == sync.Id)
+                {
+                    kv.Value.character.Speed = sync.Entity.Speed;
+                    kv.Value.character.Direction = sync.Entity.Direction;
+                    kv.Value.character.Position = sync.Entity.Position;
+                }
+                else
+                {
+                    Services.MapService.Instance.SendUpdateEntity(kv.Value.connection, sync);
+                }
+            }
+        }
+
+
     }
 }
