@@ -55,10 +55,11 @@ namespace Services
         #region MessageDistributer Event
         private void OnMapCharacterEnter(object sender, MapCharacterEnterResponse response)
         {
-            Debug.LogFormat("OnMapCharacterEnter:MapID:{0} CharacterID:{1}", User.Instance.CurrentCharacter.mapId, response.mapId);
+            if (User.Instance.CurrentCharacter != null)
+                Debug.LogFormat("OnMapCharacterEnter:MapID:{0} CharacterID:{1}", User.Instance.CurrentCharacter.mapId, response.mapId);
             foreach (var character in response.Characters)
             {
-                if (User.Instance.CurrentCharacter.Id == character.Id)
+                if (User.Instance.CurrentCharacter==null || User.Instance.CurrentCharacter.Id == character.Id)
                 {
                     User.Instance.CurrentCharacter = character;
                 }
@@ -76,7 +77,7 @@ namespace Services
             if (response.characterId != User.Instance.CurrentCharacter.Id)
                 Manager.CharacterManager.Instance.RemoveCharacter(response.characterId);
             else
-                Manager.CharacterManager.Instance.Characters.Clear();
+                Manager.CharacterManager.Instance.Clear();
         }
         private void OnMapEntitySync(object sender, MapEntitySyncResponse response)
         {

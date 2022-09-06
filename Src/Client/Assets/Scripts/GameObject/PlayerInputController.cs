@@ -79,7 +79,6 @@ public class PlayerInputController : MonoBehaviour {
                 state = SkillBridge.Message.CharacterState.Idle;
                 this.rb.velocity = Vector3.zero;
                 this.character.Stop();
-                //Debug.LogFormat("@@ EntityData.Speed:{0}  speed:{1}", this.character.EntityData.Speed, character.speed);
                 this.SendEntityEvent(EntityEvent.Idle);
             }
         }
@@ -129,7 +128,6 @@ public class PlayerInputController : MonoBehaviour {
             entityController.OnEntityEvent(entityEvent);
         if (character != null)
         {
-            this.character.UpdateInfo(Time.fixedDeltaTime);
             Services.MapService.Instance.SendEntitySync(character.EntityData,entityEvent);
         }
     }

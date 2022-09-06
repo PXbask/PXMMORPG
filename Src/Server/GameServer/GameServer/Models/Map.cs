@@ -75,14 +75,14 @@ namespace GameServer.Models
             byte[] data = PackageHandler.PackMessage(message);
             conn.SendData(data, 0, data.Length);
         }
-        internal void CharacterLeave(NCharacterInfo charInfo)
+        internal void CharacterLeave(Character charInfo)
         {
             Log.InfoFormat("CharacterLeave: Map:{0} characterid:{1}", this.ID, charInfo.Id);
-            MapCharacters.Remove(charInfo.Id);
             foreach(var kv in this.MapCharacters)
             {
                 this.SendCharacterLeaveMap(kv.Value.connection, charInfo);
             }
+            MapCharacters.Remove(charInfo.Id);
         }
         #region SendMessages
         void SendCharacterEnterMap(NetConnection<NetSession> conn, NCharacterInfo character)
@@ -98,7 +98,7 @@ namespace GameServer.Models
             conn.SendData(data, 0, data.Length);
         }
 
-        private void SendCharacterLeaveMap(NetConnection<NetSession> connection, NCharacterInfo charInfo)
+        private void SendCharacterLeaveMap(NetConnection<NetSession> connection, Character charInfo)
         {
             NetMessage message = new NetMessage();
             message.Response=new NetMessageResponse();

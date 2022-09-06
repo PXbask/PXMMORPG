@@ -238,6 +238,7 @@ namespace Services
             Debug.LogFormat("OnUserGameLeave:{0} [{1}]", response.Result, response.Errormsg);
             if (response.Result.Equals(Result.Success)) {
                 MapService.Instance.CurrentMapID = 0;
+                Models.User.Instance.CurrentCharacter = null;
             }
             else
             {
@@ -247,8 +248,8 @@ namespace Services
         private void OnMapCharacterEnter(object sender, MapCharacterEnterResponse response)
         {
             Debug.LogFormat("OnMapCharacterEnter:MapID:{0}", response.mapId);
-            NCharacterInfo info = response.Characters[0];
-            User.Instance.CurrentCharacter = info;
+            //NCharacterInfo info = response.Characters[0];
+            //User.Instance.CurrentCharacter = info;
         }
         #endregion
     }

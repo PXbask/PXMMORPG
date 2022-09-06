@@ -22,8 +22,8 @@ public class UIMiniMap : MonoBehaviour {
 	void Update () {
         if (playertr == null)
         {
-			if (Models.User.Instance.CurrentCharacterObject != null)
-				playertr = Models.User.Instance.CurrentCharacterObject.transform;
+			if (MiniMapManager.Instance.PlayerTransform != null)
+				playertr = MiniMapManager.Instance.PlayerTransform;
 			else
 				return;
 		}

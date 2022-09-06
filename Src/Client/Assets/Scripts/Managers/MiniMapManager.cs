@@ -7,8 +7,18 @@ namespace Manager
 {
 	public class MiniMapManager : Singleton<MiniMapManager>
 	{
+        public Transform PlayerTransform
+		{
+			get
+			{
+				if (User.Instance.CurrentCharacterObject == null)
+					return null;
+				else
+					return User.Instance.CurrentCharacterObject.transform;
+			}
+		}
 
-		void Start()
+        void Start()
 		{
 
 		}
