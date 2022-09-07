@@ -51,6 +51,15 @@ namespace Services
             };
             NetClient.Instance.SendMessage(message);
         }
+        internal void SendMapTeleport(int iD)
+        {
+            Debug.LogFormat("MapTeleportRequest: teleporterId:{0}",iD);
+            NetMessage message = new NetMessage();
+            message.Request=new NetMessageRequest();
+            message.Request.mapTeleport=new MapTeleportRequest();
+            message.Request.mapTeleport.teleporterId=iD;
+            NetClient.Instance.SendMessage(message);
+        }
         #endregion
         #region MessageDistributer Event
         private void OnMapCharacterEnter(object sender, MapCharacterEnterResponse response)
