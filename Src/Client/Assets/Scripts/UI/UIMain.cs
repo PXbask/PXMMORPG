@@ -5,10 +5,10 @@ using UnityEngine.UI;
 using Entities;
 using Models;
 
-public class UIMainCity : MonoBehaviour {
+public class UIMain : MonoSingleton<UIMain> {
     public Text nameText;
     public Text level;
-    private void Start()
+    protected override void OnStart()
     {
         UpdateInfo();
     }
@@ -22,4 +22,11 @@ public class UIMainCity : MonoBehaviour {
         this.nameText.text = User.Instance.CurrentCharacter.Name;
         this.level.text = User.Instance.CurrentCharacter.Level.ToString();
     }
+    #region Test
+    public void OpenUITest()
+    {
+        UITest uITest = Manager.UIManager.Instance.Show<UITest>();
+        uITest.SetInfo("Title", "Content");
+    }
+    #endregion
 }

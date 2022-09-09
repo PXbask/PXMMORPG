@@ -154,17 +154,22 @@ namespace GameServer.Services
         {
             Character character = sender.Session.Character;
             Log.InfoFormat("UserGameLeaveRequest: characterid:{0} {1}  Map{2}", character.Id, character.Info.Name, character.Info.mapId);
-            CharacterManager.Instance.RemoveCharacter(character.Id);
-            Managers.MapManager.Instance[character.Info.mapId].CharacterLeave(character);
+            CharacterLeave(character);
 
-            NetMessage message=new NetMessage();
-            message.Response=new NetMessageResponse();
-            message.Response.gameLeave= new UserGameLeaveResponse();
+            NetMessage message = new NetMessage();
+            message.Response = new NetMessageResponse();
+            message.Response.gameLeave = new UserGameLeaveResponse();
             message.Response.gameLeave.Result = Result.Success;
             message.Response.gameLeave.Errormsg = "None";
 
-            byte[] data=PackageHandler.PackMessage(message);
+            byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);
+        }
+
+        public void CharacterLeave(Character character)
+        {
+            CharacterManager.Instance.RemoveCharacter(character.Id);
+            Managers.MapManager.Instance[character.Info.mapId].CharacterLeave(character);
         }
     }
 }

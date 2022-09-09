@@ -15,5 +15,11 @@ namespace Network
         public TUser User { get; set; }
         public Character Character { get; set; }
         public NEntity Entity { get; set; }
+
+        internal void Disconnected()
+        {
+            if (Character != null)
+                GameServer.Services.UserService.Instance.CharacterLeave(Character);
+        }
     }
 }

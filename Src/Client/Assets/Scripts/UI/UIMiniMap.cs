@@ -4,20 +4,22 @@ using UnityEngine;
 using UnityEngine.UI;
 using Manager;
 public class UIMiniMap : MonoBehaviour {
-	public BoxCollider boundary;
+	public Collider boundary;
 	public Image mapImage;
 	public Image arrow;
 	public Text mapName;
 	public Transform playertr;
-	private void InitMap()
+	public void UpdateMap()
     {
 		mapName.text = Models.User.Instance.CurrentMapData.Name;
 		mapImage.sprite = MiniMapManager.Instance.LoadCurrentMiniMap();
 		mapImage.SetNativeSize();
 		mapImage.transform.localPosition = Vector3.zero;
+		this.boundary = MiniMapManager.Instance.Boundary;
+		playertr = null;
 	}
 	void Start () {
-		InitMap();
+		MiniMapManager.Instance.uIMiniMap = this;
 	}
 	void Update () {
         if (playertr == null)
@@ -27,7 +29,8 @@ public class UIMiniMap : MonoBehaviour {
 			else
 				return;
 		}
-		UpdateMinimapLocation();
+		if(boundary != null)
+			UpdateMinimapLocation();
 	}
 	private void UpdateMinimapLocation()
     {
