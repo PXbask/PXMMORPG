@@ -1,28 +1,58 @@
-2022-09-09 12:13:47,194 [ 1] INFO  Unity: LoadingManager start
-2022-09-09 12:13:50,283 [ 1] INFO  Unity: DataManager > DataManager()
-2022-09-09 12:13:57,702 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
-2022-09-09 12:13:57,703 [ 1] INFO  Unity: ConnectToServer() Start 
-2022-09-09 12:13:57,707 [ 1] INFO  Unity: DoConnect
-2022-09-09 12:13:57,709 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-09-09 12:13:57,719 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-09-12 09:18:22,228 [ 1] INFO  Unity: LoadingManager start
+2022-09-12 09:18:22,230 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-09-12 09:18:22,230 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-09-12 09:18:22,230 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
-2022-09-09 12:13:57,724 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2022-09-09 12:13:57,815 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2022-09-09 12:13:57,816 [ 1] INFO  Unity: LoadLevel: CharSelect
-2022-09-09 12:13:58,170 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-09-09 12:13:59,147 [ 1] INFO  Unity: Select Char:[6]PXbask[Wizard]
-2022-09-09 12:13:59,795 [ 1] INFO  Unity: UserGameEnterRequest::index :1
-2022-09-09 12:13:59,830 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
-2022-09-09 12:13:59,833 [ 1] INFO  Unity: AddCharacter:17:PXbask Map:1 Entity:(17:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-09-09 12:13:59,835 [ 1] INFO  Unity: LoadLevel: MainCity
-2022-09-09 12:13:59,837 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
-2022-09-09 12:14:00,547 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2022-09-12 09:18:22,231 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
-2022-09-09 12:14:00,560 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2022-09-12 09:18:28,793 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
+2022-09-12 09:18:28,793 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
+2022-09-12 09:18:29,355 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2022-09-12 09:18:29,355 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2022-09-12 09:18:29,356 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-09-12 09:18:29,356 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-09-12 09:18:29,690 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-09-12 09:18:29,690 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-09-12 09:18:30,668 [ 1] INFO  Unity: Select Char:[6]PXbask[Wizard]
+2022-09-12 09:18:30,669 [ 1] INFO  Unity: Select Char:[6]PXbask[Wizard]
+2022-09-12 09:18:31,512 [ 1] INFO  Unity: UserGameEnterRequest::index :1
+2022-09-12 09:18:31,512 [ 1] INFO  Unity: UserGameEnterRequest::index :1
+2022-09-12 09:28:38,264 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
 
-2022-09-09 12:14:00,680 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-09-09 12:14:08,180 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-09-09 12:14:08,180 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
+  at Network.NetClient.ProcessRecv () [0x00084] in C:\Users\PXbask\PXmmorpg\Src\Client\Assets\Scripts\Network\NetClient.cs:340 
+
+2022-09-12 09:28:38,264 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
+
+  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
+  at Network.NetClient.ProcessRecv () [0x00084] in C:\Users\PXbask\PXmmorpg\Src\Client\Assets\Scripts\Network\NetClient.cs:340 
+
+2022-09-12 09:28:38,265 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:354)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:434)
+
+2022-09-12 09:28:38,265 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:354)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:434)
+
+2022-09-12 09:28:51,898 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-09-12 09:28:51,899 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-09-12 09:28:51,899 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+
+2022-09-12 09:28:51,899 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)

@@ -18,7 +18,7 @@ namespace GameServer.Entities
     {
        
         public TCharacter Data;
-        
+        public ItemManager ItemManager;
 
         public Character(CharacterType type,TCharacter cha):base(new Core.Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ),new Core.Vector3Int(100,0,0))
         {
@@ -32,7 +32,8 @@ namespace GameServer.Entities
             this.Info.Class = (CharacterClass)cha.Class;
             this.Info.mapId = cha.MapID;
             this.Info.Entity = this.EntityData;
-
+            this.ItemManager=new ItemManager(this);
+            this.ItemManager.GetItemInfos(this.Info.Items);
         }
     }
 }
