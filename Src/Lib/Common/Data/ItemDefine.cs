@@ -30,5 +30,7 @@ namespace Common.Data
         public ItemFunction Function { get; set; }
         public int Param { get; set; }
         public List<int> Params { get; set; }
+        public int StackLimit { get; set; }
+        public string Icon { get; set; }
     }
 }

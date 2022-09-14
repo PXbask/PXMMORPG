@@ -233,6 +233,7 @@ namespace Services
             Debug.LogFormat("OnUserGameEnter:{0} [{1}]", response.Result, response.Errormsg);
             if (response.Result.Equals(Result.Success)) {
                 Manager.ItemManager.Instance.Init(response.Character.Items);
+                Manager.BagManager.Instance.Init(response.Character.Bag);
             }
         }
         private void OnUserGameLeave(object sender, UserGameLeaveResponse response)

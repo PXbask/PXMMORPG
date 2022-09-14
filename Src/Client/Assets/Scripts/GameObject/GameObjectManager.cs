@@ -11,7 +11,7 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
 
     Dictionary<int, GameObject> Characters = new Dictionary<int, GameObject>();
     // Use this for initialization
-    protected override void OnStart()
+    protected override void OnAwake()
     {
         StartCoroutine(InitGameObjects());
         CharacterManager.Instance.OnCharacterEnter += OnCharacterEnter;

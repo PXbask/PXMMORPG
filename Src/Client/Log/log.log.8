@@ -1,99 +1,39 @@
-2022-09-12 09:06:44,717 [ 1] INFO  Unity: LoadingManager start
-2022-09-12 09:06:47,860 [ 1] INFO  Unity: DataManager > DataManager()
-2022-09-12 09:06:50,899 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
-2022-09-12 09:06:50,900 [ 1] INFO  Unity: ConnectToServer() Start 
-2022-09-12 09:06:50,916 [ 1] INFO  Unity: DoConnect
-2022-09-12 09:06:50,917 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-09-12 09:06:50,923 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-09-14 17:23:58,672 [ 1] INFO  Unity: LoadingManager start
+2022-09-14 17:24:01,877 [ 1] INFO  Unity: DataManager > DataManager()
+2022-09-14 17:24:05,003 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
+2022-09-14 17:24:05,006 [ 1] INFO  Unity: ConnectToServer() Start 
+2022-09-14 17:24:05,048 [ 1] INFO  Unity: DoConnect
+2022-09-14 17:24:05,051 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-09-14 17:24:05,062 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-09-12 09:06:50,930 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2022-09-12 09:06:51,856 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2022-09-12 09:06:51,858 [ 1] INFO  Unity: LoadLevel: CharSelect
-2022-09-12 09:06:52,276 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-09-12 09:06:53,269 [ 1] INFO  Unity: Select Char:[6]PXbask[Wizard]
-2022-09-12 09:06:54,013 [ 1] INFO  Unity: UserGameEnterRequest::index :1
-2022-09-12 09:07:00,125 [ 1] INFO  Unity: UserGameEnterRequest::index :1
-2022-09-12 09:08:15,237 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
-
-  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
-  at Network.NetClient.ProcessRecv () [0x00084] in C:\Users\PXbask\PXmmorpg\Src\Client\Assets\Scripts\Network\NetClient.cs:340 
-
-2022-09-12 09:08:15,238 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:354)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:434)
-
-2022-09-12 09:08:15,253 [ 1] INFO  Unity: DoConnect
-2022-09-12 09:08:15,254 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-09-12 09:08:15,255 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
-
-2022-09-12 09:08:17,287 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-2022-09-12 09:08:17,299 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-2022-09-12 09:08:17,318 [ 1] INFO  Unity: DoConnect
-2022-09-12 09:08:17,319 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-09-12 09:08:17,320 [ 1] INFO  Unity: Connect[1] to server 127.0.0.1:8000
-
-2022-09-12 09:08:19,349 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-2022-09-12 09:08:19,350 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-2022-09-12 09:08:19,369 [ 1] INFO  Unity: DoConnect
-2022-09-12 09:08:19,370 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-09-12 09:08:19,371 [ 1] INFO  Unity: Connect[2] to server 127.0.0.1:8000
-
-2022-09-12 09:08:21,389 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-2022-09-12 09:08:21,390 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-2022-09-12 09:08:21,390 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :1 reason:Cannot connect to server
-2022-09-12 09:08:24,381 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-09-12 09:08:24,382 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
-
+2022-09-14 17:24:05,072 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2022-09-14 17:24:06,209 [ 1] INFO  Unity: OnUserLogin:Failed [账号或密码错误]
+2022-09-14 17:24:16,760 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
+2022-09-14 17:24:16,818 [ 1] INFO  Unity: OnUserLogin:Failed [账号或密码错误]
+2022-09-14 17:24:23,024 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683zyx
+2022-09-14 17:24:23,056 [ 1] INFO  Unity: OnUserLogin:Failed [账号或密码错误]
+2022-09-14 17:24:47,013 [ 1] INFO  Unity: UserRegisterRequest::user :PXbask psw:98259683Zyx
+2022-09-14 17:24:47,130 [ 1] INFO  Unity: OnUserRegister:Success [None]
+2022-09-14 17:24:47,132 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-09-14 17:24:47,793 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-09-14 17:24:47,807 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, UIProfileView.UpdateProfileData () (at Assets/Scripts/UI/UIProfileView.cs:43)
+UICharacterSelect.InitCharacterSelect (Boolean init) (at Assets/Scripts/UI/UICharacterSelect.cs:46)
+UICharacterSelect.Start () (at Assets/Scripts/UI/UICharacterSelect.cs:33)
+}</args></log4net.Error>
+2022-09-14 17:25:43,286 [ 1] INFO  Unity: UserCreateCharacterRequest::name :PX class:Wizard
+2022-09-14 17:26:30,865 [ 1] INFO  Unity: UserCreateCharacterRequest::name :PX class:Wizard
+2022-09-14 17:26:52,525 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, UIProfileView.UpdateProfileData () (at Assets/Scripts/UI/UIProfileView.cs:43)
+UICharacterSelect.InitCharacterSelect (Boolean init) (at Assets/Scripts/UI/UICharacterSelect.cs:46)
+UnityEngine.Events.InvokableCall`1[System.Boolean].Invoke (Boolean args0) (at D:/unity/Runtime/Export/UnityEvent.cs:207)
+UnityEngine.Events.CachedInvokableCall`1[System.Boolean].Invoke (System.Object[] args) (at D:/unity/Runtime/Export/UnityEvent.cs:345)
+UnityEngine.Events.UnityEvent.Invoke () (at D:/unity/Runtime/Export/UnityEvent_0.cs:70)
+UnityEngine.UI.Button.Press () (at D:/unity/Extensions/guisystem/UnityEngine.UI/UI/Core/Button.cs:36)
+UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) (at D:/unity/Extensions/guisystem/UnityEngine.UI/UI/Core/Button.cs:45)
+UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at D:/unity/Extensions/guisystem/UnityEngine.UI/EventSystem/ExecuteEvents.cs:50)
+UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) (at D:/unity/Extensions/guisystem/UnityEngine.UI/EventSystem/ExecuteEvents.cs:261)
+UnityEngine.EventSystems.EventSystem:Update()
+}</args></log4net.Error>
+2022-09-14 17:26:53,565 [ 1] INFO  Unity: LoadLevel: Loading
+2022-09-14 17:26:53,688 [ 1] INFO  Unity: LevelLoadCompleted:1

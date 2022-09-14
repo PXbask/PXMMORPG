@@ -9,6 +9,8 @@
     "UseCD": 1.0,
     "Price": 200,
     "SellPrice": 100,
+    "StackLimit": 99,
+    "Icon": "UI/Items/Health_Potion",
     "Function": "RecoverHP",
     "Param": 500
   },
@@ -22,6 +24,8 @@
     "UseCD": 1.0,
     "Price": 200,
     "SellPrice": 100,
+    "StackLimit": 99,
+    "Icon": "UI/Items/Magic_Potion",
     "Function": "RecoverMP",
     "Param": 500
   },
@@ -35,6 +39,8 @@
     "UseCD": 5.0,
     "Price": 200,
     "SellPrice": 100,
+    "StackLimit": 99,
+    "Icon": "UI/Items/Bread",
     "Function": "AddBuff",
     "Param": 1000
   },
@@ -48,6 +54,8 @@
     "UseCD": 5.0,
     "Price": 200,
     "SellPrice": 100,
+    "StackLimit": 99,
+    "Icon": "UI/Items/Seafood_Soup",
     "Function": "AddBuff",
     "Param": 1000
   },
@@ -60,6 +68,8 @@
     "CanUse": true,
     "UseCD": 0.0,
     "SellPrice": 1,
+    "StackLimit": 1,
+    "Icon": "UI/Items/Skill_Book_1",
     "Function": "AddExp"
   },
   "6": {
@@ -70,7 +80,9 @@
     "Category": "Badge",
     "CanUse": false,
     "UseCD": 0.0,
-    "SellPrice": 1
+    "SellPrice": 1,
+    "StackLimit": 99,
+    "Icon": "UI/Items/Badge"
   },
   "7": {
     "ID": 7,
@@ -81,6 +93,8 @@
     "CanUse": true,
     "UseCD": 0.0,
     "SellPrice": 1,
+    "StackLimit": 1,
+    "Icon": "UI/Items/Small_Wallet",
     "Function": "AddMoney",
     "Param": 1000
   },
@@ -93,6 +107,8 @@
     "CanUse": true,
     "UseCD": 0.0,
     "SellPrice": 1,
+    "StackLimit": 1,
+    "Icon": "UI/Items/Big_Wallet",
     "Function": "AddMoney",
     "Param": 10000
   },
@@ -105,6 +121,8 @@
     "CanUse": true,
     "UseCD": 0.0,
     "SellPrice": 1,
+    "StackLimit": 1,
+    "Icon": "UI/Items/Chest",
     "Function": "AddItem"
   },
   "10": {
@@ -116,6 +134,8 @@
     "CanUse": true,
     "UseCD": 0.0,
     "SellPrice": 1,
+    "StackLimit": 1,
+    "Icon": "UI/Items/Skill_Book_2",
     "Function": "AddSkillPoint",
     "Param": 1
   }

@@ -76,7 +76,7 @@ namespace GameServer.Managers
                     this.Items.Add((int)itemID, item);
                 }
                 Log.InfoFormat("[{0}]AddItem[{1}] addCount:{2}", this.Owner.Data.ID, itemID, count);
-                DBService.Instance.Save();
+                //DBService.Instance.Save();
                 return true;
             }
             catch (Exception)
@@ -97,7 +97,7 @@ namespace GameServer.Managers
             }
             item.Remove(count);
             Log.InfoFormat("[{0}]RemoveItem[{1}] removeCount:{2}", this.Owner.Data.ID, itemID, count);
-            DBService.Instance.Save();
+            //DBService.Instance.Save();
             return true;
         }
         public void GetItemInfos(List<NItemInfo> list)
