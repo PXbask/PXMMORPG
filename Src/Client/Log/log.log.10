@@ -1,7 +1,64 @@
-2022-09-13 16:08:17,435 [ 1] INFO  Unity: LoadingManager start
-2022-09-13 16:08:20,905 [ 1] INFO  Unity: DataManager > DataManager()
-2022-09-13 16:08:50,666 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-09-13 16:08:50,668 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-09-14 17:38:27,902 [ 1] INFO  Unity: LoadingManager start
+2022-09-14 17:38:31,744 [ 1] INFO  Unity: DataManager > DataManager()
+2022-09-14 17:38:35,222 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
+2022-09-14 17:38:35,230 [ 1] INFO  Unity: ConnectToServer() Start 
+2022-09-14 17:38:35,246 [ 1] INFO  Unity: DoConnect
+2022-09-14 17:38:35,249 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-09-14 17:38:35,268 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+
+2022-09-14 17:38:35,287 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2022-09-14 17:38:36,249 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2022-09-14 17:38:36,260 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-09-14 17:38:36,733 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-09-14 17:38:48,294 [ 1] INFO  Unity: UserCreateCharacterRequest::name :PX class:Wizard
+2022-09-14 17:38:53,296 [ 1] INFO  Unity: OnUserCreateChar:Success [None]
+2022-09-14 17:39:07,216 [ 1] INFO  Unity: Select Char:[0]PX[Wizard]
+2022-09-14 17:39:08,143 [ 1] INFO  Unity: UserGameEnterRequest::index :0
+2022-09-14 17:39:08,354 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
+2022-09-14 17:39:08,384 [ 1] INFO  Unity: AddCharacter:1:PX Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-09-14 17:39:08,417 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-09-14 17:39:08,420 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
+2022-09-14 17:39:09,920 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+
+2022-09-14 17:39:09,928 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+
+2022-09-14 17:39:10,202 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-09-14 17:39:12,801 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, UIBag+<InitBag>c__Iterator0.MoveNext () (at Assets/Scripts/UI/UIBag.cs:30)
+UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) (at D:/unity/Runtime/Export/Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+UIBag:Start() (at Assets/Scripts/UI/UIBag.cs:26)
+}</args></log4net.Error>
+2022-09-14 17:40:13,493 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-09-14 17:40:13,498 [ 1] INFO  Unity: UserGameLeaveRequest::User Leave
+2022-09-14 17:40:13,749 [ 1] INFO  Unity: OnMapCharacterLeave:MapID:1 CharacterID:1
+2022-09-14 17:40:13,757 [ 1] INFO  Unity: RemoveCharacter:1
+2022-09-14 17:40:13,760 [ 1] INFO  Unity: OnUserGameLeave:Success [None]
+2022-09-14 17:40:13,943 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-09-14 17:40:22,618 [ 1] INFO  Unity: Select Char:[0]PX[Wizard]
+2022-09-14 17:40:23,415 [ 1] INFO  Unity: UserGameEnterRequest::index :0
+2022-09-14 17:40:23,453 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
+2022-09-14 17:40:23,460 [ 1] INFO  Unity: ItemManager:Init[ID:1, Count:200]
+2022-09-14 17:40:23,461 [ 1] INFO  Unity: ItemManager:Init[ID:2, Count:100]
+2022-09-14 17:40:23,462 [ 1] INFO  Unity: ItemManager:Init[ID:3, Count:30]
+2022-09-14 17:40:23,463 [ 1] INFO  Unity: ItemManager:Init[ID:4, Count:120]
+2022-09-14 17:40:23,464 [ 1] INFO  Unity: AddCharacter:2:PX Map:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-09-14 17:40:23,482 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-09-14 17:40:23,484 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
+2022-09-14 17:40:24,777 [ 1] INFO  Unity: SetPosition:(5000, 4000, 768)
+2022-09-14 17:40:24,829 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+
+2022-09-14 17:40:24,830 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+
+2022-09-14 17:40:25,029 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-09-14 17:41:11,411 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, UIBag+<InitBag>c__Iterator0.MoveNext () (at Assets/Scripts/UI/UIBag.cs:30)
+UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) (at D:/unity/Runtime/Export/Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+UIBag:Start() (at Assets/Scripts/UI/UIBag.cs:26)
+}</args></log4net.Error>
+2022-09-14 17:41:15,934 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-09-14 17:41:15,935 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)

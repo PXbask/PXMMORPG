@@ -29,6 +29,7 @@ namespace GameServer.Entities
             this.Info.Name = cha.Name;
             this.Info.Level = 1;//cha.Level;
             this.Info.Tid = cha.TID;
+            this.Info.Gold = cha.Gold;
             this.Info.Class = (CharacterClass)cha.Class;
             this.Info.mapId = cha.MapID;
             this.Info.Entity = this.EntityData;

@@ -103,7 +103,7 @@ namespace GameServer.Services
             }
             else
             {
-                TCharacter @char= new TCharacter()
+                TCharacter @char = new TCharacter()
                 {
                     Name = request.Name,
                     Class = (int)request.Class,
@@ -112,6 +112,7 @@ namespace GameServer.Services
                     MapPosX = 5000,
                     MapPosY = 4000,
                     MapPosZ = 820,
+                    Gold = 100000, 
                 };
                 TCharacterBag bag=new TCharacterBag();
                 bag.Owner = @char;
