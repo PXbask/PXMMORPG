@@ -47,6 +47,7 @@ namespace Network
                 }
                 byte[] data = PackageHandler.PackMessage(response);
                 response = null;
+                return data;
             }
             return null;
         }

@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using SkillBridge.Message;
 using System;
+using Common.Data;
+
 namespace Manager
 {
     public class BagManager : Singleton<BagManager>
@@ -45,12 +47,12 @@ namespace Manager
                     while (count > kv.Value.Define.StackLimit)
                     {
                         this.Items[i].ItemID = (ushort)kv.Key;
-                        this.Items[i].Count = (ushort)(kv.Value.Count - kv.Value.Define.StackLimit);
+                        this.Items[i].Count = (ushort)kv.Value.Define.StackLimit;
                         count -= kv.Value.Define.StackLimit;
                         i++;
                     }
                     this.Items[i].ItemID = (ushort)kv.Key;
-                    this.Items[i].Count = (ushort)kv.Value.Count;
+                    this.Items[i].Count = (ushort)count;
                 }
                 i++;
             }
@@ -58,6 +60,7 @@ namespace Manager
         internal void AddItem(int id, int count)
         {
             ushort addCount = (ushort)count;
+            ItemDefine define = DataManager.Instance.Items[id];
             for(int i = 0; i < Items.Length; i++)
             {
                 if(this.Items[i].ItemID == id)
@@ -82,8 +85,25 @@ namespace Manager
                 {
                     if (this.Items[i].ItemID == 0)
                     {
-                        this.Items[i].ItemID = (ushort)id;
-                        this.Items[i].Count = addCount;
+                        if (addCount <= define.StackLimit)
+                        {
+                            this.Items[i].ItemID = (ushort)id;
+                            this.Items[i].Count = (ushort)addCount;
+                        }
+                        else
+                        {
+                            int remainCount = addCount;
+                            while (remainCount > define.StackLimit)
+                            {
+                                this.Items[i].ItemID=(ushort)id;
+                                this.Items[i].Count=(ushort)define.StackLimit;
+                                remainCount -= define.StackLimit;
+                                i++;
+                            }
+                            this.Items[i].ItemID = (ushort)id;
+                            this.Items[i].Count = (ushort)remainCount;
+                        }
+                        break;
                     }
                 }
             }

@@ -18,7 +18,7 @@ namespace GameServer.Managers
             if (!DataManager.Instance.Shops.ContainsKey(shopID))
                 return Result.Failed;
             ShopItemDefine shopItem;
-            if(DataManager.Instance.ShopItems[shopID].TryGetValue(shopID, out shopItem))
+            if(DataManager.Instance.ShopItems[shopID].TryGetValue(shopItemID, out shopItem))
             {
                 Log.InfoFormat("BuyItem: character:{0},Item:{1},Count:{2},Price:{3}", sender.Session.Character.Id, shopItem.ItemID, shopItem.Count, shopItem.Price);
                 if(sender.Session.Character.Gold >= shopItem.Price)
