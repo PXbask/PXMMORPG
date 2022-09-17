@@ -26,5 +26,9 @@ namespace Models
         public Common.Data.MapDefine CurrentMapData { get; set; }
 
         public UnityEngine.GameObject CurrentCharacterObject { get; set; }
+        public void AddGold(int value)
+        {
+            this.CurrentCharacter.Gold += value;
+        }
     }
 }

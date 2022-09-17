@@ -55,6 +55,40 @@ namespace Manager
                 i++;
             }
         }
+        internal void AddItem(int id, int count)
+        {
+            ushort addCount = (ushort)count;
+            for(int i = 0; i < Items.Length; i++)
+            {
+                if(this.Items[i].ItemID == id)
+                {
+                    ushort canAdd=(ushort)(DataManager.Instance.Items[id].StackLimit-Items[i].Count);
+                    if(canAdd >= addCount)
+                    {
+                        this.Items[i].Count += addCount;
+                        addCount = 0;
+                        break;
+                    }
+                    else
+                    {
+                        this.Items[i].Count += canAdd;
+                        addCount -= canAdd;
+                    }
+                }
+            }
+            if(addCount > 0)
+            {
+                for(int i = 0; i < Items.Length; i++)
+                {
+                    if (this.Items[i].ItemID == 0)
+                    {
+                        this.Items[i].ItemID = (ushort)id;
+                        this.Items[i].Count = addCount;
+                    }
+                }
+            }
+        }
+        internal void RemoveItem(int id, int count) { }
 
         unsafe private void Analyze(byte[] data)
         {

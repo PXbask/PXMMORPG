@@ -58,7 +58,7 @@ public class UIShop : UIWindow {
         {
             if(Manager.ShopManager.Instance.BuyItem(this.shopDefine.ID, selectedItem.ShopItemID))
             {
-
+                MessageBox.Show("Purchase Successfully！", "提示");
             }        
         }
     }

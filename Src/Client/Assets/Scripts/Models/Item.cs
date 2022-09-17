@@ -11,11 +11,12 @@ namespace Models
         public int ID;
         public int Count;
         public ItemDefine Define;
-        public Item(NItemInfo item)
+        public Item(NItemInfo item):this(item.Id, item.Count) { }
+        public Item(int itemID,int count)
         {
-            this.ID = item.Id;
-            this.Count = item.Count;
-            Define = Manager.DataManager.Instance.Items[item.Id];
+            ID = itemID;
+            Count = count;
+            Define = Manager.DataManager.Instance.Items[itemID];
         }
         public override string ToString()
         {
