@@ -45,7 +45,7 @@ namespace Services
                 if (status.Action == StatusAction.Add)
                     User.Instance.AddGold(status.Value);
                 else if (status.Action == StatusAction.Delete)
-                    User.Instance.AddGold(-status.Value);
+                    User.Instance.AddGold(status.Value);
             }
             StatusNotifyHandler handler;
             if(eventMap.TryGetValue(status.Type, out handler))

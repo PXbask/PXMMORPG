@@ -1,4 +1,5 @@
 ﻿using Common.Data;
+using Manager;
 using Models;
 using System;
 using System.Collections;
@@ -17,6 +18,7 @@ public class UIShop : UIWindow {
 	protected override void OnStart()
     {
 		StartCoroutine(InitItems());
+        ShopManager.Instance.uIShop = this;
     }
 
     private IEnumerator InitItems()
@@ -47,6 +49,12 @@ public class UIShop : UIWindow {
         }
         selectedItem = item;
     }
+
+    internal void RefreshMoneyText()
+    {
+        this.money.text = User.Instance.CurrentCharacter.Gold.ToString();
+    }
+
     public void OnClickBuy()
     {
         if (this.selectedItem == null)
@@ -56,10 +64,7 @@ public class UIShop : UIWindow {
         }
         else
         {
-            if(Manager.ShopManager.Instance.BuyItem(this.shopDefine.ID, selectedItem.ShopItemID))
-            {
-                MessageBox.Show("Purchase Successfully！", "提示");
-            }        
+            Services.ItemService.Instance.SendBuyItem(shopDefine.ID, selectedItem.ShopItemID);
         }
     }
 }

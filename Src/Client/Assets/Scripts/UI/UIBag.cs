@@ -24,6 +24,7 @@ public class UIBag : UIWindow {
             }
         }
         StartCoroutine(InitBag());
+        Manager.BagManager.Instance.uIBag = this;
     }
     private IEnumerator InitBag()
     {
@@ -44,15 +45,22 @@ public class UIBag : UIWindow {
         }
         yield return null;
     }
-    public void SetTitle(string title)
+    public void SetMoneyText()
     {
         this.Money.text = Models.User.Instance.CurrentCharacter.Id.ToString();
     }
     public void Refresh()
     {
-        Manager.BagManager.Instance.Reset();
         //TODO:
         //删除多余的格子
+        foreach(var go in this.Slots)
+        {
+            for(int i = 0; i < go.transform.childCount; i++)
+            {
+                Destroy(go.transform.GetChild(i).gameObject);
+            }
+        }
+        Manager.BagManager.Instance.Reset();
         this.StartCoroutine(InitBag());
     }
 }

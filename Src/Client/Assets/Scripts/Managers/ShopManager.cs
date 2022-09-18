@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using Common.Data;
 using System;
+using Models;
 
 namespace Manager
 {
     public class ShopManager : Singleton<ShopManager>
     {
+        public UIShop uIShop;
+
         public void Init()
         {
             NPCManager.Instance.RegisterNpcEvent(NpcFunction.InvokeShop, OnOpenShop);
+            User.Instance.OnGoldChange += this.RefreshMoneyText;
         }
 
         private bool OnOpenShop(NpcDefine npc)
@@ -35,6 +39,13 @@ namespace Manager
         {
             Services.ItemService.Instance.SendBuyItem(shopID, shopItemID);
             return true;
+        }
+        public void RefreshMoneyText()
+        {
+            if(uIShop != null)
+            {
+                uIShop.RefreshMoneyText();
+            }
         }
     }
 }

@@ -14,9 +14,16 @@ namespace Manager
         public int Unlocked;
         public BagItem[] Items;
         private NBagInfo Info;
+        public UIBag uIBag;
 
+        public void ChangeMoneyText()
+        {
+            if(uIBag != null)
+                uIBag.SetMoneyText();
+        }
         unsafe public void Init(NBagInfo info)
         {
+            User.Instance.OnGoldChange += this.ChangeMoneyText;
             this.Info = info;
             this.Unlocked = info.Unlocked;
             Items = new BagItem[this.Unlocked];

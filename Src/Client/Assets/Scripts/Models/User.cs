@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Manager;
+using UnityEngine.Events;
 
 namespace Models
 {
-    class User : Singleton<User>
+    public class User : Singleton<User>
     {
+        public UnityAction OnGoldChange;
         SkillBridge.Message.NUserInfo userInfo;
-
-
         public SkillBridge.Message.NUserInfo Info
         {
             get { return userInfo; }
@@ -29,6 +30,7 @@ namespace Models
         public void AddGold(int value)
         {
             this.CurrentCharacter.Gold += value;
+            OnGoldChange();
         }
     }
 }
