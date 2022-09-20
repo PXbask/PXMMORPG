@@ -23,6 +23,7 @@ namespace Manager
         public Dictionary<int, ItemDefine> Items = null;
         public Dictionary<int, ShopDefine> Shops = null;
         public Dictionary<int, Dictionary<int, ShopItemDefine>> ShopItems = null;
+        public Dictionary<int, EquipDefine> Equips = null;
 
         public DataManager()
         {
@@ -55,6 +56,9 @@ namespace Manager
 
             json = File.ReadAllText(this.DataPath + "ShopItemDefine.txt");
             this.ShopItems = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, ShopItemDefine>>>(json);
+
+            json = File.ReadAllText(this.DataPath + "EquipDefine.txt");
+            this.Equips = JsonConvert.DeserializeObject<Dictionary<int, EquipDefine>>(json);
         }
 
 
@@ -97,6 +101,11 @@ namespace Manager
 
             json = File.ReadAllText(this.DataPath + "ShopItemDefine.txt");
             this.ShopItems = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, ShopItemDefine>>>(json);
+
+            yield return null;
+
+            json = File.ReadAllText(this.DataPath + "EquipDefine.txt");
+            this.Equips = JsonConvert.DeserializeObject<Dictionary<int, EquipDefine>>(json);
 
             yield return null;
         }

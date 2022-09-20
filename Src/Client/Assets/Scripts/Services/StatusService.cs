@@ -12,6 +12,7 @@ namespace Services
     {
         public delegate bool StatusNotifyHandler(NStatus status);
         Dictionary<StatusType, StatusNotifyHandler> eventMap=new Dictionary<StatusType, StatusNotifyHandler>();
+        HashSet<StatusNotifyHandler> handlers=new HashSet<StatusNotifyHandler>();
         public void Init() { }
         public StatusService()
         {
@@ -24,10 +25,12 @@ namespace Services
 
         public void RegisterStatusNotify(StatusType function, StatusNotifyHandler action)
         {
+            if (handlers.Contains(action)) return;
             if (!eventMap.ContainsKey(function))
                 eventMap.Add(function, action);
             else
                 eventMap[function] += action;
+            handlers.Add(action);
         }
         private void OnStatusNotify(object sender, StatusNotify message)
         {

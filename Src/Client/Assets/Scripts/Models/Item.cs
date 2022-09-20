@@ -11,12 +11,14 @@ namespace Models
         public int ID;
         public int Count;
         public ItemDefine Define;
+        public EquipDefine EquipDefine;
         public Item(NItemInfo item):this(item.Id, item.Count) { }
         public Item(int itemID,int count)
         {
             ID = itemID;
             Count = count;
-            Define = Manager.DataManager.Instance.Items[itemID];
+            Manager.DataManager.Instance.Items.TryGetValue(itemID,out Define);
+            Manager.DataManager.Instance.Equips.TryGetValue(itemID,out EquipDefine);
         }
         public override string ToString()
         {

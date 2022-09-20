@@ -32,5 +32,9 @@ public class UIMain : MonoSingleton<UIMain> {
     {
         Manager.UIManager.Instance.Show<UIBag>();
     }
+    public void OnClickCharEquip()
+    {
+        Manager.UIManager.Instance.Show<UICharEquip>();
+    }
     #endregion
 }

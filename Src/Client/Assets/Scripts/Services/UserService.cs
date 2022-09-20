@@ -234,6 +234,7 @@ namespace Services
             if (response.Result.Equals(Result.Success)) {
                 Manager.ItemManager.Instance.Init(response.Character.Items);
                 Manager.BagManager.Instance.Init(response.Character.Bag);
+                Manager.EquipManager.Instance.Init(response.Character.Equips);
             }
         }
         private void OnUserGameLeave(object sender, UserGameLeaveResponse response)
