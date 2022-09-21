@@ -45,7 +45,7 @@ public class UIEquipItem : MonoBehaviour, UnityEngine.EventSystems.IPointerClick
         if (this.levelText != null) this.levelText.text = item.Define.Level.ToString();
         if (this.limitClass != null) this.limitClass.text = item.Define.LimitClass.ToString();
         if (this.limitCategory != null) this.limitCategory.text = item.Define.Category;
-        if (this.itemImage != null) this.itemImage.overrideSprite = Resloader.Load<Sprite>(this.item.Define.Icon);
+        if (this.itemImage != null) this.itemImage.sprite = Resloader.Load<Sprite>(this.item.Define.Icon);
     }
 
     public void OnPointerClick(PointerEventData eventData)

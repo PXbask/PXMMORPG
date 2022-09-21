@@ -62,6 +62,7 @@ namespace Services
         {
             if (message.Result == Result.Success)
             {
+                Debug.LogFormat("ItemEquipResponse: error:{0}", message.Errormsg);
                 if(pendingEquip != null)
                 {
                     if (this.isEquip)

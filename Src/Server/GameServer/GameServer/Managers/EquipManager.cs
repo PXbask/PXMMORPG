@@ -16,7 +16,7 @@ namespace GameServer.Managers
         public Result EquipItem(NetConnection<NetSession> sender,int slot,int itemID,bool isEquip)
         {
             Character character = sender.Session.Character;
-            if(character.ItemManager.Items.ContainsKey(itemID))
+            if(!character.ItemManager.Items.ContainsKey(itemID))
                 return Result.Failed;
             UpdateEquip(character.Data.Equips, slot, itemID, isEquip);
             DBService.Instance.Save();

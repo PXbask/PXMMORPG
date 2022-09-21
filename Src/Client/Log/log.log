@@ -1,84 +1,32 @@
-2022-09-20 16:32:51,916 [ 1] INFO  Unity: LoadingManager start
-2022-09-20 16:32:55,040 [ 1] INFO  Unity: DataManager > DataManager()
-2022-09-20 16:33:03,271 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
-2022-09-20 16:33:03,272 [ 1] INFO  Unity: ConnectToServer() Start 
-2022-09-20 16:33:03,276 [ 1] INFO  Unity: DoConnect
-2022-09-20 16:33:03,278 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-09-20 16:33:03,282 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-09-21 17:37:05,723 [ 1] INFO  Unity: LoadingManager start
+2022-09-21 17:37:08,898 [ 1] INFO  Unity: DataManager > DataManager()
+2022-09-21 17:37:33,946 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
+2022-09-21 17:37:33,949 [ 1] INFO  Unity: ConnectToServer() Start 
+2022-09-21 17:37:33,957 [ 1] INFO  Unity: DoConnect
+2022-09-21 17:37:33,960 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-09-21 17:37:33,966 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-09-20 16:33:03,288 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2022-09-20 16:33:03,432 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2022-09-20 16:33:03,433 [ 1] INFO  Unity: LoadLevel: CharSelect
-2022-09-20 16:33:03,745 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-09-20 16:33:04,406 [ 1] INFO  Unity: Select Char:[1]PX[Wizard]
-2022-09-20 16:33:05,120 [ 1] INFO  Unity: UserGameEnterRequest::index :0
-2022-09-20 16:33:05,159 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
-2022-09-20 16:33:05,161 [ 1] INFO  Unity: ItemManager:Init[ID:1, Count:20]
-2022-09-20 16:33:05,162 [ 1] INFO  Unity: ItemManager:Init[ID:2, Count:20]
-2022-09-20 16:33:05,165 [ 1] INFO  Unity: AddCharacter:2:PX Map:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-09-20 16:33:05,168 [ 1] INFO  Unity: LoadLevel: MainCity
-2022-09-20 16:33:05,169 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
-2022-09-20 16:33:06,039 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2022-09-21 17:37:33,972 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2022-09-21 17:37:34,179 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2022-09-21 17:37:34,182 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-09-21 17:37:34,738 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-09-21 17:37:45,116 [ 1] INFO  Unity: Select Char:[1]PX[Wizard]
+2022-09-21 17:37:45,978 [ 1] INFO  Unity: UserGameEnterRequest::index :0
+2022-09-21 17:37:46,024 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
+2022-09-21 17:37:46,027 [ 1] INFO  Unity: ItemManager:Init[ID:1, Count:20]
+2022-09-21 17:37:46,029 [ 1] INFO  Unity: ItemManager:Init[ID:2, Count:20]
+2022-09-21 17:37:46,031 [ 1] INFO  Unity: ItemManager:Init[ID:2003, Count:1]
+2022-09-21 17:37:46,033 [ 1] INFO  Unity: ItemManager:Init[ID:2002, Count:1]
+2022-09-21 17:37:46,041 [ 1] INFO  Unity: AddCharacter:11:PX Map:1 Entity:(11:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-09-21 17:37:46,045 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-09-21 17:37:46,047 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
+2022-09-21 17:37:47,232 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2022-09-20 16:33:06,039 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2022-09-21 17:37:47,233 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2022-09-20 16:33:06,185 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-09-20 16:33:35,340 [ 1] INFO  Unity: SetDirection:(98, 18, 0)
-2022-09-20 16:33:35,438 [ 1] INFO  Unity: SetDirection:(94, 35, 0)
-2022-09-20 16:33:35,522 [ 1] INFO  Unity: SetDirection:(86, 51, 0)
-2022-09-20 16:33:35,621 [ 1] INFO  Unity: SetDirection:(74, 68, 0)
-2022-09-20 16:33:35,712 [ 1] INFO  Unity: SetDirection:(61, 80, 0)
-2022-09-20 16:33:36,473 [ 1] INFO  Unity: SetDirection:(46, 89, 0)
-2022-09-20 16:33:36,639 [ 1] INFO  Unity: SetDirection:(29, 96, 0)
-2022-09-20 16:33:36,738 [ 1] INFO  Unity: SetDirection:(10, 99, 0)
-2022-09-20 16:33:36,839 [ 1] INFO  Unity: SetDirection:(-11, 99, 0)
-2022-09-20 16:33:36,937 [ 1] INFO  Unity: SetDirection:(-31, 95, 0)
-2022-09-20 16:33:37,021 [ 1] INFO  Unity: SetDirection:(-47, 88, 0)
-2022-09-20 16:33:37,121 [ 1] INFO  Unity: SetDirection:(-64, 77, 0)
-2022-09-20 16:33:37,282 [ 1] INFO  Unity: SetDirection:(-77, 64, 0)
-2022-09-20 16:33:37,529 [ 1] INFO  Unity: SetDirection:(-87, 50, 0)
-2022-09-20 16:33:37,645 [ 1] INFO  Unity: SetDirection:(-94, 33, 0)
-2022-09-20 16:33:45,469 [ 1] INFO  Unity: StatusNotify:[Item][Add]2003:1
-2022-09-20 16:33:45,471 [ 1] INFO  Unity: StatusNotify:[Money][Delete]0:-400
-2022-09-20 16:33:47,735 [ 1] INFO  Unity: StatusNotify:[Item][Add]2002:1
-2022-09-20 16:33:47,736 [ 1] INFO  Unity: StatusNotify:[Money][Delete]0:-200
-2022-09-20 16:33:53,817 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, UIEquipItem.set_Selected (Boolean value) (at Assets/Scripts/UI/UIEquipItem.cs:30)
-UIEquipItem.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) (at Assets/Scripts/UI/UIEquipItem.cs:66)
-UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at D:/unity/Extensions/guisystem/UnityEngine.UI/EventSystem/ExecuteEvents.cs:50)
-UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) (at D:/unity/Extensions/guisystem/UnityEngine.UI/EventSystem/ExecuteEvents.cs:261)
-UnityEngine.EventSystems.EventSystem:Update()
-}</args></log4net.Error>
-2022-09-20 16:33:54,295 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, UIEquipItem.set_Selected (Boolean value) (at Assets/Scripts/UI/UIEquipItem.cs:30)
-UIEquipItem.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) (at Assets/Scripts/UI/UIEquipItem.cs:66)
-UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at D:/unity/Extensions/guisystem/UnityEngine.UI/EventSystem/ExecuteEvents.cs:50)
-UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) (at D:/unity/Extensions/guisystem/UnityEngine.UI/EventSystem/ExecuteEvents.cs:261)
-UnityEngine.EventSystems.EventSystem:Update()
-}</args></log4net.Error>
-2022-09-20 16:34:04,551 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, UIEquipItem.set_Selected (Boolean value) (at Assets/Scripts/UI/UIEquipItem.cs:30)
-UIEquipItem.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) (at Assets/Scripts/UI/UIEquipItem.cs:66)
-UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at D:/unity/Extensions/guisystem/UnityEngine.UI/EventSystem/ExecuteEvents.cs:50)
-UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) (at D:/unity/Extensions/guisystem/UnityEngine.UI/EventSystem/ExecuteEvents.cs:261)
-UnityEngine.EventSystems.EventSystem:Update()
-}</args></log4net.Error>
-2022-09-20 16:34:05,115 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, UIEquipItem.set_Selected (Boolean value) (at Assets/Scripts/UI/UIEquipItem.cs:30)
-UIEquipItem.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) (at Assets/Scripts/UI/UIEquipItem.cs:66)
-UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at D:/unity/Extensions/guisystem/UnityEngine.UI/EventSystem/ExecuteEvents.cs:50)
-UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) (at D:/unity/Extensions/guisystem/UnityEngine.UI/EventSystem/ExecuteEvents.cs:261)
-UnityEngine.EventSystems.EventSystem:Update()
-}</args></log4net.Error>
-2022-09-20 16:34:05,462 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, UIEquipItem.set_Selected (Boolean value) (at Assets/Scripts/UI/UIEquipItem.cs:30)
-UIEquipItem.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) (at Assets/Scripts/UI/UIEquipItem.cs:66)
-UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at D:/unity/Extensions/guisystem/UnityEngine.UI/EventSystem/ExecuteEvents.cs:50)
-UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) (at D:/unity/Extensions/guisystem/UnityEngine.UI/EventSystem/ExecuteEvents.cs:261)
-UnityEngine.EventSystems.EventSystem:Update()
-}</args></log4net.Error>
-2022-09-20 16:34:08,669 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-09-20 16:34:08,670 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-09-21 17:37:47,452 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-09-21 17:37:54,603 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-09-21 17:37:54,605 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)

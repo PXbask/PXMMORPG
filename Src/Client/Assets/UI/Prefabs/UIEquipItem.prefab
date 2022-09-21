@@ -277,7 +277,7 @@ MonoBehaviour:
   limitClass: {fileID: 114435717220561606}
   limitCategory: {fileID: 114945710472356206}
   itemImage: {fileID: 114506356085456362}
-  BgdImage: {fileID: 0}
+  BgdImage: {fileID: 114962312881177944}
   normalSprite: {fileID: 21300000, guid: f2c26ba28b4d05643ba74996bb40967b, type: 3}
   selectedSprite: {fileID: 21300000, guid: bb799af4d1f965c4a93f16cb08f26925, type: 3}
 --- !u!114 &114655259433605992

@@ -11,7 +11,7 @@
     "Price": 200,
     "SellPrice": 100,
     "StackLimit": 99,
-    "Icon": "UI/Items/hongp",
+    "Icon": "UI/Items/Health_Potion",
     "Function": "RecoverHP",
     "Param": 500
   },
@@ -27,7 +27,7 @@
     "Price": 200,
     "SellPrice": 100,
     "StackLimit": 99,
-    "Icon": "UI/Items/lanp",
+    "Icon": "UI/Items/Magic_Potion",
     "Function": "RecoverMP",
     "Param": 500
   },
@@ -43,7 +43,7 @@
     "Price": 200,
     "SellPrice": 100,
     "StackLimit": 99,
-    "Icon": "UI/Items/mbao",
+    "Icon": "UI/Items/Bread",
     "Function": "AddBuff",
     "Param": 1
   },
@@ -59,7 +59,7 @@
     "Price": 200,
     "SellPrice": 100,
     "StackLimit": 99,
-    "Icon": "UI/Items/haixiant",
+    "Icon": "UI/Items/Seafood_Soup",
     "Function": "AddBuff",
     "Param": 2
   },
@@ -74,7 +74,7 @@
     "UseCD": 0.0,
     "SellPrice": 5,
     "StackLimit": 1,
-    "Icon": "UI/Items/jinengsh",
+    "Icon": "UI/Items/Skill_Book_1",
     "Function": "AddExp"
   },
   "6": {
@@ -87,7 +87,7 @@
     "UseCD": 0.0,
     "SellPrice": 5,
     "StackLimit": 99,
-    "Icon": "UI/Items/huizhang"
+    "Icon": "UI/Items/Badge"
   },
   "7": {
     "ID": 7,
@@ -100,7 +100,7 @@
     "UseCD": 0.0,
     "SellPrice": 5,
     "StackLimit": 1,
-    "Icon": "UI/Items/xiaoqiandai",
+    "Icon": "UI/Items/Small_Wallet",
     "Function": "AddMoney",
     "Param": 1000
   },
@@ -115,7 +115,7 @@
     "UseCD": 0.0,
     "SellPrice": 5,
     "StackLimit": 1,
-    "Icon": "UI/Items/daqiandai",
+    "Icon": "UI/Items/Big_Wallet",
     "Function": "AddMoney",
     "Param": 10000
   },
@@ -130,7 +130,7 @@
     "UseCD": 0.0,
     "SellPrice": 5,
     "StackLimit": 1,
-    "Icon": "UI/Items/baoxiang",
+    "Icon": "UI/Items/Chest",
     "Function": "AddItem"
   },
   "10": {
@@ -144,7 +144,7 @@
     "UseCD": 0.0,
     "SellPrice": 5,
     "StackLimit": 1,
-    "Icon": "UI/Items/jinengshu",
+    "Icon": "UI/Items/Skill_Book_2",
     "Function": "AddSkillPoint",
     "Param": 1
   },

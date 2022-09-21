@@ -9,6 +9,8 @@ using UnityEngine.UI;
 public class UICharEquip : UIWindow {
     public Text title;
     public Text money;
+    public Text nameText;
+    public Text levelText;
 
     public GameObject itemPrefab;
     public GameObject itemEquipedPrefab;
@@ -31,7 +33,7 @@ public class UICharEquip : UIWindow {
         InitAllEquipItems();
         ClearEquipedList();
         InitEquipedItems();
-        this.money.text = User.Instance.CurrentCharacter.Gold.ToString();
+        UpdateIntroduce();
     }
     private void ClearAllEquipList()
     {
@@ -56,9 +58,10 @@ public class UICharEquip : UIWindow {
     {
         foreach(var tr in slots)
         {
-            if (tr.childCount > 0)
+            for(int i = 0; i < tr.childCount; i++)
             {
-                Destroy(tr.GetChild(0).gameObject);
+                UIEquipItem uIEquipItem = tr.GetChild(i).GetComponent<UIEquipItem>();
+                if (uIEquipItem != null) Destroy(uIEquipItem.gameObject);
             }
         }
     }
@@ -74,6 +77,12 @@ public class UICharEquip : UIWindow {
                 uI.SetEquipItem(item.ID,item, this, true);
             }
         }
+    }
+    private void UpdateIntroduce()
+    {
+        this.nameText.text = User.Instance.CurrentCharacter.Name;
+        this.levelText.text = "Lv. " + User.Instance.CurrentCharacter.Level.ToString();
+        this.money.text = User.Instance.CurrentCharacter.Gold.ToString();
     }
     public void DoEquip(Item item)
     {
