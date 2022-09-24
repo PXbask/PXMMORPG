@@ -1,35 +1,46 @@
-2022-09-21 16:47:14,808 [ 1] INFO  Unity: LoadingManager start
-2022-09-21 16:47:19,607 [ 1] INFO  Unity: DataManager > DataManager()
-2022-09-21 16:47:23,373 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
-2022-09-21 16:47:23,381 [ 1] INFO  Unity: ConnectToServer() Start 
-2022-09-21 16:47:23,418 [ 1] INFO  Unity: DoConnect
-2022-09-21 16:47:23,424 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-09-21 16:47:23,454 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-09-24 10:34:48,007 [ 1] INFO  Unity: LoadingManager start
+2022-09-24 10:34:51,180 [ 1] INFO  Unity: DataManager > DataManager()
+2022-09-24 10:34:54,542 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
+2022-09-24 10:34:54,543 [ 1] INFO  Unity: ConnectToServer() Start 
+2022-09-24 10:34:54,560 [ 1] INFO  Unity: DoConnect
+2022-09-24 10:34:54,562 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-09-24 10:34:54,572 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-09-21 16:47:23,476 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2022-09-21 16:47:23,925 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2022-09-21 16:47:23,931 [ 1] INFO  Unity: LoadLevel: CharSelect
-2022-09-21 16:47:24,538 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-09-21 16:47:25,473 [ 1] INFO  Unity: Select Char:[1]PX[Wizard]
-2022-09-21 16:47:26,318 [ 1] INFO  Unity: UserGameEnterRequest::index :0
-2022-09-21 16:47:26,383 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
-2022-09-21 16:47:26,398 [ 1] INFO  Unity: ItemManager:Init[ID:1, Count:20]
-2022-09-21 16:47:26,399 [ 1] INFO  Unity: ItemManager:Init[ID:2, Count:20]
-2022-09-21 16:47:26,400 [ 1] INFO  Unity: ItemManager:Init[ID:2003, Count:1]
-2022-09-21 16:47:26,401 [ 1] INFO  Unity: ItemManager:Init[ID:2002, Count:1]
-2022-09-21 16:47:26,457 [ 1] INFO  Unity: AddCharacter:2:PX Map:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-09-21 16:47:26,486 [ 1] INFO  Unity: LoadLevel: MainCity
-2022-09-21 16:47:26,488 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
-2022-09-21 16:47:27,702 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2022-09-24 10:34:54,581 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2022-09-24 10:34:55,538 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2022-09-24 10:34:55,539 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-09-24 10:34:56,016 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-09-24 10:34:56,984 [ 1] INFO  Unity: Select Char:[1]PX[Wizard]
+2022-09-24 10:34:57,715 [ 1] INFO  Unity: UserGameEnterRequest::index :0
+2022-09-24 10:34:57,835 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
+2022-09-24 10:34:57,838 [ 1] INFO  Unity: ItemManager:Init[ID:1, Count:20]
+2022-09-24 10:34:57,838 [ 1] INFO  Unity: ItemManager:Init[ID:2, Count:20]
+2022-09-24 10:34:57,839 [ 1] INFO  Unity: ItemManager:Init[ID:2003, Count:1]
+2022-09-24 10:34:57,840 [ 1] INFO  Unity: ItemManager:Init[ID:2002, Count:1]
+2022-09-24 10:34:57,844 [ 1] ERROR Unity: Message handler exception:, Object reference not set to an instance of an object, Assembly-CSharp,   at Manager.QuestManager.Init (System.Collections.Generic.List`1 quests) [0x0000e] in C:\Users\PXbask\PXmmorpg\Src\Client\Assets\Scripts\Managers\QuestManager.cs:29 
+  at Services.UserService.OnUserGameEnter (System.Object sender, SkillBridge.Message.UserGameEnterResponse response) [0x000a7] in C:\Users\PXbask\PXmmorpg\Src\Client\Assets\Scripts\Services\UserService.cs:239 
+  at Network.MessageDistributer`1[System.Object].RaiseEvent[UserGameEnterResponse] (System.Object sender, SkillBridge.Message.UserGameEnterResponse msg) [0x00000] in <filename unknown>:0 
+2022-09-24 10:34:57,845 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, Manager.QuestManager.Init (System.Collections.Generic.List`1 quests) (at Assets/Scripts/Managers/QuestManager.cs:29)
+Services.UserService.OnUserGameEnter (System.Object sender, SkillBridge.Message.UserGameEnterResponse response) (at Assets/Scripts/Services/UserService.cs:239)
+Network.MessageDistributer`1[System.Object].RaiseEvent[UserGameEnterResponse] (System.Object sender, SkillBridge.Message.UserGameEnterResponse msg)
+}</args></log4net.Error>
+2022-09-24 10:34:57,862 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1 CharacterID:1
+2022-09-24 10:34:57,864 [ 1] INFO  Unity: AddCharacter:1:PX Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-09-24 10:34:57,867 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-09-24 10:34:57,868 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
+2022-09-24 10:34:58,721 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2022-09-21 16:47:27,711 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2022-09-24 10:34:58,722 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2022-09-21 16:47:28,027 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-09-21 16:47:41,429 [ 1] INFO  Unity: SendItemEquip
-2022-09-21 16:47:42,434 [ 1] INFO  Unity: ItemEquipResponse: error:
-2022-09-21 16:48:06,579 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-09-21 16:48:06,581 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)
+2022-09-24 10:34:58,888 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-09-24 10:35:33,781 [ 1] WARN  Unity: Assets/Scripts/GameObject/EntityController.cs(19,16): warning CS0649: Field `EntityController.rotation' is never assigned to, and will always have its default value
+
+2022-09-24 10:35:33,781 [ 1] WARN  Unity: Assets/Scripts/GameObject/EntityController.cs(22,16): warning CS0414: The private field `EntityController.lastRotation' is assigned but its value is never used
+
+2022-09-24 10:35:33,782 [ 1] WARN  Unity: Assets/Scripts/GameObject/PlayerInputController.cs(109,11): warning CS0414: The private field `PlayerInputController.lastSync' is assigned but its value is never used
+
+2022-09-24 10:35:33,783 [ 1] WARN  Unity: Assets/Scripts/UI/Quest/UIQuestStatus.cs(11,28): warning CS0414: The private field `UIQuestStatus.questStatus' is assigned but its value is never used
+
+2022-09-24 10:35:33,784 [ 1] WARN  Unity: Assets/Editor/MapTools.cs(21,32): warning CS0219: The variable `allTeleporters' is assigned but its value is never used
 

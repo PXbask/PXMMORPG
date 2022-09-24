@@ -21,7 +21,6 @@ namespace Manager
         }
 		public NpcDefine GetNpcDefine(int npcID)
         {
-			//return DataManager.Instance.Npcs[npcID];
 			NpcDefine npcDefine = null;
 			DataManager.Instance.Npcs.TryGetValue(npcID, out npcDefine);
 			return npcDefine;
@@ -40,23 +39,21 @@ namespace Manager
         }
 		public bool Interactive(NpcDefine define)
         {
-            if (define.Type == NpcType.Task)
+            if (DoTaskInteractive(define))
             {
-                return DoTaskInteractive(define);
+                return true;
             }
             else if (define.Type == NpcType.Functional)
             {
                 return DoFunctionInteractive(define);
             }
-            else
-            {
-                return false;
-            }
+            return false;
         }
         private bool DoTaskInteractive(NpcDefine define)
         {
-            MessageBox.Show("Clicked Npc:" + define.Name, "Npc talk");
-            return true;
+            var status = QuestManager.Instance.GetQuestStatusByNpc(define.ID);
+            if (status.Equals(NpcQuestStatus.None)) return false;
+            else return QuestManager.Instance.OpenNpcQuest(define.ID);
         }
         private bool DoFunctionInteractive(NpcDefine define)
         {

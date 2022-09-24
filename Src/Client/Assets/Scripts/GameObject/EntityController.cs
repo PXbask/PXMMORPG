@@ -41,7 +41,7 @@ public class EntityController : MonoBehaviour, Manager.IEntityNotify
     void OnDestroy()
     {
         if(UIWorldElementManager.Instance != null)
-            UIWorldElementManager.Instance.RemoveElement(transform);
+            UIWorldElementManager.Instance.RemoveCharacterNameBar(transform);
     }
     void UpdateTransform()
     {
@@ -92,7 +92,7 @@ public class EntityController : MonoBehaviour, Manager.IEntityNotify
     {
         if (UIWorldElementManager.Instance != null)
         {
-            UIWorldElementManager.Instance.RemoveElement(this.transform);
+            UIWorldElementManager.Instance.RemoveCharacterNameBar(this.transform);
         }
         Destroy(gameObject);
     }

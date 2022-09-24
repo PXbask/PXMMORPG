@@ -232,9 +232,11 @@ namespace Services
         {
             Debug.LogFormat("OnUserGameEnter:{0} [{1}]", response.Result, response.Errormsg);
             if (response.Result.Equals(Result.Success)) {
+                User.Instance.CurrentCharacter = response.Character;
                 Manager.ItemManager.Instance.Init(response.Character.Items);
                 Manager.BagManager.Instance.Init(response.Character.Bag);
                 Manager.EquipManager.Instance.Init(response.Character.Equips);
+                Manager.QuestManager.Instance.Init(response.Character.Quests);
             }
         }
         private void OnUserGameLeave(object sender, UserGameLeaveResponse response)

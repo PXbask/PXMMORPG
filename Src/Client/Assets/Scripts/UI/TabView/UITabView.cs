@@ -2,11 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class UITabView : MonoBehaviour {
 
     public UITabButton[] uITabButtons;
     public GameObject[] tabPages;
+    public UnityAction<int> OnTabSelect;
     public int index = -1;
 
     private IEnumerator Start()
@@ -30,6 +32,8 @@ public class UITabView : MonoBehaviour {
                 tabPages[j].SetActive(j== tabIndex);
             }
             this.index = tabIndex;
+            if(this.OnTabSelect != null)
+                this.OnTabSelect(tabIndex);
         }
     }
 }

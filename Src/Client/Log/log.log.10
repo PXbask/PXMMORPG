@@ -1,44 +1,32 @@
-2022-09-21 16:37:17,296 [ 1] INFO  Unity: LoadingManager start
-2022-09-21 16:37:21,095 [ 1] INFO  Unity: DataManager > DataManager()
-2022-09-21 16:37:29,367 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
-2022-09-21 16:37:29,375 [ 1] INFO  Unity: ConnectToServer() Start 
-2022-09-21 16:37:29,393 [ 1] INFO  Unity: DoConnect
-2022-09-21 16:37:29,396 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-09-21 16:37:29,426 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-09-21 17:37:05,723 [ 1] INFO  Unity: LoadingManager start
+2022-09-21 17:37:08,898 [ 1] INFO  Unity: DataManager > DataManager()
+2022-09-21 17:37:33,946 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
+2022-09-21 17:37:33,949 [ 1] INFO  Unity: ConnectToServer() Start 
+2022-09-21 17:37:33,957 [ 1] INFO  Unity: DoConnect
+2022-09-21 17:37:33,960 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-09-21 17:37:33,966 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-09-21 16:37:29,445 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2022-09-21 16:37:30,716 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2022-09-21 16:37:30,725 [ 1] INFO  Unity: LoadLevel: CharSelect
-2022-09-21 16:37:31,255 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-09-21 16:37:32,531 [ 1] INFO  Unity: Select Char:[1]PX[Wizard]
-2022-09-21 16:37:33,249 [ 1] INFO  Unity: UserGameEnterRequest::index :0
-2022-09-21 16:37:33,420 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
-2022-09-21 16:37:33,437 [ 1] INFO  Unity: ItemManager:Init[ID:1, Count:20]
-2022-09-21 16:37:33,438 [ 1] INFO  Unity: ItemManager:Init[ID:2, Count:20]
-2022-09-21 16:37:33,439 [ 1] INFO  Unity: ItemManager:Init[ID:2003, Count:1]
-2022-09-21 16:37:33,440 [ 1] INFO  Unity: ItemManager:Init[ID:2002, Count:1]
-2022-09-21 16:37:33,499 [ 1] INFO  Unity: AddCharacter:1:PX Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-09-21 16:37:33,527 [ 1] INFO  Unity: LoadLevel: MainCity
-2022-09-21 16:37:33,529 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
-2022-09-21 16:37:34,755 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2022-09-21 17:37:33,972 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2022-09-21 17:37:34,179 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2022-09-21 17:37:34,182 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-09-21 17:37:34,738 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-09-21 17:37:45,116 [ 1] INFO  Unity: Select Char:[1]PX[Wizard]
+2022-09-21 17:37:45,978 [ 1] INFO  Unity: UserGameEnterRequest::index :0
+2022-09-21 17:37:46,024 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
+2022-09-21 17:37:46,027 [ 1] INFO  Unity: ItemManager:Init[ID:1, Count:20]
+2022-09-21 17:37:46,029 [ 1] INFO  Unity: ItemManager:Init[ID:2, Count:20]
+2022-09-21 17:37:46,031 [ 1] INFO  Unity: ItemManager:Init[ID:2003, Count:1]
+2022-09-21 17:37:46,033 [ 1] INFO  Unity: ItemManager:Init[ID:2002, Count:1]
+2022-09-21 17:37:46,041 [ 1] INFO  Unity: AddCharacter:11:PX Map:1 Entity:(11:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-09-21 17:37:46,045 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-09-21 17:37:46,047 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
+2022-09-21 17:37:47,232 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2022-09-21 16:37:34,764 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2022-09-21 17:37:47,233 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2022-09-21 16:37:35,076 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-09-21 16:37:46,002 [ 1] INFO  Unity: SendItemEquip
-2022-09-21 16:38:12,494 [ 1] INFO  Unity: ItemEquipResponse: error:
-2022-09-21 16:40:00,982 [ 1] INFO  Unity: SendItemEquip
-2022-09-21 16:40:04,662 [ 1] INFO  Unity: ItemEquipResponse: error:
-2022-09-21 16:40:27,491 [ 1] INFO  Unity: SendItemEquip
-2022-09-21 16:40:29,297 [ 1] INFO  Unity: ItemEquipResponse: error:
-2022-09-21 16:40:56,573 [ 1] INFO  Unity: SendItemEquip
-2022-09-21 16:40:59,683 [ 1] INFO  Unity: ItemEquipResponse: error:
-2022-09-21 16:42:21,921 [ 1] INFO  Unity: SendItemEquip
-2022-09-21 16:42:24,820 [ 1] INFO  Unity: ItemEquipResponse: error:
-2022-09-21 16:45:40,342 [ 1] INFO  Unity: SendItemEquip
-2022-09-21 16:45:42,343 [ 1] INFO  Unity: ItemEquipResponse: error:
-2022-09-21 16:45:50,104 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-09-21 16:45:50,105 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-09-21 17:37:47,452 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-09-21 17:37:54,603 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-09-21 17:37:54,605 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)

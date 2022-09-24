@@ -23,11 +23,6 @@ public class UIMain : MonoSingleton<UIMain> {
         SceneManager.Instance.LoadScene("CharSelect");
         Services.UserService.Instance.SendGameLeave();
     }
-    public void OpenUITest()
-    {
-        UITest uITest = Manager.UIManager.Instance.Show<UITest>();
-        uITest.SetInfo("Title", "Content");
-    }
     public void OpenBag()
     {
         Manager.UIManager.Instance.Show<UIBag>();
@@ -35,6 +30,10 @@ public class UIMain : MonoSingleton<UIMain> {
     public void OnClickCharEquip()
     {
         Manager.UIManager.Instance.Show<UICharEquip>();
+    }
+    public void OnClickQuest()
+    {
+        Manager.UIManager.Instance.Show<UIQuestSystem>();
     }
     #endregion
 }
