@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Common.Data;
+using Manager;
+
 public class NPCController : MonoBehaviour
 {
     public int npcID;
@@ -10,7 +12,7 @@ public class NPCController : MonoBehaviour
     private Color origionColor;
     private bool inInteractive = false;
     private NpcDefine npcDefine;
-
+    private NpcQuestStatus questStatus;
     void Start()
     {
         skinnedMeshRenderer = transform.GetChild(1).GetComponent<SkinnedMeshRenderer>();
@@ -18,6 +20,26 @@ public class NPCController : MonoBehaviour
         origionColor=skinnedMeshRenderer.sharedMaterial.color;
         npcDefine = Manager.NPCManager.Instance.GetNpcDefine(npcID);
         this.StartCoroutine(Actions());
+
+        RefreshNpcStatus();
+        QuestManager.Instance.OnQuestStatusChanged += this.OnQuestStatusChanged;
+    }
+
+    private void OnQuestStatusChanged()
+    {
+        this.RefreshNpcStatus();
+    }
+
+    private void RefreshNpcStatus()
+    {
+        questStatus=QuestManager.Instance.GetQuestStatusByNpc(npcID);
+        UIWorldElementManager.Instance.AddNpcQuestStatus(this.transform, questStatus);
+    }
+    private void OnDestroy()
+    {
+        QuestManager.Instance.OnQuestStatusChanged -= this.OnQuestStatusChanged;
+        if(UIWorldElementManager.Instance != null)
+            UIWorldElementManager.Instance.RemoveNpcQuestStatus(this.transform);
     }
     IEnumerator Actions()
     {

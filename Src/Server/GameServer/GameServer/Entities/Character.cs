@@ -21,6 +21,7 @@ namespace GameServer.Entities
         public TCharacter Data;
         public ItemManager ItemManager;
         public StatusManager StatusManager;
+        public QuestManager QuestManager;
 
         public Character(CharacterType type,TCharacter cha):base(new Core.Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ),new Core.Vector3Int(100,0,0))
         {
@@ -29,7 +30,7 @@ namespace GameServer.Entities
             this.Info.Type = type;
             this.Info.Id = cha.ID;
             this.Info.Name = cha.Name;
-            this.Info.Level = 1;//cha.Level;
+            this.Info.Level = 10;
             this.Info.Tid = cha.TID;
             this.Info.Gold = cha.Gold;
             this.Info.Class = (CharacterClass)cha.Class;
@@ -44,6 +45,9 @@ namespace GameServer.Entities
             this.Info.Equips=Data.Equips;
 
             this.StatusManager = new StatusManager(this);
+
+            this.QuestManager = new QuestManager(this);
+            this.QuestManager.GetQuestInfos(this.Info.Quests);
         }
         public long Gold
         {

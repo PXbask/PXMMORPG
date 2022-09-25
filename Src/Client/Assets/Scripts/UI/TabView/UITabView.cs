@@ -13,7 +13,7 @@ public class UITabView : MonoBehaviour {
 
     private IEnumerator Start()
     {
-        for(int i = 0; i < tabPages.Length; i++)
+        for(int i = 0; i < uITabButtons.Length; i++)
         {
             uITabButtons[i].tabView = this;
             uITabButtons[i].tabIndex = i;
@@ -26,10 +26,11 @@ public class UITabView : MonoBehaviour {
     {
         if (this.index != tabIndex)
         {
-            for(int j = 0; j < tabPages.Length; j++)
+            for(int j = 0; j < uITabButtons.Length; j++)
             {
                 uITabButtons[j].DoSelect(j == tabIndex);
-                tabPages[j].SetActive(j== tabIndex);
+                if (j < tabPages.Length)
+                    tabPages[j].SetActive(j == tabIndex);
             }
             this.index = tabIndex;
             if(this.OnTabSelect != null)

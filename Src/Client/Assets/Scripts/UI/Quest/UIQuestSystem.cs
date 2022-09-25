@@ -21,11 +21,11 @@ public class UIQuestSystem : UIWindow {
 		this.listBrunch.onItemSelected += this.OnQuestSelected;
 		this.tabs.OnTabSelect += this.OnSelectTab;
 		this.RefreshUI();
-        QuestManager.Instance.OnQuestChanged += this.RefreshUI;
+        QuestManager.Instance.OnQuestStatusChanged += this.RefreshUI;
     }
     private void OnDestroy()
     {
-        QuestManager.Instance.OnQuestChanged -= this.RefreshUI;
+        QuestManager.Instance.OnQuestStatusChanged -= this.RefreshUI;
     }
     private void RefreshUI()
     {
