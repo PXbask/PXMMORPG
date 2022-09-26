@@ -10,7 +10,9 @@ public class UIQuestInfo : MonoBehaviour {
     public Text title;
     public Text[] targets;
     public Text description;
-    public UIIconItem[] rewardItems;
+
+    public Transform[] slots;
+    public GameObject iconItemPrefab;
 
     public Text rewardMoney;
     public Text rewardExp;
@@ -31,7 +33,7 @@ public class UIQuestInfo : MonoBehaviour {
         }
         this.rewardMoney.text = quest.Define.RewardGold.ToString();
         this.rewardExp.text = quest.Define.RewardExp.ToString();
-
+        this.InitIconItems(quest);
         foreach(var fitter in GetComponentsInChildren<ContentSizeFitter>())
         {
             fitter.SetLayoutVertical();
@@ -41,5 +43,61 @@ public class UIQuestInfo : MonoBehaviour {
     public void OnClickAbandon()
     {
 
+    }
+    public void InitIconItems(Quest quest)
+    {
+        if (quest.Define.RewardItem1 > 0)
+        {
+            slots[0].gameObject.SetActive(true);
+            UIIconItem iconItem = slots[0].GetComponentInChildren<UIIconItem>();
+
+            if (iconItem == null)
+            {
+                GameObject go = Instantiate(iconItemPrefab,slots[0]);
+                iconItem = go.GetComponent<UIIconItem>();
+            }
+            var path = Manager.DataManager.Instance.Items[quest.Define.RewardItem1].Icon;
+            iconItem.SetMainIcon(path, quest.Define.RewardItem1Count.ToString());
+        }
+        else
+        {
+            slots[0].gameObject.SetActive(false);
+        }
+
+        if (quest.Define.RewardItem2 > 0)
+        {
+            slots[1].gameObject.SetActive(true);
+            UIIconItem iconItem = slots[1].GetComponentInChildren<UIIconItem>();
+
+            if (iconItem == null)
+            {
+                GameObject go = Instantiate(iconItemPrefab, slots[1]);
+                iconItem = go.GetComponent<UIIconItem>();
+            }
+            var path = Manager.DataManager.Instance.Items[quest.Define.RewardItem2].Icon;
+            iconItem.SetMainIcon(path, quest.Define.RewardItem2Count.ToString());
+        }
+        else
+        {
+            slots[1].gameObject.SetActive(false);
+        }
+
+        if (quest.Define.RewardItem3 > 0)
+        {
+            slots[2].gameObject.SetActive(true);
+            UIIconItem iconItem = slots[2].GetComponentInChildren<UIIconItem>();
+
+            if (iconItem == null)
+            {
+                GameObject go = Instantiate(iconItemPrefab, slots[2]);
+                iconItem = go.GetComponent<UIIconItem>();
+            }
+            var path = Manager.DataManager.Instance.Items[quest.Define.RewardItem3].Icon;
+            iconItem.SetMainIcon(path, quest.Define.RewardItem3Count.ToString());
+        }
+        else
+        {
+            slots[2].gameObject.SetActive(false);
+        }
     }
 }

@@ -24062,6 +24062,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   global: 1
   uinameBar: {fileID: 1623635935835254, guid: c386b5870cfc39041bdb10ca86a4ec28, type: 2}
+  npcStatusPrefab: {fileID: 1229276133196892, guid: bb399a20172bd8f479ac06706f16e836,
+    type: 2}
 --- !u!1 &758956649
 GameObject:
   m_ObjectHideFlags: 0

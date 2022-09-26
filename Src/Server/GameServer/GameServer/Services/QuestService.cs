@@ -34,7 +34,7 @@ namespace GameServer.Services
             Character character = sender.Session.Character;
             Log.InfoFormat("QuestSubmitRequest character:{0} Quest:{1}", character.Id, message.QuestId);
             sender.Session.Response.questSubmit = new QuestSubmitResponse();
-            Result result = character.QuestManager.AcceptQuest(sender, message.QuestId);
+            Result result = character.QuestManager.SubmitQuest(sender, message.QuestId);
             sender.Session.Response.questSubmit.Result = result;
             sender.SendResponse();
         }

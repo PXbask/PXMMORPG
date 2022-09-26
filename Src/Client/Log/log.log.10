@@ -1,58 +1,135 @@
-2022-09-24 11:41:46,775 [ 1] INFO  Unity: LoadingManager start
-2022-09-24 11:41:50,894 [ 1] INFO  Unity: DataManager > DataManager()
-2022-09-24 11:42:17,493 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
-2022-09-24 11:42:17,508 [ 1] INFO  Unity: ConnectToServer() Start 
-2022-09-24 11:42:17,528 [ 1] INFO  Unity: DoConnect
-2022-09-24 11:42:17,531 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-09-24 11:42:17,559 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-09-26 14:45:28,054 [ 1] INFO  Unity: LoadingManager start
+2022-09-26 14:45:31,864 [ 1] INFO  Unity: DataManager > DataManager()
+2022-09-26 14:45:36,508 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
+2022-09-26 14:45:36,520 [ 1] INFO  Unity: ConnectToServer() Start 
+2022-09-26 14:45:36,543 [ 1] INFO  Unity: DoConnect
+2022-09-26 14:45:36,546 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-09-26 14:45:36,571 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-09-24 11:42:17,586 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2022-09-24 11:42:18,011 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2022-09-24 11:42:18,017 [ 1] INFO  Unity: LoadLevel: CharSelect
-2022-09-24 11:42:18,656 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-09-24 11:42:19,829 [ 1] INFO  Unity: Select Char:[1]PX[Wizard]
-2022-09-24 11:42:20,596 [ 1] INFO  Unity: UserGameEnterRequest::index :0
-2022-09-24 11:42:20,659 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
-2022-09-24 11:42:20,676 [ 1] INFO  Unity: ItemManager:Init[ID:1, Count:20]
-2022-09-24 11:42:20,677 [ 1] INFO  Unity: ItemManager:Init[ID:2, Count:20]
-2022-09-24 11:42:20,678 [ 1] INFO  Unity: ItemManager:Init[ID:2003, Count:1]
-2022-09-24 11:42:20,679 [ 1] INFO  Unity: ItemManager:Init[ID:2002, Count:1]
-2022-09-24 11:42:20,759 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1 CharacterID:1
-2022-09-24 11:42:20,773 [ 1] INFO  Unity: AddCharacter:7:PX Map:1 Entity:(7:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-09-24 11:42:20,803 [ 1] INFO  Unity: LoadLevel: MainCity
-2022-09-24 11:42:20,804 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
-2022-09-24 11:42:22,075 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2022-09-26 14:45:36,592 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2022-09-26 14:45:36,991 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2022-09-26 14:45:36,997 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-09-26 14:45:37,686 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-09-26 14:45:40,593 [ 1] INFO  Unity: Select Char:[3]PX3[Warrior]
+2022-09-26 14:45:43,214 [ 1] INFO  Unity: UserGameEnterRequest::index :2
+2022-09-26 14:45:43,288 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
+2022-09-26 14:45:43,305 [ 1] INFO  Unity: ItemManager:Init[ID:1, Count:20]
+2022-09-26 14:45:43,306 [ 1] INFO  Unity: ItemManager:Init[ID:2, Count:20]
+2022-09-26 14:45:43,307 [ 1] INFO  Unity: ItemManager:Init[ID:3, Count:10]
+2022-09-26 14:45:43,393 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1 CharacterID:1
+2022-09-26 14:45:43,408 [ 1] INFO  Unity: AddCharacter:2:PX3 Map:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-09-26 14:45:43,437 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-09-26 14:45:43,439 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
+2022-09-26 14:45:44,776 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2022-09-24 11:42:22,085 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2022-09-26 14:45:44,785 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2022-09-24 11:42:22,369 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-09-24 11:42:25,249 [ 1] INFO  Unity: SetDirection:(98, 18, 0)
-2022-09-24 11:42:25,341 [ 1] INFO  Unity: SetDirection:(94, 35, 0)
-2022-09-24 11:42:25,423 [ 1] INFO  Unity: SetDirection:(86, 51, 0)
-2022-09-24 11:42:25,524 [ 1] INFO  Unity: SetDirection:(74, 67, 0)
-2022-09-24 11:42:25,603 [ 1] INFO  Unity: SetDirection:(61, 79, 0)
-2022-09-24 11:42:25,694 [ 1] INFO  Unity: SetDirection:(46, 89, 0)
-2022-09-24 11:42:25,792 [ 1] INFO  Unity: SetDirection:(27, 96, 0)
-2022-09-24 11:42:25,884 [ 1] INFO  Unity: SetDirection:(10, 100, 0)
-2022-09-24 11:42:25,952 [ 1] INFO  Unity: SetDirection:(-8, 100, 0)
-2022-09-24 11:42:26,054 [ 1] INFO  Unity: SetDirection:(-28, 96, 0)
-2022-09-24 11:42:26,153 [ 1] INFO  Unity: SetDirection:(-45, 90, 0)
-2022-09-24 11:42:26,237 [ 1] INFO  Unity: SetDirection:(-62, 78, 0)
-2022-09-24 11:42:26,351 [ 1] INFO  Unity: SetDirection:(-77, 64, 0)
-2022-09-24 11:42:26,445 [ 1] INFO  Unity: SetDirection:(-87, 48, 0)
-2022-09-24 11:42:26,627 [ 1] INFO  Unity: SetDirection:(-95, 32, 0)
-2022-09-24 11:44:27,331 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{UnassignedReferenceException: The variable openBtn of UIQuestDialog has not been assigned.
-You probably need to assign the openBtn variable of the UIQuestDialog script in the inspector., UIQuestDialog.SetQuest (Models.Quest quest) (at Assets/Scripts/UI/Quest/UIQuestDialog.cs:21)
-Manager.QuestManager.ShowQuestDialog (Models.Quest quest) (at Assets/Scripts/Managers/QuestManager.cs:156)
-Manager.QuestManager.OpenNpcQuest (Int32 npcId) (at Assets/Scripts/Managers/QuestManager.cs:145)
-Manager.NPCManager.DoTaskInteractive (Common.Data.NpcDefine define) (at Assets/Scripts/Managers/NPCManager.cs:56)
-Manager.NPCManager.Interactive (Common.Data.NpcDefine define) (at Assets/Scripts/Managers/NPCManager.cs:42)
-NPCController+<DoInteractive>c__Iterator1.MoveNext () (at Assets/Scripts/GameObject/NPCController.cs:49)
-UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) (at D:/unity/Runtime/Export/Coroutines.cs:17)
-}</args></log4net.Error>
-2022-09-24 11:45:01,049 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-09-24 11:45:01,051 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-09-26 14:45:45,055 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-09-26 14:46:05,713 [ 1] INFO  Unity: SetDirection:(98, 18, 0)
+2022-09-26 14:46:05,812 [ 1] INFO  Unity: SetDirection:(93, 36, 0)
+2022-09-26 14:46:05,913 [ 1] INFO  Unity: SetDirection:(84, 54, 0)
+2022-09-26 14:46:05,996 [ 1] INFO  Unity: SetDirection:(73, 68, 0)
+2022-09-26 14:46:06,104 [ 1] INFO  Unity: SetDirection:(58, 82, 0)
+2022-09-26 14:46:06,187 [ 1] INFO  Unity: SetDirection:(43, 91, 0)
+2022-09-26 14:46:06,289 [ 1] INFO  Unity: SetDirection:(26, 96, 0)
+2022-09-26 14:46:07,085 [ 1] INFO  Unity: SetDirection:(8, 100, 0)
+2022-09-26 14:46:07,252 [ 1] INFO  Unity: SetDirection:(-12, 99, 0)
+2022-09-26 14:46:07,353 [ 1] INFO  Unity: SetDirection:(-31, 95, 0)
+2022-09-26 14:46:07,436 [ 1] INFO  Unity: SetDirection:(-47, 88, 0)
+2022-09-26 14:46:07,535 [ 1] INFO  Unity: SetDirection:(-62, 79, 0)
+2022-09-26 14:46:07,886 [ 1] INFO  Unity: SetDirection:(-75, 66, 0)
+2022-09-26 14:46:08,053 [ 1] INFO  Unity: SetDirection:(-86, 52, 0)
+2022-09-26 14:46:08,170 [ 1] INFO  Unity: SetDirection:(-94, 34, 0)
+2022-09-26 14:46:09,347 [ 1] INFO  Unity: SetDirection:(-86, 51, 0)
+2022-09-26 14:46:09,430 [ 1] INFO  Unity: SetDirection:(-76, 65, 0)
+2022-09-26 14:46:09,515 [ 1] INFO  Unity: SetDirection:(-63, 78, 0)
+2022-09-26 14:46:09,614 [ 1] INFO  Unity: SetDirection:(-48, 88, 0)
+2022-09-26 14:46:09,813 [ 1] INFO  Unity: SetDirection:(-32, 95, 0)
+2022-09-26 14:46:10,103 [ 1] INFO  Unity: SetDirection:(-14, 99, 0)
+2022-09-26 14:46:10,881 [ 1] INFO  Unity: MoveForward
+2022-09-26 14:46:11,329 [ 1] INFO  Unity: Stop
+2022-09-26 14:46:11,511 [ 1] INFO  Unity: SetDirection:(-31, 95, 0)
+2022-09-26 14:46:11,671 [ 1] INFO  Unity: SetDirection:(-48, 87, 0)
+2022-09-26 14:46:15,278 [ 1] INFO  Unity: SetDirection:(-32, 95, 0)
+2022-09-26 14:46:15,360 [ 1] INFO  Unity: MoveForward
+2022-09-26 14:46:16,608 [ 1] INFO  Unity: Stop
+2022-09-26 14:46:17,074 [ 1] INFO  Unity: SetDirection:(-50, 87, 0)
+2022-09-26 14:46:17,173 [ 1] INFO  Unity: SetDirection:(-65, 76, 0)
+2022-09-26 14:46:17,257 [ 1] INFO  Unity: SetDirection:(-77, 63, 0)
+2022-09-26 14:46:17,366 [ 1] INFO  Unity: SetDirection:(-88, 47, 0)
+2022-09-26 14:46:17,750 [ 1] INFO  Unity: SetDirection:(-95, 31, 0)
+2022-09-26 14:46:21,212 [ 1] INFO  Unity: SendQuestAccept ID:1003
+2022-09-26 14:46:22,643 [ 1] INFO  Unity: OnQuestAccept result:Success,err:
+2022-09-26 14:46:29,025 [ 1] INFO  Unity: SetDirection:(-87, 49, 0)
+2022-09-26 14:46:29,126 [ 1] INFO  Unity: SetDirection:(-75, 66, 0)
+2022-09-26 14:46:29,225 [ 1] INFO  Unity: SetDirection:(-60, 80, 0)
+2022-09-26 14:46:29,332 [ 1] INFO  Unity: SetDirection:(-42, 91, 0)
+2022-09-26 14:46:29,433 [ 1] INFO  Unity: SetDirection:(-22, 97, 0)
+2022-09-26 14:46:29,520 [ 1] INFO  Unity: SetDirection:(-2, 100, 0)
+2022-09-26 14:46:29,637 [ 1] INFO  Unity: SetDirection:(18, 98, 0)
+2022-09-26 14:46:29,802 [ 1] INFO  Unity: SetDirection:(36, 93, 0)
+2022-09-26 14:46:35,194 [ 1] INFO  Unity: SendQuestSubmit ID:1003
+2022-09-26 14:46:37,136 [ 1] INFO  Unity: StatusNotify:[Money][Add]0:1000
+2022-09-26 14:46:37,137 [ 1] INFO  Unity: StatusNotify:[Item][Add]3:5
+2022-09-26 14:46:37,140 [ 1] INFO  Unity: OnQuestSubmit result:Success,err:
+2022-09-26 14:46:47,487 [ 1] INFO  Unity: SetDirection:(18, 98, 0)
+2022-09-26 14:46:55,598 [ 1] INFO  Unity: SendQuestAccept ID:1004
+2022-09-26 14:47:01,119 [ 1] INFO  Unity: OnQuestAccept result:Success,err:
+2022-09-26 14:47:05,756 [ 1] INFO  Unity: SetDirection:(-2, 100, 0)
+2022-09-26 14:47:05,857 [ 1] INFO  Unity: SetDirection:(-22, 98, 0)
+2022-09-26 14:47:05,955 [ 1] INFO  Unity: SetDirection:(-42, 91, 0)
+2022-09-26 14:47:06,048 [ 1] INFO  Unity: SetDirection:(-60, 80, 0)
+2022-09-26 14:47:06,150 [ 1] INFO  Unity: SetDirection:(-75, 66, 0)
+2022-09-26 14:47:06,258 [ 1] INFO  Unity: SetDirection:(-87, 49, 0)
+2022-09-26 14:47:06,342 [ 1] INFO  Unity: SetDirection:(-94, 33, 0)
+2022-09-26 14:47:06,443 [ 1] INFO  Unity: SetDirection:(-99, 13, 0)
+2022-09-26 14:47:06,531 [ 1] INFO  Unity: SetDirection:(-100, -7, 0)
+2022-09-26 14:47:06,666 [ 1] INFO  Unity: SetDirection:(-97, -25, 0)
+2022-09-26 14:47:09,850 [ 1] INFO  Unity: SendQuestSubmit ID:1004
+2022-09-26 14:47:11,219 [ 1] INFO  Unity: StatusNotify:[Money][Add]0:1000
+2022-09-26 14:47:11,220 [ 1] INFO  Unity: StatusNotify:[Item][Add]3:5
+2022-09-26 14:47:11,222 [ 1] INFO  Unity: OnQuestSubmit result:Success,err:
+2022-09-26 14:47:46,019 [ 1] INFO  Unity: SendQuestAccept ID:3001
+2022-09-26 14:47:46,090 [ 1] INFO  Unity: OnQuestAccept result:Success,err:
+2022-09-26 14:47:47,849 [ 1] INFO  Unity: SetDirection:(-100, -6, 0)
+2022-09-26 14:47:47,948 [ 1] INFO  Unity: SetDirection:(-99, 14, 0)
+2022-09-26 14:47:48,034 [ 1] INFO  Unity: SetDirection:(-95, 31, 0)
+2022-09-26 14:47:48,136 [ 1] INFO  Unity: SetDirection:(-87, 50, 0)
+2022-09-26 14:47:48,227 [ 1] INFO  Unity: SetDirection:(-77, 64, 0)
+2022-09-26 14:47:48,310 [ 1] INFO  Unity: SetDirection:(-64, 77, 0)
+2022-09-26 14:47:48,412 [ 1] INFO  Unity: SetDirection:(-47, 88, 0)
+2022-09-26 14:47:48,512 [ 1] INFO  Unity: SetDirection:(-28, 96, 0)
+2022-09-26 14:47:48,663 [ 1] INFO  Unity: SetDirection:(-10, 100, 0)
+2022-09-26 14:47:49,643 [ 1] INFO  Unity: SetDirection:(-28, 96, 0)
+2022-09-26 14:47:49,742 [ 1] INFO  Unity: SetDirection:(-46, 89, 0)
+2022-09-26 14:47:49,824 [ 1] INFO  Unity: SetDirection:(-61, 79, 0)
+2022-09-26 14:47:49,926 [ 1] INFO  Unity: SetDirection:(-76, 65, 0)
+2022-09-26 14:47:50,042 [ 1] INFO  Unity: SetDirection:(-87, 49, 0)
+2022-09-26 14:47:50,241 [ 1] INFO  Unity: SetDirection:(-95, 32, 0)
+2022-09-26 14:47:50,359 [ 1] INFO  Unity: SetDirection:(-99, 14, 0)
+2022-09-26 14:47:50,441 [ 1] INFO  Unity: SetDirection:(-100, -4, 0)
+2022-09-26 14:47:50,542 [ 1] INFO  Unity: SetDirection:(-97, -24, 0)
+2022-09-26 14:47:50,626 [ 1] INFO  Unity: SetDirection:(-91, -41, 0)
+2022-09-26 14:47:50,744 [ 1] INFO  Unity: SetDirection:(-83, -56, 0)
+2022-09-26 14:47:52,642 [ 1] INFO  Unity: SetDirection:(-92, -40, 0)
+2022-09-26 14:47:58,215 [ 1] INFO  Unity: SendQuestAccept ID:2001
+2022-09-26 14:47:58,281 [ 1] INFO  Unity: OnQuestAccept result:Success,err:
+2022-09-26 14:48:03,256 [ 1] INFO  Unity: SetDirection:(-97, -23, 0)
+2022-09-26 14:48:03,358 [ 1] INFO  Unity: SetDirection:(-100, -5, 0)
+2022-09-26 14:48:03,440 [ 1] INFO  Unity: SetDirection:(-99, 13, 0)
+2022-09-26 14:48:03,527 [ 1] INFO  Unity: SetDirection:(-94, 33, 0)
+2022-09-26 14:48:03,631 [ 1] INFO  Unity: SetDirection:(-85, 52, 0)
+2022-09-26 14:48:03,738 [ 1] INFO  Unity: SetDirection:(-73, 69, 0)
+2022-09-26 14:48:03,840 [ 1] INFO  Unity: SetDirection:(-57, 82, 0)
+2022-09-26 14:48:03,927 [ 1] INFO  Unity: SetDirection:(-42, 91, 0)
+2022-09-26 14:48:04,006 [ 1] INFO  Unity: SetDirection:(-25, 97, 0)
+2022-09-26 14:48:04,123 [ 1] INFO  Unity: SetDirection:(-6, 100, 0)
+2022-09-26 14:48:07,573 [ 1] INFO  Unity: SetDirection:(-25, 97, 0)
+2022-09-26 14:48:07,655 [ 1] INFO  Unity: SetDirection:(-42, 91, 0)
+2022-09-26 14:48:07,757 [ 1] INFO  Unity: SetDirection:(-58, 81, 0)
+2022-09-26 14:48:07,925 [ 1] INFO  Unity: SetDirection:(-72, 69, 0)
+2022-09-26 14:49:05,603 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-09-26 14:49:05,605 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)

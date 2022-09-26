@@ -54,7 +54,6 @@ namespace GameServer.Managers
                     dbquest.Status = (int)QuestStatus.InProgress;
                 }
                 sender.Session.Response.questAccept.Quest = this.GetQuestInfo(dbquest);
-                dbquest = DBService.Instance.Entities.CharacterQuests.Add(dbquest);
                 character.Data.Quests.Add(dbquest);
                 DBService.Instance.Save();
                 return Result.Success;
@@ -76,11 +75,11 @@ namespace GameServer.Managers
                 {
                     if(dbquest.Status != (int)QuestStatus.Complated)
                     {
-                        sender.Session.Response.questAccept.Errormsg = "任务未完成";
+                        sender.Session.Response.questSubmit.Errormsg = "任务未完成";
                         return Result.Failed;
                     }
                     dbquest.Status=(int)QuestStatus.Finished;
-                    sender.Session.Response.questAccept.Quest = this.GetQuestInfo(dbquest);
+                    sender.Session.Response.questSubmit.Quest = this.GetQuestInfo(dbquest);
                     DBService.Instance.Save();
                     //处理任务奖励
                     if (quest.RewardGold > 0)

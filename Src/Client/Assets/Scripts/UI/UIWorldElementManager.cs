@@ -37,13 +37,13 @@ public class UIWorldElementManager : MonoSingleton<UIWorldElementManager>
         {
             elementStatus[tr].GetComponent<UIQuestStatus>().SetQuestStatus(status);
         }
-		GameObject go = Instantiate(npcStatusPrefab, transform);
-        go.name = string.Format("npcStatusPrefab [{0}]", tr.name);
-        go.GetComponent<UIWorldElement>().owner = tr;
-        go.GetComponent<UIQuestStatus>().SetQuestStatus(status);
-        go.SetActive(true);
         if (!elementStatus.ContainsKey(tr))
         {
+            GameObject go = Instantiate(npcStatusPrefab, transform);
+            go.name = string.Format("npcStatusPrefab [{0}]", tr.name);
+            go.GetComponent<UIWorldElement>().owner = tr;
+            go.GetComponent<UIQuestStatus>().SetQuestStatus(status);
+            go.SetActive(true);
             elementStatus.Add(tr, go);
         }
     }

@@ -63,7 +63,7 @@ namespace Manager {
                 if (kv.Value.PreQuest > 0)
                 {
                     Quest preQuest;
-                    if (this.allQuests.TryGetValue(kv.Key, out preQuest))//获取前置任务
+                    if (this.allQuests.TryGetValue(kv.Value.PreQuest, out preQuest))//获取前置任务
                     {
                         if (preQuest.Info == null)
                             continue;//前置任务未接取
