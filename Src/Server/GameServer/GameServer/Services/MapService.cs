@@ -25,13 +25,10 @@ namespace GameServer.Services
         }
         public void SendUpdateEntity(NetConnection<NetSession> connection, NEntitySync sync)
         {
-            NetMessage message = new NetMessage();
-            message.Response = new NetMessageResponse();
-            message.Response.mapEntitySync = new MapEntitySyncResponse();
-            message.Response.mapEntitySync.entitySyncs.Add(sync);
+            connection.Session.Response.mapEntitySync = new MapEntitySyncResponse();
+            connection.Session.Response.mapEntitySync.entitySyncs.Add(sync);
 
-            byte[] data = PackageHandler.PackMessage(message);
-            connection.SendData(data, 0, data.Length);
+            connection.SendResponse();
         }
         private void OnMapEntitySync(NetConnection<NetSession> sender, MapEntitySyncRequest request)
         {
@@ -44,7 +41,7 @@ namespace GameServer.Services
         private void OnMapTeleport(NetConnection<NetSession> sender, MapTeleportRequest request)
         {
             Character character = sender.Session.Character;
-            Log.InfoFormat("OnMapTeleport: characterID:{0}:{1} TeleporterID:{3}", character.Id, character.Data, request.teleporterId);
+            Log.InfoFormat("OnMapTeleport: characterID:{0}:{1} TeleporterID:{2}", character.Id, character.Data, request.teleporterId);
             if (!DataManager.Instance.Teleporters.ContainsKey(character.Id))
             {
                 Log.WarningFormat("Source TeleporterID [{0}] not existed", request.teleporterId);

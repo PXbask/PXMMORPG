@@ -55,5 +55,14 @@
     "Resource": "Monster/M1003",
     "InitLevel": 1,
     "Speed": 300
+  },
+  "1005": {
+    "TID": 1005,
+    "Name": "-",
+    "Type": "Normal",
+    "Class": "ARCHER",
+    "Resource": "Monster/M1005",
+    "InitLevel": 1,
+    "Speed": 300
   }
 }

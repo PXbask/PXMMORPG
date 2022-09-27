@@ -36,15 +36,20 @@ namespace GameServer.Models
 
         Dictionary<int, MapCharacter> MapCharacters = new Dictionary<int, MapCharacter>();
 
+        public SpawnManager SpawnManager = new SpawnManager();
+
+        public MonsterManager MonsterManager = new MonsterManager();
 
         internal Map(MapDefine define)
         {
             this.Define = define;
+            this.SpawnManager.Init(this);
+            this.MonsterManager.Init(this);
         }
 
         internal void Update()
         {
-            
+            this.SpawnManager.Update();
         }
 
         /// <summary>
@@ -57,23 +62,23 @@ namespace GameServer.Models
 
             character.Info.mapId = this.ID;
 
-            NetMessage message = new NetMessage();
-            message.Response = new NetMessageResponse();
-
-            message.Response.mapCharacterEnter = new MapCharacterEnterResponse();
-            message.Response.mapCharacterEnter.mapId = this.Define.ID;
-            message.Response.mapCharacterEnter.Characters.Add(character.Info);
+            conn.Session.Response.mapCharacterEnter = new MapCharacterEnterResponse();
+            conn.Session.Response.mapCharacterEnter.mapId = this.Define.ID;
+            conn.Session.Response.mapCharacterEnter.Characters.Add(character.Info);
 
             foreach (var kv in this.MapCharacters)
             {
-                message.Response.mapCharacterEnter.Characters.Add(kv.Value.character.Info);
-                this.SendCharacterEnterMap(kv.Value.connection, character.Info);
+                conn.Session.Response.mapCharacterEnter.Characters.Add(kv.Value.character.Info);
+                if (kv.Value.character != character)
+                    this.AddCharacterEnterMap(kv.Value.connection, character.Info);
             }
-            
+            foreach (var kv in this.MonsterManager.Monsters)
+            {
+                conn.Session.Response.mapCharacterEnter.Characters.Add(kv.Value.Info);
+            }
             this.MapCharacters[character.Id] = new MapCharacter(conn, character);
 
-            byte[] data = PackageHandler.PackMessage(message);
-            conn.SendData(data, 0, data.Length);
+            conn.SendResponse();
         }
         internal void CharacterLeave(Character charInfo)
         {
@@ -84,29 +89,35 @@ namespace GameServer.Models
             }
             MapCharacters.Remove(charInfo.Id);
         }
-        #region SendMessages
-        void SendCharacterEnterMap(NetConnection<NetSession> conn, NCharacterInfo character)
+        internal void MonsterEnter(Monster monster)
         {
-            NetMessage message = new NetMessage();
-            message.Response = new NetMessageResponse();
+            Log.InfoFormat("MonsterEnter: Map:{0} monsterId:{1}", this.ID, monster.Id);
+            foreach(var kv in this.MapCharacters)
+            {
+                this.AddCharacterEnterMap(kv.Value.connection, monster.Info);
+            }
+        }
+        #region SendMessages
+        void AddCharacterEnterMap(NetConnection<NetSession> conn, NCharacterInfo character)
+        {
+            if (conn.Session.Response.mapCharacterEnter == null)
+            {
+                conn.Session.Response.mapCharacterEnter = new MapCharacterEnterResponse();
+                conn.Session.Response.mapCharacterEnter.mapId = this.ID;
+            }
+            conn.Session.Response.mapCharacterEnter.Characters.Add(character);
 
-            message.Response.mapCharacterEnter = new MapCharacterEnterResponse();
-            message.Response.mapCharacterEnter.mapId = this.Define.ID;
-            message.Response.mapCharacterEnter.Characters.Add(character);
-
-            byte[] data = PackageHandler.PackMessage(message);
-            conn.SendData(data, 0, data.Length);
+            conn.SendResponse();
         }
 
         private void SendCharacterLeaveMap(NetConnection<NetSession> connection, Character charInfo)
         {
-            NetMessage message = new NetMessage();
-            message.Response=new NetMessageResponse();
-            message.Response.mapCharacterLeave = new MapCharacterLeaveResponse();
-            message.Response.mapCharacterLeave.characterId = charInfo.Id;
-
-            byte[] data = PackageHandler.PackMessage(message);
-            connection.SendData(data, 0, data.Length);
+            if (connection.Session.Response.mapCharacterLeave == null)
+            {
+                connection.Session.Response.mapCharacterLeave = new MapCharacterLeaveResponse();
+            }
+            connection.Session.Response.mapCharacterLeave.characterId = charInfo.Id;
+            connection.SendResponse();
         }
 
         #endregion

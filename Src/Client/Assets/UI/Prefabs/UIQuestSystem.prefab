@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 114563196323924554}
   - component: {fileID: 114084748374522398}
   - component: {fileID: 114820895775466892}
-  - component: {fileID: 114681811007201002}
+  - component: {fileID: 114868820462143094}
   m_Layer: 5
   m_Name: QuestInfo
   m_TagString: Untagged
@@ -769,7 +769,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1727668050838860
 GameObject:
   m_ObjectHideFlags: 1
@@ -2862,7 +2862,7 @@ MonoBehaviour:
   tabs: {fileID: 114820895775466892}
   listMain: {fileID: 114233347209793110}
   listBrunch: {fileID: 114184904839387850}
-  questInfo: {fileID: 114681811007201002}
+  questInfo: {fileID: 0}
 --- !u!114 &114595080512632108
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2962,28 +2962,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114681811007201002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1107869042332170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c788f19f5d433644880a10b955642a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: {fileID: 114017601865107454}
-  targets: []
-  description: {fileID: 114526368450646548}
-  slots:
-  - {fileID: 224197717680262398}
-  - {fileID: 224706415548081370}
-  - {fileID: 224519887442891822}
-  iconItemPrefab: {fileID: 1686575478634576, guid: deb9b1c0f89ae004bb914cfe9ef93cf9,
-    type: 2}
-  rewardMoney: {fileID: 114191972874389734}
-  rewardExp: {fileID: 114367687328068448}
 --- !u!114 &114685108635177014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3335,8 +3313,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114938403964531526}
   m_HandleRect: {fileID: 224545946288573324}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 0.99999994
+  m_Value: 1
+  m_Size: 0.9999999
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3534,7 +3512,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114109755111914048}
   m_HandleRect: {fileID: 224364199197015648}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -3564,6 +3542,28 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
+--- !u!114 &114868820462143094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1107869042332170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c788f19f5d433644880a10b955642a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: {fileID: 114017601865107454}
+  targets: []
+  description: {fileID: 114526368450646548}
+  slots:
+  - {fileID: 224197717680262398}
+  - {fileID: 224706415548081370}
+  - {fileID: 224519887442891822}
+  iconItemPrefab: {fileID: 1686575478634576, guid: deb9b1c0f89ae004bb914cfe9ef93cf9,
+    type: 2}
+  rewardMoney: {fileID: 114191972874389734}
+  rewardExp: {fileID: 114367687328068448}
 --- !u!114 &114869174836028212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4863,7 +4863,7 @@ RectTransform:
   m_Father: {fileID: 224899086004509398}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.000000059604645}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -4901,7 +4901,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000033833297, y: 0.00001974761}
+  m_AnchoredPosition: {x: 0.000033833297, y: -0.0000054509383}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &224373242209828034
@@ -5490,7 +5490,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000039728417, y: 0.00005820516}
+  m_AnchoredPosition: {x: -0.000039728417, y: 0.00007160303}
   m_SizeDelta: {x: 0.000061035, y: 432.9988}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &224848127252908780

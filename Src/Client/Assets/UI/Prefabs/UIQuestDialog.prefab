@@ -598,8 +598,6 @@ MonoBehaviour:
   - {fileID: 224388428861320196}
   - {fileID: 224397088125969258}
   - {fileID: 224582721828998500}
-  iconItemPrefab: {fileID: 1686575478634576, guid: deb9b1c0f89ae004bb914cfe9ef93cf9,
-    type: 2}
   rewardMoney: {fileID: 114779734550403766}
   rewardExp: {fileID: 114334730032682398}
 --- !u!114 &114159308006921458
@@ -2285,7 +2283,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 10, y: -114}
-  m_SizeDelta: {x: 691, y: 26.7996}
+  m_SizeDelta: {x: 691, y: 24.137144}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!224 &224751854532904560
 RectTransform:
@@ -2348,7 +2346,7 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1700937272623290}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
