@@ -28,17 +28,17 @@ public class PlayerInputController : MonoBehaviour {
         if(this.character == null)
         {
             DataManager.Instance.Load();
-            NCharacterInfo cinfo = new NCharacterInfo();
-            cinfo.Id = 1;
-            cinfo.Name = "Test";
-            cinfo.Tid = 1;
-            cinfo.Entity = new NEntity();
-            cinfo.Entity.Position = new NVector3();
-            cinfo.Entity.Direction = new NVector3();
-            cinfo.Entity.Direction.X = 0;
-            cinfo.Entity.Direction.Y = 100;
-            cinfo.Entity.Direction.Z = 0;
-            this.character = new Character(cinfo);
+            NCharacterInfo info = new NCharacterInfo();
+            info.Id = 1;
+            info.Name = "Test";
+            info.ConfigId = 1;
+            info.Entity = new NEntity();
+            info.Entity.Position = new NVector3();
+            info.Entity.Direction = new NVector3();
+            info.Entity.Direction.X = 0;
+            info.Entity.Direction.Y = 100;
+            info.Entity.Direction.Z = 0;
+            this.character = new Character(info);
 
             if (entityController != null) entityController.entity = this.character;
         }

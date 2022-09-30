@@ -14,6 +14,9 @@ namespace Manager
 {
     class CharacterManager : Singleton<CharacterManager>, IDisposable
     {
+        /// <summary>
+        /// 以EntityId为Key
+        /// </summary>
         public Dictionary<int, Character> Characters = new Dictionary<int, Character>();
 
 
@@ -48,7 +51,7 @@ namespace Manager
         {
             Debug.LogFormat("AddCharacter:{0}:{1} Map:{2} Entity:{3}", cha.Id, cha.Name, cha.mapId, cha.Entity.String());
             Character character = new Character(cha);
-            this.Characters[cha.Id] = character;
+            this.Characters[cha.EntityId] = character;
             Manager.EntityManager.Instance.AddEntity(character);
             if (OnCharacterEnter!=null)
             {
@@ -57,17 +60,17 @@ namespace Manager
         }
 
 
-        public void RemoveCharacter(int characterId)
+        public void RemoveCharacter(int entityId)
         {
-            Debug.LogFormat("RemoveCharacter:{0}", characterId);
-            if (this.Characters.ContainsKey(characterId))
+            Debug.LogFormat("RemoveCharacter:{0}", entityId);
+            if (this.Characters.ContainsKey(entityId))
             {
-                Manager.EntityManager.Instance.RemoveEntity(this.Characters[characterId].Info.Entity);
+                Manager.EntityManager.Instance.RemoveEntity(this.Characters[entityId].Info.Entity);
                 if (this.OnCharacterLeave != null)
                 {
-                    this.OnCharacterLeave(Characters[characterId]);
+                    this.OnCharacterLeave(Characters[entityId]);
                 }
-                this.Characters.Remove(characterId);
+                this.Characters.Remove(entityId);
             }
 
         }

@@ -68,7 +68,7 @@ namespace Services
                 Debug.LogFormat("OnMapCharacterEnter:MapID:{0} CharacterID:{1}", User.Instance.CurrentCharacter.mapId, response.mapId);
             foreach (var character in response.Characters)
             {
-                if (User.Instance.CurrentCharacter==null || User.Instance.CurrentCharacter.Id == character.Id)
+                if (User.Instance.CurrentCharacter==null || (User.Instance.CurrentCharacter.Id == character.Id && character.Type.Equals(CharacterType.Player)))
                 {
                     User.Instance.CurrentCharacter = character;
                 }
@@ -82,9 +82,9 @@ namespace Services
         }
         private void OnMapCharacterLeave(object sender, MapCharacterLeaveResponse response)
         {
-            Debug.LogFormat("OnMapCharacterLeave:MapID:{0} CharacterID:{1}", User.Instance.CurrentCharacter.mapId, response.characterId);
-            if (response.characterId != User.Instance.CurrentCharacter.Id)
-                Manager.CharacterManager.Instance.RemoveCharacter(response.characterId);
+            Debug.LogFormat("OnMapCharacterLeave:MapID:{0} CharacterID:{1}", User.Instance.CurrentCharacter.mapId, response.entityId);
+            if (response.entityId != User.Instance.CurrentCharacter.EntityId)
+                Manager.CharacterManager.Instance.RemoveCharacter(response.entityId);
             else
                 Manager.CharacterManager.Instance.Clear();
         }

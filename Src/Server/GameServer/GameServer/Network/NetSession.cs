@@ -10,14 +10,16 @@ using SkillBridge.Message;
 
 namespace Network
 {
-    class NetSession : INetSession
+    internal class NetSession : INetSession
     {
         public TUser User { get; set; }
         public Character Character { get; set; }
         public NEntity Entity { get; set; }
+        public IPostResponser PostResponser { get; set; }
 
         internal void Disconnected()
         {
+            this.PostResponser = null;
             if (Character != null)
                 GameServer.Services.UserService.Instance.CharacterLeave(Character);
         }
@@ -41,9 +43,9 @@ namespace Network
         {
             if (response != null)
             {
-                if(this.Character != null && this.Character.StatusManager.HasStatus)
+                if(PostResponser != null)
                 {
-                    this.Character.StatusManager.ApplyResponse(Response);
+                    PostResponser.PostProcess(Response);
                 }
                 byte[] data = PackageHandler.PackMessage(response);
                 response = null;

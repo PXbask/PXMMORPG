@@ -35,5 +35,9 @@ public class UIMain : MonoSingleton<UIMain> {
     {
         Manager.UIManager.Instance.Show<UIQuestSystem>();
     }
+    public void OnClickFriends()
+    {
+        Manager.UIManager.Instance.Show<UIFriends>();
+    }
     #endregion
 }

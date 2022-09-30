@@ -2,6 +2,7 @@
 using GameServer.Core;
 using GameServer.Managers;
 using Manager;
+using Network;
 using SkillBridge.Message;
 using System;
 using System.Collections.Generic;
@@ -15,27 +16,30 @@ namespace GameServer.Entities
     /// Character
     /// 玩家角色类
     /// </summary>
-    class Character : CharacterBase
+    internal class Character : CharacterBase, IPostResponser
     {
        
         public TCharacter Data;
         public ItemManager ItemManager;
         public StatusManager StatusManager;
         public QuestManager QuestManager;
-
+        public FriendManager FriendManager;
         public Character(CharacterType type,TCharacter cha):base(new Core.Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ),new Core.Vector3Int(100,0,0))
         {
             this.Data = cha;
+            this.Id = cha.ID;
             this.Info = new NCharacterInfo();
             this.Info.Type = type;
             this.Info.Id = cha.ID;
+            this.Info.EntityId = this.entityId;
             this.Info.Name = cha.Name;
             this.Info.Level = 10;
-            this.Info.Tid = cha.TID;
+            this.Info.ConfigId = cha.TID;
             this.Info.Gold = cha.Gold;
             this.Info.Class = (CharacterClass)cha.Class;
             this.Info.mapId = cha.MapID;
             this.Info.Entity = this.EntityData;
+            this.Define = DataManager.Instance.Characters[this.Info.ConfigId];
             this.ItemManager=new ItemManager(this);
             this.ItemManager.GetItemInfos(this.Info.Items);
 
@@ -48,6 +52,9 @@ namespace GameServer.Entities
 
             this.QuestManager = new QuestManager(this);
             this.QuestManager.GetQuestInfos(this.Info.Quests);
+
+            this.FriendManager = new FriendManager(this);
+            this.FriendManager.GetFriendInfos(this.Info.Friends);
         }
         public long Gold
         {
@@ -59,6 +66,20 @@ namespace GameServer.Entities
                 this.StatusManager.AddGoldChange((int)(value - this.Data.Gold));
                 this.Data.Gold = value; 
             }
+        }
+
+        public void PostProcess(NetMessageResponse response)
+        {
+            this.FriendManager.PostProcess(response);
+            if (this.StatusManager.HasStatus)
+                this.StatusManager.PostProcess(response);
+        }
+        /// <summary>
+        /// 角色离开时调用
+        /// </summary>
+        public void Clear()
+        {
+            this.FriendManager.UpdateFriendInfo(this.Info, 0);
         }
     }
 }

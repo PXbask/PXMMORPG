@@ -237,6 +237,7 @@ namespace Services
                 Manager.BagManager.Instance.Init(response.Character.Bag);
                 Manager.EquipManager.Instance.Init(response.Character.Equips);
                 Manager.QuestManager.Instance.Init(response.Character.Quests);
+                Manager.FriendManager.Instance.Init(response.Character.Friends);
             }
         }
         private void OnUserGameLeave(object sender, UserGameLeaveResponse response)

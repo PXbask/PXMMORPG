@@ -1,10 +1,11 @@
 ﻿using GameServer.Entities;
 using SkillBridge.Message;
+using System;
 using System.Collections.Generic;
 
 namespace Manager
 {
-    class StatusManager
+    class StatusManager : Network.IPostResponser
     {
         private Character Owner;
         private List<NStatus> Status { get; set; }
@@ -38,7 +39,7 @@ namespace Manager
         {
             this.AddStatus(StatusType.Item, id, count, action);
         }
-        public void ApplyResponse(NetMessageResponse message)
+        public void PostProcess(NetMessageResponse message)
         {
             if (message.statusNotify == null)
                 message.statusNotify = new StatusNotify();
