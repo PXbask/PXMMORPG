@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using SkillBridge.Message;
 using GameServer.Services;
 using Network;
+using Common;
 
 namespace GameServer.Managers
 {
@@ -85,13 +86,19 @@ namespace GameServer.Managers
             }
             else
             {
-                friendInfo.friendInfo = GetBasicInfo(character.Info);
+                friendInfo.friendInfo = character.GetBasicInfo();
                 friendInfo.friendInfo.Name = character.Info.Name;
                 friendInfo.friendInfo.Class = character.Info.Class;
+                if(friend.Level != character.Info.Level)
+                {
+                    friend.Level = character.Info.Level;
+                }
                 friendInfo.friendInfo.Level = character.Info.Level;
                 character.FriendManager.UpdateFriendInfo(this.Owner.Info, 1);
                 friendInfo.Status = 1;
             }
+            Log.InfoFormat("{0}:{1} GetFriendInfo {2}:{3} Status:{4}",
+                this.Owner.Id, this.Owner.Info.Name, friendInfo.friendInfo.Id, friendInfo.friendInfo.Name, friendInfo.Status);
             return friendInfo;
         }
         internal NFriendInfo GetFriendInfo(int toId)
@@ -105,17 +112,6 @@ namespace GameServer.Managers
             }
             return null;
         }
-        private NCharacterInfo GetBasicInfo(NCharacterInfo info)
-        {
-            return new NCharacterInfo()
-            {
-                Id = info.Id,
-                Name = info.Name,
-                Level = info.Level,
-                Class = info.Class,
-            };
-        }
-
         public void UpdateFriendInfo(NCharacterInfo info, int status)
         {
            foreach(var f in this.friends)
@@ -128,10 +124,22 @@ namespace GameServer.Managers
             }
            this.friendChanged = true;
         }
+        public void OfflineNotify()
+        {
+            foreach(var friendInfo in this.friends)
+            {
+                var friend = CharacterManager.Instance.GetCharacter(friendInfo.friendInfo.Id);
+                if(friend != null)
+                {
+                    friend.FriendManager.UpdateFriendInfo(this.Owner.Info, 0);
+                }
+            }
+        }
         public void PostProcess(NetMessageResponse response)
         {
             if (friendChanged)
             {
+                Log.InfoFormat("PostProcess > FriendManager: characterId:{0}:{1}", this.Owner.Id, this.Owner.Info.Name);
                 this.InitFriends();
                 if(response.friendList == null)
                 {

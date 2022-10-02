@@ -1,6 +1,8 @@
-﻿using Common.Data;
+﻿using Common;
+using Common.Data;
 using GameServer.Core;
 using GameServer.Managers;
+using GameServer.Models;
 using Manager;
 using Network;
 using SkillBridge.Message;
@@ -18,7 +20,9 @@ namespace GameServer.Entities
     /// </summary>
     internal class Character : CharacterBase, IPostResponser
     {
-       
+        public Team team;
+        public int TeamUpdateTS;
+
         public TCharacter Data;
         public ItemManager ItemManager;
         public StatusManager StatusManager;
@@ -67,10 +71,30 @@ namespace GameServer.Entities
                 this.Data.Gold = value; 
             }
         }
-
+        public NCharacterInfo GetBasicInfo()
+        {
+            var info = this.Info;
+            return new NCharacterInfo()
+            {
+                Id = Id,
+                Name = info.Name,
+                Level = info.Level,
+                Class = info.Class,
+            };
+        }
         public void PostProcess(NetMessageResponse response)
         {
             this.FriendManager.PostProcess(response);
+
+            if (team != null)
+            {
+                Log.InfoFormat("PostProcess > Time character:{0}:{1} {2} > {3}", this.Id, this.Info.Name, this.TeamUpdateTS, this.team.timeStamp);
+                if (this.TeamUpdateTS < this.team.timeStamp)
+                {
+                    this.TeamUpdateTS = this.team.timeStamp;
+                    this.team.PostProcess(response);
+                }
+            }
             if (this.StatusManager.HasStatus)
                 this.StatusManager.PostProcess(response);
         }
@@ -79,7 +103,7 @@ namespace GameServer.Entities
         /// </summary>
         public void Clear()
         {
-            this.FriendManager.UpdateFriendInfo(this.Info, 0);
+            this.FriendManager.OfflineNotify();
         }
     }
 }

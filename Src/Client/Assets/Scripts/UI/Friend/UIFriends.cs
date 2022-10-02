@@ -59,7 +59,21 @@ public class UIFriends : UIWindow {
 		MessageBox.Show(String.Format("确定删除好友【{0}】嘛？", selectedItem.nickname.text), "删除好友", MessageBoxType.Confirm, "删除", "取消")
 			.OnYes = () => { FriendService.Instance.SendFriendRemoveRequest(this.selectedItem.Info.Id, this.selectedItem.Info.friendInfo.Id); };
     }
-
+	public void OnClickFriendTeamInvite()
+    {
+        if (selectedItem == null)
+        {
+			MessageBox.Show("请选择要邀请的好友");
+			return;
+        }
+		if(selectedItem.Info.Status == 0)
+        {
+			MessageBox.Show("请选择在线的好友");
+			return;
+		}
+		MessageBox.Show(String.Format("确定要邀请好友【{0}】加入队伍吗？",selectedItem.Info.friendInfo.Name),"邀请好友组队",MessageBoxType.Confirm,
+			"邀请","取消").OnYes= () => { TeamService.Instance.SendTeamInviteRequest(this.selectedItem.Info.friendInfo.Id, this.selectedItem.Info.friendInfo.Name); };
+	}
     public void RefreshUI()
     {
 		ClearFriendList();

@@ -8,6 +8,7 @@ using Models;
 public class UIMain : MonoSingleton<UIMain> {
     public Text nameText;
     public Text level;
+    public UITeam TeamWindow;
     protected override void OnAwake()
     {
         UpdateInfo();
@@ -38,6 +39,10 @@ public class UIMain : MonoSingleton<UIMain> {
     public void OnClickFriends()
     {
         Manager.UIManager.Instance.Show<UIFriends>();
+    }
+    public void ShowTeamUI(bool show)
+    {
+        TeamWindow.ShowTeam(show);
     }
     #endregion
 }

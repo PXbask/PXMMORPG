@@ -68,7 +68,8 @@ namespace GameServer.Services
             Character character = sender.Session.Character;
             Log.InfoFormat("OnFriendAddResponse: character:{0} Result:{1} FromId:{2} ToID:{3}",
                 character.Id, response.Result, response.Request.FromId, response.Request.ToId);
-            if(response.Result == Result.Success)
+            sender.Session.Response.friendAddRes = response;
+            if (response.Result == Result.Success)
             {
                 var requester = SessionManager.Instance.GetSession(response.Request.FromId);
                 if(requester == null)
@@ -82,10 +83,7 @@ namespace GameServer.Services
                     requester.Session.Character.FriendManager.AddFriend(character);
                     DBService.Instance.Save();
 
-                    if(requester.Session.Response.friendAddRes == null)
-                    {
-                        requester.Session.Response.friendAddRes=new FriendAddResponse();
-                    }
+                    requester.Session.Response.friendAddRes = response;
                     requester.Session.Response.friendAddRes.Request = response.Request;
                     requester.Session.Response.friendAddRes.Result = Result.Success;
                     requester.Session.Response.friendAddRes.Errormsg = "添加好友成功";

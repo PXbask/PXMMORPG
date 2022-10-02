@@ -15,8 +15,6 @@ namespace Models
         {
             get { return userInfo; }
         }
-
-
         public void SetupUserInfo(SkillBridge.Message.NUserInfo info)
         {
             this.userInfo = info;
@@ -27,6 +25,7 @@ namespace Models
         public Common.Data.MapDefine CurrentMapData { get; set; }
 
         public UnityEngine.GameObject CurrentCharacterObject { get; set; }
+        public SkillBridge.Message.NTeamInfo TeamInfo { get; set; }
         public void AddGold(int value)
         {
             this.CurrentCharacter.Gold += value;
