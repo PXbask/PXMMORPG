@@ -238,6 +238,7 @@ namespace Services
                 Manager.EquipManager.Instance.Init(response.Character.Equips);
                 Manager.QuestManager.Instance.Init(response.Character.Quests);
                 Manager.FriendManager.Instance.Init(response.Character.Friends);
+                Manager.GuildManager.Instance.Init(response.Character.Guild);
             }
         }
         private void OnUserGameLeave(object sender, UserGameLeaveResponse response)

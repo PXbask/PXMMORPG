@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Entities;
 using Models;
+using Manager;
 
 public class UIMain : MonoSingleton<UIMain> {
     public Text nameText;
@@ -43,6 +44,22 @@ public class UIMain : MonoSingleton<UIMain> {
     public void ShowTeamUI(bool show)
     {
         TeamWindow.ShowTeam(show);
+    }
+    public void OnClickGuild()
+    {
+        GuildManager.Instance.ShowGuild();
+    }
+    public void OnClickRide()
+    {
+
+    }
+    public void OnClickSetting()
+    {
+
+    }
+    public void OnClickSkill()
+    {
+
     }
     #endregion
 }

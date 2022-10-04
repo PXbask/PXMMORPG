@@ -14,6 +14,7 @@ namespace GameServer.Entities
     {
 
         public int Id { get; set; }
+        public string Name { get { return Info.Name; } }
         public NCharacterInfo Info;
         public CharacterDefine Define;
 

@@ -21,7 +21,10 @@ namespace GameServer.Entities
     internal class Character : CharacterBase, IPostResponser
     {
         public Team team;
-        public int TeamUpdateTS;
+        public double TeamUpdateTS;
+
+        public Guild Guild;
+        public double GuildUpdateTS;
 
         public TCharacter Data;
         public ItemManager ItemManager;
@@ -59,6 +62,8 @@ namespace GameServer.Entities
 
             this.FriendManager = new FriendManager(this);
             this.FriendManager.GetFriendInfos(this.Info.Friends);
+
+            this.Guild = GuildManager.Instance.GetGuild(this.Data.GuildID);
         }
         public long Gold
         {
@@ -88,11 +93,34 @@ namespace GameServer.Entities
 
             if (team != null)
             {
-                Log.InfoFormat("PostProcess > Time character:{0}:{1} {2} > {3}", this.Id, this.Info.Name, this.TeamUpdateTS, this.team.timeStamp);
+                Log.InfoFormat("PostProcess > Team character:{0}:{1} {2} > {3}", this.Id, this.Info.Name, this.TeamUpdateTS, this.team.timeStamp);
                 if (this.TeamUpdateTS < this.team.timeStamp)
                 {
                     this.TeamUpdateTS = this.team.timeStamp;
                     this.team.PostProcess(response);
+                }
+            }
+            if (Guild != null)
+            {
+                Log.InfoFormat("PostProcess > Guild character:{0}:{1} {2} > {3}", this.Id, this.Info.Name, this.GuildUpdateTS, this.Guild.timestamp);
+                if (this.Info.Guild == null)
+                {
+                    this.Info.Guild = this.Guild.GuildInfo(this);
+                    if (response.mapCharacterEnter != null)
+                    {
+                        GuildUpdateTS = Guild.timestamp;
+                    }
+                    if(this.TeamUpdateTS < this.Guild.timestamp && response.mapCharacterEnter == null)
+                    {
+                        GuildUpdateTS = Guild.timestamp;
+                        this.Guild.PostProcess(this,response);
+                    }
+                }
+
+                if (this.GuildUpdateTS < this.Guild.timestamp)
+                {
+                    this.GuildUpdateTS = this.Guild.timestamp;
+                    this.Guild.PostProcess(this,response);
                 }
             }
             if (this.StatusManager.HasStatus)
