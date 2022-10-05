@@ -186,7 +186,6 @@
     <Compile Include="TUser.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Utils\Time.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

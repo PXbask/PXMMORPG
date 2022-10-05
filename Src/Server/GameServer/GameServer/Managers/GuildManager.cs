@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Utils;
 
 namespace GameServer.Managers
 {
@@ -29,7 +30,7 @@ namespace GameServer.Managers
         {
             this.Guilds[guild.Id] = guild;
             this.GuildNames.Add(guild.Name);
-            guild.timestamp = Time.timestamp;
+            guild.timestamp = TimeUtil.timestamp;
         }
 
         internal bool CheckNameExisted(string guildName)

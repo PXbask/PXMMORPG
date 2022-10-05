@@ -21,6 +21,7 @@ namespace GameServer.Services
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<GuildListRequest>(this.OnGuildList);
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<GuildRequest>(this.OnGuild);
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<GuildLeaveRequest>(this.OnGuildLeave);
+            MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<GuildAdminRequest>(this.OnGuildAdmin);
         }
         public void Init()
         {
@@ -130,6 +131,34 @@ namespace GameServer.Services
             sender.Session.Response.guildLeave.Result= Result.Success;
             DBService.Instance.Save();
             sender.SendResponse();
+        }
+        private void OnGuildAdmin(NetConnection<NetSession> sender, GuildAdminRequest message)
+        {
+            Character character=sender.Session.Character;
+            Log.InfoFormat("OnGuildAdmin: character:{0}", character.Id);
+            sender.Session.Response.guildAdmin = new GuildAdminResponse();
+            if (character.Guild == null)
+            {
+                sender.Session.Response.guildAdmin.Result = Result.Failed;
+                sender.Session.Response.guildAdmin.Errormsg = "数据非法，你将被封号114514小时";
+                sender.SendResponse();
+                return;
+            }
+            else
+            {
+                character.Guild.ExecuteAdmin(message.Command, message.Target, character.Id);
+                var target=SessionManager.Instance.GetSession(message.Target);
+                if (target != null)
+                {
+                    target.Session.Response.guildAdmin= new GuildAdminResponse();
+                    target.Session.Response.guildAdmin.Result= Result.Success;
+                    target.Session.Response.guildAdmin.Request = message;
+                    target.SendResponse();
+                }
+                sender.Session.Response.guildAdmin.Result = Result.Success;
+                sender.Session.Response.guildAdmin.Request = message;
+                sender.SendResponse();
+            }
         }
     }
 }

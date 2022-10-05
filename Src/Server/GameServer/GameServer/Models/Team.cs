@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Network;
 using SkillBridge.Message;
 using Common;
+using Utils;
 
 namespace GameServer.Models
 {
@@ -15,7 +16,7 @@ namespace GameServer.Models
         public int Id;
         public Character Leader;
         public List<Character> Members = new List<Character>();
-        public int timeStamp;
+        public double timeStamp;
 
         public Team(Character leader)
         {
@@ -30,7 +31,7 @@ namespace GameServer.Models
             }
             this.Members.Add(member);
             member.team = this;
-            timeStamp = Time.timestamp;
+            timeStamp = TimeUtil.timestamp;
         }
         public void Leave(Character member)
         {
@@ -44,7 +45,7 @@ namespace GameServer.Models
                     this.Leader = null;
             }
             member.team = null;
-            timeStamp = Time.timestamp;
+            timeStamp = TimeUtil.timestamp;
         }
         public void PostProcess(NetMessageResponse response)
         {

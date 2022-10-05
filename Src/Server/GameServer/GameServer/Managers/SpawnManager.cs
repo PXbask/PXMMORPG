@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Common.Data;
 using Common;
+using Utils;
 
 namespace GameServer.Managers
 {
@@ -56,7 +57,7 @@ namespace GameServer.Managers
         {
             if (this.spawned)
                 return false;
-            if (this.unSpawnTime + this.SpawnRuleDefine.SpawnPeriod > Time.time)
+            if (this.unSpawnTime + this.SpawnRuleDefine.SpawnPeriod > TimeUtil.time)
                 return false;
             return true;
         }

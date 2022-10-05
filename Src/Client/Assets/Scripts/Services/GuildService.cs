@@ -21,6 +21,7 @@ namespace Services{
             MessageDistributer.Instance.Subscribe<GuildJoinRequest>(this.OnGuildJoinRequest);
             MessageDistributer.Instance.Subscribe<GuildResponse>(this.OnGuild);
             MessageDistributer.Instance.Subscribe<GuildLeaveResponse>(this.OnGuildLeave);
+            MessageDistributer.Instance.Subscribe<GuildAdminResponse>(this.OnGuildAdmin);
         }
         public void Dispose()
         {
@@ -30,6 +31,7 @@ namespace Services{
             MessageDistributer.Instance.Unsubscribe<GuildJoinRequest>(this.OnGuildJoinRequest);
             MessageDistributer.Instance.Unsubscribe<GuildResponse>(this.OnGuild);
             MessageDistributer.Instance.Unsubscribe<GuildLeaveResponse>(this.OnGuildLeave);
+            MessageDistributer.Instance.Subscribe<GuildAdminResponse>(this.OnGuildAdmin);
         }
         internal void Init() { }
         #region Event
@@ -59,7 +61,6 @@ namespace Services{
                 this.OnGuildListResult(message.Guilds);
             }
         }
-
         private void OnGuildJoinResponse(object sender, GuildJoinResponse message)
         {
             Debug.LogFormat("OnGuildJoinResponse: result:{0}", message.Result.ToString());
@@ -108,6 +109,12 @@ namespace Services{
             {
                 MessageBox.Show("离开公会失败", "公会", MessageBoxType.Error);
             }
+        }
+        private void OnGuildAdmin(object sender, GuildAdminResponse message)
+        {
+            Debug.LogFormat("OnGuildAdmin: command:{0} target:{1}", message.Request.Command.ToString(),message.Request.Target);
+            MessageBox.Show(String.Format("执行操作:{0} 结果:{1}:{2}", message.Request.Command.ToString(),
+                message.Result, message.Errormsg));
         }
         #endregion
         #region SendMessages
@@ -158,6 +165,27 @@ namespace Services{
             NetMessage message = new NetMessage();
             message.Request = new NetMessageRequest();
             message.Request.guildLeave = new GuildLeaveRequest();
+            NetClient.Instance.SendMessage(message);
+        }
+        internal void SendGuildJoinApply(bool accept, NGuildApplyInfo apply)
+        {
+            Debug.LogFormat("SendGuildJoinApply: accept:{0}", accept);
+            NetMessage message = new NetMessage();
+            message.Request = new NetMessageRequest();
+            message.Request.guildJoinRes = new GuildJoinResponse();
+            message.Request.guildJoinRes.Result = Result.Success;
+            message.Request.guildJoinRes.Apply = apply;
+            message.Request.guildJoinRes.Apply.Result = accept ? ApplyResult.Accept : ApplyResult.Reject;
+            NetClient.Instance.SendMessage(message);
+        }
+        internal void SendAdminCommand(GuildAdminCommand command, int characterId)
+        {
+            Debug.LogFormat("SendAdminCommand: command:{0} Id:{1}", command.ToString(), characterId);
+            NetMessage message = new NetMessage();
+            message.Request = new NetMessageRequest();
+            message.Request.guildAdmin = new GuildAdminRequest();
+            message.Request.guildAdmin.Command = command;
+            message.Request.guildAdmin.Target = characterId;
             NetClient.Instance.SendMessage(message);
         }
         #endregion
