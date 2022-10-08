@@ -20,11 +20,6 @@ public class UIMain : MonoSingleton<UIMain> {
         this.level.text = User.Instance.CurrentCharacter.Level.ToString();
     }
     #region Event
-    public void OnClickBack2Select()
-    {
-        SceneManager.Instance.LoadScene("CharSelect");
-        Services.UserService.Instance.SendGameLeave();
-    }
     public void OpenBag()
     {
         Manager.UIManager.Instance.Show<UIBag>();
@@ -55,7 +50,7 @@ public class UIMain : MonoSingleton<UIMain> {
     }
     public void OnClickSetting()
     {
-
+        UIManager.Instance.Show<UISetting>();
     }
     public void OnClickSkill()
     {

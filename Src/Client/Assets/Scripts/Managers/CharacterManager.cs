@@ -37,6 +37,11 @@ namespace Manager
 
         }
 
+        internal void StartPrivateChat(int targetId, string targetName)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Clear()
         {
             int[] keys=this.Characters.Keys.ToArray();

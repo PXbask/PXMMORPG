@@ -16,8 +16,8 @@ namespace Services
         public UnityEngine.Events.UnityAction<Result, string> OnLogin;
         public UnityEngine.Events.UnityAction<Result, string> OnCreateChar;
         NetMessage pendingMessage = null;
-        bool connected = false;
-
+        bool connected = false; 
+        private bool isQuitGame=false;
         public UserService()
         {
             NetClient.Instance.OnConnect += OnGameServerConnect;
@@ -30,8 +30,6 @@ namespace Services
             MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnMapCharacterEnter);
 
         }
-
-
 
         public void Dispose()
         {
@@ -184,8 +182,9 @@ namespace Services
             message.Request.gameEnter.characterIdx = characterIdx;
             NetClient.Instance.SendMessage(message);
         }
-        public void SendGameLeave()
+        public void SendGameLeave(bool isQuitGame=false)
         {
+            this.isQuitGame=isQuitGame;
             Debug.LogFormat("UserGameLeaveRequest::User Leave");
             NetMessage message = new NetMessage();
             message.Request = new NetMessageRequest();
@@ -247,6 +246,13 @@ namespace Services
             if (response.Result.Equals(Result.Success)) {
                 MapService.Instance.CurrentMapID = 0;
                 Models.User.Instance.CurrentCharacter = null;
+                if (this.isQuitGame)
+                {
+#if UNITY_EDITOR
+                    UnityEditor.EditorApplication.isPlaying = false;
+#endif
+                    Application.Quit();
+                }
             }
             else
             {
@@ -259,6 +265,6 @@ namespace Services
             //NCharacterInfo info = response.Characters[0];
             //User.Instance.CurrentCharacter = info;
         }
-        #endregion
+#endregion
     }
 }

@@ -70,11 +70,13 @@
      <Compile Include="Assets\Scripts\Log\UnityLogger.cs" />
      <Compile Include="Assets\Scripts\Managers\BagManager.cs" />
      <Compile Include="Assets\Scripts\Managers\CharacterManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\ChatManager.cs" />
      <Compile Include="Assets\Scripts\Managers\DataManager.cs" />
      <Compile Include="Assets\Scripts\Managers\EntityManager.cs" />
      <Compile Include="Assets\Scripts\Managers\EquipManager.cs" />
      <Compile Include="Assets\Scripts\Managers\FriendManager.cs" />
      <Compile Include="Assets\Scripts\Managers\GuildManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\InputManager.cs" />
      <Compile Include="Assets\Scripts\Managers\ItemManager.cs" />
      <Compile Include="Assets\Scripts\Managers\MiniMapManager.cs" />
      <Compile Include="Assets\Scripts\Managers\NPCManager.cs" />
@@ -98,6 +100,8 @@
      <Compile Include="Assets\Scripts\Services\TeamService.cs" />
      <Compile Include="Assets\Scripts\Services\UserService.cs" />
      <Compile Include="Assets\Scripts\Test\ScrollViewTest.cs" />
+     <Compile Include="Assets\Scripts\UI\Chat\UIChat.cs" />
+     <Compile Include="Assets\Scripts\UI\Chat\UIPopChatMenu.cs" />
      <Compile Include="Assets\Scripts\UI\Friend\UIFriendItem.cs" />
      <Compile Include="Assets\Scripts\UI\Friend\UIFriends.cs" />
      <Compile Include="Assets\Scripts\UI\Guild\UIGuild.cs" />
@@ -137,6 +141,7 @@
      <Compile Include="Assets\Scripts\UI\UINameBar.cs" />
      <Compile Include="Assets\Scripts\UI\UIProfileView.cs" />
      <Compile Include="Assets\Scripts\UI\UIRegister.cs" />
+     <Compile Include="Assets\Scripts\UI\UISetting.cs" />
      <Compile Include="Assets\Scripts\UI\UIShop.cs" />
      <Compile Include="Assets\Scripts\UI\UIShopItem.cs" />
      <Compile Include="Assets\Scripts\UI\UIWindow.cs" />

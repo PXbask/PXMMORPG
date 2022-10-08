@@ -7,6 +7,7 @@ public abstract class UIWindow : MonoBehaviour
 	public delegate void CloseHandler(UIWindow sender, WindowResult result);
     public event CloseHandler OnClose;
     public virtual System.Type Type { get { return this.GetType(); } }
+    public GameObject Root;
     public enum WindowResult
     {
         None=0,
@@ -15,10 +16,6 @@ public abstract class UIWindow : MonoBehaviour
     }
     public void Start()
     {
-        this.transform.SetParent(UIMain.Instance.transform);
-        this.transform.localPosition = Vector3.zero;
-        this.transform.localRotation = Quaternion.identity;
-        this.transform.localScale = Vector3.one;
         this.OnStart();
     }
     protected virtual void OnStart()
