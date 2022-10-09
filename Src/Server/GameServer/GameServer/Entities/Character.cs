@@ -26,6 +26,8 @@ namespace GameServer.Entities
         public Guild Guild;
         public double GuildUpdateTS;
 
+        public Chat Chat;
+
         public TCharacter Data;
         public ItemManager ItemManager;
         public StatusManager StatusManager;
@@ -64,6 +66,8 @@ namespace GameServer.Entities
             this.FriendManager.GetFriendInfos(this.Info.Friends);
 
             this.Guild = GuildManager.Instance.GetGuild(this.Data.GuildID);
+
+            this.Chat = new Chat(this);
         }
         public long Gold
         {
@@ -125,6 +129,7 @@ namespace GameServer.Entities
             }
             if (this.StatusManager.HasStatus)
                 this.StatusManager.PostProcess(response);
+            this.Chat.PostProcess(response);
         }
         /// <summary>
         /// 角色离开时调用

@@ -1,33 +1,33 @@
-2022-10-08 15:31:49,392 [ 1] INFO  Unity: LoadingManager start
-2022-10-08 15:31:52,589 [ 1] INFO  Unity: DataManager > DataManager()
-2022-10-08 15:34:03,867 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
-2022-10-08 15:34:03,870 [ 1] INFO  Unity: ConnectToServer() Start 
-2022-10-08 15:34:03,878 [ 1] INFO  Unity: DoConnect
-2022-10-08 15:34:03,881 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-10-08 15:34:03,890 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-10-09 16:09:56,984 [ 1] INFO  Unity: LoadingManager start
+2022-10-09 16:10:00,170 [ 1] INFO  Unity: DataManager > DataManager()
+2022-10-09 16:10:10,083 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
+2022-10-09 16:10:10,085 [ 1] INFO  Unity: ConnectToServer() Start 
+2022-10-09 16:10:10,094 [ 1] INFO  Unity: DoConnect
+2022-10-09 16:10:10,097 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-10-09 16:10:10,105 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-10-08 15:34:03,901 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2022-10-08 15:34:04,729 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2022-10-08 15:34:04,731 [ 1] INFO  Unity: LoadLevel: CharSelect
-2022-10-08 15:34:05,390 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-10-08 15:34:06,561 [ 1] INFO  Unity: Select Char:[1]PX[Wizard]
-2022-10-08 15:34:07,372 [ 1] INFO  Unity: UserGameEnterRequest::index :0
-2022-10-08 15:34:07,777 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
-2022-10-08 15:34:07,780 [ 1] INFO  Unity: ItemManager:Init[ID:1, Count:20]
-2022-10-08 15:34:07,782 [ 1] INFO  Unity: ItemManager:Init[ID:2, Count:20]
-2022-10-08 15:34:07,797 [ 1] INFO  Unity: OnGuild: result:Success ID:1 Name:Homo¹Ý
-2022-10-08 15:34:07,799 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1 CharacterID:1
-2022-10-08 15:34:07,802 [ 1] INFO  Unity: AddCharacter:1:PX Map:1 Entity:(9:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-10-08 15:34:07,806 [ 1] INFO  Unity: LoadLevel: MainCity
-2022-10-08 15:34:07,809 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
-2022-10-08 15:34:09,271 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2022-10-09 16:10:10,112 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2022-10-09 16:10:10,345 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2022-10-09 16:10:10,347 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-10-09 16:10:10,939 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-10-09 16:10:11,701 [ 1] INFO  Unity: Select Char:[1]PX[Wizard]
+2022-10-09 16:10:12,316 [ 1] INFO  Unity: UserGameEnterRequest::index :0
+2022-10-09 16:10:12,373 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
+2022-10-09 16:10:12,376 [ 1] INFO  Unity: ItemManager:Init[ID:1, Count:20]
+2022-10-09 16:10:12,378 [ 1] INFO  Unity: ItemManager:Init[ID:2, Count:20]
+2022-10-09 16:10:12,392 [ 1] INFO  Unity: OnGuild: result:Success ID:1 Name:Homo¹Ý
+2022-10-09 16:10:12,394 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1 CharacterID:1
+2022-10-09 16:10:12,397 [ 1] INFO  Unity: AddCharacter:1:PX Map:1 Entity:(12:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-10-09 16:10:12,402 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-10-09 16:10:12,404 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
+2022-10-09 16:10:13,903 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2022-10-08 15:34:09,271 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2022-10-09 16:10:13,903 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2022-10-08 15:34:09,534 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-10-08 15:34:09,692 [ 1] INFO  Unity: Set Channel:Local
-2022-10-08 15:36:28,143 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-10-08 15:36:28,144 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-10-09 16:10:14,153 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-10-09 16:10:14,265 [ 1] INFO  Unity: Set Channel:Local
+2022-10-09 16:10:20,401 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-10-09 16:10:20,402 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)

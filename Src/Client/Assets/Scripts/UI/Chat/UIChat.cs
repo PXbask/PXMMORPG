@@ -21,8 +21,8 @@ public class UIChat : MonoBehaviour {
     }
     private void OnDestroy()
     {
-        this.channelTab.OnTabSelect += OnDisplayChannelSelected;
-        ChatManager.Instance.OnChat += RefreshUI;
+        this.channelTab.OnTabSelect -= OnDisplayChannelSelected;
+        ChatManager.Instance.OnChat -= RefreshUI;
     }
     private void Update()
     {
@@ -43,11 +43,11 @@ public class UIChat : MonoBehaviour {
             this.chatTarget.gameObject.SetActive(true);
             if(ChatManager.Instance.PrivateID != 0)
             {
-                this.chatText.text = ChatManager.Instance.PrivateName + ":";
+                this.chatTarget.text = ChatManager.Instance.PrivateName + ":";
             }
             else
             {
-                this.chatText.text = "<无>:";
+                this.chatTarget.text = "<无>:";
             }
         }
         else

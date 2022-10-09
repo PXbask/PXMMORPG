@@ -22,7 +22,7 @@ public class UIPopChatMenu : UIWindow, IDeselectHandler
     }
     public void OnChat()
     {
-        Manager.CharacterManager.Instance.StartPrivateChat(targetId, targetName);
+        Manager.ChatManager.Instance.StartPrivateChat(targetId, targetName);
         this.Close(WindowResult.No);
     }
     public void AddFriend()

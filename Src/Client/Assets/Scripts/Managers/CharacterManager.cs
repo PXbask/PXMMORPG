@@ -37,11 +37,6 @@ namespace Manager
 
         }
 
-        internal void StartPrivateChat(int targetId, string targetName)
-        {
-            throw new NotImplementedException();
-        }
-
         public void Clear()
         {
             int[] keys=this.Characters.Keys.ToArray();
@@ -77,7 +72,12 @@ namespace Manager
                 }
                 this.Characters.Remove(entityId);
             }
-
+        }
+        public Character GetCharacter(int id)
+        {
+            Character character = null;
+            this.Characters.TryGetValue(id, out character);
+            return character;
         }
     }
 }
