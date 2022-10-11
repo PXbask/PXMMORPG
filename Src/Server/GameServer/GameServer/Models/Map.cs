@@ -135,6 +135,10 @@ namespace GameServer.Models
                     kv.Value.character.Speed = sync.Entity.Speed;
                     kv.Value.character.Direction = sync.Entity.Direction;
                     kv.Value.character.Position = sync.Entity.Position;
+                    if (sync.Event == EntityEvent.Ride)
+                    {
+                        kv.Value.character.Ride = sync.Param;
+                    }
                 }
                 else
                 {

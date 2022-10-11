@@ -11,7 +11,7 @@ namespace Manager
     {
         void OnEntityRemoved();
         void OnEntityChanged(Entities.Entity entity);
-        void OnEntityEvent(EntityEvent @event);
+        void OnEntityEvent(EntityEvent @event, int param);
     }
     internal class EntityManager:Singleton<EntityManager>
     {
@@ -46,7 +46,7 @@ namespace Manager
                 if (notifiers.ContainsKey(data.Id))
                 {
                     notifiers[entity.entityId].OnEntityChanged(entity);
-                    notifiers[entity.entityId].OnEntityEvent(data.Event);
+                    notifiers[entity.entityId].OnEntityEvent(data.Event, data.Param);
                 }
             }
         }

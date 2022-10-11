@@ -24,12 +24,26 @@ namespace Models
 
         public Common.Data.MapDefine CurrentMapData { get; set; }
 
-        public UnityEngine.GameObject CurrentCharacterObject { get; set; }
+        public PlayerInputController CurrentCharacterObject { get; set; }
         public SkillBridge.Message.NTeamInfo TeamInfo { get; set; }
         public void AddGold(int value)
         {
             this.CurrentCharacter.Gold += value;
             OnGoldChange();
+        }
+        public int CurrentRide = 0;
+        internal void Ride(int id)
+        {
+            if (CurrentRide != id)
+            {
+                CurrentRide = id;
+                CurrentCharacterObject.SendEntityEvent(SkillBridge.Message.EntityEvent.Ride, CurrentRide);
+            }
+            else
+            {
+                CurrentRide = 0;
+                CurrentCharacterObject.SendEntityEvent(SkillBridge.Message.EntityEvent.Ride, 0);
+            }
         }
     }
 }

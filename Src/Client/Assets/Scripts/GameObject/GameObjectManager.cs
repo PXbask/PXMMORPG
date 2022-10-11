@@ -81,6 +81,7 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
         {
             ec.entity = character;
             ec.isPlayer = character.isCurrentPlayer;
+            ec.Ride(character.Info.Ride);
         }
 
         PlayerInputController pc = go.GetComponent<PlayerInputController>();
@@ -89,7 +90,7 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
             if (character.isCurrentPlayer)
             {
                 MainPlayerCamera.Instance.player = go;
-                Models.User.Instance.CurrentCharacterObject = go;
+                Models.User.Instance.CurrentCharacterObject = pc;
                 pc.enabled = true;
                 pc.character = character;
                 pc.entityController = ec;
@@ -99,6 +100,21 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
                 pc.enabled = false;
             }
         }
+    }
+
+
+    public RideController LoadRide(int rideId, Transform parent)
+    {
+        var rideDefine = DataManager.Instance.Rides[rideId];
+        Object obj = Resloader.Load<Object>(rideDefine.Resource);
+        if (obj == null)
+        {
+            Debug.LogErrorFormat("Ride[{0}] Resource[{1}] not existed.", rideDefine.ID, rideDefine.Resource);
+            return null;
+        }
+        GameObject go = (GameObject)Instantiate(obj, parent);
+        go.name = "Ride_" + rideDefine.ID + "_" + rideDefine.Name;
+        return go.GetComponent<RideController>();
     }
 }
 

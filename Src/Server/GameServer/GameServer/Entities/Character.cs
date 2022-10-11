@@ -47,6 +47,7 @@ namespace GameServer.Entities
             this.Info.Gold = cha.Gold;
             this.Info.Class = (CharacterClass)cha.Class;
             this.Info.mapId = cha.MapID;
+				this.Info.Ride = 0;
             this.Info.Entity = this.EntityData;
             this.Define = DataManager.Instance.Characters[this.Info.ConfigId];
             this.ItemManager=new ItemManager(this);
@@ -130,6 +131,16 @@ namespace GameServer.Entities
             if (this.StatusManager.HasStatus)
                 this.StatusManager.PostProcess(response);
             this.Chat.PostProcess(response);
+        }
+		public int Ride
+        {
+            get { return this.Info.Ride; }
+            set
+            {
+                if (this.Info.Ride == value)
+                    return;
+                this.Info.Ride = value;
+            }
         }
         /// <summary>
         /// 角色离开时调用

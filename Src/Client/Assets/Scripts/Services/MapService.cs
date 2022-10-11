@@ -38,7 +38,7 @@ namespace Services
             }
         }
         #region SendMessages
-        internal void SendEntitySync(NEntity entity,EntityEvent @event)
+        internal void SendEntitySync(NEntity entity,EntityEvent @event,int param)
         {
             NetMessage message = new NetMessage();
             message.Request =new NetMessageRequest();
@@ -47,7 +47,8 @@ namespace Services
             {
                 Id = entity.Id,
                 Entity=entity,
-                Event=@event
+                Event=@event,
+                Param=param
             };
             NetClient.Instance.SendMessage(message);
         }

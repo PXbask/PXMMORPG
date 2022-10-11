@@ -1,78 +1,130 @@
-2022-10-09 17:30:10,324 [ 1] INFO  Unity: LoadingManager start
-2022-10-09 17:30:13,465 [ 1] INFO  Unity: DataManager > DataManager()
-2022-10-09 17:30:17,191 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
-2022-10-09 17:30:17,193 [ 1] INFO  Unity: ConnectToServer() Start 
-2022-10-09 17:30:17,197 [ 1] INFO  Unity: DoConnect
-2022-10-09 17:30:17,200 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-10-09 17:30:17,207 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-10-11 11:15:35,986 [ 1] INFO  Unity: LoadingManager start
+2022-10-11 11:15:39,091 [ 1] INFO  Unity: DataManager > DataManager()
+2022-10-11 11:15:42,734 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
+2022-10-11 11:15:42,736 [ 1] INFO  Unity: ConnectToServer() Start 
+2022-10-11 11:15:42,743 [ 1] INFO  Unity: DoConnect
+2022-10-11 11:15:42,745 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-10-11 11:15:42,753 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-10-09 17:30:17,213 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2022-10-09 17:30:17,679 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2022-10-09 17:30:17,681 [ 1] INFO  Unity: LoadLevel: CharSelect
-2022-10-09 17:30:18,103 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-10-09 17:30:18,989 [ 1] INFO  Unity: Select Char:[1]PX[Wizard]
-2022-10-09 17:30:19,935 [ 1] INFO  Unity: UserGameEnterRequest::index :0
-2022-10-09 17:30:20,196 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
-2022-10-09 17:30:20,199 [ 1] INFO  Unity: ItemManager:Init[ID:1, Count:20]
-2022-10-09 17:30:20,200 [ 1] INFO  Unity: ItemManager:Init[ID:2, Count:20]
-2022-10-09 17:30:20,208 [ 1] INFO  Unity: OnGuild: result:Success ID:1 Name:Homo馆
-2022-10-09 17:30:20,210 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1 CharacterID:1
-2022-10-09 17:30:20,212 [ 1] INFO  Unity: AddCharacter:1:PX Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-10-09 17:30:20,216 [ 1] INFO  Unity: LoadLevel: MainCity
-2022-10-09 17:30:20,217 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
-2022-10-09 17:30:21,086 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2022-10-11 11:15:42,759 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2022-10-11 11:15:42,996 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2022-10-11 11:15:42,998 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-10-11 11:15:43,456 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-10-11 11:15:44,656 [ 1] INFO  Unity: Select Char:[1]PX[Wizard]
+2022-10-11 11:15:45,767 [ 1] INFO  Unity: UserGameEnterRequest::index :0
+2022-10-11 11:15:45,822 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
+2022-10-11 11:15:45,824 [ 1] INFO  Unity: ItemManager:Init[ID:1, Count:20]
+2022-10-11 11:15:45,825 [ 1] INFO  Unity: ItemManager:Init[ID:2, Count:20]
+2022-10-11 11:15:45,827 [ 1] INFO  Unity: ItemManager:Init[ID:3002, Count:1]
+2022-10-11 11:15:45,828 [ 1] INFO  Unity: ItemManager:Init[ID:8001, Count:1]
+2022-10-11 11:15:45,840 [ 1] INFO  Unity: OnGuild: result:Success ID:1 Name:Homo馆
+2022-10-11 11:15:45,843 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1 CharacterID:1
+2022-10-11 11:15:45,846 [ 1] INFO  Unity: AddCharacter:1:PX Map:1 Entity:(21:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-10-11 11:15:45,850 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-10-11 11:15:45,851 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
+2022-10-11 11:15:47,441 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2022-10-09 17:30:21,086 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2022-10-11 11:15:47,442 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2022-10-09 17:30:21,280 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-10-09 17:30:21,361 [ 1] INFO  Unity: Set Channel:Local
-2022-10-09 17:30:32,980 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1 CharacterID:1
-2022-10-09 17:30:32,982 [ 1] INFO  Unity: AddCharacter:2:XXX Map:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-10-09 17:30:33,030 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
-2022-10-09 17:30:33,032 [ 1] INFO  Unity: OnGuild: result:Success ID:1 Name:Homo馆
-2022-10-09 17:31:00,892 [ 1] INFO  Unity: MoveForward
-2022-10-09 17:31:01,231 [ 1] INFO  Unity: Stop
-2022-10-09 17:31:04,215 [ 1] INFO  Unity: SetDirection:(98, -19, 0)
-2022-10-09 17:31:04,323 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
-2022-10-09 17:31:04,439 [ 1] INFO  Unity: SetDirection:(85, -53, 0)
-2022-10-09 17:31:04,467 [ 1] INFO  Unity: MoveForward
-2022-10-09 17:31:04,683 [ 1] INFO  Unity: Stop
-2022-10-09 17:31:07,139 [ 1] INFO  Unity: OnEntityChanged: ID:2 Postion:(5000, 4000, 820) Direction:(100, 0, 0) Speed:300
-2022-10-09 17:31:07,141 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
-    [2]evt:MoveFwd entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:300
+2022-10-11 11:15:47,716 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-10-11 11:15:47,831 [ 1] INFO  Unity: Set Channel:Local
+2022-10-11 11:15:50,605 [ 1] INFO  Unity: SetDirection:(98, -18, 0)
+2022-10-11 11:15:50,707 [ 1] INFO  Unity: SetDirection:(93, -36, 0)
+2022-10-11 11:15:50,805 [ 1] INFO  Unity: SetDirection:(84, -54, 0)
+2022-10-11 11:15:50,954 [ 1] INFO  Unity: SetDirection:(73, -69, 0)
+2022-10-11 11:15:56,770 [ 1] INFO  Unity: MoveForward
+2022-10-11 11:15:57,517 [ 1] INFO  Unity: Stop
+2022-10-11 11:15:57,683 [ 1] INFO  Unity: SetDirection:(59, -81, 0)
+2022-10-11 11:15:57,799 [ 1] INFO  Unity: SetDirection:(43, -90, 0)
+2022-10-11 11:15:57,881 [ 1] INFO  Unity: SetDirection:(26, -96, 0)
+2022-10-11 11:15:57,982 [ 1] INFO  Unity: SetDirection:(6, -100, 0)
+2022-10-11 11:15:57,998 [ 1] INFO  Unity: MoveForward
+2022-10-11 11:15:58,131 [ 1] INFO  Unity: SetDirection:(-12, -99, 0)
+2022-10-11 11:15:59,610 [ 1] INFO  Unity: Stop
+2022-10-11 11:15:59,825 [ 1] INFO  Unity: SetDirection:(6, -100, 0)
+2022-10-11 11:15:59,925 [ 1] INFO  Unity: SetDirection:(25, -97, 0)
+2022-10-11 11:16:00,008 [ 1] INFO  Unity: SetDirection:(42, -91, 0)
+2022-10-11 11:16:00,107 [ 1] INFO  Unity: SetDirection:(60, -80, 0)
+2022-10-11 11:16:00,206 [ 1] INFO  Unity: SetDirection:(75, -66, 0)
+2022-10-11 11:16:00,290 [ 1] INFO  Unity: SetDirection:(85, -52, 0)
+2022-10-11 11:16:00,373 [ 1] INFO  Unity: SetDirection:(93, -36, 0)
+2022-10-11 11:16:00,474 [ 1] INFO  Unity: SetDirection:(99, -16, 0)
+2022-10-11 11:16:00,573 [ 1] INFO  Unity: SetDirection:(100, 4, 0)
+2022-10-11 11:16:00,640 [ 1] INFO  Unity: MoveForward
+2022-10-11 11:16:00,706 [ 1] INFO  Unity: SetDirection:(97, 23, 0)
+2022-10-11 11:16:01,221 [ 1] INFO  Unity: Stop
+2022-10-11 11:16:01,353 [ 1] INFO  Unity: SetDirection:(100, 4, 0)
+2022-10-11 11:16:01,454 [ 1] INFO  Unity: SetDirection:(99, -16, 0)
+2022-10-11 11:16:01,536 [ 1] INFO  Unity: SetDirection:(94, -33, 0)
+2022-10-11 11:16:01,618 [ 1] INFO  Unity: SetDirection:(87, -49, 0)
+2022-10-11 11:16:01,703 [ 1] INFO  Unity: SetDirection:(77, -64, 0)
+2022-10-11 11:16:01,722 [ 1] INFO  Unity: MoveForward
+2022-10-11 11:16:01,790 [ 1] INFO  Unity: SetDirection:(64, -77, 0)
+2022-10-11 11:16:01,939 [ 1] INFO  Unity: SetDirection:(49, -87, 0)
+2022-10-11 11:16:02,518 [ 1] INFO  Unity: SetPosition:(5420, 3201, 805)
+2022-10-11 11:16:03,748 [ 1] INFO  Unity: SetDirection:(64, -77, 0)
+2022-10-11 11:16:03,848 [ 1] INFO  Unity: SetDirection:(78, -63, 0)
+2022-10-11 11:16:03,947 [ 1] INFO  Unity: SetDirection:(88, -47, 0)
+2022-10-11 11:16:04,097 [ 1] INFO  Unity: SetDirection:(95, -31, 0)
+2022-10-11 11:16:06,333 [ 1] INFO  Unity: SetDirection:(99, -14, 0)
+2022-10-11 11:16:06,946 [ 1] INFO  Unity: TeleporterObject: Character[PX] EnterTeleporter[4:出城传入点2]
+2022-10-11 11:16:07,410 [ 1] INFO  Unity: SetPosition:(6640, 2563, 805)
+2022-10-11 11:16:09,184 [ 1] INFO  Unity: TeleporterObject: Character[PX] EnterTeleporter[2:主城->副本]
+2022-10-11 11:16:09,186 [ 1] INFO  Unity: MapTeleportRequest: teleporterId:2
+2022-10-11 11:16:09,237 [ 1] INFO  Unity: OnMapCharacterLeave:MapID:1 CharacterID:21
+2022-10-11 11:16:09,242 [ 1] INFO  Unity: RemoveCharacter:21
+2022-10-11 11:16:09,247 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1 CharacterID:4
+2022-10-11 11:16:09,249 [ 1] INFO  Unity: AddCharacter:1:PX Map:4 Entity:(21:pos:(-2548,-3044,-70),dir:(71,71,0),spd:300
+2022-10-11 11:16:09,278 [ 1] INFO  Unity: LoadLevel: Map03
+2022-10-11 11:16:09,281 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:4
+2022-10-11 11:16:09,309 [ 1] INFO  Unity: MoveForward
+2022-10-11 11:16:09,930 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2022-10-09 17:31:07,313 [ 1] INFO  Unity: OnEntityChanged: ID:2 Postion:(5055, 4000, 820) Direction:(100, 0, 0) Speed:0
-2022-10-09 17:31:07,314 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
-    [2]evt:Idle entity:(2:pos:(5055,4000,820),dir:(100,0,0),spd:0
-
-2022-10-09 17:31:08,620 [ 1] INFO  Unity: OnEntityChanged: ID:2 Postion:(5055, 4000, 820) Direction:(98, 18, 0) Speed:0
-2022-10-09 17:31:08,622 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
-    [2]evt:None entity:(2:pos:(5055,4000,820),dir:(98,18,0),spd:0
-
-2022-10-09 17:31:08,736 [ 1] INFO  Unity: OnEntityChanged: ID:2 Postion:(5055, 4000, 820) Direction:(93, 36, 0) Speed:0
-2022-10-09 17:31:08,738 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
-    [2]evt:None entity:(2:pos:(5055,4000,820),dir:(93,36,0),spd:0
-
-2022-10-09 17:31:08,819 [ 1] INFO  Unity: OnEntityChanged: ID:2 Postion:(5055, 4000, 820) Direction:(84, 55, 0) Speed:0
-2022-10-09 17:31:08,821 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
-    [2]evt:None entity:(2:pos:(5055,4000,820),dir:(84,55,0),spd:0
-
-2022-10-09 17:31:08,920 [ 1] INFO  Unity: OnEntityChanged: ID:2 Postion:(5055, 4000, 820) Direction:(71, 71, 0) Speed:0
-2022-10-09 17:31:08,922 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
-    [2]evt:None entity:(2:pos:(5055,4000,820),dir:(71,71,0),spd:0
-
-2022-10-09 17:31:09,028 [ 1] INFO  Unity: OnEntityChanged: ID:2 Postion:(5055, 4000, 820) Direction:(56, 83, 0) Speed:0
-2022-10-09 17:31:09,029 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
-    [2]evt:None entity:(2:pos:(5055,4000,820),dir:(56,83,0),spd:0
-
-2022-10-09 17:31:09,204 [ 1] INFO  Unity: OnEntityChanged: ID:2 Postion:(5055, 4000, 820) Direction:(40, 92, 0) Speed:0
-2022-10-09 17:31:09,208 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
-    [2]evt:None entity:(2:pos:(5055,4000,820),dir:(40,92,0),spd:0
-
-2022-10-09 17:32:32,146 [ 1] INFO  Unity: OnMapCharacterLeave:MapID:1 CharacterID:2
-2022-10-09 17:32:32,147 [ 1] INFO  Unity: RemoveCharacter:2
-2022-10-09 17:32:34,162 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-10-09 17:32:34,163 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-10-11 11:16:09,933 [ 1] INFO  Unity: SetPosition:(-2475, -2971, -127)
+2022-10-11 11:16:10,051 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-10-11 11:16:10,142 [ 1] INFO  Unity: Stop
+2022-10-11 11:16:10,146 [ 1] INFO  Unity: TeleporterObject: Character[PX] EnterTeleporter[8:副本传入点]
+2022-10-11 11:16:10,413 [ 1] INFO  Unity: SetPosition:(-2475, -2971, -76)
+2022-10-11 11:16:11,133 [ 1] INFO  Unity: MoveForward
+2022-10-11 11:16:11,868 [ 1] INFO  Unity: Stop
+2022-10-11 11:16:11,917 [ 1] INFO  Unity: SetDirection:(82, 57, 0)
+2022-10-11 11:16:12,016 [ 1] INFO  Unity: SetDirection:(91, 41, 0)
+2022-10-11 11:16:12,099 [ 1] INFO  Unity: SetDirection:(97, 24, 0)
+2022-10-11 11:16:12,198 [ 1] INFO  Unity: SetDirection:(100, 4, 0)
+2022-10-11 11:16:12,285 [ 1] INFO  Unity: SetDirection:(99, -14, 0)
+2022-10-11 11:16:12,383 [ 1] INFO  Unity: SetDirection:(94, -34, 0)
+2022-10-11 11:16:12,470 [ 1] INFO  Unity: SetDirection:(87, -50, 0)
+2022-10-11 11:16:12,551 [ 1] INFO  Unity: SetDirection:(77, -64, 0)
+2022-10-11 11:16:12,647 [ 1] INFO  Unity: SetDirection:(64, -77, 0)
+2022-10-11 11:16:12,734 [ 1] INFO  Unity: SetDirection:(47, -88, 0)
+2022-10-11 11:16:12,812 [ 1] INFO  Unity: SetDirection:(31, -95, 0)
+2022-10-11 11:16:12,916 [ 1] INFO  Unity: SetDirection:(11, -99, 0)
+2022-10-11 11:16:13,000 [ 1] INFO  Unity: SetDirection:(-7, -100, 0)
+2022-10-11 11:16:13,107 [ 1] INFO  Unity: SetDirection:(-27, -96, 0)
+2022-10-11 11:16:13,178 [ 1] INFO  Unity: SetDirection:(-44, -90, 0)
+2022-10-11 11:16:13,256 [ 1] INFO  Unity: MoveForward
+2022-10-11 11:16:13,290 [ 1] INFO  Unity: SetDirection:(-60, -80, 0)
+2022-10-11 11:16:13,439 [ 1] INFO  Unity: SetDirection:(-74, -68, 0)
+2022-10-11 11:16:13,688 [ 1] INFO  Unity: TeleporterObject: Character[PX] EnterTeleporter[8:副本传入点]
+2022-10-11 11:16:14,101 [ 1] INFO  Unity: Stop
+2022-10-11 11:16:14,118 [ 1] INFO  Unity: SetDirection:(-85, -53, 0)
+2022-10-11 11:16:14,234 [ 1] INFO  Unity: SetDirection:(-94, -35, 0)
+2022-10-11 11:16:14,333 [ 1] INFO  Unity: SetDirection:(-99, -15, 0)
+2022-10-11 11:16:14,436 [ 1] INFO  Unity: SetDirection:(-100, 6, 0)
+2022-10-11 11:16:14,530 [ 1] INFO  Unity: SetDirection:(-96, 26, 0)
+2022-10-11 11:16:14,634 [ 1] INFO  Unity: SetDirection:(-90, 44, 0)
+2022-10-11 11:16:14,784 [ 1] INFO  Unity: SetDirection:(-81, 59, 0)
+2022-10-11 11:16:15,588 [ 1] INFO  Unity: SetDirection:(-68, 73, 0)
+2022-10-11 11:16:15,704 [ 1] INFO  Unity: SetDirection:(-52, 86, 0)
+2022-10-11 11:16:15,786 [ 1] INFO  Unity: SetDirection:(-36, 93, 0)
+2022-10-11 11:16:15,869 [ 1] INFO  Unity: SetDirection:(-19, 98, 0)
+2022-10-11 11:16:15,974 [ 1] INFO  Unity: SetDirection:(2, 100, 0)
+2022-10-11 11:16:16,074 [ 1] INFO  Unity: SetDirection:(22, 97, 0)
+2022-10-11 11:16:16,157 [ 1] INFO  Unity: SetDirection:(39, 92, 0)
+2022-10-11 11:16:16,256 [ 1] INFO  Unity: SetDirection:(56, 83, 0)
+2022-10-11 11:16:16,389 [ 1] INFO  Unity: SetDirection:(70, 71, 0)
+2022-10-11 11:16:18,385 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-10-11 11:16:18,386 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)

@@ -31,6 +31,8 @@ namespace Manager
 
             this.UIResources.Add(typeof(UISetting), new UIElement() { Resources = "UI/UISetting", Cache = false });
             this.UIResources.Add(typeof(UIPopChatMenu), new UIElement() { Resources = "UI/UIPopChatMenu", Cache = false });
+
+            this.UIResources.Add(typeof(UIRide), new UIElement() { Resources = "UI/UIRide", Cache = false });
         }
         ~UIManager() { }
 		public T Show<T>()
