@@ -33,10 +33,12 @@ namespace Manager
             this.UIResources.Add(typeof(UIPopChatMenu), new UIElement() { Resources = "UI/UIPopChatMenu", Cache = false });
 
             this.UIResources.Add(typeof(UIRide), new UIElement() { Resources = "UI/UIRide", Cache = false });
+            this.UIResources.Add(typeof(UISystemConfig), new UIElement() { Resources = "UI/UISystemConfig", Cache = false });
         }
         ~UIManager() { }
 		public T Show<T>()
         {
+            SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Win_Open);
 			Type type = typeof(T);
             if (this.UIResources.ContainsKey(type))
             {

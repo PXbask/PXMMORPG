@@ -67,14 +67,16 @@ public class UICharacterSelect : MonoBehaviour {
 			classButtons_Select[i].SetActive((i == charClass - 1));
 		}
 		descripText.text = DataManager.Instance.Characters[charClass].Description;
-    }
+		SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
+	}
 	public void OnClickStartGame()
     {
         if (selectCharacterIdx >= 0)
         {
 			UserService.Instance.SendGameEnter(selectCharacterIdx);
         }
-    }
+		SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
+	}
 	public void OnClickSelectBackButton()
     {
 		SceneManager.Instance.LoadScene("Loading");
@@ -93,6 +95,7 @@ public class UICharacterSelect : MonoBehaviour {
 			MessageBox.Show("请输入角色名称");
 			return;
         }
+		SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
 		UserService.Instance.SendCharCreate(nameField.text,charClass);
     }
 	public void OnCreateChar(Result result, string msg)
@@ -118,5 +121,6 @@ public class UICharacterSelect : MonoBehaviour {
 			UICharInfo ci = uiprofileView.profileButtons[i].GetComponent<UICharInfo>();
 			ci.Selected = selectCharacterIdx == i;
 		}
+		SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
 	}
 }

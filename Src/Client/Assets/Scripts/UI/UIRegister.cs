@@ -61,6 +61,7 @@ public class UIRegister : MonoBehaviour {
             MessageBox.Show("请先同意用户协议");
             return;
         }
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
         UserService.Instance.SendRegister(this.username.text, this.password.text);
     }
 }

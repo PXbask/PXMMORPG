@@ -22,6 +22,7 @@ public class UILogin : MonoBehaviour {
 		if (result.Equals(SkillBridge.Message.Result.Success))
 		{
 			SceneManager.Instance.LoadScene("CharSelect");
+			SoundManager.Instance.PlayMusic(SoundDefine.Music_Select);
 		}
         else
         {
@@ -46,5 +47,6 @@ public class UILogin : MonoBehaviour {
 			return;
 		}
 		UserService.Instance.SendLogin(username.text, password.text);
+		SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
     }
 }

@@ -31,6 +31,7 @@ namespace Services
             {
                 User.Instance.CurrentMapData = DataManager.Instance.Maps[id];
                 SceneManager.Instance.LoadScene(DataManager.Instance.Maps[id].Resource);
+                SoundManager.Instance.PlayMusic(DataManager.Instance.Maps[id].Music);
             }
             else
             {
