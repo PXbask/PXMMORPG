@@ -84,10 +84,10 @@ public class SoundManager : MonoSingleton<SoundManager>
 
     internal void PlaySound(string name)
     {
-        AudioClip clip = Resloader.Load<AudioClip>(MusicPath + name);
+        AudioClip clip = Resloader.Load<AudioClip>(SoundPath + name);
         if (clip == null)
         {
-            Debug.LogWarningFormat("PlayMusic:{0} not exist", name);
+            Debug.LogWarningFormat("PlaySound:{0} not exist", name);
             return;
         }
         soundAudioSource.PlayOneShot(clip);

@@ -78,5 +78,9 @@ namespace Manager
                 }
             }
         }
+        public void Close<T>()
+        {
+            this.Close(typeof(T));
+        }
 	}
 }

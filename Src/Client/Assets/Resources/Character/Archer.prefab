@@ -34,10 +34,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4616454976859732}
-  - component: {fileID: 54694007077697496}
-  - component: {fileID: 136387830155563700}
-  - component: {fileID: 114984784174661268}
-  - component: {fileID: 114749285204662814}
+  - component: {fileID: 54003734923680098}
+  - component: {fileID: 136038717536158482}
+  - component: {fileID: 114987342349243876}
+  - component: {fileID: 114493378607344554}
   m_Layer: 0
   m_Name: Archer
   m_TagString: Untagged
@@ -1923,7 +1923,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1023616289239580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 19.263285, y: -2.632176, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4068600440351762}
@@ -2347,7 +2347,7 @@ Transform:
   m_Father: {fileID: 4947274273310360}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &54694007077697496
+--- !u!54 &54003734923680098
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2380,7 +2380,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114749285204662814
+--- !u!114 &114493378607344554
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2391,13 +2391,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c99e2cbb8f032409e0e1d25c142557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 54694007077697496}
+  rb: {fileID: 54003734923680098}
   rotateSpeed: 2
   turnAngle: 10
   speed: 0
   entityController: {fileID: 0}
   onAir: 0
---- !u!114 &114984784174661268
+  autoNav: 0
+--- !u!114 &114987342349243876
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2409,7 +2410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 95842149403464802}
-  rb: {fileID: 54694007077697496}
+  rb: {fileID: 54003734923680098}
   position: {x: 0, y: 0, z: 0}
   direction: {x: 0, y: 0, z: 0}
   lastPosition: {x: 0, y: 0, z: 0}
@@ -2418,8 +2419,8 @@ MonoBehaviour:
   jumpPower: 3
   isPlayer: 0
   rideController: {fileID: 0}
-  rideBone: {fileID: 4947274273310360}
---- !u!136 &136387830155563700
+  rideBone: {fileID: 4280621566586332}
+--- !u!136 &136038717536158482
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2429,9 +2430,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2.0078633
+  m_Height: 2.031872
   m_Direction: 1
-  m_Center: {x: 0, y: 0.9677125, z: 0}
+  m_Center: {x: 0, y: 0.9575101, z: 0}
 --- !u!137 &137225269108362478
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -2447,7 +2448,7 @@ SkinnedMeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: f183074ae106061459f94eb60bdbc1ea, type: 2}
+  - {fileID: 2100000, guid: 210f7e7a746b2c64084998ba5d6256e8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2549,7 +2550,7 @@ SkinnedMeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: f183074ae106061459f94eb60bdbc1ea, type: 2}
+  - {fileID: 2100000, guid: 5944bf50bf156fd48828eaca29f72fc9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

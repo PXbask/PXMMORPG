@@ -15,6 +15,9 @@ public class UIQuestInfo : MonoBehaviour {
 
     public Text rewardMoney;
     public Text rewardExp;
+
+    public Button navButton;
+    private int npc = 0;
     void Start() {
         slots.Add(GameObject.Find("UIEquipSlot").transform);
         slots.Add(GameObject.Find("UIEquipSlot (1)").transform);
@@ -36,6 +39,17 @@ public class UIQuestInfo : MonoBehaviour {
         }
         this.rewardMoney.text = quest.Define.RewardGold.ToString();
         this.rewardExp.text = quest.Define.RewardExp.ToString();
+
+        if(quest.Info == null)
+        {
+            this.npc = quest.Define.AcceptNPC;
+        }
+        else if(quest.Info.Status==SkillBridge.Message.QuestStatus.Complated)
+        {
+            this.npc = quest.Define.SubmitNPC;
+        }
+        this.navButton.gameObject.SetActive(npc > 0);
+
         this.InitIconItems(quest);
         foreach(var fitter in GetComponentsInChildren<ContentSizeFitter>())
         {
@@ -46,6 +60,12 @@ public class UIQuestInfo : MonoBehaviour {
     public void OnClickAbandon()
     {
 
+    }
+    public void OnClickNav()
+    {
+        Vector3 pos = Manager.NPCManager.Instance.GetNpcPosition(npc);
+        Models.User.Instance.CurrentCharacterObject.StartNav(pos);
+        Manager.UIManager.Instance.Close<UIQuestSystem>();
     }
     public void InitIconItems(Quest quest)
     {

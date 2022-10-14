@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Common.Data;
 using Manager;
+using Models;
 
 public class NPCController : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class NPCController : MonoBehaviour
         animator = GetComponent<Animator>();
         origionColor=skinnedMeshRenderer.sharedMaterial.color;
         npcDefine = Manager.NPCManager.Instance.GetNpcDefine(npcID);
+        NPCManager.Instance.UpdateNpcPosition(npcID, transform.position);
         this.StartCoroutine(Actions());
 
         RefreshNpcStatus();
@@ -86,6 +88,10 @@ public class NPCController : MonoBehaviour
     }
     void OnMouseDown()
     {
+        if (Vector3.Distance(this.transform.position, User.Instance.CurrentCharacterObject.transform.position) > 2f)
+        {
+            User.Instance.CurrentCharacterObject.StartNav(this.transform.position);
+        }
         Interactive();
     }
     void OnMouseOver()

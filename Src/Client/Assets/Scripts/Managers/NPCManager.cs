@@ -10,6 +10,7 @@ namespace Manager
 	{
 		public delegate bool NpcActionHandler(NpcDefine npc);
 		private Dictionary<NpcFunction,NpcActionHandler> eventMap=new Dictionary<NpcFunction,NpcActionHandler>();
+        public Dictionary<int, Vector3> npcPosition = new Dictionary<int, Vector3>();
 		public void RegisterNpcEvent(NpcFunction function,NpcActionHandler action)
         {
 			if (!eventMap.ContainsKey(function))
@@ -62,6 +63,14 @@ namespace Manager
             if (!eventMap.ContainsKey(define.Function))
                 return false;
             return eventMap[define.Function](define);
+        }
+        public void UpdateNpcPosition(int npc,Vector3 pos)
+        {
+            this.npcPosition[npc] = pos;
+        }
+        public Vector3 GetNpcPosition(int npc)
+        {
+            return this.npcPosition[npc];
         }
     }
 }
