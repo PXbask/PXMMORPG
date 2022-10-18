@@ -5,6 +5,7 @@ using UnityEngine;
 using SkillBridge.Message;
 using System;
 using Services;
+using Common.Data;
 
 namespace Manager
 {
@@ -48,6 +49,18 @@ namespace Manager
                 }
             }
         }
+
+        public List<EquipDefine> GetEquipedDefines()
+        {
+            List<EquipDefine> res = new List<EquipDefine>();
+            for (int i = 0; i < (int)EquipSlot.SlotMax; i++)
+            {
+                if(Equips[i]!=null)
+                    res.Add(Equips[i].EquipDefine);
+            }
+            return res;
+        }
+
         unsafe private byte[] GetEquipData()
         {
             fixed (byte* dataPtr = this.Data)

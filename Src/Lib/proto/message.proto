@@ -86,18 +86,26 @@ message NCharacterInfo {
 	CHARACTER_TYPE type = 5;
 	CHARACTER_CLASS class = 6;
 	int32 level = 7;
-	int32 mapId = 8;
-	NEntity entity = 9;
-	int64 gold = 10;
-	repeated NItemInfo Items=11;
-	NBagInfo Bag = 12;
-	bytes Equips = 13;
+	int64 exp = 8;
+	NAttributeDynamic attrDynamic = 9;
+	int32 mapId = 10;
+	NEntity entity = 11;
+	int64 gold = 12;
+	repeated NItemInfo Items = 13;
+	NBagInfo Bag = 14;
+	bytes Equips = 15;
 
-	repeated NQuestInfo quests = 14;
-	repeated NFriendInfo friends = 15;
+	repeated NQuestInfo quests = 16;
+	repeated NFriendInfo friends = 17;
 
-	NGuildInfo guild = 16;
-	int32 ride = 17;
+	NGuildInfo guild = 18;
+	int32 ride = 19;
+}
+
+message NAttributeDynamic
+{
+	int32 HP = 1;
+	int32 MP = 2;
 }
 
 message NItemInfo
@@ -244,8 +252,9 @@ enum STATUS_TYPE
 {
 	MONEY = 0;
 	EXP = 1;
-	SKILL_POINT = 2;
-	ITEM = 3;
+	LEVEL = 2;
+	SKILL_POINT = 3;
+	ITEM = 4;
 }
 
 message NStatus
@@ -684,17 +693,17 @@ message GuildAdminResponse
 	GuildAdminRequest request = 3;
 }
 
-//ÁÄÌì
+//ï¿½ï¿½ï¿½ï¿½
 
 enum CHAT_CHANNEL
 {
-	ALL = -1;     //ËùÓÐ
-	LOCAL = 1;	  //±¾µØ
-	WORLD = 2;	  //ÊÀ½ç
+	ALL = -1;     //ï¿½ï¿½ï¿½ï¿½
+	LOCAL = 1;	  //ï¿½ï¿½ï¿½ï¿½
+	WORLD = 2;	  //ï¿½ï¿½ï¿½ï¿½
 	SYSTEM = 4;   //ÏµÍ³
-	PRIVATE = 8;  //Ë½ÁÄ
-	TEAM = 16;    //¶ÓÎé
-	GUILD = 32;   //¹«»á
+	PRIVATE = 8;  //Ë½ï¿½ï¿½
+	TEAM = 16;    //ï¿½ï¿½ï¿½ï¿½
+	GUILD = 32;   //ï¿½ï¿½ï¿½ï¿½
 }
 
 message ChatMessage

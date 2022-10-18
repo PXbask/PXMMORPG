@@ -37,7 +37,7 @@ public class UIRide : UIWindow {
         {
             if (kv.Value.Define.Type == SkillBridge.Message.ItemType.Ride && 
                 (kv.Value.Define.LimitClass==SkillBridge.Message.CharacterClass.None) ||
-                (kv.Value.Define.LimitClass==User.Instance.CurrentCharacter.Class))
+                (kv.Value.Define.LimitClass==User.Instance.CurrentCharacterInfo.Class))
             {
                 if (EquipManager.Instance.Contain(kv.Key))
                     continue;

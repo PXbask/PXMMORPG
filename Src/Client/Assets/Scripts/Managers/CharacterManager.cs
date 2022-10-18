@@ -57,6 +57,10 @@ namespace Manager
             {
                 OnCharacterEnter(character);
             }
+            if(cha.EntityId == Models.User.Instance.CurrentCharacterInfo.EntityId)
+            {
+                Models.User.Instance.CurrentCharacter = character;
+            }
         }
 
 

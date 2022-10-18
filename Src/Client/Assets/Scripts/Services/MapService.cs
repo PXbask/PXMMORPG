@@ -66,13 +66,13 @@ namespace Services
         #region MessageDistributer Event
         private void OnMapCharacterEnter(object sender, MapCharacterEnterResponse response)
         {
-            if (User.Instance.CurrentCharacter != null)
-                Debug.LogFormat("OnMapCharacterEnter:MapID:{0} CharacterID:{1}", User.Instance.CurrentCharacter.mapId, response.mapId);
+            if (User.Instance.CurrentCharacterInfo != null)
+                Debug.LogFormat("OnMapCharacterEnter:MapID:{0} CharacterID:{1}", User.Instance.CurrentCharacterInfo.mapId, response.mapId);
             foreach (var character in response.Characters)
             {
-                if (User.Instance.CurrentCharacter==null || (User.Instance.CurrentCharacter.Id == character.Id && character.Type.Equals(CharacterType.Player)))
+                if (User.Instance.CurrentCharacterInfo==null || (User.Instance.CurrentCharacterInfo.Id == character.Id && character.Type.Equals(CharacterType.Player)))
                 {
-                    User.Instance.CurrentCharacter = character;
+                    User.Instance.CurrentCharacterInfo = character;
                 }
                 CharacterManager.Instance.AddCharacter(character);
             }
@@ -84,8 +84,8 @@ namespace Services
         }
         private void OnMapCharacterLeave(object sender, MapCharacterLeaveResponse response)
         {
-            Debug.LogFormat("OnMapCharacterLeave:MapID:{0} CharacterID:{1}", User.Instance.CurrentCharacter.mapId, response.entityId);
-            if (response.entityId != User.Instance.CurrentCharacter.EntityId)
+            Debug.LogFormat("OnMapCharacterLeave:MapID:{0} CharacterID:{1}", User.Instance.CurrentCharacterInfo.mapId, response.entityId);
+            if (response.entityId != User.Instance.CurrentCharacterInfo.EntityId)
                 Manager.CharacterManager.Instance.RemoveCharacter(response.entityId);
             else
                 Manager.CharacterManager.Instance.Clear();

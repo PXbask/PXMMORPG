@@ -16,8 +16,8 @@ public class UIMain : MonoSingleton<UIMain> {
     }
     public void UpdateInfo()
     {
-        this.nameText.text = User.Instance.CurrentCharacter.Name;
-        this.level.text = User.Instance.CurrentCharacter.Level.ToString();
+        this.nameText.text = User.Instance.CurrentCharacterInfo.Name;
+        this.level.text = User.Instance.CurrentCharacterInfo.Level.ToString();
     }
     #region Event
     public void OpenBag()

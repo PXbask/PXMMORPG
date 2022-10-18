@@ -232,7 +232,7 @@ namespace Services
         {
             Debug.LogFormat("OnUserGameEnter:{0} [{1}]", response.Result, response.Errormsg);
             if (response.Result.Equals(Result.Success)) {
-                User.Instance.CurrentCharacter = response.Character;
+                User.Instance.CurrentCharacterInfo = response.Character;
                 Manager.ItemManager.Instance.Init(response.Character.Items);
                 Manager.BagManager.Instance.Init(response.Character.Bag);
                 Manager.EquipManager.Instance.Init(response.Character.Equips);
@@ -246,7 +246,7 @@ namespace Services
             Debug.LogFormat("OnUserGameLeave:{0} [{1}]", response.Result, response.Errormsg);
             if (response.Result.Equals(Result.Success)) {
                 MapService.Instance.CurrentMapID = 0;
-                Models.User.Instance.CurrentCharacter = null;
+                Models.User.Instance.CurrentCharacterInfo = null;
                 if (this.isQuitGame)
                 {
 #if UNITY_EDITOR

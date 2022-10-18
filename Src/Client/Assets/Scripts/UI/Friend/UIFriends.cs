@@ -37,7 +37,7 @@ public class UIFriends : UIWindow {
 		string friendName = string.Empty;
 		if (!int.TryParse(inputText, out friendId))
 			friendName = inputText;
-		if(friendId == User.Instance.CurrentCharacter.Id || friendName == User.Instance.CurrentCharacter.Name)
+		if(friendId == User.Instance.CurrentCharacterInfo.Id || friendName == User.Instance.CurrentCharacterInfo.Name)
         {
 			tips = "开玩笑嘛？不能添加自己哦";
 			return false;

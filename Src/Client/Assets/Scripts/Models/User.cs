@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Entities;
 using Manager;
 using UnityEngine.Events;
 
@@ -19,8 +20,8 @@ namespace Models
         {
             this.userInfo = info;
         }
-
-        public SkillBridge.Message.NCharacterInfo CurrentCharacter { get; set; }
+        public Character CurrentCharacter { get; set; }
+        public SkillBridge.Message.NCharacterInfo CurrentCharacterInfo { get; set; }
 
         public Common.Data.MapDefine CurrentMapData { get; set; }
 
@@ -28,7 +29,7 @@ namespace Models
         public SkillBridge.Message.NTeamInfo TeamInfo { get; set; }
         public void AddGold(int value)
         {
-            this.CurrentCharacter.Gold += value;
+            this.CurrentCharacterInfo.Gold += value;
             OnGoldChange();
         }
         public int CurrentRide = 0;

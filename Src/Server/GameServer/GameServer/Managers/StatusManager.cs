@@ -3,7 +3,7 @@ using SkillBridge.Message;
 using System;
 using System.Collections.Generic;
 
-namespace Manager
+namespace Managers
 {
     class StatusManager : Network.IPostResponser
     {
@@ -34,6 +34,14 @@ namespace Manager
                 this.AddStatus(StatusType.Money, 0, goldDelta, StatusAction.Add);
             if (goldDelta < 0)
                 this.AddStatus(StatusType.Money, 0, goldDelta, StatusAction.Delete);
+        }
+        public void AddExpChange(int exp)
+        {
+            this.AddStatus(StatusType.Exp, 0, exp, StatusAction.Add);
+        }
+        public void AddLevelUp(int level)
+        {
+            this.AddStatus(StatusType.Level, 0, level, StatusAction.Add);
         }
         public void AddItemChange(int id,int count,StatusAction action)
         {

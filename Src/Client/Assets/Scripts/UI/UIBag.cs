@@ -47,7 +47,7 @@ public class UIBag : UIWindow {
     }
     public void SetMoneyText()
     {
-        this.Money.text = Models.User.Instance.CurrentCharacter.Id.ToString();
+        this.Money.text = Models.User.Instance.CurrentCharacterInfo.Id.ToString();
     }
     public void Refresh()
     {

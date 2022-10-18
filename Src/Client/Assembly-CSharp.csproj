@@ -108,6 +108,8 @@
      <Compile Include="Assets\Scripts\Test\ScrollViewTest.cs" />
      <Compile Include="Assets\Scripts\UI\Chat\UIChat.cs" />
      <Compile Include="Assets\Scripts\UI\Chat\UIPopChatMenu.cs" />
+     <Compile Include="Assets\Scripts\UI\Equip\UICharEquip.cs" />
+     <Compile Include="Assets\Scripts\UI\Equip\UIEquipItem.cs" />
      <Compile Include="Assets\Scripts\UI\Friend\UIFriendItem.cs" />
      <Compile Include="Assets\Scripts\UI\Friend\UIFriends.cs" />
      <Compile Include="Assets\Scripts\UI\Guild\UIGuild.cs" />
@@ -123,7 +125,6 @@
      <Compile Include="Assets\Scripts\UI\ListView\ListView.cs" />
      <Compile Include="Assets\Scripts\UI\LoadingManager.cs" />
      <Compile Include="Assets\Scripts\UI\MessageBox.cs" />
-     <Compile Include="Assets\Scripts\UI\NewBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\UI\Quest\UIQuestDialog.cs" />
      <Compile Include="Assets\Scripts\UI\Quest\UIQuestInfo.cs" />
      <Compile Include="Assets\Scripts\UI\Quest\UIQuestItem.cs" />
@@ -138,9 +139,7 @@
      <Compile Include="Assets\Scripts\UI\UIBag.cs" />
      <Compile Include="Assets\Scripts\UI\UICharacterSelect.cs" />
      <Compile Include="Assets\Scripts\UI\UICharacterView.cs" />
-     <Compile Include="Assets\Scripts\UI\UICharEquip.cs" />
      <Compile Include="Assets\Scripts\UI\UICharInfo.cs" />
-     <Compile Include="Assets\Scripts\UI\UIEquipItem.cs" />
      <Compile Include="Assets\Scripts\UI\UIIconItem.cs" />
      <Compile Include="Assets\Scripts\UI\UIInputBox.cs" />
      <Compile Include="Assets\Scripts\UI\UILogin.cs" />

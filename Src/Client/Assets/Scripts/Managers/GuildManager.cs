@@ -28,7 +28,7 @@ namespace Manager
             {
                 foreach(var member in guild.Members)
                 {
-                    if (member.characterId == User.Instance.CurrentCharacter.Id)
+                    if (member.characterId == User.Instance.CurrentCharacterInfo.Id)
                     {
                         myMemberInfo = member;
                         break;

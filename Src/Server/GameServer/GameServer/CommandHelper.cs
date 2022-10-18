@@ -13,17 +13,41 @@ namespace GameServer
             bool run = true;
             while (run)
             {
-                Console.Write(">");
-                string line = Console.ReadLine();
-                switch (line.ToLower().Trim())
+                try
                 {
-                    case "exit":
-                        run = false;
-                        break;
-                    default:
-                        Help();
-                        break;
+                    Console.Write(">");
+                    string line = Console.ReadLine().ToLower().Trim();
+                    string[] cmd = line.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                    switch (cmd[0])
+                    {
+                        case "addexp":
+                            AddExp(int.Parse(cmd[1]), int.Parse(cmd[2]));
+                            break;
+                        case "exit":
+                            run = false;
+                            break;
+                        default:
+                            Help();
+                            break;
+                    }
                 }
+                catch (Exception)
+                {
+                    Console.WriteLine("ERROR_UNDENTIFIED");
+                }
+            }
+        }
+
+        private static void AddExp(int id, int exp)
+        {
+            var cha = Managers.CharacterManager.Instance.GetCharacter(id);
+            if (cha == null)
+            {
+                Console.Write("characterId {0} not found", id);
+            }
+            else
+            {
+                cha.AddExp(exp);
             }
         }
 
@@ -31,6 +55,7 @@ namespace GameServer
         {
             Console.Write(@"
 Help:
+    addexp <characterId> <exp>   Add exp for character
     exit    Exit Game Server
     help    Show Help
 ");
