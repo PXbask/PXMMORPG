@@ -11,6 +11,8 @@ json-excel\json-excel json Tables\ Data\
 @copy Data\ShopItemDefine.txt ..\Client\Data\
 @copy Data\QuestDefine.txt ..\Client\Data\
 @copy Data\RideDefine.txt ..\Client\Data\
+@copy Data\SkillDefine.txt ..\Client\Data\
+@copy Data\BuffDefine.txt ..\Client\Data\
 
 
 @copy Data\CharacterDefine.txt ..\Server\GameServer\GameServer\bin\Debug\Data\
@@ -24,5 +26,7 @@ json-excel\json-excel json Tables\ Data\
 @copy Data\MapDefine.txt ..\Server\GameServer\GameServer\bin\Debug\Data\
 @copy Data\QuestDefine.txt ..\Server\GameServer\GameServer\bin\Debug\Data\
 @copy Data\RideDefine.txt ..\Server\GameServer\GameServer\bin\Debug\Data\
+@copy Data\SkillDefine.txt ..\Server\GameServer\GameServer\bin\Debug\Data\
+@copy Data\BuffDefine.txt ..\Server\GameServer\GameServer\bin\Debug\Data\
 
 pause
