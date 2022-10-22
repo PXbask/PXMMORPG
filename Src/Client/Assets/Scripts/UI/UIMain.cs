@@ -54,7 +54,7 @@ public class UIMain : MonoSingleton<UIMain> {
     }
     public void OnClickSkill()
     {
-
+        UIManager.Instance.Show<UISkill>();
     }
     #endregion
 }

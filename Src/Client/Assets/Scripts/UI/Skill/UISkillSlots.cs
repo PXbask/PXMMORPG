@@ -8,18 +8,18 @@ using UnityEngine;
 public class UISkillSlots : MonoBehaviour {
 
 	public UISkillSlot[] slots;
-	// Use this for initialization
+
 	void Start () {
 		RefreshUI();
 	}
 
     private void RefreshUI()
     {
-        var Skills = DataManager.Instance.Skills[(int)User.Instance.CurrentCharacterInfo.Class];
+        var Skills = User.Instance.CurrentCharacter.SkillMgr.Skills;
         int index = 0;
         foreach (var skill in Skills)
         {
-            slots[index++].SetSkill(skill.Value);
+            slots[index++].SetSkill(skill);
         }
     }
 }

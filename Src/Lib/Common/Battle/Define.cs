@@ -21,4 +21,11 @@ namespace Common.Battle
         CRI=10,
         MAX
     }
+    public enum SkillResult
+    {
+        InvalidTarget = 0,
+        InsufficientMP = 1,
+        UnderCooling = 2,
+        OK = 3,
+    }
 }

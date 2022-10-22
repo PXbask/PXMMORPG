@@ -28,19 +28,19 @@ public class UISkill : UIWindow {
     private void onItemSelected(ListView.ListViewItem item)
     {
         this.selectedItem = item as UISkillItem;
-        this.descr.text = this.selectedItem.item.Description;
+        this.descr.text = this.selectedItem.item.Define.Description;
     }
 
     private void InitItems()
     {
-        var Skills = DataManager.Instance.Skills[(int)User.Instance.CurrentCharacterInfo.Class];
+        var Skills = User.Instance.CurrentCharacter.SkillMgr.Skills;
         foreach (var skill in Skills)
         {
-            if (skill.Value.Type.Equals(SkillType.Skill))
+            if (skill.Define.Type.Equals(SkillType.Skill))
             {
                 GameObject go = Instantiate(itemPrefab, listMain.transform);
                 UISkillItem ui = go.GetComponent<UISkillItem>();
-                ui.SetItem(skill.Value, this);
+                ui.SetItem(skill, this);
                 listMain.AddItem(ui);
             }
         }

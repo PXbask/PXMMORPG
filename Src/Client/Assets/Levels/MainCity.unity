@@ -33232,7 +33232,7 @@ GameObject:
   - component: {fileID: 1069576131}
   - component: {fileID: 1069576130}
   m_Layer: 5
-  m_Name: AdventureBtn
+  m_Name: QuestBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33296,7 +33296,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1415483396}
-        m_MethodName: OnClickFriends
+        m_MethodName: OnClickQuest
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -52590,7 +52590,7 @@ GameObject:
   - component: {fileID: 1727093060}
   - component: {fileID: 1727093059}
   m_Layer: 5
-  m_Name: QuestBtn
+  m_Name: SkillBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52654,7 +52654,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1415483396}
-        m_MethodName: OnClickQuest
+        m_MethodName: OnClickSkill
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
