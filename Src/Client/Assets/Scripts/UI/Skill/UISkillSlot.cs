@@ -1,6 +1,8 @@
 ﻿using Battle;
 using Common.Battle;
 using Common.Data;
+using Manager;
+using SkillBridge.Message;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,18 +16,20 @@ public class UISkillSlot : MonoBehaviour,IPointerClickHandler {
 	public Text cdText;
 	Skill skill;
 
-	float overlaySpeed = 0;
-	float cdRemain = 0;
-
-    void Start() { }
+	void Start()
+	{
+		overlay.enabled = false;
+		cdText.enabled = false;
+	}
 	void Update()
 	{
-		if (overlay.fillAmount > 0)
+		if (this.skill.CD > 0)
 		{
-			overlay.fillAmount = this.cdRemain / this.skill.Define.CD;
-			this.cdText.text = ((int)Math.Ceiling(cdRemain)).ToString();
-			this.cdRemain -= Time.deltaTime;
-        }
+			if (!overlay.enabled) overlay.enabled = true;
+			if (!cdText.enabled) cdText.enabled = true;
+			overlay.fillAmount = this.skill.CD / this.skill.Define.CD;
+			cdText.text = ((int)Math.Ceiling(this.skill.CD)).ToString(); 
+		}
         else
         {
 			if (overlay.enabled) overlay.enabled = false;
@@ -34,40 +38,27 @@ public class UISkillSlot : MonoBehaviour,IPointerClickHandler {
 	}
 	public void OnPointerClick(PointerEventData eventData)
 	{
-		SkillResult res = skill.CanCast();
+		SkillResult res = skill.CanCast(BattleManager.Instance.CurrentTarget);
         switch (res)
         {
 			case SkillResult.InvalidTarget:
 				MessageBox.Show("技能目标未指定");
 				break;
-			case SkillResult.InsufficientMP:
+			case SkillResult.InsufficientMp:
 				MessageBox.Show("MP不足");
 				break;
 			case SkillResult.UnderCooling:
 				MessageBox.Show(string.Format("技能【{0}】正在冷却", this.skill.Define.Name));
 				break;
-			case SkillResult.OK:
-				MessageBox.Show(string.Format("释放技能【{0}】", this.skill.Define.Name));
-				this.SetCD(this.skill.Define.CD);
-				skill.Cast();
+			case SkillResult.Ok:
+				BattleManager.Instance.CastSkill(this.skill);
 				break;
 		}
 	}
 
-    private void SetCD(float cd)
-    {
-		if (!overlay.enabled) overlay.enabled = true;
-		if (!cdText.enabled) cdText.enabled = true;
-		this.cdText.text = ((int)Math.Ceiling(cdRemain)).ToString();
-		overlay.fillAmount = 1;
-		overlaySpeed = 1 / cd;
-		cdRemain = cd;
-		skill.CD = cd;
-	}
 	public void SetSkill(Skill value)
     {
 		this.skill = value;
 		if(this.icon != null) this.icon.overrideSprite = Resloader.Load<Sprite>(this.skill.Define.Icon);
-		this.SetCD(this.skill.Define.CD);
     }
 }

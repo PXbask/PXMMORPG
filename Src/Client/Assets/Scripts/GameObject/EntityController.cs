@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Entities;
+using Manager;
 
-
-public class EntityController : MonoBehaviour, Manager.IEntityNotify
+public class EntityController : MonoBehaviour, Manager.IEntityNotify, Entities.IEntityController
 {
 
     public Animator anim;
@@ -140,5 +140,18 @@ public class EntityController : MonoBehaviour, Manager.IEntityNotify
     {
         Debug.LogFormat("OnEntityChanged: ID:{0} Postion:{1} Direction:{2} Speed:{3}",
             entity.entityId, entity.position, entity.direction, entity.speed);
+    }
+    public void OnMouseDown()
+    {
+        BattleManager.Instance.CurrentTarget = this.entity as Creature;
+    }
+    public void PlayAnim(string name)
+    {
+        this.anim.SetTrigger(name);
+    }
+
+    public void SetStandBy(bool standBy)
+    {
+        this.anim.SetBool("Standby",standBy);
     }
 }

@@ -50,6 +50,15 @@ namespace GameServer.Models
             this.MonsterManager.Init(this);
         }
 
+        internal void BroadcastBattleResponse(NetMessageResponse response)
+        {
+            foreach (var kv in MapCharacters)
+            {
+                kv.Value.connection.Session.Response.skillCast = response.skillCast;
+                kv.Value.connection.SendResponse();
+            }
+        }
+
         internal void Update()
         {
             this.SpawnManager.Update();

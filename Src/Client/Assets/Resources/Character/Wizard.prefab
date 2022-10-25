@@ -2411,7 +2411,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1442858012577984}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 23.205027, y: -2.5116334, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4838794226340264}
@@ -2481,6 +2481,7 @@ MonoBehaviour:
   speed: 0
   entityController: {fileID: 0}
   onAir: 0
+  autoNav: 0
 --- !u!114 &114959877521383870
 MonoBehaviour:
   m_ObjectHideFlags: 1

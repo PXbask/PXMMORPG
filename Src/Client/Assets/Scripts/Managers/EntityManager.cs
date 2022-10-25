@@ -50,5 +50,11 @@ namespace Manager
                 }
             }
         }
+        public Entity GetEntity(int entity)
+        {
+            Entity en = null;
+            entities.TryGetValue((int)entity, out en);
+            return en;
+        }
     }
 }

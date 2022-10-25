@@ -843,7 +843,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1953393978184550}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 21.384834, y: -2.6080675, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4998761804184942}
@@ -1455,6 +1455,7 @@ MonoBehaviour:
   speed: 0
   entityController: {fileID: 0}
   onAir: 0
+  autoNav: 0
 --- !u!136 &136599443910912012
 CapsuleCollider:
   m_ObjectHideFlags: 1

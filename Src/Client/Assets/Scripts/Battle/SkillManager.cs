@@ -30,6 +30,25 @@ namespace Battle
         {
             this.Skills.Add(skill);
         }
+        public Skill GetSkill(int skillId)
+        {
+            foreach (var sk in Skills)
+            {
+                if (sk.Define.Id == skillId)
+                {
+                    return sk;
+                }
+            }
+            return null; 
+        }
+
+        internal void OnUpdate(float delta)
+        {
+            foreach (var sk in Skills)
+            {
+                sk.OnUpdate(delta);
+            }
+        }
     }
 }
 
