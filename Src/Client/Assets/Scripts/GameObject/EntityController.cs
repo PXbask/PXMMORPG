@@ -143,7 +143,10 @@ public class EntityController : MonoBehaviour, Manager.IEntityNotify, Entities.I
     }
     public void OnMouseDown()
     {
-        BattleManager.Instance.CurrentTarget = this.entity as Creature;
+        Creature target = this.entity as Creature;
+        if (target.isCurrentPlayer)
+            return;
+        BattleManager.Instance.CurrentTarget = target;
     }
     public void PlayAnim(string name)
     {

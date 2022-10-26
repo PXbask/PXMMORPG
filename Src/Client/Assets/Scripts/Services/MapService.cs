@@ -6,6 +6,8 @@ using Network;
 using SkillBridge.Message;
 using Models;
 using Manager;
+using Entities;
+
 namespace Services
 {
     public class MapService : Singleton<MapService>, IDisposable
@@ -73,8 +75,18 @@ namespace Services
                 if (User.Instance.CurrentCharacterInfo==null || (User.Instance.CurrentCharacterInfo.Id == character.Id && character.Type.Equals(CharacterType.Player)))
                 {
                     User.Instance.CurrentCharacterInfo = character;
+                    if (User.Instance.CurrentCharacter == null)
+                    {
+                        User.Instance.CurrentCharacter = new Entities.Character(character);
+                    }
+                    else
+                    {
+                        User.Instance.CurrentCharacter.UpdateCharacterInfo(character);
+                    }
+                    CharacterManager.Instance.AddCharacter(User.Instance.CurrentCharacter);
+                    continue;
                 }
-                CharacterManager.Instance.AddCharacter(character);
+                CharacterManager.Instance.AddCharacter(new Character(character));
             }
             if (response.mapId != CurrentMapID)
             {

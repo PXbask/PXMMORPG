@@ -17,27 +17,27 @@ namespace Common.Battle
         public AttributeData Final = new AttributeData();
 
         int level;
-        private NAttributeDynamic dynamic;
+        public NAttributeDynamic DynamicAttr;
         public float HP
         {
             get
             {
-                return dynamic.Hp;
+                return DynamicAttr.Hp;
             }
             set
             {
-                dynamic.Hp = (int)Math.Min(value, MaxHP);
+                DynamicAttr.Hp = (int)Math.Min(value, MaxHP);
             }
         }
         public float MP
         {
             get
             {
-                return dynamic.Mp;
+                return DynamicAttr.Mp;
             }
             set
             {
-                dynamic.Mp = (int)Math.Min(value, MaxMP);
+                DynamicAttr.Mp = (int)Math.Min(value, MaxMP);
             }
         }
         public float MaxHP { get { return Final.MaxHP; } }
@@ -53,7 +53,7 @@ namespace Common.Battle
         public float CRI { get { return Final.CRI; } }
         public void Init(CharacterDefine define, int level, List<EquipDefine> equips, NAttributeDynamic dynamicAttr)
         {
-            dynamic = dynamicAttr;
+            DynamicAttr = dynamicAttr;
             this.LoadInitAttribute(this.Initial, define);
             this.LoadGrowthAttribute(this.Growth, define);
             this.LoadEquipAttribute(this.Equip, equips);
@@ -62,8 +62,19 @@ namespace Common.Battle
             this.InitSecondaryAttributes();
 
             this.InitFinalAttributes();
-            this.HP = dynamicAttr.Hp;
-            this.MP = dynamicAttr.Mp;
+
+            if(DynamicAttr == null)
+            {
+                this.DynamicAttr = new NAttributeDynamic();
+                this.HP = this.MaxHP;
+                this.MP = this.MaxMP;
+            }
+            else
+            {
+                this.HP = dynamicAttr.Hp;
+                this.MP = dynamicAttr.Mp;
+            }
+
         }
 
         private void LoadInitAttribute(AttributeData attr, CharacterDefine define)
@@ -91,6 +102,7 @@ namespace Common.Battle
         private void LoadEquipAttribute(AttributeData attr, List<EquipDefine> equips)
         {
             attr.Reset();
+            if (equips == null) return;
             foreach (var define in equips)
             {
                 attr.MaxHP += define.MaxHP;

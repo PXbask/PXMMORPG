@@ -66,7 +66,13 @@ namespace Entities
             this.Attributes.Init(this.Define, this.Info.Level, this.GetEquips(), this.Info.attrDynamic);
             this.SkillMgr = new SkillManager(this);
         }
-
+        public void UpdateCharacterInfo(NCharacterInfo info)
+        {
+            this.SetEntityData(info.Entity);
+            this.Info = info;
+            this.Attributes.Init(this.Define, this.Info.Level, this.GetEquips(), this.Info.attrDynamic);
+            this.SkillMgr.UpdateSkills();
+        }
         public virtual List<EquipDefine> GetEquips()
         {
             return null;

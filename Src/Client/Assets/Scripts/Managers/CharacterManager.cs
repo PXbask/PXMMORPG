@@ -47,19 +47,14 @@ namespace Manager
             this.Characters.Clear();
         }
 
-        public void AddCharacter(SkillBridge.Message.NCharacterInfo cha)
+        public void AddCharacter(Character cha)
         {
-            Debug.LogFormat("AddCharacter:{0}:{1} Map:{2} Entity:{3}", cha.Id, cha.Name, cha.mapId, cha.Entity.String());
-            Character character = new Character(cha);
-            this.Characters[cha.EntityId] = character;
-            Manager.EntityManager.Instance.AddEntity(character);
+            Debug.LogFormat("AddCharacter:{0}:{1} Map:{2} Entity:{3}", cha.ID, cha.Name, cha.Info.mapId, cha.Info.Entity.String());
+            this.Characters[cha.entityId] = cha;
+            Manager.EntityManager.Instance.AddEntity(cha);
             if (OnCharacterEnter!=null)
             {
-                OnCharacterEnter(character);
-            }
-            if(cha.EntityId == Models.User.Instance.CurrentCharacterInfo.EntityId)
-            {
-                Models.User.Instance.CurrentCharacter = character;
+                OnCharacterEnter(cha);
             }
         }
 

@@ -12,6 +12,8 @@ namespace Manager
 {
     class BattleManager:Singleton<BattleManager>
     {
+        public delegate void TargetChangedHandler(Creature creature);
+        public event TargetChangedHandler OnTargetChanged;
         private Creature currentTarget;
 
         public Creature CurrentTarget
@@ -22,6 +24,10 @@ namespace Manager
 
         private void SetTarget(Creature value)
         {
+            if(this.currentTarget!=value && this.OnTargetChanged != null)
+            {
+                this.OnTargetChanged(value);
+            }
             currentTarget = value;
             Debug.LogFormat("BattleTarget: SetTarget:[{0}]{1}", value.ID, value.Name);
         }

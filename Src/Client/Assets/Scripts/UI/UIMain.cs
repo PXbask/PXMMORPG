@@ -10,10 +10,27 @@ public class UIMain : MonoSingleton<UIMain> {
     public Text nameText;
     public Text level;
     public UITeam TeamWindow;
+    public UICreatureInfo targetUI;
     protected override void OnAwake()
     {
         UpdateInfo();
+        this.targetUI.gameObject.SetActive(false);
+        BattleManager.Instance.OnTargetChanged += OnTargetChanged;
     }
+
+    private void OnTargetChanged(Creature creature)
+    {
+        if (creature != null)
+        {
+            if(!targetUI.isActiveAndEnabled) targetUI.gameObject.SetActive(true);
+            targetUI.Target = creature;
+        }
+        else
+        {
+            targetUI.gameObject.SetActive(false);
+        }
+    }
+
     public void UpdateInfo()
     {
         this.nameText.text = User.Instance.CurrentCharacterInfo.Name;

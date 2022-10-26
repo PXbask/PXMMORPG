@@ -50,6 +50,9 @@ public class UISkillSlot : MonoBehaviour,IPointerClickHandler {
 			case SkillResult.UnderCooling:
 				MessageBox.Show(string.Format("技能【{0}】正在冷却", this.skill.Define.Name));
 				break;
+			case SkillResult.OutOfRange:
+				MessageBox.Show("目标超出技能范围");
+				break;
 			case SkillResult.Ok:
 				BattleManager.Instance.CastSkill(this.skill);
 				break;

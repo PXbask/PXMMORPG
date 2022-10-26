@@ -753,6 +753,7 @@ enum SKILL_RESULT
 	INSUFFICIENT_MP = 1;
 	UNDER_COOLING = 2;
 	INVALID_TARGET = 3;
+	OUT_OF_RANGE = 4;
 }
 
 message NSkillCastInfo
