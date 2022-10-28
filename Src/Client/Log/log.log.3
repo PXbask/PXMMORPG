@@ -1,109 +1,437 @@
-2022-10-25 18:08:06,336 [ 1] INFO  Unity: LoadingManager start
-2022-10-25 18:08:09,603 [ 1] INFO  Unity: DataManager > DataManager()
-2022-10-25 18:08:28,219 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
-2022-10-25 18:08:28,222 [ 1] INFO  Unity: ConnectToServer() Start 
-2022-10-25 18:08:28,229 [ 1] INFO  Unity: DoConnect
-2022-10-25 18:08:28,231 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-10-25 18:08:28,267 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-10-26 19:27:43,708 [ 1] INFO  Unity: LoadingManager start
+2022-10-26 19:27:46,867 [ 1] INFO  Unity: DataManager > DataManager()
+2022-10-26 19:27:52,478 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
+2022-10-26 19:27:52,479 [ 1] INFO  Unity: ConnectToServer() Start 
+2022-10-26 19:27:52,485 [ 1] INFO  Unity: DoConnect
+2022-10-26 19:27:52,487 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-10-26 19:27:52,492 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-10-25 18:08:28,276 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2022-10-25 18:08:28,554 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2022-10-25 18:08:28,557 [ 1] INFO  Unity: LoadLevel: CharSelect
-2022-10-25 18:08:29,123 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-10-25 18:08:30,225 [ 1] INFO  Unity: Select Char:[1]FaU[Wizard]
-2022-10-25 18:08:31,149 [ 1] INFO  Unity: UserGameEnterRequest::index :0
-2022-10-25 18:08:31,195 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
-2022-10-25 18:08:31,198 [ 1] INFO  Unity: ItemManager:Init[ID:1, Count:20]
-2022-10-25 18:08:31,200 [ 1] INFO  Unity: ItemManager:Init[ID:2, Count:20]
-2022-10-25 18:08:31,214 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1 CharacterID:1
-2022-10-25 18:08:31,217 [ 1] INFO  Unity: AddCharacter:1:FaU Map:1 Entity:(11:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-10-25 18:08:31,229 [ 1] INFO  Unity: LoadLevel: MainCity
-2022-10-25 18:08:33,122 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2022-10-26 19:27:54,534 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:270)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
+Services.UserService:ConnectToServer() (at Assets/Scripts/Services/UserService.cs:57)
+Services.UserService:SendLogin(String, String) (at Assets/Scripts/Services/UserService.cs:154)
+UILogin:OnClickLogin() (at Assets/Scripts/UI/UILogin.cs:49)
+UnityEngine.EventSystems.EventSystem:Update()
+
+2022-10-26 19:27:54,549 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
+UnityEngine.Debug:LogErrorFormat(String, Object[])
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:272)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
+Services.UserService:ConnectToServer() (at Assets/Scripts/Services/UserService.cs:57)
+Services.UserService:SendLogin(String, String) (at Assets/Scripts/Services/UserService.cs:154)
+UILogin:OnClickLogin() (at Assets/Scripts/UI/UILogin.cs:49)
+UnityEngine.EventSystems.EventSystem:Update()
+
+2022-10-26 19:27:54,556 [ 1] INFO  Unity: DoConnect
+2022-10-26 19:27:54,557 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-10-26 19:27:54,559 [ 1] INFO  Unity: Connect[1] to server 127.0.0.1:8000
+
+2022-10-26 19:27:56,600 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:270)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
+
+2022-10-26 19:27:56,601 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
+UnityEngine.Debug:LogErrorFormat(String, Object[])
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:272)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
+
+2022-10-26 19:27:56,608 [ 1] INFO  Unity: DoConnect
+2022-10-26 19:27:56,609 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-10-26 19:27:56,610 [ 1] INFO  Unity: Connect[2] to server 127.0.0.1:8000
+
+2022-10-26 19:27:58,655 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:270)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
+
+2022-10-26 19:27:58,656 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
+UnityEngine.Debug:LogErrorFormat(String, Object[])
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:272)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
+
+2022-10-26 19:27:58,657 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :1 reason:Cannot connect to server
+2022-10-26 19:28:13,786 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
+2022-10-26 19:28:13,787 [ 1] INFO  Unity: ConnectToServer() Start 
+2022-10-26 19:28:13,788 [ 1] INFO  Unity: DoConnect
+2022-10-26 19:28:13,789 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-10-26 19:28:13,791 [ 1] INFO  Unity: Connect[3] to server 127.0.0.1:8000
+
+2022-10-26 19:28:13,792 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2022-10-26 19:28:14,256 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2022-10-26 19:28:14,257 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-10-26 19:28:14,710 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-10-26 19:28:15,779 [ 1] INFO  Unity: Select Char:[1]FaU[Wizard]
+2022-10-26 19:28:16,658 [ 1] INFO  Unity: UserGameEnterRequest::index :0
+2022-10-26 19:28:16,817 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
+2022-10-26 19:28:16,819 [ 1] INFO  Unity: ItemManager:Init[ID:1, Count:20]
+2022-10-26 19:28:16,819 [ 1] INFO  Unity: ItemManager:Init[ID:2, Count:20]
+2022-10-26 19:28:16,829 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1 CharacterID:1
+2022-10-26 19:28:16,834 [ 1] INFO  Unity: AddCharacter:1:FaU Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-10-26 19:28:16,837 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-10-26 19:28:18,026 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 UnityEngine.Resources:Load(String)
 Resloader:Load(String) (at Assets/Scripts/Assets/Resloader.cs:11)
 SoundManager:PlayMusic(String) (at Assets/Scripts/Managers/SoundManager.cs:71)
-Services.MapService:EnterMap(Int32) (at Assets/Scripts/Services/MapService.cs:34)
-Services.MapService:OnMapCharacterEnter(Object, MapCharacterEnterResponse) (at Assets/Scripts/Services/MapService.cs:81)
+Services.MapService:EnterMap(Int32) (at Assets/Scripts/Services/MapService.cs:36)
+Services.MapService:OnMapCharacterEnter(Object, MapCharacterEnterResponse) (at Assets/Scripts/Services/MapService.cs:93)
 Network.MessageDistributer`1:RaiseEvent(Object, MapCharacterEnterResponse)
 Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
 Network.MessageDistributer`1:Distribute()
 Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
 Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
 
-2022-10-25 18:08:33,125 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2022-10-26 19:28:18,027 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 UnityEngine.Resources:Load(String)
 Resloader:Load(String) (at Assets/Scripts/Assets/Resloader.cs:11)
 SoundManager:PlayMusic(String) (at Assets/Scripts/Managers/SoundManager.cs:71)
-Services.MapService:EnterMap(Int32) (at Assets/Scripts/Services/MapService.cs:34)
-Services.MapService:OnMapCharacterEnter(Object, MapCharacterEnterResponse) (at Assets/Scripts/Services/MapService.cs:81)
+Services.MapService:EnterMap(Int32) (at Assets/Scripts/Services/MapService.cs:36)
+Services.MapService:OnMapCharacterEnter(Object, MapCharacterEnterResponse) (at Assets/Scripts/Services/MapService.cs:93)
 Network.MessageDistributer`1:RaiseEvent(Object, MapCharacterEnterResponse)
 Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
 Network.MessageDistributer`1:Distribute()
 Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
 Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
 
-2022-10-25 18:08:33,129 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
-2022-10-25 18:08:33,389 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-10-25 18:08:33,507 [ 1] INFO  Unity: Set Channel:Local
-2022-10-25 18:08:34,033 [ 1] INFO  Unity: MoveForward
-2022-10-25 18:08:34,433 [ 1] INFO  Unity: Stop
-2022-10-25 18:08:34,915 [ 1] INFO  Unity: SetDirection:(98, 18, 0)
-2022-10-25 18:08:35,023 [ 1] INFO  Unity: SetDirection:(94, 35, 0)
-2022-10-25 18:08:35,057 [ 1] INFO  Unity: MoveForward
-2022-10-25 18:08:35,158 [ 1] INFO  Unity: SetDirection:(86, 51, 0)
-2022-10-25 18:08:35,611 [ 1] INFO  Unity: Stop
-2022-10-25 18:08:35,627 [ 1] INFO  Unity: SetDirection:(75, 66, 0)
-2022-10-25 18:08:35,746 [ 1] INFO  Unity: SetDirection:(62, 79, 0)
-2022-10-25 18:08:35,848 [ 1] INFO  Unity: SetDirection:(44, 90, 0)
-2022-10-25 18:08:35,914 [ 1] INFO  Unity: MoveForward
-2022-10-25 18:08:35,949 [ 1] INFO  Unity: SetDirection:(25, 97, 0)
-2022-10-25 18:08:36,099 [ 1] INFO  Unity: SetDirection:(7, 100, 0)
-2022-10-25 18:08:36,535 [ 1] INFO  Unity: Stop
-2022-10-25 18:08:36,618 [ 1] INFO  Unity: SetDirection:(26, 97, 0)
-2022-10-25 18:08:36,720 [ 1] INFO  Unity: SetDirection:(44, 90, 0)
-2022-10-25 18:08:36,804 [ 1] INFO  Unity: MoveForward
-2022-10-25 18:08:36,805 [ 1] INFO  Unity: SetDirection:(59, 80, 0)
-2022-10-25 18:08:36,907 [ 1] INFO  Unity: SetDirection:(73, 68, 0)
-2022-10-25 18:08:37,112 [ 1] INFO  Unity: SetDirection:(84, 54, 0)
-2022-10-25 18:08:37,263 [ 1] INFO  Unity: SetDirection:(93, 36, 0)
-2022-10-25 18:08:37,365 [ 1] INFO  Unity: SetDirection:(99, 17, 0)
-2022-10-25 18:08:37,464 [ 1] INFO  Unity: SetDirection:(100, -4, 0)
-2022-10-25 18:08:37,533 [ 1] INFO  Unity: Stop
-2022-10-25 18:08:37,566 [ 1] INFO  Unity: SetDirection:(97, -24, 0)
-2022-10-25 18:08:37,650 [ 1] INFO  Unity: SetDirection:(91, -41, 0)
-2022-10-25 18:08:37,749 [ 1] INFO  Unity: SetDirection:(81, -59, 0)
-2022-10-25 18:08:37,833 [ 1] INFO  Unity: SetDirection:(69, -72, 0)
-2022-10-25 18:08:37,926 [ 1] INFO  Unity: SetDirection:(53, -85, 0)
-2022-10-25 18:08:38,015 [ 1] INFO  Unity: SetDirection:(37, -93, 0)
-2022-10-25 18:08:38,121 [ 1] INFO  Unity: SetDirection:(17, -99, 0)
-2022-10-25 18:08:38,221 [ 1] INFO  Unity: SetDirection:(-4, -100, 0)
-2022-10-25 18:08:38,309 [ 1] INFO  Unity: SetDirection:(-22, -98, 0)
-2022-10-25 18:08:38,369 [ 1] INFO  Unity: MoveForward
-2022-10-25 18:08:41,407 [ 1] INFO  Unity: Stop
-2022-10-25 18:08:41,792 [ 1] INFO  Unity: SendCastSkill: id:201 entityId:11 targetId:0 position:(0,0,0)
-2022-10-25 18:08:41,826 [ 1] INFO  Unity: SendCastSkill: id:201 entityId:11 targetId:0 position:(0,0,0)
-2022-10-25 18:08:44,343 [ 1] INFO  Unity: MoveForward
-2022-10-25 18:08:45,685 [ 1] INFO  Unity: Stop
-2022-10-25 18:08:45,734 [ 1] INFO  Unity: MoveForward
-2022-10-25 18:08:46,573 [ 1] INFO  Unity: Stop
-2022-10-25 18:08:46,791 [ 1] INFO  Unity: SetDirection:(-39, -92, 0)
-2022-10-25 18:08:46,956 [ 1] INFO  Unity: SetDirection:(-55, -83, 0)
-2022-10-25 18:08:47,056 [ 1] INFO  Unity: SetDirection:(-70, -71, 0)
-2022-10-25 18:08:47,156 [ 1] INFO  Unity: SetDirection:(-83, -55, 0)
-2022-10-25 18:08:47,256 [ 1] INFO  Unity: SetDirection:(-93, -37, 0)
-2022-10-25 18:08:47,357 [ 1] INFO  Unity: SetDirection:(-98, -19, 0)
-2022-10-25 18:08:47,995 [ 1] INFO  Unity: MoveForward
-2022-10-25 18:08:48,711 [ 1] INFO  Unity: Stop
-2022-10-25 18:08:49,276 [ 1] INFO  Unity: MoveForward
-2022-10-25 18:08:50,169 [ 1] INFO  Unity: Stop
-2022-10-25 18:08:51,007 [ 1] INFO  Unity: SendCastSkill: id:204 entityId:11 targetId:0 position:(0,0,0)
-2022-10-25 18:08:51,041 [ 1] INFO  Unity: SendCastSkill: id:204 entityId:11 targetId:0 position:(0,0,0)
-2022-10-25 18:08:56,596 [ 1] INFO  Unity: SendCastSkill: id:203 entityId:11 targetId:0 position:(0,0,0)
-2022-10-25 18:08:56,630 [ 1] INFO  Unity: SendCastSkill: id:203 entityId:11 targetId:0 position:(0,0,0)
-2022-10-25 18:08:58,204 [ 1] INFO  Unity: SendCastSkill: id:202 entityId:11 targetId:0 position:(0,0,0)
-2022-10-25 18:08:58,237 [ 1] INFO  Unity: SendCastSkill: id:202 entityId:11 targetId:0 position:(0,0,0)
-2022-10-25 18:09:05,905 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-10-25 18:09:05,906 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-10-26 19:28:18,029 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
+2022-10-26 19:28:18,217 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-10-26 19:28:18,377 [ 1] INFO  Unity: Set Channel:Local
+2022-10-26 19:28:25,702 [ 1] INFO  Unity: SetDirection:(98, -18, 0)
+2022-10-26 19:28:25,803 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
+2022-10-26 19:28:25,884 [ 1] INFO  Unity: SetDirection:(86, -51, 0)
+2022-10-26 19:28:25,984 [ 1] INFO  Unity: SetDirection:(74, -68, 0)
+2022-10-26 19:28:26,068 [ 1] INFO  Unity: SetDirection:(61, -79, 0)
+2022-10-26 19:28:26,156 [ 1] INFO  Unity: SetDirection:(46, -89, 0)
+2022-10-26 19:28:26,216 [ 1] INFO  Unity: MoveForward
+2022-10-26 19:28:26,249 [ 1] INFO  Unity: SetDirection:(29, -96, 0)
+2022-10-26 19:28:26,433 [ 1] INFO  Unity: SetDirection:(11, -99, 0)
+2022-10-26 19:28:27,138 [ 1] INFO  Unity: SetDirection:(-7, -100, 0)
+2022-10-26 19:28:27,236 [ 1] INFO  Unity: SetDirection:(-24, -97, 0)
+2022-10-26 19:28:27,385 [ 1] INFO  Unity: SetDirection:(-41, -91, 0)
+2022-10-26 19:28:27,889 [ 1] INFO  Unity: SetDirection:(-58, -82, 0)
+2022-10-26 19:28:28,003 [ 1] INFO  Unity: SetDirection:(-73, -68, 0)
+2022-10-26 19:28:28,144 [ 1] INFO  Unity: SetDirection:(-85, -53, 0)
+2022-10-26 19:28:29,746 [ 1] INFO  Unity: SetPosition:(4508, 3179, 811)
+2022-10-26 19:28:29,828 [ 1] INFO  Unity: SetDirection:(-93, -36, 0)
+2022-10-26 19:28:29,944 [ 1] INFO  Unity: SetDirection:(-98, -19, 0)
+2022-10-26 19:28:30,094 [ 1] INFO  Unity: SetDirection:(-100, -2, 0)
+2022-10-26 19:28:30,675 [ 1] INFO  Unity: SetDirection:(-99, 17, 0)
+2022-10-26 19:28:30,773 [ 1] INFO  Unity: Stop
+2022-10-26 19:28:30,806 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
+2022-10-26 19:28:31,374 [ 1] INFO  Unity: SetDirection:(-86, 52, 0)
+2022-10-26 19:28:31,506 [ 1] INFO  Unity: SetDirection:(-74, 68, 0)
+2022-10-26 19:28:31,605 [ 1] INFO  Unity: SetDirection:(-58, 81, 0)
+2022-10-26 19:28:31,689 [ 1] INFO  Unity: SetDirection:(-43, 90, 0)
+2022-10-26 19:28:31,784 [ 1] INFO  Unity: SetDirection:(-27, 96, 0)
+2022-10-26 19:28:31,867 [ 1] INFO  Unity: MoveBack
+2022-10-26 19:28:31,885 [ 1] INFO  Unity: SetDirection:(-10, 100, 0)
+2022-10-26 19:28:32,531 [ 1] INFO  Unity: Stop
+2022-10-26 19:28:34,235 [ 1] INFO  Unity: SetDirection:(-28, 96, 0)
+2022-10-26 19:28:34,334 [ 1] INFO  Unity: SetDirection:(-47, 88, 0)
+2022-10-26 19:28:34,439 [ 1] INFO  Unity: SetDirection:(-63, 77, 0)
+2022-10-26 19:28:34,490 [ 1] INFO  Unity: MoveForward
+2022-10-26 19:28:34,573 [ 1] INFO  Unity: SetDirection:(-76, 65, 0)
+2022-10-26 19:28:35,022 [ 1] INFO  Unity: SetDirection:(-87, 50, 0)
+2022-10-26 19:28:35,137 [ 1] INFO  Unity: SetDirection:(-95, 32, 0)
+2022-10-26 19:28:35,238 [ 1] INFO  Unity: SetDirection:(-99, 12, 0)
+2022-10-26 19:28:35,353 [ 1] INFO  Unity: SetDirection:(-100, -8, 0)
+2022-10-26 19:28:35,767 [ 1] INFO  Unity: SetDirection:(-97, -25, 0)
+2022-10-26 19:28:37,757 [ 1] INFO  Unity: SetPosition:(3272, 2933, 810)
+2022-10-26 19:28:40,772 [ 1] INFO  Unity: SetPosition:(2384, 2704, 806)
+2022-10-26 19:28:43,551 [ 1] INFO  Unity: TeleporterObject: Character[FaU] EnterTeleporter[3:主城传入点1]
+2022-10-26 19:28:43,616 [ 1] INFO  Unity: SetPosition:(1557, 2491, 805)
+2022-10-26 19:28:43,781 [ 1] INFO  Unity: SetDirection:(-100, -6, 0)
+2022-10-26 19:28:43,880 [ 1] INFO  Unity: SetDirection:(-99, 13, 0)
+2022-10-26 19:28:44,012 [ 1] INFO  Unity: SetDirection:(-95, 30, 0)
+2022-10-26 19:28:45,257 [ 1] INFO  Unity: SetPosition:(1091, 2593, 805)
+2022-10-26 19:28:45,752 [ 1] INFO  Unity: SetDirection:(-99, 13, 0)
+2022-10-26 19:28:45,985 [ 1] INFO  Unity: TeleporterObject: Character[FaU] EnterTeleporter[1:主城->野外]
+2022-10-26 19:28:45,986 [ 1] INFO  Unity: MapTeleportRequest: teleporterId:1
+2022-10-26 19:28:46,019 [ 1] INFO  Unity: OnMapCharacterLeave:MapID:1 CharacterID:1
+2022-10-26 19:28:46,021 [ 1] INFO  Unity: RemoveCharacter:1
+2022-10-26 19:28:46,024 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1 CharacterID:2
+2022-10-26 19:28:46,025 [ 1] INFO  Unity: AddCharacter:1:FaU Map:2 Entity:(1:pos:(3183,4007,-2),dir:(100,0,0),spd:300
+2022-10-26 19:28:46,037 [ 1] INFO  Unity: LoadLevel: Map01
+2022-10-26 19:28:46,645 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+UnityEngine.Resources:Load(String)
+Resloader:Load(String) (at Assets/Scripts/Assets/Resloader.cs:11)
+SoundManager:PlayMusic(String) (at Assets/Scripts/Managers/SoundManager.cs:71)
+Services.MapService:EnterMap(Int32) (at Assets/Scripts/Services/MapService.cs:36)
+Services.MapService:OnMapCharacterEnter(Object, MapCharacterEnterResponse) (at Assets/Scripts/Services/MapService.cs:93)
+Network.MessageDistributer`1:RaiseEvent(Object, MapCharacterEnterResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-10-26 19:28:46,646 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2
+2022-10-26 19:28:46,647 [ 1] WARN  Unity: Failed to create agent because it is not close enough to the NavMesh
+UnityEngine.GameObject:AddComponent()
+PlayerInputController:Start() (at Assets/Scripts/GameObject/PlayerInputController.cs:53)
+
+2022-10-26 19:28:46,657 [ 1] INFO  Unity: MoveForward
+2022-10-26 19:28:46,848 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-10-26 19:28:46,855 [ 1] INFO  Unity: Stop
+2022-10-26 19:28:46,857 [ 1] INFO  Unity: TeleporterObject: Character[FaU] EnterTeleporter[6:野外传入点]
+2022-10-26 19:28:47,931 [ 1] INFO  Unity: SetDirection:(98, -18, 0)
+2022-10-26 19:28:48,033 [ 1] INFO  Unity: MoveForward
+2022-10-26 19:28:48,050 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2022-10-26 19:28:48,249 [ 1] INFO  Unity: SetDirection:(85, -53, 0)
+2022-10-26 19:28:48,630 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2022-10-26 19:28:48,796 [ 1] INFO  Unity: SetDirection:(98, -20, 0)
+2022-10-26 19:28:49,277 [ 1] INFO  Unity: SetDirection:(93, -38, 0)
+2022-10-26 19:28:49,743 [ 1] INFO  Unity: SetDirection:(98, -20, 0)
+2022-10-26 19:28:51,698 [ 1] INFO  Unity: SetDirection:(93, -38, 0)
+2022-10-26 19:28:52,659 [ 1] INFO  Unity: SetDirection:(85, -53, 0)
+2022-10-26 19:28:53,687 [ 1] INFO  Unity: SetPosition:(4799, 3432, 5)
+2022-10-26 19:28:55,492 [ 1] INFO  Unity: SetDirection:(74, -68, 0)
+2022-10-26 19:28:55,574 [ 1] INFO  Unity: Stop
+2022-10-26 19:28:55,607 [ 1] INFO  Unity: SetDirection:(59, -81, 0)
+2022-10-26 19:28:55,806 [ 1] INFO  Unity: SetDirection:(44, -90, 0)
+2022-10-26 19:29:10,944 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2 CharacterID:2
+2022-10-26 19:29:10,946 [ 1] INFO  Unity: AddCharacter:2:恶鬼 Map:2 Entity:(2:pos:(5887,1573,7),dir:(9,100,0),spd:0
+2022-10-26 19:29:10,960 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2
+2022-10-26 19:29:10,977 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2 CharacterID:2
+2022-10-26 19:29:10,978 [ 1] INFO  Unity: AddCharacter:3:山丘巨人 Map:2 Entity:(3:pos:(5540,1682,4),dir:(20,98,0),spd:0
+2022-10-26 19:29:10,993 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2
+2022-10-26 19:29:10,994 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2 CharacterID:2
+2022-10-26 19:29:10,995 [ 1] INFO  Unity: AddCharacter:4:小恶魔 Map:2 Entity:(4:pos:(4775,2865,14),dir:(-30,95,0),spd:0
+2022-10-26 19:29:11,008 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2
+2022-10-26 19:29:11,009 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2 CharacterID:2
+2022-10-26 19:29:11,009 [ 1] INFO  Unity: AddCharacter:5:死神 Map:2 Entity:(5:pos:(5683,4173,0),dir:(28,-96,0),spd:0
+2022-10-26 19:29:11,021 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2
+2022-10-26 19:29:14,614 [ 1] INFO  Unity: MoveForward
+2022-10-26 19:29:14,881 [ 1] INFO  Unity: SetPosition:(5311, 3055, 5)
+2022-10-26 19:29:15,162 [ 1] INFO  Unity: SetDirection:(61, -79, 0)
+2022-10-26 19:29:15,269 [ 1] INFO  Unity: SetDirection:(75, -66, 0)
+2022-10-26 19:29:15,287 [ 1] INFO  Unity: Stop
+2022-10-26 19:29:15,336 [ 1] INFO  Unity: MoveForward
+2022-10-26 19:29:15,369 [ 1] INFO  Unity: SetDirection:(86, -51, 0)
+2022-10-26 19:29:15,519 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
+2022-10-26 19:29:16,169 [ 1] INFO  Unity: SetDirection:(85, -52, 0)
+2022-10-26 19:29:16,269 [ 1] INFO  Unity: SetDirection:(73, -68, 0)
+2022-10-26 19:29:16,368 [ 1] INFO  Unity: SetDirection:(57, -82, 0)
+2022-10-26 19:29:16,470 [ 1] INFO  Unity: SetDirection:(39, -92, 0)
+2022-10-26 19:29:16,569 [ 1] INFO  Unity: SetDirection:(20, -98, 0)
+2022-10-26 19:29:16,684 [ 1] INFO  Unity: SetDirection:(3, -100, 0)
+2022-10-26 19:29:16,800 [ 1] INFO  Unity: Stop
+2022-10-26 19:29:17,082 [ 1] INFO  Unity: SetDirection:(-14, -99, 0)
+2022-10-26 19:29:17,215 [ 1] INFO  Unity: SetDirection:(-33, -95, 0)
+2022-10-26 19:29:17,314 [ 1] INFO  Unity: SetDirection:(-51, -86, 0)
+2022-10-26 19:29:17,397 [ 1] INFO  Unity: SetDirection:(-65, -76, 0)
+2022-10-26 19:29:17,483 [ 1] INFO  Unity: SetDirection:(-77, -63, 0)
+2022-10-26 19:29:17,565 [ 1] INFO  Unity: SetDirection:(-87, -49, 0)
+2022-10-26 19:29:17,654 [ 1] INFO  Unity: SetDirection:(-94, -33, 0)
+2022-10-26 19:29:17,736 [ 1] INFO  Unity: SetDirection:(-99, -16, 0)
+2022-10-26 19:29:17,841 [ 1] INFO  Unity: SetDirection:(-100, 5, 0)
+2022-10-26 19:29:17,941 [ 1] INFO  Unity: SetDirection:(-97, 24, 0)
+2022-10-26 19:29:18,074 [ 1] INFO  Unity: SetDirection:(-91, 41, 0)
+2022-10-26 19:29:18,521 [ 1] INFO  Unity: SetDirection:(-82, 58, 0)
+2022-10-26 19:29:18,637 [ 1] INFO  Unity: SetDirection:(-69, 72, 0)
+2022-10-26 19:29:18,721 [ 1] INFO  Unity: SetDirection:(-55, 83, 0)
+2022-10-26 19:29:18,823 [ 1] INFO  Unity: SetDirection:(-37, 93, 0)
+2022-10-26 19:29:18,922 [ 1] INFO  Unity: SetDirection:(-19, 98, 0)
+2022-10-26 19:29:19,072 [ 1] INFO  Unity: SetDirection:(-1, 100, 0)
+2022-10-26 19:29:19,586 [ 1] INFO  Unity: SetDirection:(17, 98, 0)
+2022-10-26 19:29:19,684 [ 1] INFO  Unity: SetDirection:(34, 94, 0)
+2022-10-26 19:29:19,784 [ 1] INFO  Unity: SetDirection:(53, 85, 0)
+2022-10-26 19:29:19,884 [ 1] INFO  Unity: SetDirection:(69, 72, 0)
+2022-10-26 19:29:19,982 [ 1] INFO  Unity: SetDirection:(81, 59, 0)
+2022-10-26 19:29:20,083 [ 1] INFO  Unity: SetDirection:(91, 41, 0)
+2022-10-26 19:29:20,182 [ 1] INFO  Unity: SetDirection:(97, 25, 0)
+2022-10-26 19:29:20,530 [ 1] INFO  Unity: SetDirection:(100, 7, 0)
+2022-10-26 19:29:20,696 [ 1] INFO  Unity: SetDirection:(99, -11, 0)
+2022-10-26 19:29:20,796 [ 1] INFO  Unity: SetDirection:(95, -30, 0)
+2022-10-26 19:29:20,895 [ 1] INFO  Unity: SetDirection:(87, -49, 0)
+2022-10-26 19:29:20,994 [ 1] INFO  Unity: SetDirection:(75, -66, 0)
+2022-10-26 19:29:21,110 [ 1] INFO  Unity: SetDirection:(61, -79, 0)
+2022-10-26 19:29:22,785 [ 1] INFO  Unity: BattleTarget: SetTarget:[3]山丘巨人
+2022-10-26 19:29:23,794 [ 1] INFO  Unity: SetDirection:(46, -89, 0)
+2022-10-26 19:29:24,871 [ 1] INFO  Unity: SetDirection:(29, -96, 0)
+2022-10-26 19:29:25,004 [ 1] INFO  Unity: SetDirection:(10, -100, 0)
+2022-10-26 19:29:25,087 [ 1] INFO  Unity: SetDirection:(-8, -100, 0)
+2022-10-26 19:29:25,186 [ 1] INFO  Unity: SetDirection:(-27, -96, 0)
+2022-10-26 19:29:25,318 [ 1] INFO  Unity: SetDirection:(-44, -90, 0)
+2022-10-26 19:29:25,931 [ 1] INFO  Unity: SetDirection:(-60, -80, 0)
+2022-10-26 19:29:26,048 [ 1] INFO  Unity: SetDirection:(-74, -67, 0)
+2022-10-26 19:29:26,130 [ 1] INFO  Unity: SetDirection:(-85, -53, 0)
+2022-10-26 19:29:26,213 [ 1] INFO  Unity: SetDirection:(-93, -37, 0)
+2022-10-26 19:29:26,316 [ 1] INFO  Unity: SetDirection:(-99, -17, 0)
+2022-10-26 19:29:26,421 [ 1] INFO  Unity: SetDirection:(-100, 4, 0)
+2022-10-26 19:29:26,525 [ 1] INFO  Unity: SetDirection:(-97, 23, 0)
+2022-10-26 19:29:26,656 [ 1] INFO  Unity: SetDirection:(-92, 40, 0)
+2022-10-26 19:29:27,122 [ 1] INFO  Unity: SetDirection:(-98, 21, 0)
+2022-10-26 19:29:27,222 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
+2022-10-26 19:29:27,320 [ 1] INFO  Unity: SetDirection:(-98, -21, 0)
+2022-10-26 19:29:27,420 [ 1] INFO  Unity: SetDirection:(-91, -40, 0)
+2022-10-26 19:29:27,503 [ 1] INFO  Unity: SetDirection:(-83, -56, 0)
+2022-10-26 19:29:27,606 [ 1] INFO  Unity: SetDirection:(-70, -72, 0)
+2022-10-26 19:29:27,699 [ 1] INFO  Unity: SetDirection:(-56, -83, 0)
+2022-10-26 19:29:27,782 [ 1] INFO  Unity: SetDirection:(-38, -93, 0)
+2022-10-26 19:29:27,881 [ 1] INFO  Unity: SetDirection:(-21, -98, 0)
+2022-10-26 19:29:27,982 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
+2022-10-26 19:29:28,082 [ 1] INFO  Unity: SetDirection:(21, -98, 0)
+2022-10-26 19:29:28,169 [ 1] INFO  Unity: SetDirection:(40, -91, 0)
+2022-10-26 19:29:28,254 [ 1] INFO  Unity: SetDirection:(56, -83, 0)
+2022-10-26 19:29:28,363 [ 1] INFO  Unity: SetDirection:(72, -70, 0)
+2022-10-26 19:29:28,463 [ 1] INFO  Unity: SetDirection:(84, -54, 0)
+2022-10-26 19:29:28,579 [ 1] INFO  Unity: SetDirection:(92, -38, 0)
+2022-10-26 19:29:29,192 [ 1] INFO  Unity: SetDirection:(83, -56, 0)
+2022-10-26 19:29:29,292 [ 1] INFO  Unity: SetDirection:(70, -72, 0)
+2022-10-26 19:29:29,390 [ 1] INFO  Unity: SetDirection:(53, -85, 0)
+2022-10-26 19:29:29,490 [ 1] INFO  Unity: SetDirection:(36, -93, 0)
+2022-10-26 19:29:29,623 [ 1] INFO  Unity: SetDirection:(19, -98, 0)
+2022-10-26 19:29:30,321 [ 1] INFO  Unity: SetDirection:(38, -92, 0)
+2022-10-26 19:29:30,453 [ 1] INFO  Unity: SetDirection:(55, -84, 0)
+2022-10-26 19:29:31,251 [ 1] INFO  Unity: BattleTarget: SetTarget:[2]恶鬼
+2022-10-26 19:29:32,708 [ 1] INFO  Unity: SetDirection:(39, -92, 0)
+2022-10-26 19:29:33,389 [ 1] INFO  Unity: BattleTarget: SetTarget:[3]山丘巨人
+2022-10-26 19:29:33,960 [ 1] INFO  Unity: SetDirection:(21, -98, 0)
+2022-10-26 19:29:34,124 [ 1] INFO  Unity: MoveForward
+2022-10-26 19:29:34,704 [ 1] INFO  Unity: Stop
+2022-10-26 19:29:35,733 [ 1] INFO  Unity: SendCastSkill: id:201 entityId:1 targetId:3 position:(0,0,0)
+2022-10-26 19:29:35,767 [ 1] INFO  Unity: SendCastSkill: id:201 entityId:1 targetId:3 position:(0,0,0)
+2022-10-26 19:29:39,395 [ 1] INFO  Unity: SendCastSkill: id:202 entityId:1 targetId:3 position:(0,0,0)
+2022-10-26 19:29:39,428 [ 1] INFO  Unity: SendCastSkill: id:202 entityId:1 targetId:3 position:(0,0,0)
+2022-10-26 19:29:55,675 [ 1] INFO  Unity: SendCastSkill: id:202 entityId:1 targetId:3 position:(0,0,0)
+2022-10-26 19:29:55,708 [ 1] INFO  Unity: SendCastSkill: id:202 entityId:1 targetId:3 position:(0,0,0)
+2022-10-26 19:29:59,086 [ 1] INFO  Unity: MoveForward
+2022-10-26 19:29:59,865 [ 1] INFO  Unity: SetDirection:(3, -100, 0)
+2022-10-26 19:30:00,014 [ 1] INFO  Unity: SetDirection:(-16, -99, 0)
+2022-10-26 19:30:00,163 [ 1] INFO  Unity: SetDirection:(-33, -94, 0)
+2022-10-26 19:30:00,429 [ 1] INFO  Unity: SendCastSkill: id:204 entityId:1 targetId:3 position:(0,0,0)
+2022-10-26 19:30:00,463 [ 1] INFO  Unity: SendCastSkill: id:204 entityId:1 targetId:3 position:(0,0,0)
+2022-10-26 19:30:00,495 [ 1] INFO  Unity: Stop
+2022-10-26 19:30:08,001 [ 1] INFO  Unity: SendCastSkill: id:204 entityId:1 targetId:3 position:(0,0,0)
+2022-10-26 19:30:08,034 [ 1] INFO  Unity: SendCastSkill: id:204 entityId:1 targetId:3 position:(0,0,0)
+2022-10-26 19:30:12,091 [ 1] INFO  Unity: SetDirection:(-13, -99, 0)
+2022-10-26 19:30:12,190 [ 1] INFO  Unity: SetDirection:(7, -100, 0)
+2022-10-26 19:30:12,290 [ 1] INFO  Unity: SetDirection:(27, -96, 0)
+2022-10-26 19:30:12,374 [ 1] INFO  Unity: SetDirection:(44, -90, 0)
+2022-10-26 19:30:12,474 [ 1] INFO  Unity: SetDirection:(61, -79, 0)
+2022-10-26 19:30:12,557 [ 1] INFO  Unity: SetDirection:(74, -67, 0)
+2022-10-26 19:30:12,644 [ 1] INFO  Unity: MoveForward
+2022-10-26 19:30:12,661 [ 1] INFO  Unity: SetDirection:(85, -52, 0)
+2022-10-26 19:30:12,860 [ 1] INFO  Unity: SetDirection:(93, -36, 0)
+2022-10-26 19:30:13,476 [ 1] INFO  Unity: SetPosition:(5967, 2014, 5)
+2022-10-26 19:30:14,073 [ 1] INFO  Unity: SetDirection:(85, -53, 0)
+2022-10-26 19:30:14,173 [ 1] INFO  Unity: SetDirection:(73, -69, 0)
+2022-10-26 19:30:14,272 [ 1] INFO  Unity: SetDirection:(57, -82, 0)
+2022-10-26 19:30:14,355 [ 1] INFO  Unity: SetDirection:(42, -91, 0)
+2022-10-26 19:30:14,440 [ 1] INFO  Unity: SetDirection:(25, -97, 0)
+2022-10-26 19:30:14,539 [ 1] INFO  Unity: SetDirection:(5, -100, 0)
+2022-10-26 19:30:14,621 [ 1] INFO  Unity: SetDirection:(-13, -99, 0)
+2022-10-26 19:30:14,721 [ 1] INFO  Unity: SetDirection:(-33, -94, 0)
+2022-10-26 19:30:14,811 [ 1] INFO  Unity: SetDirection:(-52, -85, 0)
+2022-10-26 19:30:14,828 [ 1] INFO  Unity: Stop
+2022-10-26 19:30:14,910 [ 1] INFO  Unity: SetDirection:(-69, -73, 0)
+2022-10-26 19:30:15,013 [ 1] INFO  Unity: SetDirection:(-82, -57, 0)
+2022-10-26 19:30:15,095 [ 1] INFO  Unity: SetDirection:(-91, -42, 0)
+2022-10-26 19:30:15,183 [ 1] INFO  Unity: SetDirection:(-97, -25, 0)
+2022-10-26 19:30:15,282 [ 1] INFO  Unity: SetDirection:(-100, -5, 0)
+2022-10-26 19:30:15,365 [ 1] INFO  Unity: SetDirection:(-99, 13, 0)
+2022-10-26 19:30:15,472 [ 1] INFO  Unity: MoveForward
+2022-10-26 19:30:15,473 [ 1] INFO  Unity: SetDirection:(-94, 33, 0)
+2022-10-26 19:30:15,571 [ 1] INFO  Unity: SetDirection:(-85, 52, 0)
+2022-10-26 19:30:15,670 [ 1] INFO  Unity: SetDirection:(-73, 69, 0)
+2022-10-26 19:30:15,769 [ 1] INFO  Unity: SetDirection:(-57, 82, 0)
+2022-10-26 19:30:15,852 [ 1] INFO  Unity: SetDirection:(-42, 91, 0)
+2022-10-26 19:30:15,936 [ 1] INFO  Unity: SetDirection:(-25, 97, 0)
+2022-10-26 19:30:16,035 [ 1] INFO  Unity: SetDirection:(-5, 100, 0)
+2022-10-26 19:30:16,117 [ 1] INFO  Unity: SetDirection:(13, 99, 0)
+2022-10-26 19:30:16,216 [ 1] INFO  Unity: SetDirection:(31, 95, 0)
+2022-10-26 19:30:16,433 [ 1] INFO  Unity: SetDirection:(47, 88, 0)
+2022-10-26 19:30:16,714 [ 1] INFO  Unity: SetDirection:(31, 95, 0)
+2022-10-26 19:30:16,831 [ 1] INFO  Unity: SetDirection:(12, 99, 0)
+2022-10-26 19:30:18,355 [ 1] INFO  Unity: SetPosition:(6212, 2554, 5)
+2022-10-26 19:30:18,388 [ 1] INFO  Unity: Stop
+2022-10-26 19:30:18,571 [ 1] INFO  Unity: BattleTarget: SetTarget:[5]死神
+2022-10-26 19:30:19,018 [ 1] INFO  Unity: SetDirection:(-5, 100, 0)
+2022-10-26 19:30:19,184 [ 1] INFO  Unity: SetDirection:(-23, 97, 0)
+2022-10-26 19:30:19,283 [ 1] INFO  Unity: SetDirection:(-41, 91, 0)
+2022-10-26 19:30:19,366 [ 1] INFO  Unity: SetDirection:(-57, 82, 0)
+2022-10-26 19:30:19,481 [ 1] INFO  Unity: SetDirection:(-72, 70, 0)
+2022-10-26 19:30:20,161 [ 1] INFO  Unity: MoveForward
+2022-10-26 19:30:20,162 [ 1] INFO  Unity: SetDirection:(-57, 82, 0)
+2022-10-26 19:30:20,281 [ 1] INFO  Unity: SetDirection:(-41, 91, 0)
+2022-10-26 19:30:21,425 [ 1] INFO  Unity: SetDirection:(-25, 97, 0)
+2022-10-26 19:30:22,038 [ 1] INFO  Unity: SetDirection:(-43, 90, 0)
+2022-10-26 19:30:22,204 [ 1] INFO  Unity: SetDirection:(-59, 81, 0)
+2022-10-26 19:30:23,996 [ 1] INFO  Unity: SetDirection:(-44, 90, 0)
+2022-10-26 19:30:24,411 [ 1] INFO  Unity: SetPosition:(5609, 3672, 5)
+2022-10-26 19:30:24,840 [ 1] INFO  Unity: SetDirection:(-27, 96, 0)
+2022-10-26 19:30:25,803 [ 1] INFO  Unity: SetPosition:(5481, 4060, 39)
+2022-10-26 19:30:26,648 [ 1] INFO  Unity: SetPosition:(5419, 4290, 85)
+2022-10-26 19:30:27,095 [ 1] INFO  Unity: SetPosition:(5386, 4412, 133)
+2022-10-26 19:30:27,461 [ 1] INFO  Unity: SetPosition:(5361, 4503, 180)
+2022-10-26 19:30:27,774 [ 1] INFO  Unity: SetPosition:(5342, 4572, 224)
+2022-10-26 19:30:28,073 [ 1] INFO  Unity: SetPosition:(5323, 4647, 273)
+2022-10-26 19:30:28,386 [ 1] INFO  Unity: SetPosition:(5303, 4724, 323)
+2022-10-26 19:30:28,719 [ 1] INFO  Unity: SetPosition:(5278, 4811, 373)
+2022-10-26 19:30:29,101 [ 1] INFO  Unity: SetPosition:(5250, 4913, 422)
+2022-10-26 19:30:29,565 [ 1] INFO  Unity: SetPosition:(5213, 5038, 470)
+2022-10-26 19:30:29,812 [ 1] INFO  Unity: SetDirection:(-45, 89, 0)
+2022-10-26 19:30:29,927 [ 1] INFO  Unity: SetDirection:(-62, 79, 0)
+2022-10-26 19:30:30,657 [ 1] INFO  Unity: SetDirection:(-75, 67, 0)
+2022-10-26 19:30:30,804 [ 1] INFO  Unity: SetDirection:(-85, 53, 0)
+2022-10-26 19:30:31,270 [ 1] INFO  Unity: SetPosition:(4899, 5405, 517)
+2022-10-26 19:30:31,536 [ 1] INFO  Unity: SetPosition:(4847, 5433, 562)
+2022-10-26 19:30:31,800 [ 1] INFO  Unity: SetPosition:(4787, 5467, 613)
+2022-10-26 19:30:32,065 [ 1] INFO  Unity: SetPosition:(4731, 5501, 664)
+2022-10-26 19:30:32,297 [ 1] INFO  Unity: SetPosition:(4683, 5531, 715)
+2022-10-26 19:30:32,513 [ 1] INFO  Unity: SetPosition:(4635, 5560, 764)
+2022-10-26 19:30:32,777 [ 1] INFO  Unity: SetPosition:(4578, 5595, 815)
+2022-10-26 19:30:33,191 [ 1] INFO  Unity: SetPosition:(4475, 5660, 865)
+2022-10-26 19:30:33,422 [ 1] INFO  Unity: Stop
+2022-10-26 19:30:33,688 [ 1] INFO  Unity: SetDirection:(-74, 67, 0)
+2022-10-26 19:30:33,770 [ 1] INFO  Unity: SetDirection:(-61, 79, 0)
+2022-10-26 19:30:33,869 [ 1] INFO  Unity: SetDirection:(-43, 90, 0)
+2022-10-26 19:30:33,969 [ 1] INFO  Unity: SetDirection:(-24, 97, 0)
+2022-10-26 19:30:34,051 [ 1] INFO  Unity: SetDirection:(-7, 100, 0)
+2022-10-26 19:30:34,160 [ 1] INFO  Unity: SetDirection:(11, 99, 0)
+2022-10-26 19:30:34,576 [ 1] INFO  Unity: SetDirection:(28, 96, 0)
+2022-10-26 19:30:34,758 [ 1] INFO  Unity: SetDirection:(44, 90, 0)
+2022-10-26 19:30:34,856 [ 1] INFO  Unity: SetDirection:(60, 80, 0)
+2022-10-26 19:30:34,956 [ 1] INFO  Unity: SetDirection:(74, 67, 0)
+2022-10-26 19:30:35,088 [ 1] INFO  Unity: SetDirection:(85, 53, 0)
+2022-10-26 19:30:35,801 [ 1] INFO  Unity: SetDirection:(93, 37, 0)
+2022-10-26 19:30:35,916 [ 1] INFO  Unity: SetDirection:(98, 18, 0)
+2022-10-26 19:30:36,034 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
+2022-10-26 19:30:36,679 [ 1] INFO  Unity: SetDirection:(98, -18, 0)
+2022-10-26 19:30:36,812 [ 1] INFO  Unity: SetDirection:(93, -36, 0)
+2022-10-26 19:30:36,912 [ 1] INFO  Unity: SetDirection:(84, -54, 0)
+2022-10-26 19:30:36,994 [ 1] INFO  Unity: SetDirection:(73, -68, 0)
+2022-10-26 19:30:37,093 [ 1] INFO  Unity: SetDirection:(58, -82, 0)
+2022-10-26 19:30:37,199 [ 1] INFO  Unity: SetDirection:(41, -91, 0)
+2022-10-26 19:30:37,365 [ 1] INFO  Unity: SetDirection:(25, -97, 0)
+2022-10-26 19:30:39,753 [ 1] INFO  Unity: BattleTarget: SetTarget:[5]死神
+2022-10-26 19:30:42,601 [ 1] INFO  Unity: SetDirection:(7, -100, 0)
+2022-10-26 19:30:45,153 [ 1] INFO  Unity: BattleTarget: SetTarget:[3]山丘巨人
+2022-10-26 19:30:46,809 [ 1] INFO  Unity: BattleTarget: SetTarget:[5]死神
+2022-10-26 19:30:54,589 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-10-26 19:30:54,589 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)

@@ -88,6 +88,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Battle\Battle.cs" />
+    <Compile Include="Battle\BattleContext.cs" />
     <Compile Include="Battle\Skill.cs" />
     <Compile Include="Battle\SkillManager.cs" />
     <Compile Include="CommandHelper.cs" />
@@ -111,6 +113,7 @@
     <Compile Include="Entities\Creature.cs" />
     <Compile Include="Entities\Entity.cs" />
     <Compile Include="Entities\Monster.cs" />
+    <Compile Include="Managers\BattleManager.cs" />
     <Compile Include="Managers\ChatManager.cs" />
     <Compile Include="Managers\EquipManager.cs" />
     <Compile Include="Managers\FriendManager.cs" />

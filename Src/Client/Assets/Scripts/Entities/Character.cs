@@ -15,6 +15,8 @@ namespace Entities {
         {
             return Manager.EquipManager.Instance.GetEquipedDefines();
         }
+
+
     }
 }
 

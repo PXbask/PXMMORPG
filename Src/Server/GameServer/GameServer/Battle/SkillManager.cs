@@ -50,5 +50,23 @@ namespace GameServer.Battle
         {
             this.Skills.Add(skill);
         }
+
+        internal Skill GetSkill(int skillId)
+        {
+            foreach (var skill in this.Skills)
+            {
+                if(skill.Define.Id == skillId)
+                    return skill;
+            }
+            return null;
+        }
+
+        internal void Update()
+        {
+            foreach (var skill in this.Skills)
+            {
+                skill.Update();
+            }
+        }
     }
 }

@@ -23,13 +23,7 @@ namespace GameServer.Services
         {
             Character character = sender.Session.Character;
             Log.InfoFormat("SendCastSkill: id:{0} entityId:{1} targetId:{2} position:{3}", message.castInfo.skillId, message.castInfo.casterId, message.castInfo.targetId, message.castInfo.Position.String());
-
-            sender.Session.Response.skillCast = new SkillCastResponse();
-            sender.Session.Response.skillCast.Result = Result.Success;
-            sender.Session.Response.skillCast.Errormsg = string.Empty;
-            sender.Session.Response.skillCast.castInfo = message.castInfo;
-
-            MapManager.Instance[character.Info.mapId].BroadcastBattleResponse(sender.Session.Response);
+            BattleManager.Instance.ProcessBattleMessage(sender, message);
         }
     }
 }

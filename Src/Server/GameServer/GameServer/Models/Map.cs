@@ -42,12 +42,13 @@ namespace GameServer.Models
         public SpawnManager SpawnManager = new SpawnManager();
 
         public MonsterManager MonsterManager = new MonsterManager();
-
+        public Battle.Battle Battle;
         internal Map(MapDefine define)
         {
             this.Define = define;
             this.SpawnManager.Init(this);
             this.MonsterManager.Init(this);
+            this.Battle = new Battle.Battle(this);
         }
 
         internal void BroadcastBattleResponse(NetMessageResponse response)
@@ -62,6 +63,7 @@ namespace GameServer.Models
         internal void Update()
         {
             this.SpawnManager.Update();
+            this.Battle.Update();
         }
 
         /// <summary>

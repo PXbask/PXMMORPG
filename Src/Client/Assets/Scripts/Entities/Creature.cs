@@ -107,11 +107,11 @@ namespace Entities
             Debug.LogFormat("SetPosition:{0}", position);
             this.position = position;
         }
-        public void CastSkill(int skillId, Creature target, NVector3 position)
+        public void CastSkill(int skillId, Creature target, NVector3 position, NDamageInfo damage)
         {
             this.SetStandBy(true);
             Skill skill = this.SkillMgr.GetSkill(skillId);
-            skill.BeginCast();
+            skill.BeginCast(damage);
         }
         public void PlayAnim(string Name)
         {
@@ -131,6 +131,12 @@ namespace Entities
         {
             base.UpdateInfo(delta);
             this.SkillMgr.OnUpdate(delta);
+        }
+        public void DoDamage(NDamageInfo damage)
+        {
+            Debug.LogFormat("Creature:{0} Damage:{1}", this.entityId, damage.Damage);
+            this.Attributes.HP -= damage.Damage;
+            this.PlayAnim("Hurt");
         }
     }
 }
