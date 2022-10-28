@@ -13,6 +13,7 @@ namespace GameServer.Battle
         public Battle Battle { get; set; }
         public Creature Caster { get; set; }
         public Creature Target { get; set; }
+        public Core.Vector3Int Position { get; set; }
         public NSkillCastInfo CastInfo { get; set; }
         public NDamageInfo Damage { get; set; }
         public SkillResult Result { get; set; }

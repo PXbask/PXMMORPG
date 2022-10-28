@@ -754,6 +754,14 @@ enum SKILL_RESULT
 	UNDER_COOLING = 2;
 	INVALID_TARGET = 3;
 	OUT_OF_RANGE = 4;
+	CASTING = 5;
+}
+
+enum SKILL_STATUS
+{
+	NONE = 0;
+	CASTING = 1;
+	RUNNING = 2;
 }
 
 message NSkillCastInfo

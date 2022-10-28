@@ -60,6 +60,15 @@ namespace GameServer.Entities
             return null;
         }
 
+        public int Distance(Creature target)
+        {
+            return (int)Vector3Int.Distance(Position, target.Position);
+        }
+        public int Distance(Vector3Int target)
+        {
+            return (int)Vector3Int.Distance(Position, target);
+        }
+
         public void CastSkill(BattleContext context, int skillId)
         {
             Skill skill = this.SkillMgr.GetSkill(skillId);
