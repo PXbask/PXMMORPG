@@ -47,7 +47,7 @@ namespace Manager
         }
         public void CastSkill(Skill skill)
         {
-            int targetID = currentTarget != null ? currentTarget.ID : 0;
+            int targetID = currentTarget != null ? currentTarget.entityId : 0;
             BattleService.Instance.SendSkillCast(skill.Define.Id, skill.owner.entityId, targetID, currentPosition);
         }
     }

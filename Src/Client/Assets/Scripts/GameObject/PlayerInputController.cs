@@ -31,23 +31,23 @@ public class PlayerInputController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         state = SkillBridge.Message.CharacterState.Idle;
-        if(this.character == null)
-        {
-            DataManager.Instance.Load();
-            NCharacterInfo info = new NCharacterInfo();
-            info.Id = 1;
-            info.Name = "Test";
-            info.ConfigId = 1;
-            info.Entity = new NEntity();
-            info.Entity.Position = new NVector3();
-            info.Entity.Direction = new NVector3();
-            info.Entity.Direction.X = 0;
-            info.Entity.Direction.Y = 100;
-            info.Entity.Direction.Z = 0;
-            this.character = new Character(info);
+        //if(this.character == null)
+        //{
+        //    DataManager.Instance.Load();
+        //    NCharacterInfo info = new NCharacterInfo();
+        //    info.Id = 1;
+        //    info.Name = "Test";
+        //    info.ConfigId = 1;
+        //    info.Entity = new NEntity();
+        //    info.Entity.Position = new NVector3();
+        //    info.Entity.Direction = new NVector3();
+        //    info.Entity.Direction.X = 0;
+        //    info.Entity.Direction.Y = 100;
+        //    info.Entity.Direction.Z = 0;
+        //    this.character = new Character(info);
 
-            if (entityController != null) entityController.entity = this.character;
-        }
+        //    if (entityController != null) entityController.entity = this.character;
+        //}
         if(agent == null)
         {
             agent=this.gameObject.AddComponent<NavMeshAgent>();

@@ -11,11 +11,15 @@ public class UIMain : MonoSingleton<UIMain> {
     public Text level;
     public UITeam TeamWindow;
     public UICreatureInfo targetUI;
+    public UISkillSlots skillSlots;
     protected override void OnAwake()
     {
         UpdateInfo();
         this.targetUI.gameObject.SetActive(false);
         BattleManager.Instance.OnTargetChanged += OnTargetChanged;
+
+        User.Instance.OnCharacterInit += this.skillSlots.RefreshUI;
+        this.skillSlots.RefreshUI();
     }
 
     private void OnTargetChanged(Creature creature)

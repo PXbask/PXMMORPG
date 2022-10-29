@@ -83,6 +83,7 @@ namespace Services
                     {
                         User.Instance.CurrentCharacter.UpdateCharacterInfo(character);
                     }
+                    User.Instance.CharacterInit();
                     CharacterManager.Instance.AddCharacter(User.Instance.CurrentCharacter);
                     continue;
                 }

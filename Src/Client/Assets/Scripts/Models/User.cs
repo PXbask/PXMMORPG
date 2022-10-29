@@ -46,5 +46,14 @@ namespace Models
                 CurrentCharacterObject.SendEntityEvent(SkillBridge.Message.EntityEvent.Ride, 0);
             }
         }
+        public delegate void CharacterInitHandler();
+        public CharacterInitHandler OnCharacterInit;
+        internal void CharacterInit()
+        {
+            if(this.OnCharacterInit != null)
+            {
+                this.OnCharacterInit();
+            }
+        }
     }
 }

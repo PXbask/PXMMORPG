@@ -247,6 +247,7 @@ namespace Services
             if (response.Result.Equals(Result.Success)) {
                 MapService.Instance.CurrentMapID = 0;
                 Models.User.Instance.CurrentCharacterInfo = null;
+                Models.User.Instance.CurrentCharacter = null;
                 if (this.isQuitGame)
                 {
 #if UNITY_EDITOR

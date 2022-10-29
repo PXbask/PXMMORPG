@@ -15,6 +15,7 @@ namespace Common.Data
         None,
         Target,
         Position,
+        Self
     }
 
     public class SkillDefine

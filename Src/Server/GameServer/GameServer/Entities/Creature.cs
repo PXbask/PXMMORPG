@@ -73,7 +73,7 @@ namespace GameServer.Entities
         {
             Skill skill = this.SkillMgr.GetSkill(skillId);
             if(skill != null)
-                skill.Cast(context);
+                context.Result = skill.Cast(context);
         }
 
         public override void Update()

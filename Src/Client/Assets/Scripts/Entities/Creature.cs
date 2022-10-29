@@ -78,6 +78,12 @@ namespace Entities
             return null;
         }
 
+        public void DoSkillHit(int skillId, int hitId, List<NDamageInfo> damages)
+        {
+            Skill skill = this.SkillMgr.GetSkill(skillId);
+            skill.DoHit(hitId, damages);
+        }
+
         public void MoveForward()
         {
             Debug.LogFormat("MoveForward");
@@ -134,9 +140,17 @@ namespace Entities
         }
         public void DoDamage(NDamageInfo damage)
         {
-            Debug.LogFormat("Creature:{0} Damage:{1}", this.entityId, damage.Damage);
+            Debug.LogFormat("Creature:{0} Damage:{1}", this.Name, damage.Damage);
             this.Attributes.HP -= damage.Damage;
             this.PlayAnim("Hurt");
+        }
+        public int Distance(Creature target)
+        {
+            return (int)Vector3Int.Distance(position, target.position);
+        }
+        public int Distance(Vector3Int target)
+        {
+            return (int)Vector3Int.Distance(position, target);
         }
     }
 }
