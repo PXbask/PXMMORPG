@@ -140,7 +140,7 @@ namespace Entities
         }
         public void DoDamage(NDamageInfo damage)
         {
-            Debug.LogFormat("Creature:{0} Damage:{1}", this.Name, damage.Damage);
+            Debug.LogFormat("Creature:{0} Damage:{1} Crit:{2}", this.Name, damage.Damage, damage.Crit);
             this.Attributes.HP -= damage.Damage;
             this.PlayAnim("Hurt");
         }

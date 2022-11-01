@@ -37,7 +37,21 @@ public class UISkillSlot : MonoBehaviour,IPointerClickHandler {
 			if (cdText.enabled) cdText.enabled = false;
         }
 	}
+	private void OnPositionSelected(Vector3 pos)
+    {
+		BattleManager.Instance.CurrentPosition = GameObjectTool.WorldToLogicN(pos);
+		this.CastSkill();
+    }
 	public void OnPointerClick(PointerEventData eventData)
+	{
+        if (skill.Define.CastTarget.Equals(SkillTarget.Position))
+        {
+			TargetSelector.ShowSelector(this.skill.Define.CastRange, this.skill.Define.AOERange, this.OnPositionSelected);
+			return;
+        }
+		CastSkill();
+	}
+	private void CastSkill()
 	{
 		SkillResult res = skill.CanCast(BattleManager.Instance.CurrentTarget);
         switch (res)

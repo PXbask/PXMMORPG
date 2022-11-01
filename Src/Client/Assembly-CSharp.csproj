@@ -74,6 +74,7 @@
      <Compile Include="Assets\Scripts\GameObject\PlayerInputController.cs" />
      <Compile Include="Assets\Scripts\GameObject\RideController.cs" />
      <Compile Include="Assets\Scripts\GameObject\SpawnPoint.cs" />
+     <Compile Include="Assets\Scripts\GameObject\TargetSelector.cs" />
      <Compile Include="Assets\Scripts\GameObject\TeleporterObject.cs" />
      <Compile Include="Assets\Scripts\Log\UnityLogger.cs" />
      <Compile Include="Assets\Scripts\Managers\BagManager.cs" />
@@ -213,6 +214,7 @@
      <None Include="Assets\FX\Shader\ParticlesAlphaBlended.shader" />
      <None Include="Assets\Shader\Particle\ParticleAdditive.shader" />
      <None Include="Assets\References\log4net.xml" />
+     <None Include="Assets\Shader\Projector.shader" />
      <None Include="Assets\Resources\log4net.xml" />
      <None Include="Assets\Shader\DepthBloom.shader" />
      <None Include="Assets\FX\Shader\ParticlesFresnel.shader" />
