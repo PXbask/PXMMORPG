@@ -16,9 +16,9 @@ namespace Battle
     {
         public NSkillInfo Info;
         public Creature owner;
+        public Creature Target;
         public SkillDefine Define;
         private float cd = 0;
-        public NDamageInfo Damage { get; private set; }
 
         public float CD
         {
@@ -31,7 +31,8 @@ namespace Battle
         private float castingTime = 0;
         private float skillTime;
         public bool IsCasting = false;
-        private int Hit;
+        public int Hit = 0;
+        private List<Bullet> Bullets = new List<Bullet>();
 
         public Skill(NSkillInfo info, Creature owner)
         {
@@ -118,22 +119,57 @@ namespace Battle
                 }
                 else
                 {
+                    if (!this.Define.Bullet)
+                    {
+                        this.Status = SkillStatus.None;
+                        Debug.LogFormat("Skill[{0}].UpdateSkill Finished", this.Define.Name);
+                    }
+                }
+            }
+            if (this.Define.Bullet)
+            {
+                bool finish = true;
+                foreach (var bullet in this.Bullets)
+                {
+                    bullet.Update();
+                    if (!bullet.Stopped) finish = false;
+                }
+
+                if (finish && this.Define.HitTimes.Count <= this.Hit)
+                {
                     this.Status = SkillStatus.None;
-                    this.IsCasting = false;
                     Debug.LogFormat("Skill[{0}].UpdateSkill Finished", this.Define.Name);
                 }
             }
         }
         private void DoHit()
         {
-            List<NDamageInfo> damages = null;
-            if(this.HitMap.TryGetValue(this.Hit,out damages))
+            if (this.Define.Bullet)
             {
-                DoHitDamages(damages);
+                this.CastBullet();
+            }
+            else
+            {
+                this.DoHitDamages(this.Hit);
             }
             this.Hit++;
         }
 
+        private void CastBullet()
+        {
+            Debug.LogFormat("Skill[{0}].CastBullet:[{1}]", Define.Name, Define.BulletResource);
+            Bullet bullet = new Bullet(this);
+            this.Bullets.Add(bullet);
+        }
+
+        public void DoHitDamages(int hit)
+        {
+            List<NDamageInfo> damages = null;
+            if (this.HitMap.TryGetValue(hit, out damages))
+            {
+                DoHitDamages(damages);
+            }
+        }
         private void DoHitDamages(List<NDamageInfo> damages)
         {
             foreach (var damage in damages)
@@ -158,16 +194,24 @@ namespace Battle
             if (cd < 0)
                 cd = 0;
         }
-
-        public void BeginCast(NDamageInfo damage)
+        public void DoHit(NSkillHitInfo hit)
+        {
+            if (hit.isBullet || !this.Define.Bullet)
+            {
+                this.DoHit(hit.hitId, hit.Damages);
+            }
+        }
+        public void BeginCast(Creature target)
         {
             this.IsCasting = true;
             this.castingTime = 0;
             this.skillTime = 0;
             this.Hit = 0;
             this.cd = this.Define.CD;
-            this.Damage = damage; 
+            this.Target = target;
             this.owner.PlayAnim(Define.SkillAnim);
+            this.Bullets.Clear();
+            this.HitMap.Clear();
             if (Define.CastTime > 0)
             {
                 this.Status = SkillStatus.Casting;

@@ -1,122 +1,446 @@
-2022-10-28 17:19:53,489 [ 1] INFO  Unity: LoadingManager start
-2022-10-28 17:19:56,790 [ 1] INFO  Unity: DataManager > DataManager()
-2022-10-28 17:20:15,751 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
-2022-10-28 17:20:15,754 [ 1] INFO  Unity: ConnectToServer() Start 
-2022-10-28 17:20:15,760 [ 1] INFO  Unity: DoConnect
-2022-10-28 17:20:15,764 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-10-28 17:20:15,798 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-10-29 18:18:20,654 [ 1] INFO  Unity: LoadingManager start
+2022-10-29 18:18:24,699 [ 1] INFO  Unity: DataManager > DataManager()
+2022-10-29 18:18:29,587 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
+2022-10-29 18:18:29,595 [ 1] INFO  Unity: ConnectToServer() Start 
+2022-10-29 18:18:29,615 [ 1] INFO  Unity: DoConnect
+2022-10-29 18:18:29,616 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-10-29 18:18:29,644 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-10-28 17:20:15,805 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2022-10-28 17:20:16,048 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2022-10-28 17:20:16,050 [ 1] INFO  Unity: LoadLevel: CharSelect
-2022-10-28 17:20:16,670 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-10-28 17:20:17,704 [ 1] INFO  Unity: Select Char:[1003]lll[Archer]
-2022-10-28 17:20:18,253 [ 1] INFO  Unity: UserGameEnterRequest::index :2
-2022-10-28 17:20:18,299 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
-2022-10-28 17:20:18,302 [ 1] INFO  Unity: ItemManager:Init[ID:1, Count:20]
-2022-10-28 17:20:18,303 [ 1] INFO  Unity: ItemManager:Init[ID:2, Count:20]
-2022-10-28 17:20:18,318 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1 CharacterID:1
-2022-10-28 17:20:18,327 [ 1] INFO  Unity: AddCharacter:1003:lll Map:1 Entity:(12:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-10-28 17:20:18,330 [ 1] INFO  Unity: LoadLevel: MainCity
-2022-10-28 17:20:20,256 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2022-10-29 18:18:29,665 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2022-10-29 18:18:30,399 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2022-10-29 18:18:30,407 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-10-29 18:18:30,899 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-10-29 18:18:32,111 [ 1] INFO  Unity: Select Char:[2]111[Warrior]
+2022-10-29 18:18:32,696 [ 1] INFO  Unity: UserGameEnterRequest::index :1
+2022-10-29 18:18:32,880 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
+2022-10-29 18:18:32,898 [ 1] INFO  Unity: ItemManager:Init[ID:1, Count:20]
+2022-10-29 18:18:32,898 [ 1] INFO  Unity: ItemManager:Init[ID:2, Count:20]
+2022-10-29 18:18:33,006 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1 CharacterID:1
+2022-10-29 18:18:33,074 [ 1] INFO  Unity: AddCharacter:2:111 Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-10-29 18:18:33,088 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-10-29 18:18:34,493 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 UnityEngine.Resources:Load(String)
 Resloader:Load(String) (at Assets/Scripts/Assets/Resloader.cs:11)
 SoundManager:PlayMusic(String) (at Assets/Scripts/Managers/SoundManager.cs:71)
 Services.MapService:EnterMap(Int32) (at Assets/Scripts/Services/MapService.cs:36)
-Services.MapService:OnMapCharacterEnter(Object, MapCharacterEnterResponse) (at Assets/Scripts/Services/MapService.cs:93)
+Services.MapService:OnMapCharacterEnter(Object, MapCharacterEnterResponse) (at Assets/Scripts/Services/MapService.cs:94)
 Network.MessageDistributer`1:RaiseEvent(Object, MapCharacterEnterResponse)
 Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
 Network.MessageDistributer`1:Distribute()
 Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
 Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
 
-2022-10-28 17:20:20,258 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2022-10-29 18:18:34,493 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 UnityEngine.Resources:Load(String)
 Resloader:Load(String) (at Assets/Scripts/Assets/Resloader.cs:11)
 SoundManager:PlayMusic(String) (at Assets/Scripts/Managers/SoundManager.cs:71)
 Services.MapService:EnterMap(Int32) (at Assets/Scripts/Services/MapService.cs:36)
-Services.MapService:OnMapCharacterEnter(Object, MapCharacterEnterResponse) (at Assets/Scripts/Services/MapService.cs:93)
+Services.MapService:OnMapCharacterEnter(Object, MapCharacterEnterResponse) (at Assets/Scripts/Services/MapService.cs:94)
 Network.MessageDistributer`1:RaiseEvent(Object, MapCharacterEnterResponse)
 Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
 Network.MessageDistributer`1:Distribute()
 Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
 Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
 
-2022-10-28 17:20:20,262 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
-2022-10-28 17:20:20,521 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-10-28 17:20:20,636 [ 1] INFO  Unity: Set Channel:Local
-2022-10-28 17:20:21,238 [ 1] INFO  Unity: SetDirection:(98, -18, 0)
-2022-10-28 17:20:21,325 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-10-28 17:20:21,409 [ 1] INFO  Unity: SetDirection:(86, -51, 0)
-2022-10-28 17:20:21,492 [ 1] INFO  Unity: SetDirection:(76, -65, 0)
-2022-10-28 17:20:21,526 [ 1] INFO  Unity: MoveForward
-2022-10-28 17:20:21,576 [ 1] INFO  Unity: SetDirection:(63, -77, 0)
-2022-10-28 17:20:21,660 [ 1] INFO  Unity: SetDirection:(49, -87, 0)
-2022-10-28 17:20:21,753 [ 1] INFO  Unity: SetDirection:(33, -94, 0)
-2022-10-28 17:20:21,836 [ 1] INFO  Unity: SetDirection:(16, -99, 0)
-2022-10-28 17:20:21,938 [ 1] INFO  Unity: SetDirection:(-5, -100, 0)
-2022-10-28 17:20:22,042 [ 1] INFO  Unity: SetDirection:(-25, -97, 0)
-2022-10-28 17:20:22,116 [ 1] INFO  Unity: SetDirection:(-42, -91, 0)
-2022-10-28 17:20:22,210 [ 1] INFO  Unity: SetDirection:(-60, -80, 0)
-2022-10-28 17:20:22,323 [ 1] INFO  Unity: SetDirection:(-74, -68, 0)
-2022-10-28 17:20:22,488 [ 1] INFO  Unity: SetDirection:(-85, -53, 0)
-2022-10-28 17:20:24,598 [ 1] INFO  Unity: SetPosition:(4444, 3419, 813)
-2022-10-28 17:20:26,520 [ 1] INFO  Unity: SetPosition:(3950, 3111, 812)
-2022-10-28 17:20:28,499 [ 1] INFO  Unity: SetPosition:(3446, 2797, 810)
-2022-10-28 17:20:29,105 [ 1] INFO  Unity: SetDirection:(-93, -37, 0)
-2022-10-28 17:20:31,459 [ 1] INFO  Unity: SetPosition:(2635, 2440, 807)
-2022-10-28 17:20:31,673 [ 1] INFO  Unity: SetDirection:(-98, -20, 0)
-2022-10-28 17:20:31,781 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-10-28 17:20:31,920 [ 1] INFO  Unity: SetDirection:(-98, 18, 0)
-2022-10-28 17:20:34,731 [ 1] INFO  Unity: SetPosition:(1702, 2556, 805)
-2022-10-28 17:20:35,178 [ 1] INFO  Unity: TeleporterObject: Character[lll] EnterTeleporter[3:主城传入点1]
-2022-10-28 17:20:36,715 [ 1] INFO  Unity: SetPosition:(1154, 2656, 805)
-2022-10-28 17:20:37,692 [ 1] INFO  Unity: TeleporterObject: Character[lll] EnterTeleporter[1:主城->野外]
-2022-10-28 17:20:37,695 [ 1] INFO  Unity: MapTeleportRequest: teleporterId:1
-2022-10-28 17:20:38,297 [ 1] INFO  Unity: Stop
-2022-10-28 17:20:38,601 [ 1] INFO  Unity: MoveForward
-2022-10-28 17:20:38,915 [ 1] INFO  Unity: Stop
-2022-10-28 17:20:38,918 [ 1] INFO  Unity: SetPosition:(635, 2752, 805)
-2022-10-28 17:20:39,174 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-10-28 17:20:39,350 [ 1] INFO  Unity: SetDirection:(-98, -19, 0)
-2022-10-28 17:20:39,458 [ 1] INFO  Unity: SetDirection:(-93, -37, 0)
-2022-10-28 17:20:39,557 [ 1] INFO  Unity: SetDirection:(-83, -55, 0)
-2022-10-28 17:20:39,631 [ 1] INFO  Unity: SetDirection:(-72, -69, 0)
-2022-10-28 17:20:39,733 [ 1] INFO  Unity: SetDirection:(-56, -83, 0)
-2022-10-28 17:20:39,848 [ 1] INFO  Unity: SetDirection:(-38, -92, 0)
-2022-10-28 17:20:39,917 [ 1] INFO  Unity: SetDirection:(-21, -98, 0)
-2022-10-28 17:20:40,032 [ 1] INFO  Unity: SetDirection:(-1, -100, 0)
-2022-10-28 17:20:40,096 [ 1] INFO  Unity: SetDirection:(17, -99, 0)
-2022-10-28 17:20:40,196 [ 1] INFO  Unity: SetDirection:(35, -94, 0)
-2022-10-28 17:20:40,276 [ 1] INFO  Unity: MoveForward
-2022-10-28 17:20:40,411 [ 1] INFO  Unity: SetDirection:(51, -86, 0)
-2022-10-28 17:20:40,687 [ 1] INFO  Unity: Stop
-2022-10-28 17:20:41,023 [ 1] INFO  Unity: MoveForward
-2022-10-28 17:20:41,659 [ 1] INFO  Unity: Stop
-2022-10-28 17:20:41,676 [ 1] INFO  Unity: SetDirection:(66, -75, 0)
-2022-10-28 17:20:41,787 [ 1] INFO  Unity: SetDirection:(79, -61, 0)
-2022-10-28 17:20:41,872 [ 1] INFO  Unity: SetDirection:(89, -46, 0)
-2022-10-28 17:20:41,970 [ 1] INFO  Unity: SetDirection:(96, -27, 0)
-2022-10-28 17:20:42,032 [ 1] INFO  Unity: MoveForward
-2022-10-28 17:20:42,109 [ 1] INFO  Unity: SetDirection:(100, -9, 0)
-2022-10-28 17:20:42,854 [ 1] INFO  Unity: SetPosition:(1020, 2466, 805)
-2022-10-28 17:20:43,034 [ 1] INFO  Unity: Stop
-2022-10-28 17:20:43,176 [ 1] INFO  Unity: SetDirection:(96, -28, 0)
-2022-10-28 17:20:43,288 [ 1] INFO  Unity: SetDirection:(88, -47, 0)
-2022-10-28 17:20:43,372 [ 1] INFO  Unity: SetDirection:(77, -64, 0)
-2022-10-28 17:20:43,460 [ 1] INFO  Unity: SetDirection:(65, -76, 0)
-2022-10-28 17:20:43,538 [ 1] INFO  Unity: SetDirection:(50, -86, 0)
-2022-10-28 17:20:43,640 [ 1] INFO  Unity: SetDirection:(31, -95, 0)
-2022-10-28 17:20:43,740 [ 1] INFO  Unity: SetDirection:(11, -99, 0)
-2022-10-28 17:20:43,826 [ 1] INFO  Unity: SetDirection:(-7, -100, 0)
-2022-10-28 17:20:43,926 [ 1] INFO  Unity: SetDirection:(-27, -96, 0)
-2022-10-28 17:20:44,009 [ 1] INFO  Unity: SetDirection:(-44, -90, 0)
-2022-10-28 17:20:44,107 [ 1] INFO  Unity: SetDirection:(-61, -79, 0)
-2022-10-28 17:20:44,199 [ 1] INFO  Unity: SetDirection:(-74, -67, 0)
-2022-10-28 17:20:44,298 [ 1] INFO  Unity: SetDirection:(-86, -50, 0)
-2022-10-28 17:20:44,413 [ 1] INFO  Unity: SetDirection:(-95, -33, 0)
-2022-10-28 17:22:21,511 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-10-28 17:22:21,512 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-10-29 18:18:34,495 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
+2022-10-29 18:18:34,752 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-10-29 18:18:35,024 [ 1] INFO  Unity: Set Channel:Local
+2022-10-29 18:18:35,635 [ 1] INFO  Unity: SetDirection:(98, -19, 0)
+2022-10-29 18:18:35,737 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2022-10-29 18:18:35,820 [ 1] INFO  Unity: SetDirection:(85, -53, 0)
+2022-10-29 18:18:35,920 [ 1] INFO  Unity: SetDirection:(72, -69, 0)
+2022-10-29 18:18:35,992 [ 1] INFO  Unity: MoveForward
+2022-10-29 18:18:36,009 [ 1] INFO  Unity: SetDirection:(57, -82, 0)
+2022-10-29 18:18:36,141 [ 1] INFO  Unity: SetDirection:(41, -91, 0)
+2022-10-29 18:18:36,622 [ 1] INFO  Unity: SetDirection:(24, -97, 0)
+2022-10-29 18:18:36,738 [ 1] INFO  Unity: SetDirection:(5, -100, 0)
+2022-10-29 18:18:36,820 [ 1] INFO  Unity: SetDirection:(-13, -99, 0)
+2022-10-29 18:18:36,920 [ 1] INFO  Unity: SetDirection:(-33, -94, 0)
+2022-10-29 18:18:37,036 [ 1] INFO  Unity: SetDirection:(-51, -86, 0)
+2022-10-29 18:18:37,367 [ 1] INFO  Unity: SetDirection:(-66, -75, 0)
+2022-10-29 18:18:38,099 [ 1] INFO  Unity: SetDirection:(-78, -62, 0)
+2022-10-29 18:18:38,282 [ 1] INFO  Unity: SetDirection:(-88, -47, 0)
+2022-10-29 18:18:39,559 [ 1] INFO  Unity: SetPosition:(4495, 3227, 812)
+2022-10-29 18:18:40,752 [ 1] INFO  Unity: SetPosition:(4167, 3052, 811)
+2022-10-29 18:18:41,148 [ 1] INFO  Unity: Stop
+2022-10-29 18:18:48,166 [ 1] INFO  Unity: SendCastSkill: id:103 entityId:1 targetId:0 position:(0,0,0)
+2022-10-29 18:18:50,057 [ 1] INFO  Unity: MoveForward
+2022-10-29 18:18:50,787 [ 1] INFO  Unity: Stop
+2022-10-29 18:18:50,871 [ 1] INFO  Unity: SendCastSkill: id:103 entityId:1 targetId:0 position:(0,0,0)
+2022-10-29 18:18:55,377 [ 1] INFO  Unity: SendCastSkill: id:103 entityId:1 targetId:0 position:(0,0,0)
+2022-10-29 18:19:08,462 [ 1] INFO  Unity: MoveForward
+2022-10-29 18:19:08,529 [ 1] INFO  Unity: SetPosition:(3839, 2877, 810)
+2022-10-29 18:19:09,174 [ 1] INFO  Unity: SetDirection:(-95, -31, 0)
+2022-10-29 18:19:10,416 [ 1] INFO  Unity: Stop
+2022-10-29 18:19:18,133 [ 1] INFO  Unity: MoveForward
+2022-10-29 18:19:18,581 [ 1] INFO  Unity: SetDirection:(-99, -13, 0)
+2022-10-29 18:19:19,492 [ 1] INFO  Unity: SetDirection:(-100, 5, 0)
+2022-10-29 18:19:19,741 [ 1] INFO  Unity: SetPosition:(2811, 2589, 808)
+2022-10-29 18:19:22,839 [ 1] INFO  Unity: SetPosition:(1908, 2634, 805)
+2022-10-29 18:19:22,871 [ 1] INFO  Unity: SetDirection:(-99, -14, 0)
+2022-10-29 18:19:23,021 [ 1] INFO  Unity: SetDirection:(-95, -32, 0)
+2022-10-29 18:19:24,032 [ 1] INFO  Unity: SetPosition:(1585, 2537, 805)
+2022-10-29 18:19:24,048 [ 1] INFO  Unity: TeleporterObject: Character[111] EnterTeleporter[3:主城传入点1]
+2022-10-29 18:19:24,246 [ 1] INFO  Unity: SetDirection:(-99, -14, 0)
+2022-10-29 18:19:25,638 [ 1] INFO  Unity: SetPosition:(1141, 2463, 805)
+2022-10-29 18:19:26,582 [ 1] INFO  Unity: TeleporterObject: Character[111] EnterTeleporter[1:主城->野外]
+2022-10-29 18:19:26,583 [ 1] INFO  Unity: MapTeleportRequest: teleporterId:1
+2022-10-29 18:19:27,129 [ 1] INFO  Unity: Stop
+2022-10-29 18:19:27,642 [ 1] INFO  Unity: SetDirection:(-100, 3, 0)
+2022-10-29 18:19:27,758 [ 1] INFO  Unity: MoveForward
+2022-10-29 18:19:28,058 [ 1] INFO  Unity: SetPosition:(643, 2408, 805)
+2022-10-29 18:19:28,304 [ 1] INFO  Unity: Stop
+2022-10-29 18:19:28,354 [ 1] INFO  Unity: SetDirection:(-98, 21, 0)
+2022-10-29 18:19:28,537 [ 1] INFO  Unity: SetDirection:(-92, 40, 0)
+2022-10-29 18:19:28,636 [ 1] INFO  Unity: SetDirection:(-81, 58, 0)
+2022-10-29 18:19:28,735 [ 1] INFO  Unity: SetDirection:(-68, 74, 0)
+2022-10-29 18:19:28,818 [ 1] INFO  Unity: SetDirection:(-54, 84, 0)
+2022-10-29 18:19:28,901 [ 1] INFO  Unity: SetDirection:(-38, 92, 0)
+2022-10-29 18:19:29,001 [ 1] INFO  Unity: SetDirection:(-18, 98, 0)
+2022-10-29 18:19:29,102 [ 1] INFO  Unity: SetDirection:(2, 100, 0)
+2022-10-29 18:19:29,185 [ 1] INFO  Unity: SetDirection:(20, 98, 0)
+2022-10-29 18:19:29,288 [ 1] INFO  Unity: SetDirection:(40, 92, 0)
+2022-10-29 18:19:29,387 [ 1] INFO  Unity: SetDirection:(58, 81, 0)
+2022-10-29 18:19:29,487 [ 1] INFO  Unity: SetDirection:(74, 68, 0)
+2022-10-29 18:19:29,572 [ 1] INFO  Unity: SetDirection:(84, 54, 0)
+2022-10-29 18:19:29,655 [ 1] INFO  Unity: SetDirection:(92, 38, 0)
+2022-10-29 18:19:29,725 [ 1] INFO  Unity: MoveForward
+2022-10-29 18:19:29,743 [ 1] INFO  Unity: SetDirection:(98, 19, 0)
+2022-10-29 18:19:29,859 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
+2022-10-29 18:19:30,372 [ 1] INFO  Unity: SetDirection:(98, 20, 0)
+2022-10-29 18:19:30,455 [ 1] INFO  Unity: SetDirection:(93, 37, 0)
+2022-10-29 18:19:30,538 [ 1] INFO  Unity: SetDirection:(85, 53, 0)
+2022-10-29 18:19:30,653 [ 1] INFO  Unity: SetDirection:(73, 68, 0)
+2022-10-29 18:19:31,564 [ 1] INFO  Unity: SetDirection:(60, 80, 0)
+2022-10-29 18:19:31,631 [ 1] INFO  Unity: Stop
+2022-10-29 18:19:31,713 [ 1] INFO  Unity: SetDirection:(44, 90, 0)
+2022-10-29 18:19:31,814 [ 1] INFO  Unity: SetDirection:(25, 97, 0)
+2022-10-29 18:19:31,912 [ 1] INFO  Unity: SetDirection:(5, 100, 0)
+2022-10-29 18:19:31,996 [ 1] INFO  Unity: SetDirection:(-13, 99, 0)
+2022-10-29 18:19:32,112 [ 1] INFO  Unity: SetDirection:(-33, 94, 0)
+2022-10-29 18:19:32,211 [ 1] INFO  Unity: SetDirection:(-52, 85, 0)
+2022-10-29 18:19:32,311 [ 1] INFO  Unity: SetDirection:(-69, 73, 0)
+2022-10-29 18:19:32,410 [ 1] INFO  Unity: SetDirection:(-82, 57, 0)
+2022-10-29 18:19:32,493 [ 1] INFO  Unity: SetDirection:(-91, 42, 0)
+2022-10-29 18:19:32,575 [ 1] INFO  Unity: SetDirection:(-97, 25, 0)
+2022-10-29 18:19:32,674 [ 1] INFO  Unity: SetDirection:(-100, 7, 0)
+2022-10-29 18:19:32,757 [ 1] INFO  Unity: MoveForward
+2022-10-29 18:19:32,873 [ 1] INFO  Unity: SetDirection:(-99, -11, 0)
+2022-10-29 18:19:33,288 [ 1] INFO  Unity: TeleporterObject: Character[111] EnterTeleporter[1:主城->野外]
+2022-10-29 18:19:33,289 [ 1] INFO  Unity: MapTeleportRequest: teleporterId:1
+2022-10-29 18:19:34,082 [ 1] INFO  Unity: Stop
+2022-10-29 18:19:34,398 [ 1] INFO  Unity: MoveBack
+2022-10-29 18:19:35,442 [ 1] INFO  Unity: SetPosition:(938, 2635, 805)
+2022-10-29 18:19:35,773 [ 1] INFO  Unity: Stop
+2022-10-29 18:19:41,484 [ 1] INFO  Unity: MoveForward
+2022-10-29 18:19:41,966 [ 1] INFO  Unity: TeleporterObject: Character[111] EnterTeleporter[1:主城->野外]
+2022-10-29 18:19:41,967 [ 1] INFO  Unity: MapTeleportRequest: teleporterId:1
+2022-10-29 18:19:43,074 [ 1] INFO  Unity: Stop
+2022-10-29 18:19:43,109 [ 1] INFO  Unity: MoveBack
+2022-10-29 18:19:44,782 [ 1] INFO  Unity: SetPosition:(1015, 2643, 805)
+2022-10-29 18:19:45,145 [ 1] INFO  Unity: Stop
+2022-10-29 18:20:15,682 [ 1] INFO  Unity: SendCastSkill: id:103 entityId:1 targetId:0 position:(0,0,0)
+2022-10-29 18:20:19,756 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:20:19,757 [ 1] INFO  Unity: OnMapCharacterLeave:MapID:1 CharacterID:1
+2022-10-29 18:20:19,764 [ 1] INFO  Unity: RemoveCharacter:1
+2022-10-29 18:20:19,766 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1 CharacterID:2
+2022-10-29 18:20:19,768 [ 1] INFO  Unity: AddCharacter:2:111 Map:2 Entity:(1:pos:(3183,4007,-2),dir:(100,0,0),spd:0
+2022-10-29 18:20:19,778 [ 1] INFO  Unity: AddCharacter:2:恶鬼 Map:2 Entity:(2:pos:(5887,1573,7),dir:(9,100,0),spd:0
+2022-10-29 18:20:19,789 [ 1] INFO  Unity: LoadLevel: Map01
+2022-10-29 18:20:20,337 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+UnityEngine.Resources:Load(String)
+Resloader:Load(String) (at Assets/Scripts/Assets/Resloader.cs:11)
+SoundManager:PlayMusic(String) (at Assets/Scripts/Managers/SoundManager.cs:71)
+Services.MapService:EnterMap(Int32) (at Assets/Scripts/Services/MapService.cs:36)
+Services.MapService:OnMapCharacterEnter(Object, MapCharacterEnterResponse) (at Assets/Scripts/Services/MapService.cs:94)
+Network.MessageDistributer`1:RaiseEvent(Object, MapCharacterEnterResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-10-29 18:20:20,338 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2
+2022-10-29 18:20:20,339 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2 CharacterID:2
+2022-10-29 18:20:20,340 [ 1] INFO  Unity: AddCharacter:2:恶鬼 Map:2 Entity:(2:pos:(5887,1573,7),dir:(9,100,0),spd:0
+2022-10-29 18:20:20,408 [ 1] ERROR Unity: Message handler exception:, An element with the same key already exists in the dictionary., mscorlib,   at System.Collections.Generic.Dictionary`2[System.Int32,Entities.Entity].Add (Int32 key, Entities.Entity value) [0x00002] in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/List.cs:735 
+  at Manager.EntityManager.AddEntity (Entities.Entity entity) [0x0000e] in C:\Users\PXbask\PXmmorpg\Src\Client\Assets\Scripts\Managers\EntityManager.cs:27 
+  at Manager.CharacterManager.AddCharacter (Entities.Character cha) [0x00066] in C:\Users\PXbask\PXmmorpg\Src\Client\Assets\Scripts\Managers\CharacterManager.cs:54 
+  at Services.MapService.OnMapCharacterEnter (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse response) [0x0011a] in C:\Users\PXbask\PXmmorpg\Src\Client\Assets\Scripts\Services\MapService.cs:90 
+  at (wrapper delegate-invoke) Network.MessageDistributer`1/MessageHandler`1<object, SkillBridge.Message.MapCharacterEnterResponse>:invoke_void__this___object_MapCharacterEnterResponse (object,SkillBridge.Message.MapCharacterEnterResponse)
+  at Network.MessageDistributer`1[System.Object].RaiseEvent[MapCharacterEnterResponse] (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse msg) [0x00000] in <filename unknown>:0 
+2022-10-29 18:20:20,412 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{ArgumentException: An element with the same key already exists in the dictionary., System.Collections.Generic.Dictionary`2[System.Int32,Entities.Entity].Add (Int32 key, Entities.Entity value) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/List.cs:735)
+Manager.EntityManager.AddEntity (Entities.Entity entity) (at Assets/Scripts/Managers/EntityManager.cs:27)
+Manager.CharacterManager.AddCharacter (Entities.Character cha) (at Assets/Scripts/Managers/CharacterManager.cs:54)
+Services.MapService.OnMapCharacterEnter (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse response) (at Assets/Scripts/Services/MapService.cs:90)
+Network.MessageDistributer`1[System.Object].RaiseEvent[MapCharacterEnterResponse] (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse msg)
+}</args></log4net.Error>
+2022-10-29 18:20:20,494 [ 1] WARN  Unity: Failed to create agent because it is not close enough to the NavMesh
+UnityEngine.GameObject:AddComponent()
+PlayerInputController:Start() (at Assets/Scripts/GameObject/PlayerInputController.cs:53)
+
+2022-10-29 18:20:20,520 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2 CharacterID:2
+2022-10-29 18:20:20,521 [ 1] INFO  Unity: AddCharacter:3:山丘巨人 Map:2 Entity:(3:pos:(5540,1682,4),dir:(20,98,0),spd:0
+2022-10-29 18:20:20,535 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2
+2022-10-29 18:20:20,536 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2 CharacterID:2
+2022-10-29 18:20:20,536 [ 1] INFO  Unity: AddCharacter:2:111 Map:2 Entity:(1:pos:(1125,2665,805),dir:(-99,-11,0),spd:0
+2022-10-29 18:20:20,539 [ 1] ERROR Unity: Message handler exception:, An element with the same key already exists in the dictionary., mscorlib,   at System.Collections.Generic.Dictionary`2[System.Int32,Entities.Entity].Add (Int32 key, Entities.Entity value) [0x00002] in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/List.cs:735 
+  at Manager.EntityManager.AddEntity (Entities.Entity entity) [0x0000e] in C:\Users\PXbask\PXmmorpg\Src\Client\Assets\Scripts\Managers\EntityManager.cs:27 
+  at Manager.CharacterManager.AddCharacter (Entities.Character cha) [0x00066] in C:\Users\PXbask\PXmmorpg\Src\Client\Assets\Scripts\Managers\CharacterManager.cs:54 
+  at Services.MapService.OnMapCharacterEnter (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse response) [0x00105] in C:\Users\PXbask\PXmmorpg\Src\Client\Assets\Scripts\Services\MapService.cs:87 
+  at (wrapper delegate-invoke) Network.MessageDistributer`1/MessageHandler`1<object, SkillBridge.Message.MapCharacterEnterResponse>:invoke_void__this___object_MapCharacterEnterResponse (object,SkillBridge.Message.MapCharacterEnterResponse)
+  at Network.MessageDistributer`1[System.Object].RaiseEvent[MapCharacterEnterResponse] (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse msg) [0x00000] in <filename unknown>:0 
+2022-10-29 18:20:20,541 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{ArgumentException: An element with the same key already exists in the dictionary., System.Collections.Generic.Dictionary`2[System.Int32,Entities.Entity].Add (Int32 key, Entities.Entity value) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/List.cs:735)
+Manager.EntityManager.AddEntity (Entities.Entity entity) (at Assets/Scripts/Managers/EntityManager.cs:27)
+Manager.CharacterManager.AddCharacter (Entities.Character cha) (at Assets/Scripts/Managers/CharacterManager.cs:54)
+Services.MapService.OnMapCharacterEnter (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse response) (at Assets/Scripts/Services/MapService.cs:87)
+Network.MessageDistributer`1[System.Object].RaiseEvent[MapCharacterEnterResponse] (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse msg)
+}</args></log4net.Error>
+2022-10-29 18:20:20,546 [ 1] INFO  Unity: SetPosition:(3183, 4007, -8)
+2022-10-29 18:20:20,547 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
+2022-10-29 18:20:20,766 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-10-29 18:20:20,770 [ 1] INFO  Unity: TeleporterObject: Character[111] EnterTeleporter[6:野外传入点]
+2022-10-29 18:20:20,775 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2 CharacterID:2
+2022-10-29 18:20:20,776 [ 1] INFO  Unity: AddCharacter:4:小恶魔 Map:2 Entity:(4:pos:(4775,2865,14),dir:(-30,95,0),spd:0
+2022-10-29 18:20:20,792 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2
+2022-10-29 18:20:20,793 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2 CharacterID:2
+2022-10-29 18:20:20,794 [ 1] INFO  Unity: AddCharacter:2:111 Map:2 Entity:(1:pos:(3183,4007,-2),dir:(100,0,0),spd:0
+2022-10-29 18:20:20,797 [ 1] ERROR Unity: Message handler exception:, An element with the same key already exists in the dictionary., mscorlib,   at System.Collections.Generic.Dictionary`2[System.Int32,Entities.Entity].Add (Int32 key, Entities.Entity value) [0x00002] in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/List.cs:735 
+  at Manager.EntityManager.AddEntity (Entities.Entity entity) [0x0000e] in C:\Users\PXbask\PXmmorpg\Src\Client\Assets\Scripts\Managers\EntityManager.cs:27 
+  at Manager.CharacterManager.AddCharacter (Entities.Character cha) [0x00066] in C:\Users\PXbask\PXmmorpg\Src\Client\Assets\Scripts\Managers\CharacterManager.cs:54 
+  at Services.MapService.OnMapCharacterEnter (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse response) [0x00105] in C:\Users\PXbask\PXmmorpg\Src\Client\Assets\Scripts\Services\MapService.cs:87 
+  at (wrapper delegate-invoke) Network.MessageDistributer`1/MessageHandler`1<object, SkillBridge.Message.MapCharacterEnterResponse>:invoke_void__this___object_MapCharacterEnterResponse (object,SkillBridge.Message.MapCharacterEnterResponse)
+  at Network.MessageDistributer`1[System.Object].RaiseEvent[MapCharacterEnterResponse] (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse msg) [0x00000] in <filename unknown>:0 
+2022-10-29 18:20:20,799 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{ArgumentException: An element with the same key already exists in the dictionary., System.Collections.Generic.Dictionary`2[System.Int32,Entities.Entity].Add (Int32 key, Entities.Entity value) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/List.cs:735)
+Manager.EntityManager.AddEntity (Entities.Entity entity) (at Assets/Scripts/Managers/EntityManager.cs:27)
+Manager.CharacterManager.AddCharacter (Entities.Character cha) (at Assets/Scripts/Managers/CharacterManager.cs:54)
+Services.MapService.OnMapCharacterEnter (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse response) (at Assets/Scripts/Services/MapService.cs:87)
+Network.MessageDistributer`1[System.Object].RaiseEvent[MapCharacterEnterResponse] (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse msg)
+}</args></log4net.Error>
+2022-10-29 18:20:20,873 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2 CharacterID:2
+2022-10-29 18:20:20,874 [ 1] INFO  Unity: AddCharacter:5:死神 Map:2 Entity:(5:pos:(5683,4173,0),dir:(28,-96,0),spd:0
+2022-10-29 18:20:20,887 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2
+2022-10-29 18:20:23,697 [ 1] INFO  Unity: MoveBack
+2022-10-29 18:20:24,078 [ 1] INFO  Unity: Stop
+2022-10-29 18:20:24,260 [ 1] INFO  Unity: SetDirection:(98, -18, 0)
+2022-10-29 18:20:24,313 [ 1] INFO  Unity: MoveForward
+2022-10-29 18:20:24,364 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
+2022-10-29 18:20:24,462 [ 1] INFO  Unity: SetDirection:(86, -52, 0)
+2022-10-29 18:20:24,661 [ 1] INFO  Unity: SetDirection:(75, -66, 0)
+2022-10-29 18:20:25,903 [ 1] INFO  Unity: SetDirection:(86, -51, 0)
+2022-10-29 18:20:26,501 [ 1] INFO  Unity: SetDirection:(94, -33, 0)
+2022-10-29 18:20:28,339 [ 1] INFO  Unity: Stop
+2022-10-29 18:20:29,251 [ 1] INFO  Unity: SendCastSkill: id:103 entityId:1 targetId:0 position:(0,0,0)
+2022-10-29 18:20:39,211 [ 1] INFO  Unity: SendCastSkill: id:103 entityId:1 targetId:0 position:(0,0,0)
+2022-10-29 18:20:40,741 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:20:40,783 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:20:40,784 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:20:40,784 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:20:40,785 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:20:40,785 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:20:40,786 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:20:40,787 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:20:40,787 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:20:40,788 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:20:40,788 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:20:40,789 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:20:40,789 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:20:40,790 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:20:40,790 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:20:40,791 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:20:42,247 [ 1] INFO  Unity: MoveForward
+2022-10-29 18:20:42,430 [ 1] INFO  Unity: SetPosition:(4177, 3424, 6)
+2022-10-29 18:20:43,821 [ 1] INFO  Unity: SetDirection:(87, -50, 0)
+2022-10-29 18:20:44,484 [ 1] INFO  Unity: SetPosition:(4742, 3187, 6)
+2022-10-29 18:20:45,295 [ 1] INFO  Unity: SetDirection:(76, -65, 0)
+2022-10-29 18:20:46,388 [ 1] INFO  Unity: Stop
+2022-10-29 18:21:50,995 [ 1] INFO  Unity: SendCastSkill: id:103 entityId:1 targetId:0 position:(0,0,0)
+2022-10-29 18:21:52,857 [ 1] INFO  Unity: SendCastSkill: id:103 entityId:1 targetId:0 position:(0,0,0)
+2022-10-29 18:21:54,081 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:21:54,082 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:21:54,082 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:21:54,083 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:21:54,083 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:21:54,084 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:21:54,084 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:21:54,085 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:21:54,086 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:21:54,086 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:21:54,087 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:21:54,087 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:21:54,088 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:21:54,088 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:21:54,089 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:21:54,090 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:21:56,004 [ 1] INFO  Unity: MoveForward
+2022-10-29 18:21:56,552 [ 1] INFO  Unity: SetDirection:(63, -78, 0)
+2022-10-29 18:21:57,644 [ 1] INFO  Unity: SetDirection:(47, -88, 0)
+2022-10-29 18:21:58,225 [ 1] INFO  Unity: SetDirection:(30, -95, 0)
+2022-10-29 18:21:58,374 [ 1] INFO  Unity: SetDirection:(12, -99, 0)
+2022-10-29 18:21:58,473 [ 1] INFO  Unity: SetDirection:(-6, -100, 0)
+2022-10-29 18:21:58,622 [ 1] INFO  Unity: SetDirection:(-23, -97, 0)
+2022-10-29 18:21:59,832 [ 1] INFO  Unity: Stop
+2022-10-29 18:22:00,726 [ 1] INFO  Unity: SetDirection:(-5, -100, 0)
+2022-10-29 18:22:00,859 [ 1] INFO  Unity: SetDirection:(13, -99, 0)
+2022-10-29 18:22:00,991 [ 1] INFO  Unity: SetDirection:(31, -95, 0)
+2022-10-29 18:22:01,040 [ 1] INFO  Unity: MoveForward
+2022-10-29 18:22:01,355 [ 1] INFO  Unity: Stop
+2022-10-29 18:22:01,439 [ 1] INFO  Unity: BattleTarget: SetTarget:[3]山丘巨人
+2022-10-29 18:22:02,349 [ 1] INFO  Unity: SetDirection:(13, -99, 0)
+2022-10-29 18:22:02,499 [ 1] INFO  Unity: SetDirection:(-6, -100, 0)
+2022-10-29 18:22:03,394 [ 1] INFO  Unity: SendCastSkill: id:104 entityId:1 targetId:3 position:(0,0,0)
+2022-10-29 18:22:06,235 [ 1] INFO  Unity: SendCastSkill: id:104 entityId:1 targetId:3 position:(0,0,0)
+2022-10-29 18:22:26,307 [ 1] INFO  Unity: SendCastSkill: id:104 entityId:1 targetId:3 position:(0,0,0)
+2022-10-29 18:22:34,106 [ 1] INFO  Unity: SendCastSkill: id:104 entityId:1 targetId:3 position:(0,0,0)
+2022-10-29 18:22:34,147 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:22:42,322 [ 1] INFO  Unity: SendCastSkill: id:103 entityId:1 targetId:3 position:(0,0,0)
+2022-10-29 18:22:42,404 [ 1] INFO  Unity: SendCastSkill: id:103 entityId:1 targetId:3 position:(0,0,0)
+2022-10-29 18:22:42,421 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:22:42,520 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:22:42,637 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:22:42,754 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:22:42,869 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:22:42,968 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:22:43,083 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:22:43,200 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:22:43,298 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:22:43,415 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:22:43,519 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:22:43,634 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:22:43,751 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:22:43,850 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:22:43,967 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:22:44,083 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:22:50,314 [ 1] INFO  Unity: SendCastSkill: id:104 entityId:1 targetId:3 position:(0,0,0)
+2022-10-29 18:22:50,396 [ 1] INFO  Unity: SendCastSkill: id:104 entityId:1 targetId:3 position:(0,0,0)
+2022-10-29 18:22:50,844 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:22:56,922 [ 1] INFO  Unity: MoveBack
+2022-10-29 18:22:57,585 [ 1] INFO  Unity: Stop
+2022-10-29 18:22:57,634 [ 1] INFO  Unity: SetDirection:(14, -99, 0)
+2022-10-29 18:22:57,734 [ 1] INFO  Unity: SetDirection:(34, -94, 0)
+2022-10-29 18:22:57,817 [ 1] INFO  Unity: SetDirection:(50, -87, 0)
+2022-10-29 18:22:57,901 [ 1] INFO  Unity: SetDirection:(64, -77, 0)
+2022-10-29 18:22:58,000 [ 1] INFO  Unity: SetDirection:(77, -64, 0)
+2022-10-29 18:22:58,182 [ 1] INFO  Unity: SetDirection:(87, -49, 0)
+2022-10-29 18:22:58,465 [ 1] INFO  Unity: BattleTarget: SetTarget:[2]恶鬼
+2022-10-29 18:23:00,998 [ 1] INFO  Unity: MoveForward
+2022-10-29 18:23:01,628 [ 1] INFO  Unity: SetDirection:(76, -65, 0)
+2022-10-29 18:23:02,358 [ 1] INFO  Unity: SetDirection:(63, -77, 0)
+2022-10-29 18:23:02,507 [ 1] INFO  Unity: SetDirection:(48, -88, 0)
+2022-10-29 18:23:02,606 [ 1] INFO  Unity: SetDirection:(30, -95, 0)
+2022-10-29 18:23:02,689 [ 1] INFO  Unity: SetDirection:(13, -99, 0)
+2022-10-29 18:23:02,705 [ 1] INFO  Unity: Stop
+2022-10-29 18:23:02,772 [ 1] INFO  Unity: SetDirection:(-5, -100, 0)
+2022-10-29 18:23:02,871 [ 1] INFO  Unity: SetDirection:(-23, -97, 0)
+2022-10-29 18:23:03,069 [ 1] INFO  Unity: SetDirection:(-40, -92, 0)
+2022-10-29 18:23:03,153 [ 1] INFO  Unity: SendCastSkill: id:101 entityId:1 targetId:2 position:(0,0,0)
+2022-10-29 18:23:03,269 [ 1] INFO  Unity: SendCastSkill: id:101 entityId:1 targetId:2 position:(0,0,0)
+2022-10-29 18:23:08,615 [ 1] INFO  Unity: SendCastSkill: id:101 entityId:1 targetId:2 position:(0,0,0)
+2022-10-29 18:23:08,682 [ 1] INFO  Unity: SendCastSkill: id:101 entityId:1 targetId:2 position:(0,0,0)
+2022-10-29 18:23:40,110 [ 1] INFO  Unity: SendCastSkill: id:101 entityId:1 targetId:2 position:(0,0,0)
+2022-10-29 18:23:40,210 [ 1] INFO  Unity: SendCastSkill: id:101 entityId:1 targetId:2 position:(0,0,0)
+2022-10-29 18:25:41,233 [ 1] INFO  Unity: SendCastSkill: id:101 entityId:1 targetId:2 position:(0,0,0)
+2022-10-29 18:25:41,350 [ 1] INFO  Unity: SendCastSkill: id:101 entityId:1 targetId:2 position:(0,0,0)
+2022-10-29 18:25:45,342 [ 1] INFO  Unity: SendCastSkill: id:101 entityId:1 targetId:2 position:(0,0,0)
+2022-10-29 18:25:45,459 [ 1] INFO  Unity: SendCastSkill: id:101 entityId:1 targetId:2 position:(0,0,0)
+2022-10-29 18:26:37,460 [ 1] INFO  Unity: SendCastSkill: id:101 entityId:1 targetId:2 position:(0,0,0)
+2022-10-29 18:26:37,543 [ 1] INFO  Unity: SendCastSkill: id:101 entityId:1 targetId:2 position:(0,0,0)
+2022-10-29 18:28:52,893 [ 1] INFO  Unity: SendCastSkill: id:101 entityId:1 targetId:2 position:(0,0,0)
+2022-10-29 18:28:53,027 [ 1] INFO  Unity: SendCastSkill: id:101 entityId:1 targetId:2 position:(0,0,0)
+2022-10-29 18:29:10,700 [ 1] INFO  Unity: SetDirection:(-56, -83, 0)
+2022-10-29 18:29:10,916 [ 1] INFO  Unity: MoveForward
+2022-10-29 18:29:11,132 [ 1] INFO  Unity: Stop
+2022-10-29 18:29:11,746 [ 1] INFO  Unity: SendCastSkill: id:104 entityId:1 targetId:2 position:(0,0,0)
+2022-10-29 18:29:11,878 [ 1] INFO  Unity: SendCastSkill: id:104 entityId:1 targetId:2 position:(0,0,0)
+2022-10-29 18:30:20,288 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:32:02,705 [ 1] INFO  Unity: SendCastSkill: id:104 entityId:1 targetId:2 position:(0,0,0)
+2022-10-29 18:32:02,771 [ 1] INFO  Unity: SendCastSkill: id:104 entityId:1 targetId:2 position:(0,0,0)
+2022-10-29 18:32:05,574 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:32:17,733 [ 1] INFO  Unity: SendCastSkill: id:104 entityId:1 targetId:2 position:(0,0,0)
+2022-10-29 18:32:17,884 [ 1] INFO  Unity: SendCastSkill: id:104 entityId:1 targetId:2 position:(0,0,0)
+2022-10-29 18:32:20,709 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-10-29 18:41:20,825 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
+
+  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
+  at Network.NetClient.ProcessRecv () [0x00084] in C:\Users\PXbask\PXmmorpg\Src\Client\Assets\Scripts\Network\NetClient.cs:336 
+
+2022-10-29 18:41:20,826 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
+Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:350)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:430)
+
+2022-10-29 18:41:20,841 [ 1] INFO  Unity: DoConnect
+2022-10-29 18:41:20,842 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-10-29 18:41:20,846 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+
+2022-10-29 18:41:22,872 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:270)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
+
+2022-10-29 18:41:22,874 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
+UnityEngine.Debug:LogErrorFormat(String, Object[])
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:272)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
+
+2022-10-29 18:41:22,928 [ 1] INFO  Unity: DoConnect
+2022-10-29 18:41:22,929 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-10-29 18:41:22,931 [ 1] INFO  Unity: Connect[1] to server 127.0.0.1:8000
+
+2022-10-29 18:41:24,954 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:270)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
+
+2022-10-29 18:41:24,956 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
+UnityEngine.Debug:LogErrorFormat(String, Object[])
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:272)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
+
+2022-10-29 18:41:25,017 [ 1] INFO  Unity: DoConnect
+2022-10-29 18:41:25,018 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-10-29 18:41:25,023 [ 1] INFO  Unity: Connect[2] to server 127.0.0.1:8000
+
+2022-10-29 18:41:27,053 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:270)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
+
+2022-10-29 18:41:27,054 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
+UnityEngine.Debug:LogErrorFormat(String, Object[])
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:272)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
+
+2022-10-29 18:41:27,055 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :1 reason:Cannot connect to server
+2022-10-29 18:41:40,244 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-10-29 18:41:40,245 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)

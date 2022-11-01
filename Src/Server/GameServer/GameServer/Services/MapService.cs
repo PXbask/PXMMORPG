@@ -42,7 +42,7 @@ namespace GameServer.Services
         {
             Character character = sender.Session.Character;
             Log.InfoFormat("OnMapTeleport: characterID:{0}:{1} TeleporterID:{2}", character.Id, character.Data, request.teleporterId);
-            if (!DataManager.Instance.Teleporters.ContainsKey(character.Id))
+            if (!DataManager.Instance.Teleporters.ContainsKey(request.teleporterId))
             {
                 Log.WarningFormat("Source TeleporterID [{0}] not existed", request.teleporterId);
                 return;

@@ -78,10 +78,10 @@ namespace Entities
             return null;
         }
 
-        public void DoSkillHit(int skillId, int hitId, List<NDamageInfo> damages)
+        public void DoSkillHit(NSkillHitInfo info)
         {
-            Skill skill = this.SkillMgr.GetSkill(skillId);
-            skill.DoHit(hitId, damages);
+            Skill skill = this.SkillMgr.GetSkill(info.skillId);
+            skill.DoHit(info);
         }
 
         public void MoveForward()
@@ -117,7 +117,7 @@ namespace Entities
         {
             this.SetStandBy(true);
             Skill skill = this.SkillMgr.GetSkill(skillId);
-            skill.BeginCast(damage);
+            skill.BeginCast(target);
         }
         public void PlayAnim(string Name)
         {
