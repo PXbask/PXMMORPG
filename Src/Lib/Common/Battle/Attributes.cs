@@ -12,8 +12,8 @@ namespace Common.Battle
         AttributeData Initial = new AttributeData();
         AttributeData Growth = new AttributeData();
         AttributeData Equip = new AttributeData();
-        AttributeData Basic = new AttributeData();
-        AttributeData Buff = new AttributeData();
+        public AttributeData Basic = new AttributeData();
+        public AttributeData Buff = new AttributeData();
         public AttributeData Final = new AttributeData();
 
         int level;
@@ -151,7 +151,7 @@ namespace Common.Battle
             this.Basic.CRI = this.Basic.DEX * 0.0002f + this.Initial.CRI + this.Equip.CRI;
         }
 
-        private void InitFinalAttributes()
+        public void InitFinalAttributes()
         {
             for (int i = 0; i < (int)AttributeType.MAX; i++)
             {

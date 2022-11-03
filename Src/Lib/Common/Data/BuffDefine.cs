@@ -7,13 +7,25 @@ namespace Common.Data
 {
     public enum BuffTarget
     {
+        None = 0,
         Target,
         Self,
+        Position
     }
     public enum BuffEffect
     {
-        Stun,
+        None = 0,
+        Stun,///眩晕
+        Invincible,
     }
+
+    public enum TriggerType
+    {
+        None = 0,
+        SkillCast = 1,
+        SkillHit = 2
+    }
+
     public class BuffDefine
     {
         public int Id { get; set; }
@@ -22,6 +34,7 @@ namespace Common.Data
         public string Icon { get; set; }
         public BuffTarget Target { get; set; }
         public BuffEffect Effect { get; set; }
+        public TriggerType Trigger { get; set; }
         public int CD { get; set; }
         public float Duration { get; set; }
         public float Interval { get; set; }
