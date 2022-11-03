@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Common;
+using GameServer.Core;
 using GameServer.Entities;
 namespace GameServer.Managers
 {
@@ -38,6 +39,24 @@ namespace GameServer.Managers
         internal Creature GetCreature(int casterId)
         {
             return this.GetEntity(casterId) as Creature;
+        }
+        public List<T> GetMapEntities<T>(int mapId,Predicate<Entity> match) where T : Creature
+        {
+            List<T> res = new List<T>();
+            foreach(Entity entity in this.MapEntities[mapId])
+            {
+                if(entity is T && match.Invoke(entity))
+                    res.Add((T)entity);
+            }
+            return res;
+        }
+        public List<T> GetMapEntitiesInRange<T>(int mapId,Vector3Int pos, int range) where T : Creature
+        {
+            return this.GetMapEntities<T>(mapId, entity =>
+             {
+                 T creature = entity as T;
+                 return creature.Distance(pos) < range;
+             });
         }
     }
 }

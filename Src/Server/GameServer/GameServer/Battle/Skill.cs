@@ -58,6 +58,7 @@ namespace GameServer.Battle
             if (result.Equals(SkillResult.Ok))
             {
                 this.InitInfo(context);
+                this.AddBuff(TriggerType.SkillCast);
                 if (this.Instant)
                 {
                     this.DoHit();
@@ -134,6 +135,7 @@ namespace GameServer.Battle
             Log.InfoFormat("Skill[{0}].HitTarget[{1}] Damage:{2} Crit:{3}", this.Define.Name, target.Name, damage.Damage, damage.Crit);
             target.DoDamage(damage);
             hitInfo.Damages.Add(damage);
+            this.AddBuff(TriggerType.SkillHit);
         }
 
         private NDamageInfo CalcSkillDamage(Creature caster, Creature target)
@@ -174,7 +176,7 @@ namespace GameServer.Battle
             {
                 pos = Context.Caster.Position;
             }
-            List<Creature> units = this.Context.Battle.FindUnitsInRange(pos, this.Define.AOERange);
+            List<Creature> units = this.Context.Battle.FindUnitsInMapRange(pos, this.Define.AOERange);
             foreach (var target in units)
             {
                 this.HitTarget(target, hitInfo);
@@ -311,6 +313,24 @@ namespace GameServer.Battle
                 {
                     this.Status = SkillStatus.None;
                     Log.InfoFormat("Skill[{0}].UpdateSkill Finished", this.Define.Name);
+                }
+            }
+        }
+        private void AddBuff(TriggerType trigger)
+        {
+            if(this.Define.Buff==null || this.Define.Buff.Count == 0)
+            {
+                return;
+            }
+            foreach (var buffId in this.Define.Buff)
+            {
+                var buffDefine = DataManager.Instance.Buffs[buffId];
+                if (!buffDefine.Trigger.Equals(trigger)) continue;
+                if (buffDefine.Target.Equals(BuffTarget.Self))
+                    this.owner.AddBuff(this.Context, buffDefine);
+                else if (buffDefine.Target.Equals(BuffTarget.Target))
+                {
+                    this.Context.Target.AddBuff(this.Context, buffDefine);
                 }
             }
         }

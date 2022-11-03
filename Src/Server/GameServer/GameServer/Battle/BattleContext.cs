@@ -15,7 +15,6 @@ namespace GameServer.Battle
         public Creature Target { get; set; }
         public Core.Vector3Int Position { get; set; }
         public NSkillCastInfo CastInfo { get; set; }
-        public NDamageInfo Damage { get; set; }
         public SkillResult Result { get; set; }
         public BattleContext(Battle battle)
         {

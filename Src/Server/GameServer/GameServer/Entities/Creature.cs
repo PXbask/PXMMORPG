@@ -21,6 +21,8 @@ namespace GameServer.Entities
         public CharacterDefine Define;
         public Attributes Attributes;
         public SkillManager SkillMgr;
+        public BuffManager BuffMgr;
+        public EffectManager EffectMgr;
         public bool IsDeath = false;
         public Creature(CharacterType type, int configId, int level, Vector3Int pos, Vector3Int dir) :base(pos, dir)
         {
@@ -34,11 +36,13 @@ namespace GameServer.Entities
 
             this.Info.Name = this.Define.Name;
             this.InitSkills();
-
+            this.InitBuff();
             this.Attributes = new Attributes();
             this.Attributes.Init(this.Define, this.Info.Level, this.GetEquips(), Attributes.DynamicAttr);
             this.Info.attrDynamic = Attributes.DynamicAttr;
         }
+
+
 
         internal void DoDamage(NDamageInfo damage)
         {
@@ -54,6 +58,11 @@ namespace GameServer.Entities
         {
             SkillMgr = new SkillManager(this);
             this.Info.Skills.AddRange(SkillMgr.Infos);
+        }
+        private void InitBuff()
+        {
+            BuffMgr = new BuffManager(this);
+            EffectMgr = new EffectManager(this);
         }
         public virtual List<EquipDefine> GetEquips()
         {
@@ -79,6 +88,12 @@ namespace GameServer.Entities
         public override void Update()
         {
             this.SkillMgr.Update();
+            this.BuffMgr.Update();
+        }
+
+        internal void AddBuff(BattleContext context, BuffDefine buffDefine)
+        {
+            this.BuffMgr.AddBuff(context, buffDefine);
         }
     }
 }
