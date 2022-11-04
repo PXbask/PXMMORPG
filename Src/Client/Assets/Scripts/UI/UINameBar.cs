@@ -6,10 +6,14 @@ using UnityEngine.UI;
 public class UINameBar : MonoBehaviour {
 	public Text nameText;
 	public Entities.Character character;
+	public UIBuffIcons buffIcons;
 	// Use this for initialization
 	void Start () {
 		if (character != null)
+        {
 			UpdateInfo();
+			buffIcons.SetOwner(character);
+		}
 	}
 	
 	// Update is called once per frame

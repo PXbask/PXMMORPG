@@ -56,7 +56,10 @@
      <Compile Include="Assets\FX\Scripts\DelayActiveChild.cs" />
      <Compile Include="Assets\FX\Scripts\uv_l.cs" />
      <Compile Include="Assets\Scripts\Assets\Resloader.cs" />
+     <Compile Include="Assets\Scripts\Battle\Buff.cs" />
+     <Compile Include="Assets\Scripts\Battle\BuffManager.cs" />
      <Compile Include="Assets\Scripts\Battle\Bullet.cs" />
+     <Compile Include="Assets\Scripts\Battle\EffectManager.cs" />
      <Compile Include="Assets\Scripts\Battle\Skill.cs" />
      <Compile Include="Assets\Scripts\Battle\SkillManager.cs" />
      <Compile Include="Assets\Scripts\Config.cs" />
@@ -115,6 +118,8 @@
      <Compile Include="Assets\Scripts\Services\UserService.cs" />
      <Compile Include="Assets\Scripts\SoundDefine.cs" />
      <Compile Include="Assets\Scripts\Test\ScrollViewTest.cs" />
+     <Compile Include="Assets\Scripts\UI\Buff\UIBuffIcons.cs" />
+     <Compile Include="Assets\Scripts\UI\Buff\UIBuffItem.cs" />
      <Compile Include="Assets\Scripts\UI\Chat\UIChat.cs" />
      <Compile Include="Assets\Scripts\UI\Chat\UIPopChatMenu.cs" />
      <Compile Include="Assets\Scripts\UI\Equip\UICharEquip.cs" />

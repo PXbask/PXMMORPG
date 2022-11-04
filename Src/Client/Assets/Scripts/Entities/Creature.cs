@@ -11,15 +11,20 @@ using Battle;
 
 namespace Entities
 {
-    public class Creature: Entity
+    public class Creature : Entity
     {
         public NCharacterInfo Info;
 
         public CharacterDefine Define;
-        public Attributes Attributes; 
+        public Attributes Attributes;
         public SkillManager SkillMgr;
-
+        public BuffManager BuffMgr;
+        public EffectManager EffectMgr;
         private bool battleState = false;
+
+        public Action<Battle.Buff> OnBuffAdd;
+        public Action<Battle.Buff> OnBuffRemove;
+
         public bool BattleState
         {
             get { return battleState; }
@@ -62,10 +67,13 @@ namespace Entities
         {
             this.Info = info;
             this.Define = DataManager.Instance.Characters[info.ConfigId];
-            this.Attributes=new Attributes();
+            this.Attributes = new Attributes();
             this.Attributes.Init(this.Define, this.Info.Level, this.GetEquips(), this.Info.attrDynamic);
             this.SkillMgr = new SkillManager(this);
+            this.BuffMgr = new BuffManager(this);
+            this.EffectMgr = new EffectManager(this);
         }
+
         public void UpdateCharacterInfo(NCharacterInfo info)
         {
             this.SetEntityData(info.Entity);
@@ -82,6 +90,37 @@ namespace Entities
         {
             Skill skill = this.SkillMgr.GetSkill(info.skillId);
             skill.DoHit(info);
+        }
+        public void DoBuffAction(NBuffInfo buff)
+        {
+            switch (buff.Action)
+            {
+                case BuffAction.Add:
+                    this.AddBuff(buff.buffId, buff.buffType, buff.casterId);
+                    break;
+                case BuffAction.Remove:
+                    this.RemoveBuff(buff.buffId);
+                    break;
+                case BuffAction.Hit:
+                    DoDamage(buff.Damage);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void AddBuff(int buffId, int buffType, int casterId)
+        {
+            Buff buff = this.BuffMgr.AddBuff(buffId, buffType, casterId);
+            if (buff != null && this.OnBuffAdd != null)
+                this.OnBuffAdd(buff);
+        }
+
+        public void RemoveBuff(int buffId)
+        {
+            Buff buff = this.BuffMgr.RemoveBuff(buffId);
+            if (buff != null && this.OnBuffRemove != null)
+                this.OnBuffRemove(buff);
         }
 
         public void MoveForward()
@@ -121,7 +160,7 @@ namespace Entities
         }
         public void PlayAnim(string Name)
         {
-            if(this.Controller != null)
+            if (this.Controller != null)
             {
                 this.Controller.PlayAnim(Name);
             }
@@ -137,12 +176,21 @@ namespace Entities
         {
             base.UpdateInfo(delta);
             this.SkillMgr.OnUpdate(delta);
+            this.BuffMgr.OnUpdate(delta);
         }
         public void DoDamage(NDamageInfo damage)
         {
             Debug.LogFormat("Creature:{0} Damage:{1} Crit:{2}", this.Name, damage.Damage, damage.Crit);
             this.Attributes.HP -= damage.Damage;
             this.PlayAnim("Hurt");
+        }
+        public void AddBuffEffect(BuffEffect effect)
+        {
+            this.EffectMgr.AddEffect(effect);
+        }
+        public void RemoveBuffEffect(BuffEffect effect)
+        {
+            this.EffectMgr.RemoveEffect(effect);
         }
         public int Distance(Creature target)
         {

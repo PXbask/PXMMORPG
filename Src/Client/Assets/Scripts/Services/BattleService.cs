@@ -64,10 +64,14 @@ namespace Services
         }
         private void OnBuff(object sender, BuffResponse message)
         {
-            Debug.LogFormat("Buff:Count[{0}]", message.Buffs.Count);
+            Debug.LogFormat("OnBuff:Count[{0}] Received", message.Buffs.Count);
             foreach (var buff in message.Buffs)
             {
-                Debug.LogFormat("Buff: ID[{0}] type[{1}] action[{2}]", buff.buffId, buff.buffType, buff.Action);
+                Creature Owner = EntityManager.Instance.GetEntity(buff.ownerId) as Creature;
+                if(Owner != null)
+                {
+                    Owner.DoBuffAction(buff);
+                }
             }
         }
         internal void SendSkillCast(int id, int entityId, int targetID, NVector3 position)
