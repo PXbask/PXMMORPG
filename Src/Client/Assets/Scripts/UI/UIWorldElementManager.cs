@@ -8,8 +8,10 @@ public class UIWorldElementManager : MonoSingleton<UIWorldElementManager>
 {
 	public GameObject uinameBar;
 	public GameObject npcStatusPrefab;
+    public GameObject uiPopupText;
 	public Dictionary<Transform, GameObject> elementNames = new Dictionary<Transform, GameObject>();	
-	public Dictionary<Transform, GameObject> elementStatus = new Dictionary<Transform, GameObject>();	
+	public Dictionary<Transform, GameObject> elementStatus = new Dictionary<Transform, GameObject>();
+    public Dictionary<Transform, GameObject> elementText = new Dictionary<Transform, GameObject>();
 	
 	public void AddCharacterNameBar(Transform tr, Character character)
     {
@@ -54,5 +56,12 @@ public class UIWorldElementManager : MonoSingleton<UIWorldElementManager>
             Destroy(elementStatus[tr]);
             elementStatus.Remove(tr);
         }
+    }
+    public void ShowPopupText(PopupType type,Vector3 position,float damage,bool isCrit)
+    {
+        GameObject goPopup = Instantiate(uiPopupText, position, Quaternion.identity, this.transform);
+        goPopup.name = "Popup";
+        goPopup.GetComponent<UIPopupText>().InitPopup(type, damage, isCrit);
+        goPopup.SetActive(true);
     }
 }

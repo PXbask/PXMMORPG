@@ -1,105 +1,88 @@
-2022-11-07 15:33:36,766 [ 1] INFO  Unity: LoadingManager start
-2022-11-07 15:33:39,954 [ 1] INFO  Unity: DataManager > DataManager()
-2022-11-07 15:33:45,085 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
-2022-11-07 15:33:45,087 [ 1] INFO  Unity: ConnectToServer() Start 
-2022-11-07 15:33:45,091 [ 1] INFO  Unity: DoConnect
-2022-11-07 15:33:45,093 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-11-07 15:33:45,098 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-11-07 15:45:27,041 [ 1] INFO  Unity: LoadingManager start
+2022-11-07 15:45:30,499 [ 1] INFO  Unity: DataManager > DataManager()
+2022-11-07 15:45:34,371 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
+2022-11-07 15:45:34,373 [ 1] INFO  Unity: ConnectToServer() Start 
+2022-11-07 15:45:34,377 [ 1] INFO  Unity: DoConnect
+2022-11-07 15:45:34,379 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-11-07 15:45:34,385 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-11-07 15:33:45,103 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2022-11-07 15:33:45,242 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2022-11-07 15:33:45,243 [ 1] INFO  Unity: LoadLevel: CharSelect
-2022-11-07 15:33:47,040 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-11-07 15:33:48,186 [ 1] INFO  Unity: Select Char:[2]111[Warrior]
-2022-11-07 15:33:49,148 [ 1] INFO  Unity: UserGameEnterRequest::index :1
-2022-11-07 15:33:49,190 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
-2022-11-07 15:33:49,192 [ 1] INFO  Unity: ItemManager:Init[ID:1, Count:20]
-2022-11-07 15:33:49,193 [ 1] INFO  Unity: ItemManager:Init[ID:2, Count:20]
-2022-11-07 15:33:49,202 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1 CharacterID:1
-2022-11-07 15:33:49,209 [ 1] INFO  Unity: AddCharacter:2:111 Map:1 Entity:(12:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-11-07 15:33:49,211 [ 1] INFO  Unity: LoadLevel: MainCity
-2022-11-07 15:33:49,755 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
-2022-11-07 15:33:51,024 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2022-11-07 15:45:34,389 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2022-11-07 15:45:34,555 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2022-11-07 15:45:34,556 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-11-07 15:45:36,370 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-11-07 15:45:37,262 [ 1] INFO  Unity: Select Char:[2]111[Warrior]
+2022-11-07 15:45:37,992 [ 1] INFO  Unity: UserGameEnterRequest::index :1
+2022-11-07 15:45:38,039 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
+2022-11-07 15:45:38,042 [ 1] INFO  Unity: ItemManager:Init[ID:1, Count:20]
+2022-11-07 15:45:38,043 [ 1] INFO  Unity: ItemManager:Init[ID:2, Count:20]
+2022-11-07 15:45:38,054 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1 CharacterID:1
+2022-11-07 15:45:38,064 [ 1] INFO  Unity: AddCharacter:2:111 Map:1 Entity:(13:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-11-07 15:45:38,066 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-11-07 15:45:39,466 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+UnityEngine.Resources:Load(String)
+Resloader:Load(String) (at Assets/Scripts/Assets/Resloader.cs:11)
+SoundManager:PlayMusic(String) (at Assets/Scripts/Managers/SoundManager.cs:71)
+Services.MapService:EnterMap(Int32) (at Assets/Scripts/Services/MapService.cs:36)
+Services.MapService:OnMapCharacterEnter(Object, MapCharacterEnterResponse) (at Assets/Scripts/Services/MapService.cs:94)
+Network.MessageDistributer`1:RaiseEvent(Object, MapCharacterEnterResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
 
-2022-11-07 15:33:51,024 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2022-11-07 15:45:39,467 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+UnityEngine.Resources:Load(String)
+Resloader:Load(String) (at Assets/Scripts/Assets/Resloader.cs:11)
+SoundManager:PlayMusic(String) (at Assets/Scripts/Managers/SoundManager.cs:71)
+Services.MapService:EnterMap(Int32) (at Assets/Scripts/Services/MapService.cs:36)
+Services.MapService:OnMapCharacterEnter(Object, MapCharacterEnterResponse) (at Assets/Scripts/Services/MapService.cs:94)
+Network.MessageDistributer`1:RaiseEvent(Object, MapCharacterEnterResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
 
-2022-11-07 15:33:51,181 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-11-07 15:33:52,699 [ 1] INFO  Unity: SendCastSkill: id:103 entityId:12 targetId:0 position:(0,0,0)
-2022-11-07 15:33:52,786 [ 1] INFO  Unity: SendCastSkill: id:103 entityId:12 targetId:0 position:(0,0,0)
-2022-11-07 15:33:52,788 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:52,882 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:52,997 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:53,096 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:53,212 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:53,312 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:53,313 [ 1] INFO  Unity: AnimationEventController: [Warrior]PlayEffect[EFX_Warrior_SkillB_prefab]
-2022-11-07 15:33:53,314 [ 1] INFO  Unity: [Character_2_111]PlayEffect:[EFX_Warrior_SkillB_prefab]
-2022-11-07 15:33:53,429 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:53,544 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:53,662 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:53,772 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:53,878 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:53,998 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:54,115 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:54,215 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:54,331 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:54,432 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:54,548 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:54,664 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:54,764 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:54,880 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:54,995 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:55,096 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:55,212 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:55,321 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:55,439 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:55,538 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:55,657 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:55,762 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:55,880 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:55,986 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:56,085 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:56,201 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:33:56,284 [ 1] INFO  Unity: Skill[Ðý·çÕ¶].UpdateSkill Finished
-2022-11-07 15:34:00,361 [ 1] INFO  Unity: SendCastSkill: id:103 entityId:12 targetId:0 position:(0,0,0)
-2022-11-07 15:34:00,492 [ 1] INFO  Unity: SendCastSkill: id:103 entityId:12 targetId:0 position:(0,0,0)
-2022-11-07 15:34:00,493 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:00,608 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:00,725 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:00,757 [ 1] INFO  Unity: AnimationEventController: [Warrior]PlayEffect[EFX_Warrior_SkillB_prefab]
-2022-11-07 15:34:00,758 [ 1] INFO  Unity: [Character_2_111]PlayEffect:[EFX_Warrior_SkillB_prefab]
-2022-11-07 15:34:00,823 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:00,939 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:01,039 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:01,162 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:01,262 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:01,381 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:01,499 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:01,615 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:01,714 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:01,831 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:01,933 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:02,049 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:02,147 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:02,265 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:02,363 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:02,479 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:02,596 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:02,711 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:02,811 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:02,927 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:03,043 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:03,146 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:03,245 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:03,359 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:03,477 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:03,593 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:03,691 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:03,807 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:03,922 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-07 15:34:04,005 [ 1] INFO  Unity: Skill[Ðý·çÕ¶].UpdateSkill Finished
-2022-11-07 15:34:06,378 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-11-07 15:34:06,380 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-11-07 15:45:39,469 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
+2022-11-07 15:45:39,655 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-11-07 15:45:41,835 [ 1] INFO  Unity: SendCastSkill: id:103 entityId:13 targetId:0 position:(0,0,0)
+2022-11-07 15:45:41,890 [ 1] INFO  Unity: SendCastSkill: id:103 entityId:13 targetId:0 position:(0,0,0)
+2022-11-07 15:45:41,891 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:41,985 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:42,103 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:42,201 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:42,317 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:42,418 [ 1] INFO  Unity: AnimationEventController: [Warrior]PlayEffect[EFX_Warrior_SkillB_prefab]
+2022-11-07 15:45:42,418 [ 1] INFO  Unity: [Character_2_111]PlayEffect:[EFX_Warrior_SkillB_prefab]
+2022-11-07 15:45:42,433 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:42,533 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:42,648 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:42,765 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:42,882 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:42,979 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:43,095 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:43,212 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:43,311 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:43,428 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:43,542 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:43,658 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:43,757 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:43,876 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:43,973 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:44,089 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:44,206 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:44,320 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:44,420 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:44,537 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:44,654 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:44,753 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:44,869 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:44,986 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:45,081 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:45,198 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:45,307 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-07 15:45:45,390 [ 1] INFO  Unity: Skill[Ðý·çÕ¶].UpdateSkill Finished
+2022-11-07 15:46:13,981 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-11-07 15:46:13,982 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)

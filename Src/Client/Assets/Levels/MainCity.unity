@@ -24791,6 +24791,8 @@ MonoBehaviour:
   uinameBar: {fileID: 1623635935835254, guid: c386b5870cfc39041bdb10ca86a4ec28, type: 2}
   npcStatusPrefab: {fileID: 1229276133196892, guid: bb399a20172bd8f479ac06706f16e836,
     type: 2}
+  uiPopupText: {fileID: 1755929348371366, guid: 45fb2951a0c8de94eb751c0ca285c26e,
+    type: 2}
 --- !u!1 &758956649
 GameObject:
   m_ObjectHideFlags: 0
@@ -46552,6 +46554,8 @@ MonoBehaviour:
   camera: {fileID: 1887196306}
   viewPoint: {fileID: 0}
   player: {fileID: 0}
+  followSpeed: 5
+  rotateSpeed: 5
 --- !u!4 &1487474266
 Transform:
   m_ObjectHideFlags: 0

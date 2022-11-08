@@ -167,10 +167,29 @@ public class EntityController : MonoBehaviour, Manager.IEntityNotify, Entities.I
         this.lastRotation = this.rotation;
     }
 
-    public void PlayEffect(EffectType type, string name, Entity target, float duration)
+    public void PlayEffect(EffectType type, string name, Creature target, float duration)
     {
         Transform transform = target.Controller.GetTransform();
-        this.EffectMgr.PlayEffect(type, name, transform, duration);
+        if (type.Equals(EffectType.Position) || type.Equals(EffectType.Hit))
+        {
+            FXManager.Instance.PlayEffect(type, name, transform, target.GetHitOffset(), duration);
+        }
+        else
+        {
+            this.EffectMgr.PlayEffect(type, name, transform, target.GetHitOffset(), duration);
+        }
+    }
+
+    public void PlayEffect(EffectType type, string name, NVector3 position, float duration)
+    {
+        if (type.Equals(EffectType.Position) || type.Equals(EffectType.Hit))
+        {
+            FXManager.Instance.PlayEffect(type, name, null, GameObjectTool.LogicToWorld(position), duration);
+        }
+        else
+        {
+            this.EffectMgr.PlayEffect(type, name, null, GameObjectTool.LogicToWorld(position), duration);
+        }
     }
 
     public Transform GetTransform()

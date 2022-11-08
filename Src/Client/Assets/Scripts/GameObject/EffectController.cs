@@ -7,6 +7,8 @@ public enum EffectType
 {
 	None,
 	Bullet,
+	Position,
+	Hit,
 }
 public class EffectController : MonoBehaviour {
 
@@ -31,17 +33,23 @@ public class EffectController : MonoBehaviour {
 		yield return new WaitForSeconds(lifeTime);
 		this.gameObject.SetActive(false);
     }
-	public void Init(EffectType type,Transform source,Transform target,float duration)
+	public void Init(EffectType type,Transform source,Transform target,Vector3 offset,float duration)
     {
 		this.type = type;
 		this.target = target;
-		this.lifeTime = duration;
+		if (duration > 0)
+			this.lifeTime = duration;
+		this.time = 0;
         if (type.Equals(EffectType.Bullet))
         {
 			this.startPos = this.transform.position;
-			this.offset = new Vector3(0, this.transform.position.y - source.position.y, 0);
+			this.offset = offset;
 			this.targetPos = target.position + offset;
 		}
+		else if (type.Equals(EffectType.Hit))
+        {
+			this.targetPos = target.position + offset;
+        }
     }
 	void Update()
     {
@@ -58,6 +66,11 @@ public class EffectController : MonoBehaviour {
 				Destroy(this.gameObject);
 				return;
             }
+			if(this.lifeTime > 0 && this.time >= this.lifeTime)
+            {
+				Destroy(this.gameObject);
+				return;
+			}
 			this.transform.position = Vector3.Lerp(this.transform.position, this.targetPos, Time.deltaTime / (this.lifeTime - this.time));
         }
     }

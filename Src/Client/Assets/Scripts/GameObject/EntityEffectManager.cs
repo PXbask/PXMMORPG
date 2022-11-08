@@ -36,14 +36,14 @@ public class EntityEffectManager : MonoBehaviour {
         }
     }
 
-    public void PlayEffect(EffectType type, string name, Transform target, float duration)
+    public void PlayEffect(EffectType type, string name, Transform target,Vector3 pos, float duration)
     {
         if (type.Equals(EffectType.Bullet))
         {
             EffectController effect = InstantiateEffect(name);
             if(effect != null)
             {
-                effect.Init(type, this.transform, target, duration);
+                effect.Init(type, this.transform, target,pos, duration);
                 effect.gameObject.SetActive(true);
             }
         }

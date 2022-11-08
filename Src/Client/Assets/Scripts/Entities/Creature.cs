@@ -102,7 +102,7 @@ namespace Entities
                     this.RemoveBuff(buff.buffId);
                     break;
                 case BuffAction.Hit:
-                    DoDamage(buff.Damage);
+                    DoDamage(buff.Damage, false);
                     break;
                 default:
                     break;
@@ -179,7 +179,16 @@ namespace Entities
             this.BuffMgr.OnUpdate(delta);
         }
 
-        public void PlayEffect(EffectType type, string name, Entity target, float duration)
+        public Vector3 GetHitOffset()
+        {
+            return new Vector3(0, this.Define.Height * 0.8f, 0);
+        }
+        public Vector3 GetPopupOffset()
+        {
+            return new Vector3(0, this.Define.Height, 0);
+        }
+
+        public void PlayEffect(EffectType type, string name, Creature target, float duration = 0)
         {
             if (string.IsNullOrEmpty(name)) return;
             if (this.Controller != null)
@@ -187,12 +196,25 @@ namespace Entities
                 this.Controller.PlayEffect(type, name, target, duration);
             }
         }
+        public void PlayEffect(EffectType type, string name, NVector3 pos, float duration = 0)
+        {
+            if (string.IsNullOrEmpty(name)) return;
+            if (this.Controller != null)
+            {
+                this.Controller.PlayEffect(type, name, pos, duration);
+            }
+        }
 
-        public void DoDamage(NDamageInfo damage)
+        public void DoDamage(NDamageInfo damage,bool playHurt)
         {
             Debug.LogFormat("Creature:{0} Damage:{1} Crit:{2}", this.Name, damage.Damage, damage.Crit);
             this.Attributes.HP -= damage.Damage;
-            this.PlayAnim("Hurt");
+            if(playHurt) this.PlayAnim("Hurt");
+            if (this.Controller != null)
+            {
+                UIWorldElementManager.Instance.ShowPopupText
+                    (PopupType.Damage, this.Controller.GetTransform().position + this.GetPopupOffset(), -damage.Damage, damage.Crit);
+            }
         }
         public void AddBuffEffect(BuffEffect effect)
         {

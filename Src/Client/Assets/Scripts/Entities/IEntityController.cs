@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SkillBridge.Message;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,8 @@ namespace Entities
         void PlayAnim(string name);
         void SetStandBy(bool standBy);
         void UpdateDirection();
-        void PlayEffect(EffectType type, string name, Entity target, float duration);
+        void PlayEffect(EffectType type, string name, Creature target, float duration);
+        void PlayEffect(EffectType type, string name, NVector3 target, float duration);
         Transform GetTransform();
     }
 }
