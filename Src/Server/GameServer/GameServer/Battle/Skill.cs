@@ -58,7 +58,7 @@ namespace GameServer.Battle
             if (result.Equals(SkillResult.Ok))
             {
                 this.InitInfo(context);
-                this.AddBuff(TriggerType.SkillCast);
+                this.AddBuff(TriggerType.SkillCast, this.Context.Target);
                 if (this.Instant)
                 {
                     this.DoHit();
@@ -135,7 +135,7 @@ namespace GameServer.Battle
             Log.InfoFormat("Skill[{0}].HitTarget[{1}] Damage:{2} Crit:{3}", this.Define.Name, target.Name, damage.Damage, damage.Crit);
             target.DoDamage(damage);
             hitInfo.Damages.Add(damage);
-            this.AddBuff(TriggerType.SkillHit);
+            this.AddBuff(TriggerType.SkillHit,target);
         }
 
         private NDamageInfo CalcSkillDamage(Creature caster, Creature target)
@@ -316,7 +316,7 @@ namespace GameServer.Battle
                 }
             }
         }
-        private void AddBuff(TriggerType trigger)
+        private void AddBuff(TriggerType trigger,Creature target)
         {
             if(this.Define.Buff==null || this.Define.Buff.Count == 0)
             {
@@ -330,7 +330,7 @@ namespace GameServer.Battle
                     this.owner.AddBuff(this.Context, buffDefine);
                 else if (buffDefine.Target.Equals(BuffTarget.Target))
                 {
-                    this.Context.Target.AddBuff(this.Context, buffDefine);
+                    target.AddBuff(this.Context, buffDefine);
                 }
             }
         }

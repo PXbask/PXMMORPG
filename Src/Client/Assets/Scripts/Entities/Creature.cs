@@ -156,7 +156,7 @@ namespace Entities
         {
             this.SetStandBy(true);
             Skill skill = this.SkillMgr.GetSkill(skillId);
-            skill.BeginCast(target);
+            skill.BeginCast(target,position);
         }
         public void PlayAnim(string Name)
         {
@@ -178,6 +178,16 @@ namespace Entities
             this.SkillMgr.OnUpdate(delta);
             this.BuffMgr.OnUpdate(delta);
         }
+
+        public void PlayEffect(EffectType type, string name, Entity target, float duration)
+        {
+            if (string.IsNullOrEmpty(name)) return;
+            if (this.Controller != null)
+            {
+                this.Controller.PlayEffect(type, name, target, duration);
+            }
+        }
+
         public void DoDamage(NDamageInfo damage)
         {
             Debug.LogFormat("Creature:{0} Damage:{1} Crit:{2}", this.Name, damage.Damage, damage.Crit);
@@ -192,6 +202,7 @@ namespace Entities
         {
             this.EffectMgr.RemoveEffect(effect);
         }
+        #region Mathf
         public int Distance(Creature target)
         {
             return (int)Vector3Int.Distance(position, target.position);
@@ -200,5 +211,16 @@ namespace Entities
         {
             return (int)Vector3Int.Distance(position, target);
         }
+        public void FaceTo(Vector3Int pos)
+        {
+            this.SetDirection(GameObjectTool.WorldToLogic(GameObjectTool.LogicToWorld(pos - this.position).normalized));
+            this.UpdateEntityData();
+            if (this.Controller != null)
+            {
+                this.Controller.UpdateDirection();
+            }
+        }
+        #endregion
+
     }
 }

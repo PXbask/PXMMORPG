@@ -11,7 +11,7 @@ namespace Battle
         Skill skill;
         private int hit;
         float flyTime = 0;
-        float duration = 0;
+        public float duration = 0;
 
         public bool Stopped = false;
 

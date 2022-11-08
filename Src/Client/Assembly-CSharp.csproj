@@ -68,7 +68,10 @@
      <Compile Include="Assets\Scripts\Entities\Entity.cs" />
      <Compile Include="Assets\Scripts\Entities\IEntityController.cs" />
      <Compile Include="Assets\Scripts\Entities\Monster.cs" />
+     <Compile Include="Assets\Scripts\GameObject\AnimationEventController.cs" />
+     <Compile Include="Assets\Scripts\GameObject\EffectController.cs" />
      <Compile Include="Assets\Scripts\GameObject\EntityController.cs" />
+     <Compile Include="Assets\Scripts\GameObject\EntityEffectManager.cs" />
      <Compile Include="Assets\Scripts\GameObject\GameObjectManager.cs" />
      <Compile Include="Assets\Scripts\GameObject\GameObjectTool.cs" />
      <Compile Include="Assets\Scripts\GameObject\MainPlayerCamera.cs" />

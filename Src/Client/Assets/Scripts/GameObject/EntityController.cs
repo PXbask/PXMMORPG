@@ -28,6 +28,7 @@ public class EntityController : MonoBehaviour, Manager.IEntityNotify, Entities.I
     public bool isPlayer = false;
 
     public RideController rideController;
+    public EntityEffectManager EffectMgr;
 
     private int currentRide = 0;
 
@@ -35,6 +36,7 @@ public class EntityController : MonoBehaviour, Manager.IEntityNotify, Entities.I
 
     // Use this for initialization
     void Start () {
+        EffectMgr = GetComponent<EntityEffectManager>();
         if (entity != null)
         {
             Manager.EntityManager.Instance.RegisterEntityChangeNotify(this.entity.entityId, this);
@@ -156,5 +158,23 @@ public class EntityController : MonoBehaviour, Manager.IEntityNotify, Entities.I
     public void SetStandBy(bool standBy)
     {
         this.anim.SetBool("Standby",standBy);
+    }
+
+    public void UpdateDirection()
+    {
+        this.direction = GameObjectTool.LogicToWorld(entity.direction);
+        this.transform.forward = this.direction;
+        this.lastRotation = this.rotation;
+    }
+
+    public void PlayEffect(EffectType type, string name, Entity target, float duration)
+    {
+        Transform transform = target.Controller.GetTransform();
+        this.EffectMgr.PlayEffect(type, name, transform, duration);
+    }
+
+    public Transform GetTransform()
+    {
+        return this.transform;
     }
 }
