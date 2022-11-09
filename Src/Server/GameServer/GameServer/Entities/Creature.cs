@@ -24,6 +24,8 @@ namespace GameServer.Entities
         public BuffManager BuffMgr;
         public EffectManager EffectMgr;
         public bool IsDeath = false;
+
+        public CharState State;     
         public Creature(CharacterType type, int configId, int level, Vector3Int pos, Vector3Int dir) :base(pos, dir)
         {
             this.Define = DataManager.Instance.Characters[configId];
@@ -44,14 +46,21 @@ namespace GameServer.Entities
 
 
 
-        internal void DoDamage(NDamageInfo damage)
+        internal void DoDamage(NDamageInfo damage, Creature creature)
         {
+            this.State = CharState.InBattle;
             this.Attributes.HP -= damage.Damage;
             if(this.Attributes.HP < 0)
             {
                 damage.willDead = true;
                 this.IsDeath = true;
             }
+            this.OnDoDamage(damage, creature);
+        }
+
+        protected virtual void OnDoDamage(NDamageInfo damage, Creature creature)
+        {
+            
         }
 
         private void InitSkills()
@@ -83,6 +92,30 @@ namespace GameServer.Entities
             Skill skill = this.SkillMgr.GetSkill(skillId);
             if(skill != null)
                 context.Result = skill.Cast(context);
+            if (context.Result.Equals(SkillResult.Ok))
+            {
+                this.State = CharState.InBattle;
+            }
+            if (context.CastInfo == null)
+            {
+                if (context.Result.Equals(SkillResult.Ok))
+                {
+                    context.CastInfo = new NSkillCastInfo()
+                    {
+                        casterId = this.entityId,
+                        targetId = context.Target.entityId,
+                        skillId = skill.Define.Id,
+                        Position = new NVector3(),
+                        Result = context.Result,
+                    };
+                    context.Battle.AddCastSkillInfo(context.CastInfo);
+                }
+            }
+            else
+            {
+                context.CastInfo.Result = context.Result;
+                context.Battle.AddCastSkillInfo(context.CastInfo);
+            }
         }
 
         public override void Update()

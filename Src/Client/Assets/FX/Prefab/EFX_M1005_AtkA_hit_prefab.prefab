@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4634214262423984}
-  - component: {fileID: 114385945975652458}
+  - component: {fileID: 114123377680819096}
   m_Layer: 0
   m_Name: EFX_M1005_AtkA_hit_prefab
   m_TagString: Untagged
@@ -226,7 +226,7 @@ Transform:
   m_Father: {fileID: 4184489858855126}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114385945975652458
+--- !u!114 &114123377680819096
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1112809353389700}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecf074bbcc64b034bb044bc1995a87a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 408e131cb27c5b24b8655e6d2cf62871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 1

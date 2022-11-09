@@ -17,6 +17,7 @@ namespace GameServer.Battle
         public Map Map;
         Dictionary<int,Creature> AllUnits = new Dictionary<int,Creature>();
         Queue<NSkillCastInfo> Actions = new Queue<NSkillCastInfo>();
+        List<NSkillCastInfo> CastSkills = new List<NSkillCastInfo>();
         List<Creature> DeathPool = new List<Creature>();
         List<NSkillHitInfo> Hits = new List<NSkillHitInfo>();
         List<NBuffInfo> BuffActions = new List<NBuffInfo>();
@@ -38,6 +39,7 @@ namespace GameServer.Battle
         }
         internal void Update()
         {
+            this.CastSkills.Clear();
             this.Hits.Clear();
             this.BuffActions.Clear();
             if (this.Actions.Count > 0)
@@ -52,8 +54,15 @@ namespace GameServer.Battle
 
         private void BroadcastHitMessages()
         {
-            if (this.Hits.Count <= 0 && this.BuffActions.Count <= 0) return;
+            if (this.Hits.Count <= 0 && this.BuffActions.Count <= 0 && this.CastSkills.Count <= 0) return;
             NetMessageResponse message = new NetMessageResponse();
+            if (this.CastSkills.Count > 0)
+            {
+                message.skillCast = new SkillCastResponse();
+                message.skillCast.castInfoes.AddRange(this.CastSkills);
+                message.skillCast.Result = Result.Success;
+                message.skillCast.Errormsg = "";
+            }
             if (this.Hits.Count > 0)
             {
                 message.skillHits = new SkillHitResponse();
@@ -87,13 +96,6 @@ namespace GameServer.Battle
                 this.JoinBattle(context.Target);
             }
 
-            NetMessageResponse message = new NetMessageResponse();
-            message.skillCast = new SkillCastResponse();
-            message.skillCast.castInfo = context.CastInfo;
-            message.skillCast.Result = context.Result.Equals(SkillResult.Ok) ? Result.Success : Result.Failed;
-            message.skillCast.Errormsg = context.Result.ToString();
-            this.Map.BroadcastBattleResponse(message);
-
             context.Caster.CastSkill(context, castInfo.skillId);
         }
         public void JoinBattle(Creature creature)
@@ -119,7 +121,10 @@ namespace GameServer.Battle
                 this.LeaveBattle(crea);
             }
         }
-
+        public void AddCastSkillInfo(NSkillCastInfo castInfo)
+        {
+            this.CastSkills.Add(castInfo);
+        }
         public void AddHitInfo(NSkillHitInfo hitInfo)
         {
             this.Hits.Add(hitInfo);

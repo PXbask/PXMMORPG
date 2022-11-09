@@ -21,5 +21,10 @@ namespace Common.Battle
         CRI=10,
         MAX
     }
-
+    public enum CharState
+    {
+        None = 0,
+        Idle = 1,
+        InBattle = 2,
+    }
 }
