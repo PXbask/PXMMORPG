@@ -1,4 +1,7 @@
-﻿using Common.Battle;
+﻿using Common;
+using Common.Battle;
+using Common.Data;
+using GameServer.AI;
 using GameServer.Battle;
 using GameServer.Core;
 using GameServer.Models;
@@ -8,16 +11,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Utils;
 
 namespace GameServer.Entities
 {
     class Monster : Creature
     {
-        public Creature Target;
-        private Map Map;
+        AIAgent AI;
+
+        public Map Map;
+        private Vector3Int moveTarget;
+        private Vector3 movePosition;
         public Monster(int tid, int level, Vector3Int pos, Vector3Int dir) : base(CharacterType.Monster, tid, level, pos, dir)
         {
-
+            this.AI = new AIAgent(this);
         }
         public void OnEnterMap(Map map)
         {
@@ -25,42 +32,24 @@ namespace GameServer.Entities
         }
         protected override void OnDoDamage(NDamageInfo damage, Creature creature)
         {
-            if(this.Target == null)
+            if(this.AI != null)
             {
-                this.Target = creature;
+                this.AI.OnDamage(damage, creature);
             }
         }
         public override void Update()
         {
-            if(this.State.Equals(CharState.InBattle))
-            {
-                this.UpdateBattle();
-            }
             base.Update();
+            this.UpdateMovement();
+            this.AI.Update();
         }
 
-        private void UpdateBattle()
-        {
-            if (this.Target != null)
-            {
-                BattleContext context = new BattleContext(this.Map.Battle)
-                {
-                    Target = this.Target,
-                    Caster = this,
-                };
-                Skill skill = this.FindSkill(context);
-                if (skill != null)
-                {
-                    this.CastSkill(context, skill.Define.Id);
-                }
-            }
-        }
-
-        private Skill FindSkill(BattleContext context)
+        public Skill FindSkill(BattleContext context, SkillType type)
         {
             Skill skillcancast = null;
             foreach (var skill in this.SkillMgr.Skills)
             {
+                if ((skill.Define.Type & type) != skill.Define.Type) continue;
                 var res = skill.CanCast(context);
                 if(res.Equals(SkillResult.Casting)) { return null; }
                 if (res.Equals(SkillResult.Ok))
@@ -69,6 +58,58 @@ namespace GameServer.Entities
                 }
             }
             return skillcancast;
+        }
+
+        internal void MoveTo(Vector3Int position)
+        {
+            if(State.Equals(CharacterState.Idle))
+            {
+                State = CharacterState.Move;
+            }
+            if(this.moveTarget != position)
+            {
+                this.moveTarget = position;
+                this.movePosition= this.Position;
+                var dist = this.moveTarget - this.Position;
+                this.Direction = dist.normalized;
+                this.Speed = this.Define.Speed;
+                Log.InfoFormat("Dir:{0} Speed:{1} Position:{2}",this.Direction.ToString(),this.Speed.ToString(),this.Position.ToString());
+                NEntitySync sync = new NEntitySync();
+                sync.Entity = this.EntityData;
+                sync.Event = EntityEvent.MoveFwd;
+                sync.Id = this.entityId;
+
+                this.Map.UpdateEntity(sync);
+            }
+        }
+        internal void StopMove()
+        {
+            this.State = CharacterState.Idle;
+            this.moveTarget = Vector3Int.zero;
+            this.Speed= 0;
+
+            NEntitySync sync = new NEntitySync();
+            sync.Entity = this.EntityData;
+            sync.Event = EntityEvent.Idle;
+            sync.Id = this.entityId;
+
+            this.Map.UpdateEntity(sync);
+        }
+        private void UpdateMovement()
+        {
+            if (State == CharacterState.Move)
+            {
+                if(this.Distance(moveTarget) < 50) 
+                {
+                    this.StopMove();
+                }
+                if(this.Speed > 0)
+                {
+                    Vector3 dir = this.Direction;
+                    this.movePosition += dir * this.Speed * TimeUtil.deltaTime / 100f;
+                    this.Position = movePosition;
+                }
+            }
         }
     }
 }

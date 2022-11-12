@@ -25,7 +25,8 @@ namespace GameServer.Entities
         public EffectManager EffectMgr;
         public bool IsDeath = false;
 
-        public CharState State;     
+        public BattleState BattleState;
+        public CharacterState State;
         public Creature(CharacterType type, int configId, int level, Vector3Int pos, Vector3Int dir) :base(pos, dir)
         {
             this.Define = DataManager.Instance.Characters[configId];
@@ -48,7 +49,7 @@ namespace GameServer.Entities
 
         internal void DoDamage(NDamageInfo damage, Creature creature)
         {
-            this.State = CharState.InBattle;
+            this.BattleState = BattleState.InBattle;
             this.Attributes.HP -= damage.Damage;
             if(this.Attributes.HP < 0)
             {
@@ -94,7 +95,7 @@ namespace GameServer.Entities
                 context.Result = skill.Cast(context);
             if (context.Result.Equals(SkillResult.Ok))
             {
-                this.State = CharState.InBattle;
+                this.BattleState = BattleState.InBattle;
             }
             if (context.CastInfo == null)
             {

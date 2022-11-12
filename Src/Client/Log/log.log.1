@@ -1,102 +1,121 @@
-2022-11-09 17:37:18,584 [ 1] INFO  Unity: LoadingManager start
-2022-11-09 17:37:21,710 [ 1] INFO  Unity: DataManager > DataManager()
-2022-11-09 17:37:25,424 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
-2022-11-09 17:37:25,425 [ 1] INFO  Unity: ConnectToServer() Start 
-2022-11-09 17:37:25,429 [ 1] INFO  Unity: DoConnect
-2022-11-09 17:37:25,431 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-11-09 17:37:25,436 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-11-12 10:50:02,892 [ 1] INFO  Unity: LoadingManager start
+2022-11-12 10:50:05,989 [ 1] INFO  Unity: DataManager > DataManager()
+2022-11-12 10:50:09,994 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
+2022-11-12 10:50:09,995 [ 1] INFO  Unity: ConnectToServer() Start 
+2022-11-12 10:50:10,000 [ 1] INFO  Unity: DoConnect
+2022-11-12 10:50:10,001 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-11-12 10:50:10,005 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-11-09 17:37:25,441 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2022-11-09 17:37:25,584 [ 1] INFO  Unity: OnUserLogin:Success [None]
-2022-11-09 17:37:25,585 [ 1] INFO  Unity: LoadLevel: CharSelect
-2022-11-09 17:37:27,870 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-11-09 17:37:28,845 [ 1] INFO  Unity: Select Char:[2]111[Warrior]
-2022-11-09 17:37:29,856 [ 1] INFO  Unity: Select Char:[1]FaU[Wizard]
-2022-11-09 17:37:30,569 [ 1] INFO  Unity: UserGameEnterRequest::index :0
-2022-11-09 17:37:30,609 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
-2022-11-09 17:37:30,612 [ 1] INFO  Unity: ItemManager:Init[ID:1, Count:20]
-2022-11-09 17:37:30,612 [ 1] INFO  Unity: ItemManager:Init[ID:2, Count:20]
-2022-11-09 17:37:30,621 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1 CharacterID:1
-2022-11-09 17:37:30,629 [ 1] INFO  Unity: AddCharacter:1:FaU Map:1 Entity:(10:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-11-09 17:37:30,631 [ 1] INFO  Unity: LoadLevel: MainCity
-2022-11-09 17:37:31,760 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
-UnityEngine.Resources:Load(String)
-Resloader:Load(String) (at Assets/Scripts/Assets/Resloader.cs:11)
-SoundManager:PlayMusic(String) (at Assets/Scripts/Managers/SoundManager.cs:71)
-Services.MapService:EnterMap(Int32) (at Assets/Scripts/Services/MapService.cs:36)
-Services.MapService:OnMapCharacterEnter(Object, MapCharacterEnterResponse) (at Assets/Scripts/Services/MapService.cs:94)
-Network.MessageDistributer`1:RaiseEvent(Object, MapCharacterEnterResponse)
-Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
-Network.MessageDistributer`1:Distribute()
-Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+2022-11-12 10:50:10,010 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2022-11-12 10:50:10,431 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2022-11-12 10:50:10,433 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-11-12 10:50:12,797 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-11-12 10:50:13,619 [ 1] INFO  Unity: Select Char:[2]111[Warrior]
+2022-11-12 10:50:14,268 [ 1] INFO  Unity: UserGameEnterRequest::index :1
+2022-11-12 10:50:14,424 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
+2022-11-12 10:50:14,426 [ 1] INFO  Unity: ItemManager:Init[ID:1, Count:20]
+2022-11-12 10:50:14,427 [ 1] INFO  Unity: ItemManager:Init[ID:2, Count:20]
+2022-11-12 10:50:14,435 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1 CharacterID:1
+2022-11-12 10:50:14,443 [ 1] INFO  Unity: AddCharacter:2:111 Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-11-12 10:50:14,445 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-11-12 10:50:14,980 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
+2022-11-12 10:50:15,794 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2022-11-09 17:37:31,761 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
-UnityEngine.Resources:Load(String)
-Resloader:Load(String) (at Assets/Scripts/Assets/Resloader.cs:11)
-SoundManager:PlayMusic(String) (at Assets/Scripts/Managers/SoundManager.cs:71)
-Services.MapService:EnterMap(Int32) (at Assets/Scripts/Services/MapService.cs:36)
-Services.MapService:OnMapCharacterEnter(Object, MapCharacterEnterResponse) (at Assets/Scripts/Services/MapService.cs:94)
-Network.MessageDistributer`1:RaiseEvent(Object, MapCharacterEnterResponse)
-Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
-Network.MessageDistributer`1:Distribute()
-Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+2022-11-12 10:50:15,795 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2022-11-09 17:37:31,763 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
-2022-11-09 17:37:31,937 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-11-09 17:37:33,080 [ 1] INFO  Unity: SetDirection:(98, -18, 0)
-2022-11-09 17:37:33,179 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-11-09 17:37:33,263 [ 1] INFO  Unity: SetDirection:(86, -51, 0)
-2022-11-09 17:37:33,362 [ 1] INFO  Unity: SetDirection:(74, -68, 0)
-2022-11-09 17:37:33,464 [ 1] INFO  Unity: SetDirection:(58, -81, 0)
-2022-11-09 17:37:33,546 [ 1] INFO  Unity: SetDirection:(43, -90, 0)
-2022-11-09 17:37:33,628 [ 1] INFO  Unity: SetDirection:(27, -96, 0)
-2022-11-09 17:37:33,712 [ 1] INFO  Unity: SetDirection:(9, -100, 0)
-2022-11-09 17:37:33,811 [ 1] INFO  Unity: SetDirection:(-11, -99, 0)
-2022-11-09 17:37:33,893 [ 1] INFO  Unity: SetDirection:(-28, -96, 0)
-2022-11-09 17:37:33,996 [ 1] INFO  Unity: SetDirection:(-45, -89, 0)
-2022-11-09 17:37:34,045 [ 1] INFO  Unity: MoveForward
-2022-11-09 17:37:34,179 [ 1] INFO  Unity: SetDirection:(-60, -80, 0)
-2022-11-09 17:37:36,532 [ 1] INFO  Unity: SetDirection:(-73, -68, 0)
-2022-11-09 17:37:36,681 [ 1] INFO  Unity: SetDirection:(-84, -54, 0)
-2022-11-09 17:37:36,781 [ 1] INFO  Unity: SetDirection:(-92, -38, 0)
-2022-11-09 17:37:36,946 [ 1] INFO  Unity: SetDirection:(-98, -21, 0)
-2022-11-09 17:37:40,195 [ 1] INFO  Unity: SetPosition:(3457, 3103, 811)
-2022-11-09 17:37:40,292 [ 1] INFO  Unity: SetDirection:(-92, -38, 0)
-2022-11-09 17:37:43,128 [ 1] INFO  Unity: SetPosition:(2627, 2766, 808)
-2022-11-09 17:37:43,987 [ 1] INFO  Unity: SetDirection:(-98, -21, 0)
-2022-11-09 17:37:45,295 [ 1] INFO  Unity: SetDirection:(-100, -3, 0)
-2022-11-09 17:37:46,738 [ 1] INFO  Unity: TeleporterObject: Character[FaU] EnterTeleporter[3:主城传入点1]
-2022-11-09 17:37:49,074 [ 1] INFO  Unity: TeleporterObject: Character[FaU] EnterTeleporter[1:主城->野外]
-2022-11-09 17:37:49,075 [ 1] INFO  Unity: MapTeleportRequest: teleporterId:1
-2022-11-09 17:37:49,110 [ 1] INFO  Unity: OnMapCharacterLeave:MapID:1 CharacterID:10
-2022-11-09 17:37:49,112 [ 1] INFO  Unity: RemoveCharacter:10
-2022-11-09 17:37:49,114 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1 CharacterID:2
-2022-11-09 17:37:49,115 [ 1] INFO  Unity: AddCharacter:1:FaU Map:2 Entity:(10:pos:(3183,4007,-2),dir:(100,0,0),spd:300
-2022-11-09 17:37:50,073 [ 1] INFO  Unity: AddCharacter:1:恶鬼 Map:2 Entity:(1:pos:(5887,1573,7),dir:(9,100,0),spd:0
-2022-11-09 17:37:50,084 [ 1] INFO  Unity: AddCharacter:2:山丘巨人 Map:2 Entity:(2:pos:(5540,1682,4),dir:(20,98,0),spd:0
-2022-11-09 17:37:50,525 [ 1] INFO  Unity: AddCharacter:3:小恶魔 Map:2 Entity:(3:pos:(4775,2865,14),dir:(-30,95,0),spd:0
-2022-11-09 17:37:50,536 [ 1] INFO  Unity: AddCharacter:4:死神 Map:2 Entity:(4:pos:(5683,4173,0),dir:(28,-96,0),spd:0
-2022-11-09 17:37:50,838 [ 1] INFO  Unity: LoadLevel: Map01
-2022-11-09 17:37:51,070 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2
-2022-11-09 17:37:51,071 [ 1] WARN  Unity: Failed to create agent because it is not close enough to the NavMesh
+2022-11-12 10:50:15,958 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-11-12 10:50:17,277 [ 1] INFO  Unity: SetDirection:(98, -20, 0)
+2022-11-12 10:50:17,372 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2022-11-12 10:50:17,456 [ 1] INFO  Unity: SetDirection:(85, -53, 0)
+2022-11-12 10:50:17,542 [ 1] INFO  Unity: SetDirection:(74, -67, 0)
+2022-11-12 10:50:17,644 [ 1] INFO  Unity: SetDirection:(59, -81, 0)
+2022-11-12 10:50:17,728 [ 1] INFO  Unity: SetDirection:(44, -90, 0)
+2022-11-12 10:50:17,811 [ 1] INFO  Unity: SetDirection:(28, -96, 0)
+2022-11-12 10:50:17,887 [ 1] INFO  Unity: SetDirection:(10, -99, 0)
+2022-11-12 10:50:17,998 [ 1] INFO  Unity: SetDirection:(-10, -99, 0)
+2022-11-12 10:50:18,076 [ 1] INFO  Unity: MoveForward
+2022-11-12 10:50:18,078 [ 1] INFO  Unity: SetDirection:(-28, -96, 0)
+2022-11-12 10:50:18,178 [ 1] INFO  Unity: SetDirection:(-45, -89, 0)
+2022-11-12 10:50:18,381 [ 1] INFO  Unity: SetDirection:(-60, -80, 0)
+2022-11-12 10:50:20,185 [ 1] INFO  Unity: SetDirection:(-74, -67, 0)
+2022-11-12 10:50:21,273 [ 1] INFO  Unity: SetDirection:(-85, -53, 0)
+2022-11-12 10:50:21,496 [ 1] INFO  Unity: SetDirection:(-93, -37, 0)
+2022-11-12 10:50:24,824 [ 1] INFO  Unity: SetPosition:(3382, 2840, 810)
+2022-11-12 10:50:27,648 [ 1] INFO  Unity: SetDirection:(-98, -20, 0)
+2022-11-12 10:50:28,334 [ 1] INFO  Unity: SetDirection:(-100, -2, 0)
+2022-11-12 10:50:28,410 [ 1] INFO  Unity: SetPosition:(2354, 2479, 807)
+2022-11-12 10:50:29,687 [ 1] INFO  Unity: SetDirection:(-99, 16, 0)
+2022-11-12 10:50:31,131 [ 1] INFO  Unity: TeleporterObject: Character[111] EnterTeleporter[3:主城传入点1]
+2022-11-12 10:50:31,263 [ 1] INFO  Unity: SetPosition:(1544, 2542, 805)
+2022-11-12 10:50:31,995 [ 1] INFO  Unity: SetDirection:(-100, -2, 0)
+2022-11-12 10:50:33,621 [ 1] INFO  Unity: TeleporterObject: Character[111] EnterTeleporter[1:主城->野外]
+2022-11-12 10:50:33,623 [ 1] INFO  Unity: MapTeleportRequest: teleporterId:1
+2022-11-12 10:50:33,628 [ 1] INFO  Unity: SetPosition:(880, 2566, 805)
+2022-11-12 10:50:33,659 [ 1] INFO  Unity: OnMapCharacterLeave:MapID:1 CharacterID:1
+2022-11-12 10:50:33,664 [ 1] INFO  Unity: RemoveCharacter:1
+2022-11-12 10:50:33,671 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1 CharacterID:2
+2022-11-12 10:50:33,675 [ 1] INFO  Unity: AddCharacter:2:111 Map:2 Entity:(1:pos:(3183,4007,-2),dir:(100,0,0),spd:300
+2022-11-12 10:50:34,072 [ 1] INFO  Unity: LoadLevel: Map01
+2022-11-12 10:50:34,332 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2
+2022-11-12 10:50:34,333 [ 1] WARN  Unity: Failed to create agent because it is not close enough to the NavMesh
 UnityEngine.GameObject:AddComponent()
 PlayerInputController:Start() (at Assets/Scripts/GameObject/PlayerInputController.cs:53)
 
-2022-11-09 17:37:51,380 [ 1] INFO  Unity: MoveForward
-2022-11-09 17:37:51,465 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2022-11-12 10:50:34,627 [ 1] INFO  Unity: MoveForward
+2022-11-12 10:50:34,693 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2022-11-09 17:37:51,591 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-11-09 17:37:51,594 [ 1] INFO  Unity: Stop
-2022-11-09 17:37:51,596 [ 1] INFO  Unity: TeleporterObject: Character[FaU] EnterTeleporter[6:野外传入点]
-2022-11-09 17:37:52,241 [ 1] INFO  Unity: MoveForward
-2022-11-09 17:37:52,972 [ 1] INFO  Unity: SetDirection:(98, -18, 0)
-2022-11-09 17:37:54,727 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-11-09 17:37:55,606 [ 1] INFO  Unity: SetDirection:(86, -51, 0)
-2022-11-09 17:37:55,771 [ 1] INFO  Unity: SetDirection:(75, -66, 0)
-2022-11-09 17:37:56,984 [ 1] INFO  Unity: SendCastSkill: id:10052 entityId:4 targetId:9 position:(0,0,0)
-2022-11-09 17:37:56,986 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+2022-11-12 10:50:34,852 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-11-12 10:50:34,855 [ 1] INFO  Unity: Stop
+2022-11-12 10:50:34,856 [ 1] INFO  Unity: TeleporterObject: Character[111] EnterTeleporter[6:野外传入点]
+2022-11-12 10:50:36,138 [ 1] INFO  Unity: MoveForward
+2022-11-12 10:50:36,638 [ 1] INFO  Unity: SetDirection:(98, -18, 0)
+2022-11-12 10:50:36,781 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
+2022-11-12 10:50:38,969 [ 1] INFO  Unity: SetPosition:(4056, 3769, 6)
+2022-11-12 10:50:41,189 [ 1] INFO  Unity: SetPosition:(4678, 3538, 6)
+2022-11-12 10:50:41,809 [ 1] INFO  Unity: SetDirection:(86, -52, 0)
+2022-11-12 10:50:41,927 [ 1] INFO  Unity: SetDirection:(74, -68, 0)
+2022-11-12 10:50:42,027 [ 1] INFO  Unity: SetDirection:(60, -80, 0)
+2022-11-12 10:50:45,429 [ 1] INFO  Unity: SetDirection:(45, -89, 0)
+2022-11-12 10:50:45,627 [ 1] INFO  Unity: SetDirection:(28, -96, 0)
+2022-11-12 10:50:45,728 [ 1] INFO  Unity: SetDirection:(10, -99, 0)
+2022-11-12 10:50:45,827 [ 1] INFO  Unity: SetDirection:(-11, -99, 0)
+2022-11-12 10:50:45,946 [ 1] INFO  Unity: SetDirection:(-30, -95, 0)
+2022-11-12 10:50:46,211 [ 1] INFO  Unity: Stop
+2022-11-12 10:50:46,676 [ 1] INFO  Unity: SetDirection:(-10, -99, 0)
+2022-11-12 10:50:46,825 [ 1] INFO  Unity: SetDirection:(8, -100, 0)
+2022-11-12 10:50:46,846 [ 1] INFO  Unity: MoveForward
+2022-11-12 10:50:47,112 [ 1] INFO  Unity: Stop
+2022-11-12 10:50:54,949 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2 CharacterID:2
+2022-11-12 10:50:54,952 [ 1] INFO  Unity: AddCharacter:2:恶鬼 Map:2 Entity:(2:pos:(5887,1573,7),dir:(9,100,0),spd:0
+2022-11-12 10:50:54,981 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2
+2022-11-12 10:50:54,983 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2 CharacterID:2
+2022-11-12 10:50:54,985 [ 1] INFO  Unity: AddCharacter:3:山丘巨人 Map:2 Entity:(3:pos:(5540,1682,4),dir:(20,98,0),spd:0
+2022-11-12 10:50:55,475 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2
+2022-11-12 10:50:55,487 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2 CharacterID:2
+2022-11-12 10:50:55,488 [ 1] INFO  Unity: AddCharacter:4:小恶魔 Map:2 Entity:(4:pos:(4775,2865,14),dir:(-30,95,0),spd:0
+2022-11-12 10:50:55,499 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2
+2022-11-12 10:50:55,500 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2 CharacterID:2
+2022-11-12 10:50:55,501 [ 1] INFO  Unity: AddCharacter:5:死神 Map:2 Entity:(5:pos:(5683,4173,0),dir:(28,-96,0),spd:0
+2022-11-12 10:50:55,847 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:2
+2022-11-12 10:50:57,924 [ 1] INFO  Unity: BattleTarget: SetTarget:[3]山丘巨人
+2022-11-12 10:50:58,567 [ 1] INFO  Unity: MoveForward
+2022-11-12 10:50:59,864 [ 1] INFO  Unity: SetPosition:(5575, 1930, 9)
+2022-11-12 10:51:00,194 [ 1] INFO  Unity: SendCastSkill: id:101 entityId:1 targetId:3 position:(0,0,0)
+2022-11-12 10:51:00,307 [ 1] INFO  Unity: Stop
+2022-11-12 10:51:05,739 [ 1] INFO  Unity: SendCastSkill: id:101 entityId:1 targetId:3 position:(0,0,0)
+2022-11-12 10:51:05,741 [ 1] INFO  Unity: SetDirection:(-28, -96, -4)
+2022-11-12 10:51:06,150 [ 1] INFO  Unity: Skill[普通攻击].UpdateSkill Finished
+2022-11-12 10:51:06,267 [ 1] INFO  Unity: AnimationEventController: [Warrior]PlayEffect[EFX_Warrior_AtkA_prefab]
+2022-11-12 10:51:06,268 [ 1] INFO  Unity: [Character_2_111]PlayEffect:[EFX_Warrior_AtkA_prefab]
+2022-11-12 10:51:11,512 [ 1] INFO  Unity: MoveForward
+2022-11-12 10:51:11,635 [ 1] INFO  Unity: Stop
+2022-11-12 10:51:12,532 [ 1] INFO  Unity: SendCastSkill: id:101 entityId:1 targetId:3 position:(0,0,0)
+2022-11-12 10:51:12,630 [ 1] INFO  Unity: SendCastSkill: id:101 entityId:1 targetId:3 position:(0,0,0)
+2022-11-12 10:51:12,632 [ 1] INFO  Unity: SetDirection:(-33, -94, -6)
+2022-11-12 10:51:12,879 [ 1] INFO  Unity: AnimationEventController: [Warrior]PlayEffect[EFX_Warrior_AtkA_prefab]
+2022-11-12 10:51:12,880 [ 1] INFO  Unity: [Character_2_111]PlayEffect:[EFX_Warrior_AtkA_prefab]
+2022-11-12 10:51:12,983 [ 1] INFO  Unity: SendCastSkill: id:10023 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:12,984 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
 UnityEngine.Animator:SetBool(String, Boolean)
 EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
 Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
@@ -108,33 +127,12 @@ Network.MessageDistributer`1:Distribute()
 Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
 Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
 
-2022-11-09 17:37:56,999 [ 1] INFO  Unity: AnimationEventController: [M1005]PlayEffect[EFX_M1005_SkillA_prefab]
-2022-11-09 17:37:57,000 [ 1] INFO  Unity: [Character_4_死神]PlayEffect:[EFX_M1005_SkillA_prefab]
-2022-11-09 17:37:57,201 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:37:57,295 [ 1] INFO  Unity: Skill[死亡尖叫].UpdateSkill Finished
-2022-11-09 17:37:57,723 [ 1] INFO  Unity: SetPosition:(4698, 3410, 5)
-2022-11-09 17:37:59,862 [ 1] INFO  Unity: SetPosition:(5179, 2986, 5)
-2022-11-09 17:38:00,258 [ 1] INFO  Unity: Stop
-2022-11-09 17:38:02,212 [ 1] INFO  Unity: SetDirection:(86, -51, 0)
-2022-11-09 17:38:02,296 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-11-09 17:38:02,395 [ 1] INFO  Unity: SetDirection:(99, -15, 0)
-2022-11-09 17:38:02,479 [ 1] INFO  Unity: SetDirection:(100, 3, 0)
-2022-11-09 17:38:02,580 [ 1] INFO  Unity: MoveForward
-2022-11-09 17:38:02,581 [ 1] INFO  Unity: SetDirection:(98, 22, 0)
-2022-11-09 17:38:02,746 [ 1] INFO  Unity: SetDirection:(92, 39, 0)
-2022-11-09 17:38:03,309 [ 1] INFO  Unity: SetDirection:(84, 54, 0)
-2022-11-09 17:38:03,409 [ 1] INFO  Unity: SetDirection:(73, 68, 0)
-2022-11-09 17:38:03,492 [ 1] INFO  Unity: Stop
-2022-11-09 17:38:03,509 [ 1] INFO  Unity: SetDirection:(58, 82, 0)
-2022-11-09 17:38:03,591 [ 1] INFO  Unity: SetDirection:(43, 90, 0)
-2022-11-09 17:38:03,673 [ 1] INFO  Unity: SetDirection:(26, 96, 0)
-2022-11-09 17:38:03,790 [ 1] INFO  Unity: SetDirection:(8, 100, 0)
-2022-11-09 17:38:04,038 [ 1] INFO  Unity: MoveForward
-2022-11-09 17:38:05,166 [ 1] INFO  Unity: SetDirection:(-11, 99, 0)
-2022-11-09 17:38:06,609 [ 1] INFO  Unity: SetPosition:(5499, 3780, 22)
-2022-11-09 17:38:06,989 [ 1] INFO  Unity: Stop
-2022-11-09 17:38:07,007 [ 1] INFO  Unity: SendCastSkill: id:10052 entityId:4 targetId:9 position:(0,0,0)
-2022-11-09 17:38:07,008 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+2022-11-12 10:51:12,985 [ 1] INFO  Unity: SetDirection:(33, 94, 6)
+2022-11-12 10:51:12,987 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:12,989 [ 1] INFO  Unity: Creature:山丘巨人 Damage:34 Crit:False
+2022-11-12 10:51:13,052 [ 1] INFO  Unity: Skill[普通攻击].UpdateSkill Finished
+2022-11-12 10:51:13,087 [ 1] INFO  Unity: SendCastSkill: id:10021 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:13,088 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
 UnityEngine.Animator:SetBool(String, Boolean)
 EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
 Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
@@ -146,25 +144,13 @@ Network.MessageDistributer`1:Distribute()
 Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
 Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
 
-2022-11-09 17:38:07,024 [ 1] INFO  Unity: AnimationEventController: [M1005]PlayEffect[EFX_M1005_SkillA_prefab]
-2022-11-09 17:38:07,024 [ 1] INFO  Unity: [Character_4_死神]PlayEffect:[EFX_M1005_SkillA_prefab]
-2022-11-09 17:38:07,072 [ 1] INFO  Unity: SetDirection:(7, 100, 0)
-2022-11-09 17:38:07,239 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:07,321 [ 1] INFO  Unity: Skill[死亡尖叫].UpdateSkill Finished
-2022-11-09 17:38:09,460 [ 1] INFO  Unity: BattleTarget: SetTarget:[4]死神
-2022-11-09 17:38:11,412 [ 1] INFO  Unity: SetDirection:(25, 97, 0)
-2022-11-09 17:38:11,562 [ 1] INFO  Unity: SetDirection:(42, 91, 0)
-2022-11-09 17:38:15,436 [ 1] INFO  Unity: BattleTarget: SetPosition:[SkillBridge.Message.NVector3]
-2022-11-09 17:38:15,437 [ 1] INFO  Unity: SendCastSkill: id:203 entityId:10 targetId:4 position:(5785,4328,8)
-2022-11-09 17:38:15,485 [ 1] INFO  Unity: SendCastSkill: id:203 entityId:10 targetId:4 position:(5785,4328,8)
-2022-11-09 17:38:15,487 [ 1] INFO  Unity: SetDirection:(58, 81, -3)
-2022-11-09 17:38:16,733 [ 1] INFO  Unity: Skill[火焰雨].UpdateCasting Finished
-2022-11-09 17:38:16,829 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:16,831 [ 1] INFO  Unity: Creature:死神 Damage:28 Crit:False
-2022-11-09 17:38:16,931 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:16,932 [ 1] INFO  Unity: Creature:死神 Damage:29 Crit:False
-2022-11-09 17:38:17,047 [ 1] INFO  Unity: SendCastSkill: id:10052 entityId:4 targetId:9 position:(0,0,0)
-2022-11-09 17:38:17,048 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+2022-11-12 10:51:13,089 [ 1] INFO  Unity: SetDirection:(33, 94, 6)
+2022-11-12 10:51:13,599 [ 1] INFO  Unity: Skill[重击].UpdateSkill Finished
+2022-11-12 10:51:13,632 [ 1] INFO  Unity: MoveBack
+2022-11-12 10:51:13,657 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:13,660 [ 1] INFO  Unity: Creature:111 Damage:844 Crit:True
+2022-11-12 10:51:13,759 [ 1] INFO  Unity: SendCastSkill: id:10022 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:13,760 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
 UnityEngine.Animator:SetBool(String, Boolean)
 EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
 Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
@@ -176,79 +162,30 @@ Network.MessageDistributer`1:Distribute()
 Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
 Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
 
-2022-11-09 17:38:17,049 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:17,050 [ 1] INFO  Unity: Creature:死神 Damage:29 Crit:False
-2022-11-09 17:38:17,148 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:17,149 [ 1] INFO  Unity: Creature:死神 Damage:28 Crit:False
-2022-11-09 17:38:17,265 [ 1] INFO  Unity: OnSkillHit:count:2
-2022-11-09 17:38:17,266 [ 1] INFO  Unity: Creature:死神 Damage:30 Crit:False
-2022-11-09 17:38:17,360 [ 1] INFO  Unity: Skill[死亡尖叫].UpdateSkill Finished
-2022-11-09 17:38:17,378 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:17,379 [ 1] INFO  Unity: Creature:死神 Damage:31 Crit:False
-2022-11-09 17:38:17,484 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:17,485 [ 1] INFO  Unity: Creature:死神 Damage:28 Crit:False
-2022-11-09 17:38:17,600 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:17,601 [ 1] INFO  Unity: Creature:死神 Damage:30 Crit:False
-2022-11-09 17:38:17,716 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:17,717 [ 1] INFO  Unity: Creature:死神 Damage:30 Crit:False
-2022-11-09 17:38:17,816 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:17,817 [ 1] INFO  Unity: Creature:死神 Damage:28 Crit:False
-2022-11-09 17:38:17,932 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:17,933 [ 1] INFO  Unity: Creature:死神 Damage:30 Crit:False
-2022-11-09 17:38:18,049 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:18,050 [ 1] INFO  Unity: Creature:死神 Damage:28 Crit:False
-2022-11-09 17:38:18,164 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:18,165 [ 1] INFO  Unity: Creature:死神 Damage:29 Crit:False
-2022-11-09 17:38:18,264 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:18,265 [ 1] INFO  Unity: Creature:死神 Damage:28 Crit:False
-2022-11-09 17:38:18,380 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:18,381 [ 1] INFO  Unity: Creature:死神 Damage:30 Crit:False
-2022-11-09 17:38:18,496 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:18,497 [ 1] INFO  Unity: Creature:死神 Damage:30 Crit:False
-2022-11-09 17:38:18,593 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:18,594 [ 1] INFO  Unity: Creature:死神 Damage:29 Crit:False
-2022-11-09 17:38:18,711 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:18,712 [ 1] INFO  Unity: Creature:死神 Damage:28 Crit:False
-2022-11-09 17:38:18,826 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:18,827 [ 1] INFO  Unity: Creature:死神 Damage:28 Crit:False
-2022-11-09 17:38:18,943 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:18,944 [ 1] INFO  Unity: Creature:死神 Damage:29 Crit:False
-2022-11-09 17:38:19,042 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:19,043 [ 1] INFO  Unity: Creature:死神 Damage:30 Crit:False
-2022-11-09 17:38:19,091 [ 1] INFO  Unity: AnimationEventController: [Wizard]PlayEffect[EFX_Wizard_SkillB_prefab]
-2022-11-09 17:38:19,092 [ 1] INFO  Unity: [Character_1_FaU]PlayEffect:[EFX_Wizard_SkillB_prefab]
-2022-11-09 17:38:19,158 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:19,159 [ 1] INFO  Unity: Creature:死神 Damage:29 Crit:False
-2022-11-09 17:38:19,274 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:19,275 [ 1] INFO  Unity: Creature:死神 Damage:30 Crit:False
-2022-11-09 17:38:19,390 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:19,390 [ 1] INFO  Unity: Creature:死神 Damage:30 Crit:False
-2022-11-09 17:38:19,489 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:19,490 [ 1] INFO  Unity: Creature:死神 Damage:29 Crit:False
-2022-11-09 17:38:19,605 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:19,606 [ 1] INFO  Unity: Creature:死神 Damage:29 Crit:False
-2022-11-09 17:38:19,721 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:19,723 [ 1] INFO  Unity: Creature:死神 Damage:29 Crit:False
-2022-11-09 17:38:19,821 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:19,822 [ 1] INFO  Unity: Creature:死神 Damage:28 Crit:False
-2022-11-09 17:38:19,936 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:19,937 [ 1] INFO  Unity: Creature:死神 Damage:30 Crit:False
-2022-11-09 17:38:20,052 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:20,053 [ 1] INFO  Unity: Creature:死神 Damage:28 Crit:False
-2022-11-09 17:38:20,168 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:20,169 [ 1] INFO  Unity: Creature:死神 Damage:28 Crit:False
-2022-11-09 17:38:20,217 [ 1] INFO  Unity: Skill[火焰雨].UpdateSkill Finished
-2022-11-09 17:38:20,284 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:20,285 [ 1] INFO  Unity: Creature:死神 Damage:31 Crit:False
-2022-11-09 17:38:21,477 [ 1] INFO  Unity: AnimationEventController: [M1005]PlayEffect[EFX_M1005_SkillA_prefab]
-2022-11-09 17:38:21,477 [ 1] INFO  Unity: [Character_4_死神]PlayEffect:[EFX_M1005_SkillA_prefab]
-2022-11-09 17:38:21,625 [ 1] INFO  Unity: MoveForward
-2022-11-09 17:38:22,287 [ 1] INFO  Unity: Stop
-2022-11-09 17:38:24,723 [ 1] INFO  Unity: MoveForward
-2022-11-09 17:38:25,304 [ 1] INFO  Unity: Stop
-2022-11-09 17:38:26,483 [ 1] INFO  Unity: MoveForward
-2022-11-09 17:38:27,065 [ 1] INFO  Unity: SendCastSkill: id:10052 entityId:4 targetId:9 position:(0,0,0)
-2022-11-09 17:38:27,066 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+2022-11-12 10:51:13,762 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:13,764 [ 1] INFO  Unity: Creature:111 Damage:149 Crit:False
+2022-11-12 10:51:14,043 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_Atk_prefab]
+2022-11-12 10:51:14,044 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_Atk_prefab]
+2022-11-12 10:51:14,099 [ 1] INFO  Unity: Skill[拳击挥打].UpdateSkill Finished
+2022-11-12 10:51:14,103 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:14,106 [ 1] INFO  Unity: Creature:111 Damage:145 Crit:False
+2022-11-12 10:51:14,318 [ 1] INFO  Unity: Skill[大地震击].UpdateSkill Finished
+2022-11-12 10:51:14,336 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:14,338 [ 1] INFO  Unity: Creature:恶鬼 Damage:234 Crit:False
+2022-11-12 10:51:14,433 [ 1] INFO  Unity: Stop
+2022-11-12 10:51:14,576 [ 1] INFO  Unity: OnEntityChanged: ID:3 Postion:(5540, 1682, 4) Direction:(-2147483648, -2147483648, -2147483648) Speed:300
+2022-11-12 10:51:14,579 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
+    [3]evt:MoveFwd entity:(3:pos:(5540,1682,4),dir:(-2147483648,-2147483648,-2147483648),spd:300
+
+2022-11-12 10:51:14,791 [ 1] INFO  Unity: OnEntityChanged: ID:3 Postion:(5663, 2000, 9) Direction:(-2147483648, -2147483648, -2147483648) Speed:0
+2022-11-12 10:51:14,793 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
+    [3]evt:Idle entity:(3:pos:(5663,2000,9),dir:(-2147483648,-2147483648,-2147483648),spd:0
+
+2022-11-12 10:51:15,081 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_SkillA_prefab]
+2022-11-12 10:51:15,082 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_SkillA_prefab]
+2022-11-12 10:51:15,455 [ 1] INFO  Unity: MoveBack
+2022-11-12 10:51:16,127 [ 1] INFO  Unity: SendCastSkill: id:10021 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:16,129 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
 UnityEngine.Animator:SetBool(String, Boolean)
 EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
 Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
@@ -260,53 +197,29 @@ Network.MessageDistributer`1:Distribute()
 Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
 Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
 
-2022-11-09 17:38:27,081 [ 1] INFO  Unity: AnimationEventController: [M1005]PlayEffect[EFX_M1005_SkillA_prefab]
-2022-11-09 17:38:27,081 [ 1] INFO  Unity: [Character_4_死神]PlayEffect:[EFX_M1005_SkillA_prefab]
-2022-11-09 17:38:27,129 [ 1] INFO  Unity: Stop
-2022-11-09 17:38:27,212 [ 1] INFO  Unity: MoveForward
-2022-11-09 17:38:27,296 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:27,378 [ 1] INFO  Unity: Skill[死亡尖叫].UpdateSkill Finished
-2022-11-09 17:38:27,891 [ 1] INFO  Unity: Stop
-2022-11-09 17:38:28,236 [ 1] INFO  Unity: MoveBack
-2022-11-09 17:38:29,280 [ 1] INFO  Unity: SetDirection:(43, 90, -3)
-2022-11-09 17:38:29,379 [ 1] INFO  Unity: SetDirection:(26, 97, -3)
-2022-11-09 17:38:29,462 [ 1] INFO  Unity: SetDirection:(9, 100, -3)
-2022-11-09 17:38:29,544 [ 1] INFO  Unity: SetDirection:(-9, 100, -3)
-2022-11-09 17:38:29,644 [ 1] INFO  Unity: SetDirection:(-29, 96, -3)
-2022-11-09 17:38:29,727 [ 1] INFO  Unity: SetDirection:(-45, 89, -3)
-2022-11-09 17:38:29,809 [ 1] INFO  Unity: SetDirection:(-60, 80, -3)
-2022-11-09 17:38:29,895 [ 1] INFO  Unity: SetDirection:(-73, 68, -3)
-2022-11-09 17:38:29,928 [ 1] INFO  Unity: Stop
-2022-11-09 17:38:29,995 [ 1] INFO  Unity: SetDirection:(-86, 51, -3)
-2022-11-09 17:38:30,094 [ 1] INFO  Unity: SetDirection:(-94, 33, -3)
-2022-11-09 17:38:30,227 [ 1] INFO  Unity: SetDirection:(-99, 15, -2)
-2022-11-09 17:38:31,883 [ 1] INFO  Unity: SetDirection:(-100, -4, -2)
-2022-11-09 17:38:31,999 [ 1] INFO  Unity: SetDirection:(-97, -22, -2)
-2022-11-09 17:38:32,099 [ 1] INFO  Unity: SetDirection:(-91, -42, -2)
-2022-11-09 17:38:32,198 [ 1] INFO  Unity: SetDirection:(-80, -59, -2)
-2022-11-09 17:38:32,330 [ 1] INFO  Unity: MoveForward
-2022-11-09 17:38:32,331 [ 1] INFO  Unity: SetDirection:(-68, -73, -2)
-2022-11-09 17:38:33,059 [ 1] INFO  Unity: SetDirection:(-53, -85, -2)
-2022-11-09 17:38:33,176 [ 1] INFO  Unity: SetDirection:(-37, -93, -2)
-2022-11-09 17:38:33,258 [ 1] INFO  Unity: SetDirection:(-20, -98, -2)
-2022-11-09 17:38:33,357 [ 1] INFO  Unity: SetDirection:(1, -100, -2)
-2022-11-09 17:38:33,458 [ 1] INFO  Unity: SetDirection:(20, -98, -2)
-2022-11-09 17:38:33,589 [ 1] INFO  Unity: SetDirection:(37, -93, -2)
-2022-11-09 17:38:33,921 [ 1] INFO  Unity: Stop
-2022-11-09 17:38:34,352 [ 1] INFO  Unity: SetDirection:(54, -84, -2)
-2022-11-09 17:38:34,467 [ 1] INFO  Unity: SetDirection:(69, -72, -2)
-2022-11-09 17:38:34,550 [ 1] INFO  Unity: SetDirection:(81, -59, -2)
-2022-11-09 17:38:34,650 [ 1] INFO  Unity: SetDirection:(91, -41, -2)
-2022-11-09 17:38:34,734 [ 1] INFO  Unity: SetDirection:(97, -24, -2)
-2022-11-09 17:38:34,834 [ 1] INFO  Unity: SetDirection:(100, -4, -2)
-2022-11-09 17:38:34,917 [ 1] INFO  Unity: SetDirection:(99, 14, -2)
-2022-11-09 17:38:35,016 [ 1] INFO  Unity: SetDirection:(94, 34, -2)
-2022-11-09 17:38:35,133 [ 1] INFO  Unity: SetDirection:(85, 53, -2)
-2022-11-09 17:38:35,248 [ 1] INFO  Unity: SetDirection:(73, 68, -2)
-2022-11-09 17:38:36,093 [ 1] INFO  Unity: SetDirection:(60, 80, -2)
-2022-11-09 17:38:36,309 [ 1] INFO  Unity: SetDirection:(44, 90, -2)
-2022-11-09 17:38:37,105 [ 1] INFO  Unity: SendCastSkill: id:10052 entityId:4 targetId:9 position:(0,0,0)
-2022-11-09 17:38:37,105 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+2022-11-12 10:51:16,132 [ 1] INFO  Unity: SetDirection:(37, 93, 0)
+2022-11-12 10:51:16,339 [ 1] INFO  Unity: SetPosition:(5737, 2232, 31)
+2022-11-12 10:51:16,438 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_Atk_prefab]
+2022-11-12 10:51:16,439 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_Atk_prefab]
+2022-11-12 10:51:16,740 [ 1] INFO  Unity: Stop
+2022-11-12 10:51:16,809 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:16,812 [ 1] INFO  Unity: Creature:111 Damage:141 Crit:False
+2022-11-12 10:51:17,129 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:17,133 [ 1] INFO  Unity: Creature:111 Damage:143 Crit:False
+2022-11-12 10:51:17,147 [ 1] INFO  Unity: Skill[拳击挥打].UpdateSkill Finished
+2022-11-12 10:51:17,238 [ 1] INFO  Unity: OnEntityChanged: ID:3 Postion:(5663, 2000, 9) Direction:(-2147483648, -2147483648, -2147483648) Speed:300
+2022-11-12 10:51:17,240 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
+    [3]evt:MoveFwd entity:(3:pos:(5663,2000,9),dir:(-2147483648,-2147483648,-2147483648),spd:300
+
+2022-11-12 10:51:17,411 [ 1] INFO  Unity: MoveBack
+2022-11-12 10:51:17,448 [ 1] INFO  Unity: OnEntityChanged: ID:3 Postion:(5785, 2352, 31) Direction:(-2147483648, -2147483648, -2147483648) Speed:0
+2022-11-12 10:51:17,450 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
+    [3]evt:Idle entity:(3:pos:(5785,2352,31),dir:(-2147483648,-2147483648,-2147483648),spd:0
+
+2022-11-12 10:51:17,733 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_SkillB_prefab]
+2022-11-12 10:51:17,734 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_SkillB_prefab]
+2022-11-12 10:51:17,783 [ 1] INFO  Unity: SendCastSkill: id:10022 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:17,785 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
 UnityEngine.Animator:SetBool(String, Boolean)
 EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
 Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
@@ -318,12 +231,20 @@ Network.MessageDistributer`1:Distribute()
 Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
 Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
 
-2022-11-09 17:38:37,122 [ 1] INFO  Unity: AnimationEventController: [M1005]PlayEffect[EFX_M1005_SkillA_prefab]
-2022-11-09 17:38:37,122 [ 1] INFO  Unity: [Character_4_死神]PlayEffect:[EFX_M1005_SkillA_prefab]
-2022-11-09 17:38:37,320 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:37,435 [ 1] INFO  Unity: Skill[死亡尖叫].UpdateSkill Finished
-2022-11-09 17:38:47,132 [ 1] INFO  Unity: SendCastSkill: id:10052 entityId:4 targetId:9 position:(0,0,0)
-2022-11-09 17:38:47,133 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+2022-11-12 10:51:18,350 [ 1] INFO  Unity: Skill[大地震击].UpdateSkill Finished
+2022-11-12 10:51:18,355 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:18,357 [ 1] INFO  Unity: Creature:恶鬼 Damage:244 Crit:False
+2022-11-12 10:51:18,481 [ 1] INFO  Unity: SetPosition:(5876, 2629, 42)
+2022-11-12 10:51:18,927 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_SkillA_prefab]
+2022-11-12 10:51:18,929 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_SkillA_prefab]
+2022-11-12 10:51:19,012 [ 1] INFO  Unity: SetPosition:(5929, 2779, 88)
+2022-11-12 10:51:19,043 [ 1] INFO  Unity: Stop
+2022-11-12 10:51:19,146 [ 1] INFO  Unity: OnEntityChanged: ID:3 Postion:(5785, 2352, 31) Direction:(-2147483648, -2147483648, -2147483648) Speed:300
+2022-11-12 10:51:19,148 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
+    [3]evt:MoveFwd entity:(3:pos:(5785,2352,31),dir:(-2147483648,-2147483648,-2147483648),spd:300
+
+2022-11-12 10:51:19,246 [ 1] INFO  Unity: SendCastSkill: id:10021 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:19,248 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
 UnityEngine.Animator:SetBool(String, Boolean)
 EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
 Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
@@ -335,17 +256,19 @@ Network.MessageDistributer`1:Distribute()
 Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
 Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
 
-2022-11-09 17:38:47,150 [ 1] INFO  Unity: AnimationEventController: [M1005]PlayEffect[EFX_M1005_SkillA_prefab]
-2022-11-09 17:38:47,150 [ 1] INFO  Unity: [Character_4_死神]PlayEffect:[EFX_M1005_SkillA_prefab]
-2022-11-09 17:38:47,347 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:47,447 [ 1] INFO  Unity: Skill[死亡尖叫].UpdateSkill Finished
-2022-11-09 17:38:55,641 [ 1] INFO  Unity: BattleTarget: SetTarget:[4]死神
-2022-11-09 17:38:55,905 [ 1] INFO  Unity: MoveForward
-2022-11-09 17:38:56,451 [ 1] INFO  Unity: Stop
-2022-11-09 17:38:56,551 [ 1] INFO  Unity: MoveForward
-2022-11-09 17:38:56,997 [ 1] INFO  Unity: Stop
-2022-11-09 17:38:57,131 [ 1] INFO  Unity: SendCastSkill: id:10052 entityId:4 targetId:9 position:(0,0,0)
-2022-11-09 17:38:57,132 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+2022-11-12 10:51:19,250 [ 1] INFO  Unity: SetDirection:(58, 58, 58)
+2022-11-12 10:51:19,345 [ 1] INFO  Unity: SetPosition:(5931, 2783, 37)
+2022-11-12 10:51:19,361 [ 1] INFO  Unity: OnEntityChanged: ID:3 Postion:(5933, 2789, 88) Direction:(-2147483648, -2147483648, -2147483648) Speed:0
+2022-11-12 10:51:19,363 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
+    [3]evt:Idle entity:(3:pos:(5933,2789,88),dir:(-2147483648,-2147483648,-2147483648),spd:0
+
+2022-11-12 10:51:19,659 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_Atk_prefab]
+2022-11-12 10:51:19,660 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_Atk_prefab]
+2022-11-12 10:51:19,921 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:19,923 [ 1] INFO  Unity: Creature:111 Damage:144 Crit:False
+2022-11-12 10:51:19,969 [ 1] INFO  Unity: SetDirection:(-51, -86, -6)
+2022-11-12 10:51:20,020 [ 1] INFO  Unity: SendCastSkill: id:10023 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:20,022 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
 UnityEngine.Animator:SetBool(String, Boolean)
 EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
 Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
@@ -357,12 +280,26 @@ Network.MessageDistributer`1:Distribute()
 Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
 Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
 
-2022-11-09 17:38:57,149 [ 1] INFO  Unity: AnimationEventController: [M1005]PlayEffect[EFX_M1005_SkillA_prefab]
-2022-11-09 17:38:57,149 [ 1] INFO  Unity: [Character_4_死神]PlayEffect:[EFX_M1005_SkillA_prefab]
-2022-11-09 17:38:57,363 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:38:57,445 [ 1] INFO  Unity: Skill[死亡尖叫].UpdateSkill Finished
-2022-11-09 17:39:07,138 [ 1] INFO  Unity: SendCastSkill: id:10052 entityId:4 targetId:9 position:(0,0,0)
-2022-11-09 17:39:07,138 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+2022-11-12 10:51:20,024 [ 1] INFO  Unity: SetDirection:(-4, -12, -99)
+2022-11-12 10:51:20,068 [ 1] INFO  Unity: SetDirection:(-66, -75, -6)
+2022-11-12 10:51:20,168 [ 1] INFO  Unity: SetDirection:(-80, -60, -6)
+2022-11-12 10:51:20,252 [ 1] INFO  Unity: SetDirection:(-89, -45, -6)
+2022-11-12 10:51:20,253 [ 1] INFO  Unity: Skill[拳击挥打].UpdateSkill Finished
+2022-11-12 10:51:20,346 [ 1] INFO  Unity: SetDirection:(-96, -29, -5)
+2022-11-12 10:51:20,379 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:20,382 [ 1] INFO  Unity: Creature:111 Damage:149 Crit:False
+2022-11-12 10:51:20,431 [ 1] INFO  Unity: SetDirection:(-99, -11, -5)
+2022-11-12 10:51:20,543 [ 1] INFO  Unity: SetDirection:(-99, 9, -5)
+2022-11-12 10:51:20,603 [ 1] INFO  Unity: SetDirection:(-96, 27, -5)
+2022-11-12 10:51:20,640 [ 1] INFO  Unity: Skill[重击].UpdateSkill Finished
+2022-11-12 10:51:20,705 [ 1] INFO  Unity: SetDirection:(-90, 44, -5)
+2022-11-12 10:51:20,709 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:20,711 [ 1] INFO  Unity: Creature:111 Damage:427 Crit:False
+2022-11-12 10:51:21,221 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_SkillB_prefab]
+2022-11-12 10:51:21,222 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_SkillB_prefab]
+2022-11-12 10:51:21,385 [ 1] INFO  Unity: MoveForward
+2022-11-12 10:51:21,800 [ 1] INFO  Unity: SendCastSkill: id:10022 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:21,801 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
 UnityEngine.Animator:SetBool(String, Boolean)
 EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
 Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
@@ -374,12 +311,8 @@ Network.MessageDistributer`1:Distribute()
 Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
 Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
 
-2022-11-09 17:39:07,154 [ 1] INFO  Unity: AnimationEventController: [M1005]PlayEffect[EFX_M1005_SkillA_prefab]
-2022-11-09 17:39:07,155 [ 1] INFO  Unity: [Character_4_死神]PlayEffect:[EFX_M1005_SkillA_prefab]
-2022-11-09 17:39:07,370 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:39:07,451 [ 1] INFO  Unity: Skill[死亡尖叫].UpdateSkill Finished
-2022-11-09 17:39:17,243 [ 1] INFO  Unity: SendCastSkill: id:10052 entityId:4 targetId:9 position:(0,0,0)
-2022-11-09 17:39:17,244 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+2022-11-12 10:51:22,254 [ 1] INFO  Unity: SendCastSkill: id:10021 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:22,256 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
 UnityEngine.Animator:SetBool(String, Boolean)
 EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
 Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
@@ -391,12 +324,42 @@ Network.MessageDistributer`1:Distribute()
 Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
 Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
 
-2022-11-09 17:39:17,260 [ 1] INFO  Unity: AnimationEventController: [M1005]PlayEffect[EFX_M1005_SkillA_prefab]
-2022-11-09 17:39:17,261 [ 1] INFO  Unity: [Character_4_死神]PlayEffect:[EFX_M1005_SkillA_prefab]
-2022-11-09 17:39:17,475 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:39:17,556 [ 1] INFO  Unity: Skill[死亡尖叫].UpdateSkill Finished
-2022-11-09 17:43:36,466 [ 1] INFO  Unity: SendCastSkill: id:10052 entityId:4 targetId:9 position:(0,0,0)
-2022-11-09 17:43:36,467 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+2022-11-12 10:51:22,259 [ 1] INFO  Unity: SetDirection:(-92, 34, -18)
+2022-11-12 10:51:22,344 [ 1] INFO  Unity: Skill[大地震击].UpdateSkill Finished
+2022-11-12 10:51:22,363 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:22,415 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_Atk_prefab]
+2022-11-12 10:51:22,416 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_Atk_prefab]
+2022-11-12 10:51:22,462 [ 1] INFO  Unity: Stop
+2022-11-12 10:51:22,465 [ 1] INFO  Unity: SetPosition:(5647, 2922, 6)
+2022-11-12 10:51:22,931 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:22,933 [ 1] INFO  Unity: Creature:111 Damage:138 Crit:False
+2022-11-12 10:51:23,267 [ 1] INFO  Unity: Skill[拳击挥打].UpdateSkill Finished
+2022-11-12 10:51:23,289 [ 1] INFO  Unity: MoveForward
+2022-11-12 10:51:23,379 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:23,382 [ 1] INFO  Unity: Creature:111 Damage:144 Crit:False
+2022-11-12 10:51:23,487 [ 1] INFO  Unity: OnEntityChanged: ID:3 Postion:(5933, 2789, 88) Direction:(-2147483648, -2147483648, -2147483648) Speed:300
+2022-11-12 10:51:23,488 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
+    [3]evt:MoveFwd entity:(3:pos:(5933,2789,88),dir:(-2147483648,-2147483648,-2147483648),spd:300
+
+2022-11-12 10:51:23,689 [ 1] INFO  Unity: OnEntityChanged: ID:3 Postion:(5647, 2922, 6) Direction:(-2147483648, -2147483648, -2147483648) Speed:0
+2022-11-12 10:51:23,692 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
+    [3]evt:Idle entity:(3:pos:(5647,2922,6),dir:(-2147483648,-2147483648,-2147483648),spd:0
+
+2022-11-12 10:51:23,980 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_SkillA_prefab]
+2022-11-12 10:51:23,981 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_SkillA_prefab]
+2022-11-12 10:51:24,353 [ 1] INFO  Unity: Stop
+2022-11-12 10:51:24,472 [ 1] INFO  Unity: OnEntityChanged: ID:3 Postion:(5647, 2922, 6) Direction:(-2147483648, -2147483648, -2147483648) Speed:300
+2022-11-12 10:51:24,475 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
+    [3]evt:MoveFwd entity:(3:pos:(5647,2922,6),dir:(-2147483648,-2147483648,-2147483648),spd:300
+
+2022-11-12 10:51:24,695 [ 1] INFO  Unity: OnEntityChanged: ID:3 Postion:(5327, 3050, 6) Direction:(-2147483648, -2147483648, -2147483648) Speed:0
+2022-11-12 10:51:24,698 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
+    [3]evt:Idle entity:(3:pos:(5327,3050,6),dir:(-2147483648,-2147483648,-2147483648),spd:0
+
+2022-11-12 10:51:24,999 [ 1] INFO  Unity: MoveForward
+2022-11-12 10:51:25,345 [ 1] INFO  Unity: SetPosition:(5271, 3106, 6)
+2022-11-12 10:51:25,362 [ 1] INFO  Unity: SendCastSkill: id:10021 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:25,364 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
 UnityEngine.Animator:SetBool(String, Boolean)
 EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
 Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
@@ -408,90 +371,928 @@ Network.MessageDistributer`1:Distribute()
 Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
 Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
 
-2022-11-09 17:43:36,482 [ 1] INFO  Unity: AnimationEventController: [M1005]PlayEffect[EFX_M1005_SkillA_prefab]
-2022-11-09 17:43:36,483 [ 1] INFO  Unity: [Character_4_死神]PlayEffect:[EFX_M1005_SkillA_prefab]
-2022-11-09 17:43:36,681 [ 1] INFO  Unity: OnSkillHit:count:1
-2022-11-09 17:43:36,796 [ 1] INFO  Unity: Skill[死亡尖叫].UpdateSkill Finished
-2022-11-09 17:43:42,299 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
+2022-11-12 10:51:25,367 [ 1] INFO  Unity: SetDirection:(-72, 69, 0)
+2022-11-12 10:51:25,386 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_Atk_prefab]
+2022-11-12 10:51:25,387 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_Atk_prefab]
+2022-11-12 10:51:25,915 [ 1] INFO  Unity: SendCastSkill: id:10022 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:25,918 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
 
-  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
-  at Network.NetClient.ProcessRecv () [0x00084] in C:\Users\PXbask\PXmmorpg\Src\Client\Assets\Scripts\Network\NetClient.cs:336 
+2022-11-12 10:51:26,040 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:26,042 [ 1] INFO  Unity: Creature:111 Damage:149 Crit:False
+2022-11-12 10:51:26,369 [ 1] INFO  Unity: Skill[拳击挥打].UpdateSkill Finished
+2022-11-12 10:51:26,373 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:26,377 [ 1] INFO  Unity: Creature:111 Damage:141 Crit:False
+2022-11-12 10:51:26,457 [ 1] INFO  Unity: Skill[大地震击].UpdateSkill Finished
+2022-11-12 10:51:26,481 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:26,484 [ 1] INFO  Unity: Creature:小恶魔 Damage:139 Crit:False
+2022-11-12 10:51:26,621 [ 1] INFO  Unity: SetPosition:(4935, 3271, 6)
+2022-11-12 10:51:26,804 [ 1] INFO  Unity: OnEntityChanged: ID:3 Postion:(5327, 3050, 6) Direction:(-2147483648, -2147483648, -2147483648) Speed:300
+2022-11-12 10:51:26,806 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
+    [3]evt:MoveFwd entity:(3:pos:(5327,3050,6),dir:(-2147483648,-2147483648,-2147483648),spd:300
 
-2022-11-09 17:43:42,300 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
-Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:350)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:430)
+2022-11-12 10:51:27,025 [ 1] INFO  Unity: OnEntityChanged: ID:3 Postion:(4935, 3271, 6) Direction:(-2147483648, -2147483648, -2147483648) Speed:0
+2022-11-12 10:51:27,025 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
+    [3]evt:Idle entity:(3:pos:(4935,3271,6),dir:(-2147483648,-2147483648,-2147483648),spd:0
 
-2022-11-09 17:43:42,314 [ 1] INFO  Unity: DoConnect
-2022-11-09 17:43:42,315 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-11-09 17:43:42,316 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-11-12 10:51:27,140 [ 1] INFO  Unity: SendCastSkill: id:10023 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:27,140 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
 
-2022-11-09 17:43:44,349 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:270)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
+2022-11-12 10:51:27,141 [ 1] INFO  Unity: SetDirection:(-93, 37, 0)
+2022-11-12 10:51:27,507 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_SkillA_prefab]
+2022-11-12 10:51:27,508 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_SkillA_prefab]
+2022-11-12 10:51:27,656 [ 1] INFO  Unity: Stop
+2022-11-12 10:51:27,691 [ 1] INFO  Unity: OnEntityChanged: ID:3 Postion:(4935, 3271, 6) Direction:(-2147483648, -2147483648, -2147483648) Speed:300
+2022-11-12 10:51:27,693 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
+    [3]evt:MoveFwd entity:(3:pos:(4935,3271,6),dir:(-2147483648,-2147483648,-2147483648),spd:300
 
-2022-11-09 17:43:44,352 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+2022-11-12 10:51:27,755 [ 1] INFO  Unity: Skill[重击].UpdateSkill Finished
+2022-11-12 10:51:27,807 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:27,810 [ 1] INFO  Unity: Creature:111 Damage:445 Crit:False
+2022-11-12 10:51:27,909 [ 1] INFO  Unity: OnEntityChanged: ID:3 Postion:(4625, 3395, 6) Direction:(-2147483648, -2147483648, -2147483648) Speed:0
+2022-11-12 10:51:27,910 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
+    [3]evt:Idle entity:(3:pos:(4625,3395,6),dir:(-2147483648,-2147483648,-2147483648),spd:0
 
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:272)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
+2022-11-12 10:51:28,209 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_SkillB_prefab]
+2022-11-12 10:51:28,210 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_SkillB_prefab]
+2022-11-12 10:51:28,473 [ 1] INFO  Unity: SendCastSkill: id:10021 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:28,475 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
 
-2022-11-09 17:43:44,368 [ 1] INFO  Unity: DoConnect
-2022-11-09 17:43:44,369 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-11-09 17:43:44,371 [ 1] INFO  Unity: Connect[1] to server 127.0.0.1:8000
+2022-11-12 10:51:28,477 [ 1] INFO  Unity: SetDirection:(0, 0, 0)
+2022-11-12 10:51:28,514 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,530 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,533 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,535 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,551 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,568 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,583 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,600 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,617 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,633 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,650 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,666 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,683 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,699 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,716 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,733 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,749 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,766 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,782 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,799 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,815 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,832 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,849 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,865 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,882 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,898 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,915 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,931 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,948 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,964 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,981 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:28,997 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,014 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,031 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,049 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,066 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,083 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,099 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,116 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,133 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,135 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:29,136 [ 1] INFO  Unity: Creature:111 Damage:138 Crit:False
+2022-11-12 10:51:29,150 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,166 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,183 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,199 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,216 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,232 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,249 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,265 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,282 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,298 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,315 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,332 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,373 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,374 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,375 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,394 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,410 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,412 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_Atk_prefab]
+2022-11-12 10:51:29,413 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_Atk_prefab]
+2022-11-12 10:51:29,427 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,443 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,460 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,477 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,494 [ 1] INFO  Unity: Skill[拳击挥打].UpdateSkill Finished
+2022-11-12 10:51:29,495 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,510 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,526 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,543 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,559 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,576 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,578 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:29,579 [ 1] INFO  Unity: Creature:111 Damage:149 Crit:False
+2022-11-12 10:51:29,592 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,609 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,626 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,642 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,658 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,675 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,692 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,708 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,724 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,741 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,757 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,774 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,791 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,807 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,824 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,840 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,857 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,875 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,890 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,907 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,923 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,941 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,956 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,973 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:29,990 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,007 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,024 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,026 [ 1] INFO  Unity: SendCastSkill: id:10022 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:30,027 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
 
-2022-11-09 17:43:46,409 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:270)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
+2022-11-12 10:51:30,043 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,060 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,076 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,093 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,109 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,126 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,143 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,159 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,175 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,192 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,209 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,225 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,243 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,259 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,276 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,292 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,309 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,326 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,348 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,365 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,381 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,398 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,415 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,431 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,448 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,464 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,481 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,498 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,514 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,531 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,547 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,564 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,581 [ 1] INFO  Unity: Skill[大地震击].UpdateSkill Finished
+2022-11-12 10:51:30,581 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,583 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:30,583 [ 1] INFO  Unity: Creature:小恶魔 Damage:136 Crit:False
+2022-11-12 10:51:30,597 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,614 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,630 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,647 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,664 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,680 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,696 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,735 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,737 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,753 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,769 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,786 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,803 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,819 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,835 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,851 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,868 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,884 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,901 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,919 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,935 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,951 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,967 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:30,969 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_SkillA_prefab]
+2022-11-12 10:51:30,970 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_SkillA_prefab]
+2022-11-12 10:51:30,984 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,001 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,018 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,035 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,052 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,070 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,087 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,103 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,120 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,137 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,154 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,170 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,187 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,204 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,220 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,236 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,253 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,270 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,287 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,304 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,321 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,338 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,361 [ 1] INFO  Unity: MoveBack
+2022-11-12 10:51:31,363 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,367 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,385 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,401 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,418 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,435 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,451 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,467 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,491 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,495 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,516 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,532 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,550 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,567 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,584 [ 1] INFO  Unity: Look rotation viewing vector is zero
+2022-11-12 10:51:31,588 [ 1] INFO  Unity: SendCastSkill: id:10021 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:31,590 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
 
-2022-11-09 17:43:46,410 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+2022-11-12 10:51:31,592 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2022-11-12 10:51:32,256 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:32,260 [ 1] INFO  Unity: Creature:111 Damage:139 Crit:False
+2022-11-12 10:51:32,338 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_Atk_prefab]
+2022-11-12 10:51:32,339 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_Atk_prefab]
+2022-11-12 10:51:32,579 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:32,582 [ 1] INFO  Unity: Creature:111 Damage:148 Crit:False
+2022-11-12 10:51:32,602 [ 1] INFO  Unity: Skill[拳击挥打].UpdateSkill Finished
+2022-11-12 10:51:33,812 [ 1] INFO  Unity: SetPosition:(5311, 3087, 6)
+2022-11-12 10:51:33,911 [ 1] INFO  Unity: OnEntityChanged: ID:3 Postion:(4625, 3395, 6) Direction:(-2147483648, -2147483648, -2147483648) Speed:300
+2022-11-12 10:51:33,913 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
+    [3]evt:MoveFwd entity:(3:pos:(4625,3395,6),dir:(-2147483648,-2147483648,-2147483648),spd:300
 
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:272)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
+2022-11-12 10:51:33,925 [ 1] INFO  Unity: Stop
+2022-11-12 10:51:34,030 [ 1] INFO  Unity: SendCastSkill: id:10022 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:34,033 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
 
-2022-11-09 17:43:46,441 [ 1] INFO  Unity: DoConnect
-2022-11-09 17:43:46,441 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-11-09 17:43:46,443 [ 1] INFO  Unity: Connect[2] to server 127.0.0.1:8000
+2022-11-12 10:51:34,130 [ 1] INFO  Unity: OnEntityChanged: ID:3 Postion:(5311, 3087, 6) Direction:(-2147483648, -2147483648, -2147483648) Speed:0
+2022-11-12 10:51:34,132 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
+    [3]evt:Idle entity:(3:pos:(5311,3087,6),dir:(-2147483648,-2147483648,-2147483648),spd:0
 
-2022-11-09 17:43:48,471 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:270)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
+2022-11-12 10:51:34,465 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_SkillA_prefab]
+2022-11-12 10:51:34,467 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_SkillA_prefab]
+2022-11-12 10:51:34,565 [ 1] INFO  Unity: Skill[大地震击].UpdateSkill Finished
+2022-11-12 10:51:34,584 [ 1] INFO  Unity: SendCastSkill: id:10021 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:34,586 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
 
-2022-11-09 17:43:48,472 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+2022-11-12 10:51:34,589 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2022-11-12 10:51:34,591 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:34,593 [ 1] INFO  Unity: Creature:小恶魔 Damage:134 Crit:False
+2022-11-12 10:51:34,691 [ 1] INFO  Unity: SendCastSkill: id:10023 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:34,693 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
 
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:272)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
+2022-11-12 10:51:34,695 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2022-11-12 10:51:34,815 [ 1] INFO  Unity: MoveBack
+2022-11-12 10:51:35,261 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:35,264 [ 1] INFO  Unity: Creature:111 Damage:138 Crit:False
+2022-11-12 10:51:35,300 [ 1] INFO  Unity: Skill[重击].UpdateSkill Finished
+2022-11-12 10:51:35,361 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:35,364 [ 1] INFO  Unity: Creature:111 Damage:434 Crit:False
+2022-11-12 10:51:35,590 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:35,593 [ 1] INFO  Unity: Creature:111 Damage:136 Crit:False
+2022-11-12 10:51:35,617 [ 1] INFO  Unity: Skill[拳击挥打].UpdateSkill Finished
+2022-11-12 10:51:35,839 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_Atk_prefab]
+2022-11-12 10:51:35,841 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_Atk_prefab]
+2022-11-12 10:51:35,938 [ 1] INFO  Unity: SetPosition:(5637, 2927, 6)
+2022-11-12 10:51:36,038 [ 1] INFO  Unity: OnEntityChanged: ID:3 Postion:(5311, 3087, 6) Direction:(-2147483648, -2147483648, -2147483648) Speed:300
+2022-11-12 10:51:36,038 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
+    [3]evt:MoveFwd entity:(3:pos:(5311,3087,6),dir:(-2147483648,-2147483648,-2147483648),spd:300
 
-2022-11-09 17:43:48,472 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :1 reason:Cannot connect to server
-2022-11-09 17:43:56,300 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-11-09 17:43:56,301 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-11-12 10:51:36,261 [ 1] INFO  Unity: OnEntityChanged: ID:3 Postion:(5637, 2927, 6) Direction:(-2147483648, -2147483648, -2147483648) Speed:0
+2022-11-12 10:51:36,263 [ 1] INFO  Unity: MapEntityUpdateResponse:Entitys:1
+    [3]evt:Idle entity:(3:pos:(5637,2927,6),dir:(-2147483648,-2147483648,-2147483648),spd:0
+
+2022-11-12 10:51:36,486 [ 1] INFO  Unity: Stop
+2022-11-12 10:51:36,560 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_SkillB_prefab]
+2022-11-12 10:51:36,561 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_SkillB_prefab]
+2022-11-12 10:51:37,589 [ 1] INFO  Unity: SendCastSkill: id:10021 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:37,591 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:51:37,594 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2022-11-12 10:51:37,759 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_Atk_prefab]
+2022-11-12 10:51:37,760 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_Atk_prefab]
+2022-11-12 10:51:38,039 [ 1] INFO  Unity: SendCastSkill: id:10022 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:38,041 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:51:38,254 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:38,255 [ 1] INFO  Unity: Creature:111 Damage:143 Crit:False
+2022-11-12 10:51:38,604 [ 1] INFO  Unity: Skill[大地震击].UpdateSkill Finished
+2022-11-12 10:51:38,608 [ 1] INFO  Unity: OnSkillHit:count:2
+2022-11-12 10:51:38,610 [ 1] INFO  Unity: Creature:111 Damage:146 Crit:False
+2022-11-12 10:51:38,628 [ 1] INFO  Unity: Skill[拳击挥打].UpdateSkill Finished
+2022-11-12 10:51:39,316 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_SkillA_prefab]
+2022-11-12 10:51:39,317 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_SkillA_prefab]
+2022-11-12 10:51:40,598 [ 1] INFO  Unity: SendCastSkill: id:10021 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:40,599 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:51:40,600 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2022-11-12 10:51:40,681 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_Atk_prefab]
+2022-11-12 10:51:40,682 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_Atk_prefab]
+2022-11-12 10:51:41,288 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:41,291 [ 1] INFO  Unity: Creature:111 Damage:295 Crit:True
+2022-11-12 10:51:41,618 [ 1] INFO  Unity: Skill[拳击挥打].UpdateSkill Finished
+2022-11-12 10:51:41,719 [ 1] INFO  Unity: SendCastSkill: id:10023 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:41,720 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:51:41,721 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2022-11-12 10:51:41,721 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:41,722 [ 1] INFO  Unity: Creature:111 Damage:141 Crit:False
+2022-11-12 10:51:42,243 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_SkillB_prefab]
+2022-11-12 10:51:42,244 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_SkillB_prefab]
+2022-11-12 10:51:42,342 [ 1] INFO  Unity: Skill[重击].UpdateSkill Finished
+2022-11-12 10:51:42,393 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:42,394 [ 1] INFO  Unity: Creature:111 Damage:441 Crit:False
+2022-11-12 10:51:42,494 [ 1] INFO  Unity: SendCastSkill: id:10022 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:42,497 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:51:43,045 [ 1] INFO  Unity: Skill[大地震击].UpdateSkill Finished
+2022-11-12 10:51:43,047 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:43,426 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_SkillA_prefab]
+2022-11-12 10:51:43,426 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_SkillA_prefab]
+2022-11-12 10:51:43,616 [ 1] INFO  Unity: SendCastSkill: id:10021 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:43,618 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:51:43,621 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2022-11-12 10:51:44,285 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:44,288 [ 1] INFO  Unity: Creature:111 Damage:149 Crit:False
+2022-11-12 10:51:44,629 [ 1] INFO  Unity: Skill[拳击挥打].UpdateSkill Finished
+2022-11-12 10:51:44,631 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:44,632 [ 1] INFO  Unity: Creature:111 Damage:145 Crit:False
+2022-11-12 10:51:44,778 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_Atk_prefab]
+2022-11-12 10:51:44,779 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_Atk_prefab]
+2022-11-12 10:51:46,525 [ 1] INFO  Unity: SendCastSkill: id:10022 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:46,526 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:51:46,541 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_SkillA_prefab]
+2022-11-12 10:51:46,542 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_SkillA_prefab]
+2022-11-12 10:51:46,625 [ 1] INFO  Unity: SendCastSkill: id:10021 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:51:46,628 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:51:46,631 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2022-11-12 10:51:47,077 [ 1] INFO  Unity: Skill[大地震击].UpdateSkill Finished
+2022-11-12 10:51:47,096 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:47,321 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:47,323 [ 1] INFO  Unity: Creature:111 Damage:143 Crit:False
+2022-11-12 10:51:47,651 [ 1] INFO  Unity: Skill[拳击挥打].UpdateSkill Finished
+2022-11-12 10:51:47,655 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:51:47,658 [ 1] INFO  Unity: Creature:111 Damage:140 Crit:False
+2022-11-12 10:52:02,263 [ 1] INFO  Unity: SendCastSkill: id:10023 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:52:02,265 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:52:02,266 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2022-11-12 10:52:02,267 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:52:02,268 [ 1] INFO  Unity: Creature:111 Damage:447 Crit:False
+2022-11-12 10:52:02,270 [ 1] INFO  Unity: SendCastSkill: id:10021 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:52:02,271 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:52:02,272 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2022-11-12 10:52:02,272 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:52:02,273 [ 1] INFO  Unity: Creature:111 Damage:149 Crit:False
+2022-11-12 10:52:02,275 [ 1] INFO  Unity: SendCastSkill: id:10022 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:52:02,276 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:52:02,277 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:52:02,278 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:52:02,279 [ 1] INFO  Unity: SendCastSkill: id:10021 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:52:02,279 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:52:02,280 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2022-11-12 10:52:02,281 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:52:02,282 [ 1] INFO  Unity: Creature:111 Damage:146 Crit:False
+2022-11-12 10:52:02,283 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:52:02,284 [ 1] INFO  Unity: SendCastSkill: id:10023 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:52:02,285 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:52:02,286 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2022-11-12 10:52:02,287 [ 1] INFO  Unity: SendCastSkill: id:10021 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:52:02,288 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:52:02,289 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2022-11-12 10:52:02,289 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:52:02,290 [ 1] INFO  Unity: Creature:111 Damage:425 Crit:False
+2022-11-12 10:52:02,292 [ 1] INFO  Unity: SendCastSkill: id:10022 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:52:02,293 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:52:02,294 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:52:02,295 [ 1] INFO  Unity: Creature:111 Damage:145 Crit:False
+2022-11-12 10:52:02,297 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:52:02,298 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:52:02,299 [ 1] INFO  Unity: SendCastSkill: id:10021 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:52:02,299 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:52:02,300 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2022-11-12 10:52:02,301 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:52:02,302 [ 1] INFO  Unity: Creature:111 Damage:135 Crit:False
+2022-11-12 10:52:02,303 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:52:02,304 [ 1] INFO  Unity: SendCastSkill: id:10022 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:52:02,304 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:52:02,305 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:52:02,324 [ 1] INFO  Unity: SendCastSkill: id:10021 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:52:02,324 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:52:02,325 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2022-11-12 10:52:02,408 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_Atk_prefab]
+2022-11-12 10:52:02,409 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_Atk_prefab]
+2022-11-12 10:52:02,807 [ 1] INFO  Unity: Skill[大地震击].UpdateSkill Finished
+2022-11-12 10:52:02,872 [ 1] INFO  Unity: Skill[重击].UpdateSkill Finished
+2022-11-12 10:52:02,990 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:52:02,991 [ 1] INFO  Unity: Creature:111 Damage:141 Crit:False
+2022-11-12 10:52:03,204 [ 1] INFO  Unity: SendCastSkill: id:10023 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:52:03,205 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:52:03,207 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2022-11-12 10:52:03,321 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:52:03,322 [ 1] INFO  Unity: Creature:111 Damage:142 Crit:False
+2022-11-12 10:52:03,337 [ 1] INFO  Unity: Skill[拳击挥打].UpdateSkill Finished
+2022-11-12 10:52:03,823 [ 1] INFO  Unity: Skill[重击].UpdateSkill Finished
+2022-11-12 10:52:03,892 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:52:03,895 [ 1] INFO  Unity: Creature:111 Damage:409 Crit:False
+2022-11-12 10:52:03,960 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_SkillA_prefab]
+2022-11-12 10:52:03,961 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_SkillA_prefab]
+2022-11-12 10:52:05,093 [ 1] INFO  Unity: SendCastSkill: id:10022 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:52:05,095 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:52:05,317 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_SkillA_prefab]
+2022-11-12 10:52:05,318 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_SkillA_prefab]
+2022-11-12 10:52:05,434 [ 1] INFO  Unity: SendCastSkill: id:10021 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:52:05,434 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:52:05,435 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2022-11-12 10:52:05,648 [ 1] INFO  Unity: Skill[大地震击].UpdateSkill Finished
+2022-11-12 10:52:05,650 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:52:06,118 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:52:06,120 [ 1] INFO  Unity: Creature:111 Damage:144 Crit:False
+2022-11-12 10:52:06,442 [ 1] INFO  Unity: Skill[拳击挥打].UpdateSkill Finished
+2022-11-12 10:52:06,444 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:52:06,445 [ 1] INFO  Unity: Creature:111 Damage:145 Crit:False
+2022-11-12 10:52:06,676 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_Atk_prefab]
+2022-11-12 10:52:06,677 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_Atk_prefab]
+2022-11-12 10:52:08,228 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_SkillB_prefab]
+2022-11-12 10:52:08,230 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_SkillB_prefab]
+2022-11-12 10:52:59,127 [ 1] INFO  Unity: SendCastSkill: id:10021 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:52:59,128 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:52:59,129 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2022-11-12 10:52:59,143 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_Atk_prefab]
+2022-11-12 10:52:59,144 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_Atk_prefab]
+2022-11-12 10:52:59,242 [ 1] INFO  Unity: SendCastSkill: id:10023 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:52:59,243 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:52:59,243 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2022-11-12 10:52:59,244 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:52:59,245 [ 1] INFO  Unity: Creature:111 Damage:144 Crit:False
+2022-11-12 10:52:59,358 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:52:59,474 [ 1] INFO  Unity: SendCastSkill: id:10021 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:52:59,475 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:52:59,476 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2022-11-12 10:52:59,857 [ 1] INFO  Unity: Skill[重击].UpdateSkill Finished
+2022-11-12 10:52:59,907 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:52:59,908 [ 1] INFO  Unity: Creature:111 Damage:442 Crit:False
+2022-11-12 10:53:00,022 [ 1] INFO  Unity: SendCastSkill: id:10022 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:53:00,023 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:53:00,149 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:53:00,150 [ 1] INFO  Unity: Creature:111 Damage:135 Crit:False
+2022-11-12 10:53:00,479 [ 1] INFO  Unity: Skill[拳击挥打].UpdateSkill Finished
+2022-11-12 10:53:00,481 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:53:00,483 [ 1] INFO  Unity: Creature:111 Damage:140 Crit:False
+2022-11-12 10:53:00,579 [ 1] INFO  Unity: Skill[大地震击].UpdateSkill Finished
+2022-11-12 10:53:00,596 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:53:00,696 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_Atk_prefab]
+2022-11-12 10:53:00,696 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_Atk_prefab]
+2022-11-12 10:53:02,263 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_SkillA_prefab]
+2022-11-12 10:53:02,264 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_SkillA_prefab]
+2022-11-12 10:53:02,484 [ 1] INFO  Unity: SendCastSkill: id:10021 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:53:02,486 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:53:02,489 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
+2022-11-12 10:53:03,148 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:53:03,150 [ 1] INFO  Unity: Creature:111 Damage:139 Crit:False
+2022-11-12 10:53:03,496 [ 1] INFO  Unity: Skill[拳击挥打].UpdateSkill Finished
+2022-11-12 10:53:03,498 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:53:03,499 [ 1] INFO  Unity: Creature:111 Damage:142 Crit:False
+2022-11-12 10:53:03,612 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_Atk_prefab]
+2022-11-12 10:53:03,612 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_Atk_prefab]
+2022-11-12 10:53:04,048 [ 1] INFO  Unity: SendCastSkill: id:10022 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:53:04,049 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:53:04,604 [ 1] INFO  Unity: Skill[大地震击].UpdateSkill Finished
+2022-11-12 10:53:04,607 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:53:04,855 [ 1] INFO  Unity: MoveForward
+2022-11-12 10:53:05,172 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_SkillA_prefab]
+2022-11-12 10:53:05,174 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_SkillA_prefab]
+2022-11-12 10:53:05,497 [ 1] INFO  Unity: SendCastSkill: id:10021 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:53:05,499 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:53:05,501 [ 1] INFO  Unity: SetDirection:(-93, 37, 0)
+2022-11-12 10:53:06,161 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:53:06,162 [ 1] INFO  Unity: Creature:111 Damage:149 Crit:False
+2022-11-12 10:53:06,277 [ 1] INFO  Unity: SendCastSkill: id:10023 entityId:3 targetId:1 position:(0,0,0)
+2022-11-12 10:53:06,277 [ 1] WARN  Unity: Parameter 'Standby' does not exist.
+UnityEngine.Animator:SetBool(String, Boolean)
+EntityController:SetStandBy(Boolean) (at Assets/Scripts/GameObject/EntityController.cs:160)
+Entities.Creature:SetStandBy(Boolean) (at Assets/Scripts/Entities/Creature.cs:172)
+Entities.Creature:CastSkill(Int32, Creature, NVector3) (at Assets/Scripts/Entities/Creature.cs:157)
+Services.BattleService:OnSkillCast(Object, SkillCastResponse) (at Assets/Scripts/Services/BattleService.cs:44)
+Network.MessageDistributer`1:RaiseEvent(Object, SkillCastResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-12 10:53:06,278 [ 1] INFO  Unity: SetDirection:(-93, 37, 0)
+2022-11-12 10:53:06,492 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:53:06,493 [ 1] INFO  Unity: Creature:111 Damage:146 Crit:False
+2022-11-12 10:53:06,524 [ 1] INFO  Unity: Skill[拳击挥打].UpdateSkill Finished
+2022-11-12 10:53:06,527 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_Atk_prefab]
+2022-11-12 10:53:06,527 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_Atk_prefab]
+2022-11-12 10:53:06,889 [ 1] INFO  Unity: Skill[重击].UpdateSkill Finished
+2022-11-12 10:53:06,923 [ 1] INFO  Unity: SetPosition:(5230, 3126, 6)
+2022-11-12 10:53:06,939 [ 1] INFO  Unity: OnSkillHit:count:1
+2022-11-12 10:53:06,940 [ 1] INFO  Unity: Creature:111 Damage:445 Crit:False
+2022-11-12 10:53:07,059 [ 1] INFO  Unity: Stop
+2022-11-12 10:53:08,089 [ 1] INFO  Unity: AnimationEventController: [M1002]PlayEffect[EFX_M1002_SkillB_prefab]
+2022-11-12 10:53:08,089 [ 1] INFO  Unity: [Character_3_山丘巨人]PlayEffect:[EFX_M1002_SkillB_prefab]
+2022-11-12 10:58:23,723 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-11-12 10:58:23,725 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)
