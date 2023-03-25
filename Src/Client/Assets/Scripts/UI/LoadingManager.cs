@@ -47,7 +47,7 @@ public class LoadingManager : MonoBehaviour {
         GuildService.Instance.Init();
         ChatService.Instance.Init();
         BattleService.Instance.Init();
-
+        ArenaService.Instance.Init();
         SoundManager.Instance.PlayMusic(SoundDefine.Music_Login);
 
         // Fake Loading Simulate

@@ -14,7 +14,6 @@ json-excel\json-excel json Tables\ Data\
 @copy Data\SkillDefine.txt ..\Client\Data\
 @copy Data\BuffDefine.txt ..\Client\Data\
 
-
 @copy Data\CharacterDefine.txt ..\Server\GameServer\GameServer\bin\Debug\Data\
 @copy Data\EquipDefine.txt ..\Server\GameServer\GameServer\bin\Debug\Data\
 @copy Data\ItemDefine.txt ..\Server\GameServer\GameServer\bin\Debug\Data\

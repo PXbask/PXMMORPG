@@ -1,4 +1,5 @@
-﻿using GameServer.Entities;
+﻿using Common.Data;
+using GameServer.Entities;
 using GameServer.Managers;
 using SkillBridge.Message;
 using System;
@@ -14,6 +15,7 @@ namespace GameServer.Battle
         Creature Owner;
         public List<Skill> Skills { get; private set; }
         public List<NSkillInfo> Infos { get; private set; }
+        public Skill NormalSkill { get; set; }
         public SkillManager(Creature creatrue)
         {
             Owner = creatrue;
@@ -43,6 +45,7 @@ namespace GameServer.Battle
                 }
                 this.Infos.Add(info);
                 Skill skill = new Skill(info, this.Owner);
+                if(define.Value.Type.Equals(SkillType.Normal)) { this.NormalSkill= skill; }
                 this.AddSkill(skill);
             }
         }

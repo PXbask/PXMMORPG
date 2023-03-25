@@ -1,7 +1,60 @@
-2022-11-08 10:43:36,007 [ 1] INFO  Unity: LoadingManager start
-2022-11-08 10:43:39,095 [ 1] INFO  Unity: DataManager > DataManager()
-2022-11-08 11:28:00,775 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-11-08 11:28:00,778 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-11-13 09:51:45,485 [ 1] INFO  Unity: LoadingManager start
+2022-11-13 09:51:48,785 [ 1] INFO  Unity: DataManager > DataManager()
+2022-11-13 09:52:28,470 [ 1] INFO  Unity: UserLoginRequest::user :PXbask psw:98259683Zyx
+2022-11-13 09:52:28,471 [ 1] INFO  Unity: ConnectToServer() Start 
+2022-11-13 09:52:28,476 [ 1] INFO  Unity: DoConnect
+2022-11-13 09:52:28,477 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-11-13 09:52:28,485 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+
+2022-11-13 09:52:28,494 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2022-11-13 09:52:29,080 [ 1] INFO  Unity: OnUserLogin:Success [None]
+2022-11-13 09:52:29,083 [ 1] INFO  Unity: LoadLevel: CharSelect
+2022-11-13 09:52:31,547 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-11-13 09:54:03,114 [ 1] INFO  Unity: Select Char:[2]111[Warrior]
+2022-11-13 09:54:04,903 [ 1] INFO  Unity: Select Char:[1]FaU[Wizard]
+2022-11-13 09:54:05,632 [ 1] INFO  Unity: UserGameEnterRequest::index :0
+2022-11-13 09:54:05,828 [ 1] INFO  Unity: OnUserGameEnter:Success [None]
+2022-11-13 09:54:05,831 [ 1] INFO  Unity: ItemManager:Init[ID:1, Count:20]
+2022-11-13 09:54:05,832 [ 1] INFO  Unity: ItemManager:Init[ID:2, Count:20]
+2022-11-13 09:54:05,842 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1 CharacterID:1
+2022-11-13 09:54:05,852 [ 1] INFO  Unity: AddCharacter:1:FaU Map:1 Entity:(9:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-11-13 09:54:05,854 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-11-13 09:54:07,190 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+UnityEngine.Resources:Load(String)
+Resloader:Load(String) (at Assets/Scripts/Assets/Resloader.cs:11)
+SoundManager:PlayMusic(String) (at Assets/Scripts/Managers/SoundManager.cs:71)
+Services.MapService:EnterMap(Int32) (at Assets/Scripts/Services/MapService.cs:36)
+Services.MapService:OnMapCharacterEnter(Object, MapCharacterEnterResponse) (at Assets/Scripts/Services/MapService.cs:94)
+Network.MessageDistributer`1:RaiseEvent(Object, MapCharacterEnterResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-13 09:54:07,191 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+UnityEngine.Resources:Load(String)
+Resloader:Load(String) (at Assets/Scripts/Assets/Resloader.cs:11)
+SoundManager:PlayMusic(String) (at Assets/Scripts/Managers/SoundManager.cs:71)
+Services.MapService:EnterMap(Int32) (at Assets/Scripts/Services/MapService.cs:36)
+Services.MapService:OnMapCharacterEnter(Object, MapCharacterEnterResponse) (at Assets/Scripts/Services/MapService.cs:94)
+Network.MessageDistributer`1:RaiseEvent(Object, MapCharacterEnterResponse)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse)
+Network.MessageDistributer`1:Distribute()
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:417)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:435)
+
+2022-11-13 09:54:07,193 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
+2022-11-13 09:54:07,449 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-11-13 09:54:10,986 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1 CharacterID:1
+2022-11-13 09:54:10,988 [ 1] INFO  Unity: AddCharacter:1002:ZS Map:1 Entity:(10:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-11-13 09:54:11,354 [ 1] INFO  Unity: OnMapCharacterEnter:MapID:1
+2022-11-13 09:54:27,581 [ 1] INFO  Unity: SendFriendAddRequest:friendId:0,friendName:ZS
+2022-11-13 09:54:31,411 [ 1] INFO  Unity: OnFriendList
+2022-11-13 09:56:01,139 [ 1] INFO  Unity: OnMapCharacterLeave:MapID:1 CharacterID:10
+2022-11-13 09:56:01,140 [ 1] INFO  Unity: RemoveCharacter:10
+2022-11-13 09:56:01,143 [ 1] INFO  Unity: OnFriendList
+2022-11-13 09:56:10,182 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-11-13 09:56:10,183 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)

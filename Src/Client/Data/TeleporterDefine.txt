@@ -134,5 +134,39 @@
       "Y": 71,
       "Z": 0
     }
+  },
+  "9": {
+    "ID": 9,
+    "Name": "竞技场P1传入点",
+    "MapID": 5,
+    "LinkTo": 0,
+    "Descript": null,
+    "Position": {
+      "X": -2073,
+      "Y": 0,
+      "Z": 2671
+    },
+    "Direction": {
+      "X": 100,
+      "Y": 0,
+      "Z": 0
+    }
+  },
+  "10": {
+    "ID": 10,
+    "Name": "竞技场P2传入点",
+    "MapID": 5,
+    "LinkTo": 0,
+    "Descript": null,
+    "Position": {
+      "X": 2043,
+      "Y": 9,
+      "Z": 2671
+    },
+    "Direction": {
+      "X": -100,
+      "Y": -2,
+      "Z": 0
+    }
   }
 }

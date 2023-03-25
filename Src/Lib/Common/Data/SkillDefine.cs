@@ -7,8 +7,9 @@ namespace Common.Data
 {
     public enum SkillType
     {
-        Normal,
-        Skill,
+        All = -1,
+        Normal = 1,
+        Skill = 2,
     }
     public enum SkillTarget
     {

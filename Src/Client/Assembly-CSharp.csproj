@@ -118,6 +118,7 @@
      <Compile Include="Assets\Scripts\GameObject\TeleporterObject.cs" />
      <Compile Include="Assets\Scripts\GameObject\UIPopupText.cs" />
      <Compile Include="Assets\Scripts\Log\UnityLogger.cs" />
+     <Compile Include="Assets\Scripts\Managers\ArenaManager.cs" />
      <Compile Include="Assets\Scripts\Managers\BagManager.cs" />
      <Compile Include="Assets\Scripts\Managers\BattleManager.cs" />
      <Compile Include="Assets\Scripts\Managers\CharacterManager.cs" />
@@ -144,6 +145,7 @@
      <Compile Include="Assets\Scripts\Models\User.cs" />
      <Compile Include="Assets\Scripts\Network\NetClient.cs" />
      <Compile Include="Assets\Scripts\Scene\SceneManager.cs" />
+     <Compile Include="Assets\Scripts\Services\ArenaService.cs" />
      <Compile Include="Assets\Scripts\Services\BattleService.cs" />
      <Compile Include="Assets\Scripts\Services\ChatService.cs" />
      <Compile Include="Assets\Scripts\Services\FriendService.cs" />

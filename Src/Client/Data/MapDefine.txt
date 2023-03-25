@@ -38,5 +38,13 @@
     "Resource": "Map03",
     "Asset": "Sunset_Dungon",
     "Music": "bgm-map03"
+  },
+  "5": {
+    "ID": 5,
+    "Name": "竞技场",
+    "Type": "Normal",
+    "SubType": "Normal",
+    "Resource": "Arena",
+    "Music": "bgm-town"
   }
 }
